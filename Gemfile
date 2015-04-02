@@ -7,7 +7,7 @@ gem 'rails', '3.2.18'
 
 gem 'pg'
 gem 'fog'
-gem 'bootstrap-sass'#, '~> 3.1.1'
+gem 'bootstrap-sass', '~> 3.3.4'
 gem "sass", "~> 3.2.19"
 gem 'sass-rails',   '~> 3.2.3'
 
