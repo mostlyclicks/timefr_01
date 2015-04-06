@@ -1,9 +1,48 @@
 <%#= render '/refinery/content_page' %>
-<section id="sec1">
-  <h1>Section one</h1>
-  <%= raw @page.content_for(:home_section) %>
 
+<% @top_bg_image = ['top-bg-1.png', 'top-bg-2.png', 'top-bg-3.png', 'top-bg-4.png', 'top-bg-5.png'] %>
+<% @random_bg_image = @top_bg_image.sample %>
+
+<style>
+  #home-top {background-image:url(/assets/<%= @random_bg_image %>); }
+</style>
+
+<section id="home-top">
+  <div class="container">
+    <div class="row">
+      <%= raw @page.content_for(:home_main) %>
+    </div>
+  </div>
 </section>
+
+
+<% @mif_bg_image = ['made-in-france-p3.jpg','readyforresin.jpeg', 'DSC_7960-carbon-weaver.jpg'] %>
+<% @random_mif_image = @mif_bg_image.sample %>
+
+<style>
+  #home-made-in-france {background-image:url(/assets/<%= @random_mif_image %>); }
+</style>
+
+<section id="home-made-in-france">
+  <div class="container-fluid">
+    <div class="row">
+      <%= raw @page.content_for(:home_made_in_france) %>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <section id="sec2">
   <h1>Section two</h1>
