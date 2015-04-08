@@ -31,6 +31,20 @@
   </div>
 </section>
 
+<section id="home-features">
+
+  <% @home_features.each do |hf| %>
+    <%= image_tag hf.logo.url %>
+    <%= link_to hf.link_text, hf.link_url %>
+
+
+  <% end %>
+
+
+</section>
+
+
+
 
 
 

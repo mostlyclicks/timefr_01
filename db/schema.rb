@@ -11,7 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150402172724) do
+ActiveRecord::Schema.define(:version => 20150408161529) do
+
+  create_table "refinery_home_feature_translations", :force => true do |t|
+    t.integer  "refinery_home_feature_id"
+    t.string   "locale",                   :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.string   "title"
+    t.string   "link_text"
+  end
+
+  add_index "refinery_home_feature_translations", ["locale"], :name => "index_refinery_home_feature_translations_on_locale"
+  add_index "refinery_home_feature_translations", ["refinery_home_feature_id"], :name => "index_0cb94798f51d707f94b08b67bc8246355ee62bcf"
+
+  create_table "refinery_home_features", :force => true do |t|
+    t.string   "title"
+    t.integer  "logo_id"
+    t.string   "link_text"
+    t.string   "link_url"
+    t.integer  "main_image_id"
+    t.integer  "background_image_id"
+    t.integer  "position"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
