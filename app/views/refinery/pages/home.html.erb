@@ -31,16 +31,54 @@
   </div>
 </section>
 
+
 <section id="home-features">
+  <div class="container-fluid">
+    <div class="row">
+      <h1 class="text-center">What's new for 2015</h1>
 
-  <% @home_features.each do |hf| %>
-    <%= image_tag hf.logo.url %>
-    <%= link_to hf.link_text, hf.link_url %>
+        <div id="bike-frame-carousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <% @home_features.each_with_index do |hf, index| %>
+            <li data-target="#bike-frame-carousel" data-slide-to="<%= index %>" class="<% if index == 0 %>active<% end %>"></li>
+            <% end %>
+          </ol>
 
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" >
 
-  <% end %>
+            <% @home_features.each_with_index do |hf, index| %>
+            <div class="item <% if index == 0 %>active<% end %>">
 
+              <div class="col-lg-9 col-sm-9 red-border1" id="home-bike-image">
 
+                <%= image_tag hf.main_image.url, alt: hf.title, class: 'img-responsive' %>
+              </div>
+              <div class="col-lg-3 col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1 red-border1 text-center" id="home-bike-logo">
+                <%= image_tag hf.logo.url, class: 'img-responsive text-center' %>
+                
+                <h3><%= link_to hf.link_text, hf.link_url %></h3>
+              </div>
+              <div class="col-lg-3 col-sm-3 col-xs-6 dhidden-xs red-border1" id="home-bike-bg">
+                <%= image_tag hf.background_image.url %>
+              </div>
+            </div>
+            <% end %>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#bike-frame-carousel" role="button" data-slide="prev">
+            <span class="fa fa-angle-left fa-4x"></span>
+          </a>
+          <a class="right carousel-control" href="#bike-frame-carousel" role="button" data-slide="next">
+            <span class="fa fa-angle-right fa-4x"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+   
+  </div>
 </section>
 
 
