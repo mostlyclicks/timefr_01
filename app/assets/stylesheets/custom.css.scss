@@ -30,17 +30,17 @@ section {
 //HOME - MADE IN FRANCE
 #home-made-in-france {
   min-height:80vh;
-
+  width:100%;
   position:relative;
   color:#fff;
   //background-image:url(made-in-france-p3.jpg);
-  @include background-style(cover, 50%, -100px, no-repeat);
+  @include background-style(cover, 50%, -190px, no-repeat);
   .row {
     background-color:rgba(0,0,0,1);
-    padding:0px 20px 20px 20px;
+    padding:20px 20px 20px 20px;
     position:absolute;
     bottom:0;
-    p {@include text-style(11px, 200, $white-alpha7);padding-top:10px;}
+    p {@include text-style(18px, 200, $white-alpha7);padding-top:10px;}
     img {margin:10px auto 10px auto;}
     h1 {@include text-style(24px, 200, $time-red);text-align:center;text-transform:uppercase;}
     h3 {@include text-style(18px, 200, $time-red);text-align:center;}
