@@ -11,3 +11,6 @@ Refinery::Pages::Engine.load_seed
 
 # Added by Refinery CMS HomeFeatures extension
 Refinery::HomeFeatures::Engine.load_seed
+
+# Added by Refinery CMS Bikes extension
+Refinery::Bikes::Engine.load_seed

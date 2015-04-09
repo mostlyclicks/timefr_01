@@ -1,6 +1,8 @@
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-bikes (1.0)
+      refinerycms-core (~> 2.1.5)
     refinerycms-home_features (1.0)
       refinerycms-core (~> 2.1.5)
 
@@ -242,6 +244,8 @@ GEM
     refinerycms-images (2.1.5)
       dragonfly (~> 0.9.14)
       refinerycms-core (= 2.1.5)
+    refinerycms-nested_models (0.0.5)
+      refinerycms-core (~> 2.1.0)
     refinerycms-pages (2.1.5)
       awesome_nested_set (~> 2.1.3)
       babosa (!= 0.3.6)
@@ -293,7 +297,9 @@ DEPENDENCIES
   rails (= 3.2.18)
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
+  refinerycms-bikes!
   refinerycms-home_features!
+  refinerycms-nested_models
   sass (~> 3.2.19)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
