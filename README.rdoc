@@ -2,3 +2,6 @@
 
 Bikes
 rails g refinery:engine bike name:string hero_logo:image hero_image:image hero_background:image hero_description:text fork_standard:text fork_standard_image:image fork_aktiv:text fork_aktiv_image:image --i18n name hero_description fork_standard fork_aktiv
+
+Bike Colors
+rails g refinery:engine color name:string image:image --extension bikes --namespace bikes --i18n name
