@@ -11,6 +11,12 @@
   </div>
 
   <div class='field'>
+    <%= f.label :bike_type -%>
+    <small>(choices: 'Aero', 'Altitude', 'Endurance', 'Specialty')</small>
+    <%= f.text_field :bike_type, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
     <%= f.label :hero_logo -%>
     <%= render '/refinery/admin/image_picker',
                :f => f,
@@ -64,12 +70,17 @@
 
   <section>
     <div class="field">
-      <h1><%= f.label :colors %></h1>
+      <h1><%= f.label :colors %> </h1>
+      <!-- <a data-toggle="collapse" href="#colorCollapse" aria-expanded="false" aria-controls="colorCollapse">Minimize</a> -->
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#colorCollapse" aria-expanded="false" aria-controls="colorCollapse">
+  Button with data-target
+</button>
+      <div class="collapse" id="colorCollapse">
       <%= f.fields_for :colors do |j| %>
         <%= render 'refinery/bikes/admin/bikes/color_fields', :f => j %>
       <% end %>
       <%= link_to_add_fields 'Add Color', f, :colors %>
-      
+      </div>
     </div>
   </section>
 

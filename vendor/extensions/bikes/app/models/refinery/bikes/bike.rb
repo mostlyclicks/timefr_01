@@ -3,9 +3,9 @@ module Refinery
     class Bike < Refinery::Core::BaseModel
       self.table_name = 'refinery_bikes'
 
-      attr_accessible :name, :hero_logo_id, :hero_image_id, :hero_background_id, :hero_description, :fork_standard, :fork_standard_image_id, :fork_aktiv, :fork_aktiv_image_id, :position, :colors_attributes
+      attr_accessible :name, :hero_logo_id, :hero_image_id, :hero_background_id, :hero_description, :fork_standard, :fork_standard_image_id, :fork_aktiv, :fork_aktiv_image_id, :position, :colors_attributes, :bike_type
 
-      translates :name, :hero_description, :fork_standard, :fork_aktiv
+      translates :name, :hero_description, :fork_standard, :fork_aktiv, :bike_type
 
       class Translation
         attr_accessible :locale
