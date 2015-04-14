@@ -97,7 +97,22 @@
 
 
 <section id="sec2">
-  <h1>Section two</h1>
+
+  <div class="container">
+    <h1>2015 Collection</h1>
+    <div class="row">
+      <div class="col-md-3">
+        <h3><%= @bike_type %></h3>
+          <% @home_skylon_aktiv.each do |c| %>
+          <%= image_tag c.image.url, class: 'img-responsive' %>
+          <%= c.name %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  
+
+
 
 </section>
 
