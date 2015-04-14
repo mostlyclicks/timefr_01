@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150409171037) do
+ActiveRecord::Schema.define(:version => 20150414162359) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -42,7 +42,10 @@ ActiveRecord::Schema.define(:version => 20150409171037) do
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
     t.string   "bike_type"
+    t.string   "slug"
   end
+
+  add_index "refinery_bikes", ["slug"], :name => "index_refinery_bikes_on_slug"
 
   create_table "refinery_bikes_color_translations", :force => true do |t|
     t.integer  "refinery_bikes_color_id"

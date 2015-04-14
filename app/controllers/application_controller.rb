@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
       @skylon_bike_type = b.bike_type
       @skylon_aktiv = b.colors.where(name: "Skylon | Plasma AKTIV")
       @skylon = b.colors.where(name: "Skylon | White")
+      @skylon_path = b.slug
     end
   end
 
@@ -24,6 +25,7 @@ class ApplicationController < ActionController::Base
       @izon_bike_type = b.bike_type
       @izon_aktiv = b.colors.where(name: "Izon | Red AKTIV")
       @izon = b.colors.where(name: "Izon | Red/Black")
+      @izon_path = b.slug
     end
   end
 
@@ -33,6 +35,7 @@ class ApplicationController < ActionController::Base
       @fluidity_bike_type = b.bike_type
       @fluidity_aktiv = b.colors.where(name: "Fluidity | Black AKTIV")
       @fluidity = b.colors.where(name: "Fluidity | White")
+      @fluidity_path = b.slug
     end
   end
 

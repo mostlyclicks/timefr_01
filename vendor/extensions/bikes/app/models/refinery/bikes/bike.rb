@@ -2,6 +2,8 @@ module Refinery
   module Bikes
     class Bike < Refinery::Core::BaseModel
       self.table_name = 'refinery_bikes'
+      extend FriendlyId
+      friendly_id :name, :use => [:slugged]
 
       attr_accessible :name, :hero_logo_id, :hero_image_id, :hero_background_id, :hero_description, :fork_standard, :fork_standard_image_id, :fork_aktiv, :fork_aktiv_image_id, :position, :colors_attributes, :bike_type
 

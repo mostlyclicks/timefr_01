@@ -107,14 +107,14 @@
           <div class="col-md-12 col-xs-6">
             <% @skylon_aktiv.each do |c| %>
               <%= image_tag c.image.url, class: 'img-responsive' %>
-              <%= c.name %>
-               <!-- #, bikes_bike_path(@bike) -->
+              <%= link_to c.name, bikes_bike_path(@skylon_path) %>
           <% end %>
           </div>
           <div class="col-md-12 col-xs-6">
             <% @skylon.each do |s| %>
               <%= image_tag s.image.url, class: 'img-responsive' %>
               <%= s.name %>
+              <%= link_to s.name, bikes_bike_path(@skylon_path) %>
             <% end %>
           </div>
         </div>
@@ -126,13 +126,13 @@
           <div class="col-md-12 col-xs-6">
             <% @izon_aktiv.each do |c| %>
               <%= image_tag c.image.url, class: 'img-responsive' %>
-              <%= c.name %>
+              <%= link_to c.name, bikes_bike_path(@izon_path) %>
           <% end %>
           </div>
           <div class="col-md-12 col-xs-6">
             <% @izon.each do |s| %>
               <%= image_tag s.image.url, class: 'img-responsive' %>
-              <%= s.name %>
+              <%= link_to s.name, bikes_bike_path(@izon_path) %>
             <% end %>
           </div>
         </div>
@@ -145,13 +145,13 @@
           <div class="col-md-12 col-xs-6">
             <% @fluidity_aktiv.each do |c| %>
               <%= image_tag c.image.url, class: 'img-responsive' %>
-              <%= c.name %>
+              <%= link_to c.name, bikes_bike_path(@fluidity_path) %>
           <% end %>
           </div>
           <div class="col-md-12 col-xs-6">
             <% @fluidity.each do |s| %>
               <%= image_tag s.image.url, class: 'img-responsive' %>
-              <%= s.name %>
+              <%= link_to s.name, bikes_bike_path(@fluidity_path) %>
             <% end %>
           </div>
         </div>
