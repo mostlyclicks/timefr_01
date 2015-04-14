@@ -106,6 +106,10 @@ p {@include text-style(14px, 200, $black-med);}
   top:20%;
 }
 
+.carousel-inner {
+  -webkit-transform-style: preserve-3d;
+}
+
 //FOOTER
 * {
    margin: 0;
