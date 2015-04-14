@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :load_home_features, :load_home_skylons, :load_home_izons, :load_home_fluidity
+  before_filter :load_home_features, :load_home_skylons, :load_home_izons, :load_home_fluidity, :load_home_bettini, :load_zxrs_piste
 
   protected
 
@@ -36,6 +36,24 @@ class ApplicationController < ActionController::Base
       @fluidity_aktiv = b.colors.where(name: "Fluidity | Black AKTIV")
       @fluidity = b.colors.where(name: "Fluidity | White")
       @fluidity_path = b.slug
+    end
+  end
+
+  def load_home_bettini
+    bike = Refinery::Bikes::Bike.where(name: 'Limited Edition Bettini VXrs')
+    bike.each do |b|
+      @specialty_bike_type = b.bike_type
+      @specialty_1 = b.colors.where(name: "Limited Edition Bettini VXrs")
+      @specialty_1_path = b.slug
+    end
+  end
+
+  def load_zxrs_piste
+    bike = Refinery::Bikes::Bike.where(name: 'ZXrs Piste')
+    bike.each do |b|
+      #@specialty_bike_type = b.bike_type
+      @specialty_2 = b.colors.where(name: "ZXrs Piste")
+      @specialty_2_path = b.slug
     end
   end
 

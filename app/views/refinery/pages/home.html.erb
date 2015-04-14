@@ -158,18 +158,18 @@
       </div>
 
       <div class="col-md-3">
-        <h3><%= @bike_skylon_type %></h3>
+        <h3><%= @specialty_bike_type %></h3>
          <div class="row">
           <div class="col-md-12 col-xs-6">
-            <% @skylon_aktiv.each do |c| %>
+            <% @specialty_1.each do |c| %>
               <%= image_tag c.image.url, class: 'img-responsive' %>
-              <%= c.name %>
+              <%= link_to c.name, bikes_bike_path(@specialty_1_path) %>
           <% end %>
           </div>
           <div class="col-md-12 col-xs-6">
-            <% @skylon.each do |s| %>
+            <% @specialty_2.each do |s| %>
               <%= image_tag s.image.url, class: 'img-responsive' %>
-              <%= s.name %>
+              <%= link_to s.name, bikes_bike_path(@specialty_2_path) %>
             <% end %>
           </div>
         </div>
