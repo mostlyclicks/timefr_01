@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :load_home_features, :load_home_skylons
+  before_filter :load_home_features, :load_home_skylons, :load_home_izons, :load_home_fluidity
 
   protected
 
@@ -10,18 +10,33 @@ class ApplicationController < ActionController::Base
   end
 
   def load_home_skylons
-    # @skylons = Refinery::Bikes::Bike.first.colors.all
-    # @skylons.each do |s|
-    #   if s.name =~
-    # end
-
-
-    @home_skylon_aktiv = Refinery::Bikes::Bike.first.colors.where(name: "Skylon AKTIV | Team")
-    @home_skylon = Refinery::Bikes::Bike.first.colors.where(name: "Skylon | White")
-    @bike_type = Refinery::Bikes::Bike.first.bike_type
+    bike = Refinery::Bikes::Bike.where(name: 'Skylon')
+    bike.each do |b|
+      @skylon_bike_type = b.bike_type
+      @skylon_aktiv = b.colors.where(name: "Skylon | Plasma AKTIV")
+      @skylon = b.colors.where(name: "Skylon | White")
+    end
   end
 
-  # def load_home_izons
-  #   @home_
-  # end
+  def load_home_izons
+    bike = Refinery::Bikes::Bike.where(name: 'Izon')
+    bike.each do |b|
+      @izon_bike_type = b.bike_type
+      @izon_aktiv = b.colors.where(name: "Izon | Red AKTIV")
+      @izon = b.colors.where(name: "Izon | Red/Black")
+    end
+  end
+
+  def load_home_fluidity
+    bike = Refinery::Bikes::Bike.where(name: 'Fluidity')
+    bike.each do |b|
+      @fluidity_bike_type = b.bike_type
+      @fluidity_aktiv = b.colors.where(name: "Fluidity | Black AKTIV")
+      @fluidity = b.colors.where(name: "Fluidity | White")
+    end
+  end
+
+
+
+
 end

@@ -98,16 +98,83 @@
 
 <section id="sec2">
 
-  <div class="container">
-    <h1>2015 Collection</h1>
+  <div class="container-fluid">
+   <h1>2015 Collection</h1>
     <div class="row">
       <div class="col-md-3">
-        <h3><%= @bike_type %></h3>
-          <% @home_skylon_aktiv.each do |c| %>
-          <%= image_tag c.image.url, class: 'img-responsive' %>
-          <%= c.name %>
-        <% end %>
+        <h3><%= @skylon_bike_type %></h3>
+        <div class="row">
+          <div class="col-md-12 col-xs-6">
+            <% @skylon_aktiv.each do |c| %>
+              <%= image_tag c.image.url, class: 'img-responsive' %>
+              <%= c.name %>
+               <!-- #, bikes_bike_path(@bike) -->
+          <% end %>
+          </div>
+          <div class="col-md-12 col-xs-6">
+            <% @skylon.each do |s| %>
+              <%= image_tag s.image.url, class: 'img-responsive' %>
+              <%= s.name %>
+            <% end %>
+          </div>
+        </div>
       </div>
+
+      <div class="col-md-3">
+        <h3><%= @izon_bike_type %></h3>
+         <div class="row">
+          <div class="col-md-12 col-xs-6">
+            <% @izon_aktiv.each do |c| %>
+              <%= image_tag c.image.url, class: 'img-responsive' %>
+              <%= c.name %>
+          <% end %>
+          </div>
+          <div class="col-md-12 col-xs-6">
+            <% @izon.each do |s| %>
+              <%= image_tag s.image.url, class: 'img-responsive' %>
+              <%= s.name %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+ 
+
+    <div class="col-md-3">
+        <h3><%= @fluidity_bike_type %></h3>
+         <div class="row">
+          <div class="col-md-12 col-xs-6">
+            <% @fluidity_aktiv.each do |c| %>
+              <%= image_tag c.image.url, class: 'img-responsive' %>
+              <%= c.name %>
+          <% end %>
+          </div>
+          <div class="col-md-12 col-xs-6">
+            <% @fluidity.each do |s| %>
+              <%= image_tag s.image.url, class: 'img-responsive' %>
+              <%= s.name %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h3><%= @bike_skylon_type %></h3>
+         <div class="row">
+          <div class="col-md-12 col-xs-6">
+            <% @skylon_aktiv.each do |c| %>
+              <%= image_tag c.image.url, class: 'img-responsive' %>
+              <%= c.name %>
+          <% end %>
+          </div>
+          <div class="col-md-12 col-xs-6">
+            <% @skylon.each do |s| %>
+              <%= image_tag s.image.url, class: 'img-responsive' %>
+              <%= s.name %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   
