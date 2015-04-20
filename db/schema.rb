@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150414162359) do
+ActiveRecord::Schema.define(:version => 20150420135108) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -65,6 +65,38 @@ ActiveRecord::Schema.define(:version => 20150414162359) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "bike_id"
+  end
+
+  create_table "refinery_group_translations", :force => true do |t|
+    t.integer  "refinery_group_id"
+    t.string   "locale",            :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "name"
+    t.string   "shift_levers"
+    t.string   "brakes"
+    t.string   "front_derailleur"
+    t.string   "rear_derailleur"
+    t.string   "crankset"
+    t.string   "cassette"
+    t.string   "chain"
+  end
+
+  add_index "refinery_group_translations", ["locale"], :name => "index_refinery_group_translations_on_locale"
+  add_index "refinery_group_translations", ["refinery_group_id"], :name => "index_refinery_group_translations_on_refinery_group_id"
+
+  create_table "refinery_groups", :force => true do |t|
+    t.string   "name"
+    t.string   "shift_levers"
+    t.string   "brakes"
+    t.string   "front_derailleur"
+    t.string   "rear_derailleur"
+    t.string   "crankset"
+    t.string   "cassette"
+    t.string   "chain"
+    t.integer  "position"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "refinery_home_feature_translations", :force => true do |t|

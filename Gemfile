@@ -54,3 +54,4 @@ gem 'refinerycms-nested_models'
 
 gem 'refinerycms-home_features', :path => 'vendor/extensions'
 gem 'refinerycms-bikes', :path => 'vendor/extensions'
+gem 'refinerycms-groups', :path => 'vendor/extensions'
