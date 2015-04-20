@@ -1,3 +1,33 @@
+<style>
+  #l2-bike {background-image:url(<%= @bike.hero_background.url %>);}
+</style>
+
+
+<!-- L2 BIKE INTRO -->
+<section class="show" id="l2-bike">
+  <div class="container">
+    <%#= render '/refinery/content_page' %>
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-lg-8" id="bike-img">
+        <%#= image_fu @bike.hero_image, '1200x765c', class: 'img-responsive' %>
+        <%= image_tag @bike.hero_image.url, class: 'img-responsive2' %>
+      </div>
+      <div class="col-md-4 col-lg-4" id="bike-main-txt">
+        <%= image_tag @bike.hero_logo.url, class: 'img-responsive' %>
+        <%=raw @bike.hero_description %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 <% content_for :body_content_title do %>
   <%= @bike.name %>
 <% end %>
@@ -72,7 +102,7 @@
   </aside>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+<%#= render '/refinery/content_page' %>
 
 <section id="groups">
 <%# if @bike.name == 'Skylon' %>

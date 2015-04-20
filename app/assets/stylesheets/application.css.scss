@@ -13,6 +13,7 @@
  * require_self
  * require_tree .
  */
-@import 'custom';
+@import 'custom.css.scss';
+@import 'responsive.css.scss';
 @import "bootstrap-sprockets";
 @import "bootstrap";
