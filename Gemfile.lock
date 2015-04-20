@@ -7,6 +7,8 @@ PATH
       refinerycms-core (~> 2.1.5)
     refinerycms-home_features (1.0)
       refinerycms-core (~> 2.1.5)
+    refinerycms-pedals (1.0)
+      refinerycms-core (~> 2.1.5)
 
 GEM
   remote: https://rubygems.org/
@@ -303,6 +305,7 @@ DEPENDENCIES
   refinerycms-groups!
   refinerycms-home_features!
   refinerycms-nested_models
+  refinerycms-pedals!
   sass (~> 3.2.19)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
