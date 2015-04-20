@@ -106,6 +106,17 @@ section {
    #bike-img img {@include bike-hero-style(0px, 100%);}
  }
 
+ #aktiv-choice {
+  padding:40px 0px;
+  h3 {
+    @include text-style(40px, 100, $time-red);
+    text-align:center;
+  }
+    .ac-desc {
+      padding:20px 20px;
+    }
+ }
+
 #groups {
   .group {
     padding:0px 10px!important;

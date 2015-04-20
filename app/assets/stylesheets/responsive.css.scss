@@ -33,6 +33,19 @@
       }
     }
   }
+
+#aktiv-choice {
+  padding:80px 0px;
+  h3 {
+    @include text-style(40px, 100, $time-red);
+    text-align:center;
+  }
+    .ac-desc {
+      p {@include text-style(16px, 200, $black-med);}
+      padding:20px 100px;
+    }
+ }
+
   #aktiv-biker {
   .row {background:none;}
    min-height:1000px;
