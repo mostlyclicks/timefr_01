@@ -150,7 +150,7 @@
               <%= link_to c.name, bikes_bike_path(@specialty_1_path) %>
           <% end %>
           </div>
-          <div class="col-md-12 col-xs-6 bikes-frames-bikes">in
+          <div class="col-md-12 col-xs-6 bikes-frames-bikes">
             <% @specialty_2.each do |s| %>
               <%= image_tag s.image.url, class: 'img-responsive' %>
               <%= link_to s.name, bikes_bike_path(@specialty_2_path) %>
@@ -176,5 +176,25 @@
       </div>
     </div>
   </div>
-  
+</section>
+
+<!-- PEDALS  ***************************** -->
+<section id="pedals">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+      <h1>Pedals</h1></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <%= image_tag 'PEDALS-road-xpresso15-profil.png', class: 'img-responsive' %>
+      </div>
+      <div class="col-lg-6 col-lg-offset-3 text-center" id="pedal-txt">
+        <%= raw @page.content_for(:pedal_section) %>
+        
+          
+        </p>
+      </div>
+    </div>
+  </div>
 </section>

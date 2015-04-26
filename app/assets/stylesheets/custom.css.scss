@@ -80,7 +80,7 @@ section {
 
 //HOME - AKTIV
 #aktiv {
-  padding:40px 20px;
+  padding:40px 20px 100px 20px;
   @include gradient-bg(#000, #fff, 100%);//$start-color, $end-color, $gradient-point
   #aktiv-txt {
     h3 {@include text-style(24px, 100, $time-red);}
@@ -88,6 +88,22 @@ section {
     p {@include text-style(14px, 200, $white-alpha7);}
     img {margin:0 auto;}
   }
+}
+
+//HOME - PEDALS
+#pedals {
+  h1 {
+    @include text-style(48px, 100, #fff);
+    color:#fff;
+    text-shadow:0 0 5px rgba(0,0,0,.8);}
+  h3 {@include text-style(24px, 100, $time-red);}
+  h4 {@include text-style(20px, 200, $time-red);}
+  padding:80px 0;
+  background-image:url(clouds.jpg);
+  background-size:cover;
+  background-position-y:20%;
+  // background-color:rgba(235,235,235,.1);
+
 }
 
 
