@@ -57,6 +57,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # def load_home_akitv
+  #   @aktiv_bikes
+
+  # end
+
 
 
 
