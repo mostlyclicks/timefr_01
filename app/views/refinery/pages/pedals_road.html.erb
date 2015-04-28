@@ -1,0 +1,23 @@
+<%# @road_pedals.each do |p| %>
+  <%#= p.name %>
+
+<%# end %>
+
+<%= @road_pedals.count %>
+<% @road_pedals.each do |rp| %>
+  <p><%= rp.name %></p>
+
+<% end %>
+
+
+<div class="container">
+  <div class="row">
+    <% @road_pedals.each do |rp| %>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
+        <%#= image_tag rp.pedal_image.url, class: 'img-responsive' %>
+        <h3><%= rp.name %> | <%= rp.weight %></h3>
+        <small><%= rp.description %></small>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :load_home_features, :load_home_skylons, :load_home_izons, :load_home_fluidity, :load_home_bettini, :load_zxrs_piste
+  before_filter :load_home_features, :load_home_skylons, :load_home_izons, :load_home_fluidity, :load_home_bettini, :load_zxrs_piste, :load_road_pedals, :load_mtb_pedals
 
   protected
 
@@ -55,6 +55,14 @@ class ApplicationController < ActionController::Base
       @specialty_2 = b.colors.where(name: "ZXrs Piste")
       @specialty_2_path = b.slug
     end
+  end
+
+  def load_road_pedals
+    #@road_pedals = Refinery::Pedals::Pedal.where(riding_type: 'Road')
+  end
+
+  def load_mtb_pedals
+    #@mtb_pedals = Refinery::Pedals::Pedal.where(riding_type: 'MTB')
   end
 
   # def load_home_akitv

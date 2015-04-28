@@ -19,7 +19,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="time-nav">
       <% presenter = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self) %>
-      <% presenter.max_depth = 1 %>
+      <% presenter.max_depth = 2 %>
       <%= presenter.to_html %>
     </div>
   </div>

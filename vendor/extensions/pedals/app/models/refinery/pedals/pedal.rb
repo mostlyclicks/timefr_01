@@ -5,7 +5,7 @@ module Refinery
 
       attr_accessible :name, :riding_type, :category, :weight, :description, :pedal_image_id, :position
 
-      translates :name, :riding_type, :category, :description
+      translates :name, :riding_type, :category, :weight, :description
 
       class Translation
         attr_accessible :locale

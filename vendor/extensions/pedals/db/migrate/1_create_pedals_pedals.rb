@@ -13,17 +13,13 @@ class CreatePedalsPedals < ActiveRecord::Migration
       t.timestamps
     end
 
-    Refinery::Pedals::Pedal.create_translation_table! :name => :string, :riding_type => :string, :category => :string, :description => :text
+    Refinery::Pedals::Pedal.create_translation_table! :name => :string, :riding_type => :string, :category => :string, :weight => :string, :description => :text
 
   end
 
   def down
     if defined?(::Refinery::UserPlugin)
       ::Refinery::UserPlugin.destroy_all({:name => "refinerycms-pedals"})
-    end
-
-    if defined?(::Refinery::Page)
-      ::Refinery::Page.delete_all({:link_url => "/pedals/pedals"})
     end
 
     drop_table :refinery_pedals

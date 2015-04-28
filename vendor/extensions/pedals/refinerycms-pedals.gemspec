@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name              = 'refinerycms-pedals'
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Pedals extension for Refinery CMS'
-  s.date              = '2015-04-20'
+  s.date              = '2015-04-28'
   s.summary           = 'Pedals extension for Refinery CMS'
   s.require_paths     = %w(lib)
   s.files             = Dir["{app,config,db,lib}/**/*"] + ["readme.md"]
