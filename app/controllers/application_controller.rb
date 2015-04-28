@@ -63,6 +63,9 @@ class ApplicationController < ActionController::Base
 
   def load_mtb_pedals
     @mtb_pedals = Refinery::Pedals::Pedal.where(riding_type: 'MTB')
+    @mtb_pedals_xc = @mtb_pedals.where(category: 'XC')
+    @mtb_pedals_mx = @mtb_pedals.where(category: 'MX')
+    @mtb_pedals_dh = @mtb_pedals.where(category: 'DH')
   end
 
   # def load_home_akitv
