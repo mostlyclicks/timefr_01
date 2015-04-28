@@ -58,11 +58,11 @@ class ApplicationController < ActionController::Base
   end
 
   def load_road_pedals
-    #@road_pedals = Refinery::Pedals::Pedal.where(riding_type: 'Road')
+    @road_pedals = Refinery::Pedals::Pedal.where(riding_type: 'Road')
   end
 
   def load_mtb_pedals
-    #@mtb_pedals = Refinery::Pedals::Pedal.where(riding_type: 'MTB')
+    @mtb_pedals = Refinery::Pedals::Pedal.where(riding_type: 'MTB')
   end
 
   # def load_home_akitv

@@ -1,16 +1,32 @@
-<%# @road_pedals.each do |p| %>
-  <%#= p.name %>
+<section id="pedal-xpresso-hero">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-4" id="pedal-main-txt">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2"><%= image_tag 'LOGO-XPRESSO-white.png', class: 'img-responsive' %>
+          </div>
+        </div>
+        <%= raw @page.content_for(:hero_text) %>
+          <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0">
+              <%= image_tag 'PEDALS-road-xpresso15-pers.png', class: 'img-responsive' %>
+            </div>
+          </div>
+      </div>
+   
+    </div>
+  </div>
+</section>
 
-<%# end %>
+<section class="pedals-xpresso">
+  <div class="container">
+    <div class="col-lg-12">
+      <%= raw @page.content_for(:body) %>
+    </div>
+  </div>
+</section>
 
-<%= @road_pedals.count %>
-<% @road_pedals.each do |rp| %>
-  <p><%= rp.name %></p>
-
-<% end %>
-
-
-<div class="container">
+<div class="container pedals-xpresso">
   <div class="row">
     <% @road_pedals.each do |rp| %>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
