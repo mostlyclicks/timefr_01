@@ -2,8 +2,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_filter :load_home_features, :load_home_skylons, :load_home_izons, :load_home_fluidity, :load_home_bettini, :load_zxrs_piste, :load_road_pedals, :load_mtb_pedals
+  before_filter :load_geo
+
 
   protected
+
+  def load_geo
+    @geoip = GeoIP.new(Rails.root.join("GeoIP.dat"))
+  end
 
   def load_home_features
     @home_features = Refinery::HomeFeatures::HomeFeature.all

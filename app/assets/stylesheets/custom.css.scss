@@ -216,3 +216,16 @@ section {
      margin-top:1em;
    }
  }
+
+
+.page-wrap {
+   min-height: 100%;
+   /* equal to footer height */
+   margin-bottom: -350px; 
+ }
+
+  .site-footer, .page-wrap:after {
+   /* .push must be the same height as footer */
+   height: 350px; 
+ }
+
