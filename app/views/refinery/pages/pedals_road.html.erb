@@ -27,10 +27,32 @@
 </section>
 
 <div class="container pedals-xpresso">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offet-1">
+        <%= image_tag 'LOGO-XPRESSO.png', class: 'img-responsive atac-logo' %>
+      </div>
+    </div>
   <div class="row">
-    <% @road_pedals.each do |rp| %>
+    <% @road_pedals_xpresso.each do |rp| %>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-        <%= image_tag rp.pedal_image.url, class: 'img-responsive' %>
+        <%#= image_tag rp.pedal_image.url, class: 'img-responsive' %>
+        <h3><%= rp.name %> | <%= rp.weight %></h3>
+        <small><%= rp.description %></small>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container pedals-xpresso">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offet-1">
+        <%= image_tag 'LOGO-RXS.png', class: 'img-responsive atac-logo' %>
+      </div>
+    </div>
+  <div class="row">
+    <% @road_pedals_rxs.each do |rp| %>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
+        <%#= image_tag rp.pedal_image.url, class: 'img-responsive' %>
         <h3><%= rp.name %> | <%= rp.weight %></h3>
         <small><%= rp.description %></small>
       </div>

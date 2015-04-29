@@ -59,6 +59,8 @@ class ApplicationController < ActionController::Base
 
   def load_road_pedals
     @road_pedals = Refinery::Pedals::Pedal.where(riding_type: 'Road')
+    @road_pedals_xpresso = @road_pedals.where(category: 'Xpresso')
+    @road_pedals_rxs = @road_pedals.where(category: 'RXS')
   end
 
   def load_mtb_pedals
