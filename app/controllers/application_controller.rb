@@ -76,12 +76,4 @@ class ApplicationController < ActionController::Base
     @mtb_pedals_dh = @mtb_pedals.where(category: 'DH')
   end
 
-  # def load_home_akitv
-  #   @aktiv_bikes
-
-  # end
-
-
-
-
 end

@@ -1,0 +1,36 @@
+<section id="aktiv-hero">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-8 col-md-5 col-md-offset-7 col-sm-6 col-sm-offset-6" id="hero-txt" style="background-color:rgba(0,0,0,.8);height:100%;">
+        <%= raw @page.content_for(:main) %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aktiv-biker">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-6">
+        <%= raw @page.content_for(:aktiv_section_2) %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aktiv-graph">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <%= raw @page.content_for(:aktiv_graph) %>
+    </div>
+  </div>
+</section>
+
+<section id="aktiv-models">
+  <div class="container">
+    <div class="row text-center">
+      <%= raw @page.content_for(:aktiv_models) %>
+    </div>
+  </div>
+</section>
+
