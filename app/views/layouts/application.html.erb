@@ -12,9 +12,21 @@
 
 
 <nav id='locale'>
+    <%# ::Refinery::I18n.frontend_locales.each do |locale| %>
+      <%#= link_to_if Globalize.locale.to_s != locale.to_s, locale, refinery.url_for{:locale => locale} %>
+    <%# end %>
+
+    <!-- THIS WORKS -->
+    <%# new_locale = ::Refinery::I18n.frontend_locales.detect{|locale| Globalize.locale.to_s != locale.to_s} %>
+    
+    <%#= link_to new_locale, refinery.url_for(params.merge(locale: new_locale)) %>
+
+    <!-- combo of block and working link -->
     <% ::Refinery::I18n.frontend_locales.each do |locale| %>
-      <%= link_to_if Globalize.locale.to_s != locale.to_s, locale, {:locale => locale} %>
+      <%= link_to_if Globalize.locale.to_s != locale.to_s, locale, refinery.url_for(params.merge(locale: locale)) %>
     <% end %>
+
+
 </nav>
         <%= render "/refinery/header" -%>
       </header>

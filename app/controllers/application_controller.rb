@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   before_filter :load_geo
 
 
+
+
   protected
 
   def load_geo
