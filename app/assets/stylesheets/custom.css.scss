@@ -384,17 +384,21 @@ section {
 
   #accessories-intro {
     padding:20px;
+    h1 {@include header-style(48px, 100, $time-red)}
+    h3 {@include header-style(24px, 100, $time-red)}
   }
 
    #pedal-accessories-intro {
     padding:20px;
+    h1 {@include header-style(48px, 100, $time-red)}
+    h3 {@include header-style(24px, 100, $time-red)}
   }
 
   #handlebars {
     background-color:rgba(220,220,220,.1);
     padding:20px;
      h1 {@include header-style(48px, 100, $time-red)}
-     h2 {@include header-style(24px, 100, $time-red)}
+     h3 {@include header-style(24px, 100, $time-red)}
      //border:1px solid red;
 
     .accessory-title {
@@ -414,6 +418,29 @@ section {
           border-left:0px solid $time-red;
         p {padding:20px 0px 20px 0px;}
   }
+
+  #stems, #cleats {
+    img {padding:30px;}
+  }
+  #stems {
+    background-color:#000;
+    padding:20px;
+    h1 {@include header-style(48px, 100, #fff)}
+    h2 {@include header-style(24px, 100, #fff)}
+    .accessory-title {
+      h2, h3 {color:#fff;}
+    }
+    .accessory-desc {
+      p {color:rgba(255,255,255,.6);}
+    }
+
+  }
+
+  #cleat-plates {
+    h1 {@include header-style(48px, 100, $time-red)}
+    padding:20px 20px 40px 20px;
+  }
+
 
 
 
