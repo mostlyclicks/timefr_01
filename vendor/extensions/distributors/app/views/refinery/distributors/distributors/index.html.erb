@@ -1,0 +1,27 @@
+<section id="dist-top"></section>
+
+<section id="dist-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1><%= @page.title %></h1>
+        <%= raw @page.content_for(:body) %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dist-grid">
+  <div class="container">
+    <div class="row">
+      <% @distributors.each do |d| %>
+        <div class="col-md-3 col-sm-4 distributors">
+          <strong><%= d.name.html_safe %></strong><br />
+          <%= d.address.html_safe %><br />
+          TEL: <%= d.telephone %><br />
+          <% if d.fax.present? %>FAX: <%= d.fax %><% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

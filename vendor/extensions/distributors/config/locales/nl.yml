@@ -1,0 +1,33 @@
+nl:
+  refinery:
+    plugins:
+      distributors:
+        title: Distributors
+    distributors:
+      admin:
+        distributors:
+          actions:
+            create_new: Nieuwe Distributor toevoegen
+            reorder: De volgorde van de Distributors wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Distributor-volgorde
+          records:
+            title: Distributors
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Distributors. Druk op 'Nieuwe Distributor toevoegen' om de eerste toe te voegen.
+          distributor:
+            view_live_html: Deze distributor op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze distributor
+            delete: Deze distributor definitief verwijderen
+      distributors:
+        show:
+          other: Andere Distributors
+  activerecord:
+    attributes:
+      'refinery/distributors/distributor':
+        name: Name
+        address: Address
+        country: Country
+        telephone: Telephone
+        fax: Fax
+        website: Website
+        email: Email

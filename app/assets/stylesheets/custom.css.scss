@@ -441,6 +441,40 @@ section {
     padding:20px 20px 40px 20px;
   }
 
+  //Distributors
+
+#dist-grid {
+  padding:80px 20px;
+  .distributors {
+    min-height:12em;
+    color:rgba(0,0,0,.6);
+    strong {
+      text-transform: uppercase;
+      font-weight:600;
+    }
+  }
+
+}
+
+#dist-top {
+  height:300px;
+  padding:0;
+  background-image:url(contender_6.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position-y:50%;
+}
+
+#dist-text {
+  h1 {
+    @include header-style(48px, 100, $time-red);
+    margin-top:1em;
+  }
+  p {color:rgba(0,0,0,.6);} 
+
+
+}
+
 
 
 

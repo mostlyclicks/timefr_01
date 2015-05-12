@@ -1,0 +1,33 @@
+it:
+  refinery:
+    plugins:
+      distributors:
+        title: Distributors
+    distributors:
+      admin:
+        distributors:
+          actions:
+            create_new: Aggiungi Nuovo Distributor
+            reorder: Riordina Distributors
+            reorder_done: Termina il Riordino di Distributors
+          records:
+            title: Distributors
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Distributors. Clicca "Aggiungi Nuovo Distributor" per aggiungere il tuo primo distributor.
+          distributor:
+            view_live_html: Guarda live questo distributor <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo distributor
+            delete: Rimuovi per sempre questo distributor
+      distributors:
+        show:
+          other: Altri Distributors
+  activerecord:
+    attributes:
+      'refinery/distributors/distributor':
+        name: Name
+        address: Address
+        country: Country
+        telephone: Telephone
+        fax: Fax
+        website: Website
+        email: Email

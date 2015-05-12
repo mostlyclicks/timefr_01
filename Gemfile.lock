@@ -3,6 +3,8 @@ PATH
   specs:
     refinerycms-bikes (1.0)
       refinerycms-core (~> 2.1.5)
+    refinerycms-distributors (1.0)
+      refinerycms-core (~> 2.1.5)
     refinerycms-groups (1.0)
       refinerycms-core (~> 2.1.5)
     refinerycms-home_features (1.0)
@@ -304,6 +306,7 @@ DEPENDENCIES
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
   refinerycms-bikes!
+  refinerycms-distributors!
   refinerycms-groups!
   refinerycms-home_features!
   refinerycms-nested_models

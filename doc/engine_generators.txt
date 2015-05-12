@@ -1,0 +1,3 @@
+engine_generators.txt
+
+rails generate refinery:engine distributor name:string address:text country:string telephone:string fax:string website:string email:string

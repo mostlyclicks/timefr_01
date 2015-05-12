@@ -1,0 +1,33 @@
+tr:
+  refinery:
+    plugins:
+      distributors:
+        title: Distributors
+    distributors:
+      admin:
+        distributors:
+          actions:
+            create_new: Yeni Ekle Distributor
+            reorder: Tekrar sirala Distributors
+            reorder_done: Tekrar siralama tamamlandiDistributors
+          records:
+            title: Distributors
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Distributors yok henuz.  Tikla "Yeni Ekle Distributor" eklemek senin ilk distributor.
+          distributor:
+            view_live_html: Bunu canlu distributor goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle distributor
+            delete: Bunu Sil distributor sonsuza dek
+      distributors:
+        show:
+          other: Diger Distributors
+  activerecord:
+    attributes:
+      'refinery/distributors/distributor':
+        name: Name
+        address: Address
+        country: Country
+        telephone: Telephone
+        fax: Fax
+        website: Website
+        email: Email
