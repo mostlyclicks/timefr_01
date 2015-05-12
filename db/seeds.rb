@@ -47,17 +47,17 @@ Refinery::Groups::Engine.load_seed
   {name: 'Quality Bicycle Products', address: '6400 West 105th Street<br />Bloomington<br />Minnesota 55438 - 2554', country: 'USA', telephone: '1 (952) 941-9391 ', fax: '1 (952) 656-5262', website: '', email: ''}
 ]
 
-@distributors.each do |d|
-  Refinery::Distributors::Distributor.create(
-    name: d[:name],
-    address: d[:address],
-    country: d[:country],
-    telephone: d[:telephone],
-    fax: d[:fax],
-    website: d[:website],
-    email: d[:email]
-  )
-end
+# @distributors.each do |d|
+#   Refinery::Distributors::Distributor.create(
+#     name: d[:name],
+#     address: d[:address],
+#     country: d[:country],
+#     telephone: d[:telephone],
+#     fax: d[:fax],
+#     website: d[:website],
+#     email: d[:email]
+#   )
+# end
 
 @groups = [
   {name: 'Super Record EPS', shift_levers: 'Super Record EPS', brakes: 'Super Record', front_derailleur: 'Super Record EPS', rear_derailleur: 'Super Record EPS', crankset: 'Super Record Ti Carbon 50/34', cassette: 'Super Record 12-25', chain: 'Record' },
