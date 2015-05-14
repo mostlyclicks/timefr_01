@@ -131,13 +131,7 @@
         <%= image_tag 'TIME-2015-geometry.png', class: 'img-responsive center-it' %>
       </div>
       <div class="col-lg-7">
-
-        
-
         <% get_bike_geometry(@bike.name) %>
-          
-
-
         <% @bike_geometry.each do |g| %>
         <h3><%= g.name %></h3>
         <%= g.geometry_table.html_safe %>
@@ -150,14 +144,6 @@
 
 
 <section id="groups">
-<%# if @bike.name == 'Skylon' %>
-  
-<%# elsif @bike.name == 'Izon' %>
-
-<%# else %>
-
-<%# end %>
-
 <div class="container">
   <h1 class="text-center">Component Groups</h1>
   <div class="row">
