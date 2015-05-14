@@ -1,0 +1,29 @@
+it:
+  refinery:
+    plugins:
+      geometries:
+        title: Geometries
+    geometries:
+      admin:
+        geometries:
+          actions:
+            create_new: Aggiungi Nuovo Geometry
+            reorder: Riordina Geometries
+            reorder_done: Termina il Riordino di Geometries
+          records:
+            title: Geometries
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Geometries. Clicca "Aggiungi Nuovo Geometry" per aggiungere il tuo primo geometry.
+          geometry:
+            view_live_html: Guarda live questo geometry <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo geometry
+            delete: Rimuovi per sempre questo geometry
+      geometries:
+        show:
+          other: Altri Geometries
+  activerecord:
+    attributes:
+      'refinery/geometries/geometry':
+        name: Name
+        geometry_table: Geometry Table
+        geometry_image: Geometry Image

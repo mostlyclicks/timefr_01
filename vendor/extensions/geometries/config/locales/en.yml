@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      geometries:
+        title: Geometries
+    geometries:
+      admin:
+        geometries:
+          actions:
+            create_new: Add New Geometry
+            reorder: Reorder Geometries
+            reorder_done: Done Reordering Geometries
+          records:
+            title: Geometries
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Geometries yet. Click "Add New Geometry" to add your first geometry.
+          geometry:
+            view_live_html: View this geometry live <br/><em>(opens in a new window)</em>
+            edit: Edit this geometry
+            delete: Remove this geometry forever
+      geometries:
+        show:
+          other: Other Geometries
+  activerecord:
+    attributes:
+      'refinery/geometries/geometry':
+        name: Name
+        geometry_table: Geometry Table
+        geometry_image: Geometry Image

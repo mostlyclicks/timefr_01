@@ -142,3 +142,6 @@ Refinery::Pedals::Engine.load_seed
 
 # Added by Refinery CMS Distributors extension
 Refinery::Distributors::Engine.load_seed
+
+# Added by Refinery CMS Geometries extension
+Refinery::Geometries::Engine.load_seed

@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Geometries::Admin::GeometriesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.geometries_admin_geometries_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_geometries_admin_geometry_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Geometries::Admin::GeometriesController.sortable? && ::Refinery::Geometries::Geometry.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Geometries"),
+                 refinery.geometries_admin_geometries_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Geometries"),
+                 refinery.geometries_admin_geometries_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

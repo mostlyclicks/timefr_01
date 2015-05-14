@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      geometries:
+        title: Geometries
+#        article: masculino/femenino
+    geometries:
+      admin:
+        geometries:
+          actions:
+            create_new: Crear nuevo geometry
+            reorder: Reordenar geometries
+            reorder_done: Reordenación de geometries completada
+          records:
+            title: Geometries
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay geometries todavía. Pulsa en "Crear nuevo Geometry" para crear tu primer geometry.
+          geometry:
+            view_live_html: Ver este geometry como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este geometry
+            delete: Borrar este geometry para siempre
+      geometries:
+        show:
+          other: Otros geometries
+  activerecord:
+    attributes:
+      'refinery/geometries/geometry':
+        name: Name
+        geometry_table: Geometry Table
+        geometry_image: Geometry Image

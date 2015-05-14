@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      geometries:
+        title: Geometries
+    geometries:
+      admin:
+        geometries:
+          actions:
+            create_new: Pridať Geometry
+            reorder: Preusporiadať Geometries
+            reorder_done: Koniec radenia Geometries
+          records:
+            title: Geometries
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Geometries. Kliknite na "Pridať Geometry" pre pridanie prvého geometry.
+          geometry:
+            view_live_html: Zobraziť náhľad geometry<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť geometry
+            delete: Zmazať geometry
+      geometries:
+        show:
+          other: Daľšie Geometries
+  activerecord:
+    attributes:
+      'refinery/geometries/geometry':
+        name: Name
+        geometry_table: Geometry Table
+        geometry_image: Geometry Image

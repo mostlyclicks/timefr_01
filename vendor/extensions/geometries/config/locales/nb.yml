@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      geometries:
+        title: Geometries
+    geometries:
+      admin:
+        geometries:
+          actions:
+            create_new: Lag en ny Geometry
+            reorder: Endre rekkefølgen på Geometries
+            reorder_done: Ferdig å endre rekkefølgen Geometries
+          records:
+            title: Geometries
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Geometries enda. Klikk på "Lag en ny Geometry" for å legge til din første geometry.
+          geometry:
+            view_live_html: Vis hvordan denne geometry ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne geometry
+            delete: Fjern denne geometry permanent
+      geometries:
+        show:
+          other: Andre Geometries
+  activerecord:
+    attributes:
+      'refinery/geometries/geometry':
+        name: Name
+        geometry_table: Geometry Table
+        geometry_image: Geometry Image

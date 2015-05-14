@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      geometries:
+        title: Geometries
+    geometries:
+      admin:
+        geometries:
+          actions:
+            create_new: 建立新的 Geometry
+            reorder: 对 Geometries 重新排序
+            reorder_done: 对 Geometries 的重新排序结束
+          records:
+            title: Geometries
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Geometries yet. Click "Add New Geometry" to add your first geometry.
+            no_items_yet: 目前没有 Geometries . 点击 "Add New Geometry" 创建一个geometry.
+          geometry:
+            view_live_html: 查看 geometry 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 geometry
+            delete: 永久删除 geometry
+      geometries:
+        show:
+          other: 其他 Geometries
+  activerecord:
+    attributes:
+      'refinery/geometries/geometry':
+        name: Name
+        geometry_table: Geometry Table
+        geometry_image: Geometry Image

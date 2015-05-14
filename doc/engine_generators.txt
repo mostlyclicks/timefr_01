@@ -1,3 +1,5 @@
 engine_generators.txt
 
 rails generate refinery:engine distributor name:string address:text country:string telephone:string fax:string website:string email:string
+
+rails g refinery:geometry name:string geometry_table:text geometry_image:image --i18n name geometry_table --skip-frontend

@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      geometries:
+        title: Geometries
+    geometries:
+      admin:
+        geometries:
+          actions:
+            create_new: Nieuwe Geometry toevoegen
+            reorder: De volgorde van de Geometries wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Geometry-volgorde
+          records:
+            title: Geometries
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Geometries. Druk op 'Nieuwe Geometry toevoegen' om de eerste toe te voegen.
+          geometry:
+            view_live_html: Deze geometry op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze geometry
+            delete: Deze geometry definitief verwijderen
+      geometries:
+        show:
+          other: Andere Geometries
+  activerecord:
+    attributes:
+      'refinery/geometries/geometry':
+        name: Name
+        geometry_table: Geometry Table
+        geometry_image: Geometry Image

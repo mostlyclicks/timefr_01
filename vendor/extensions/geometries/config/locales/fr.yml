@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      geometries:
+        title: Geometries
+    geometries:
+      admin:
+        geometries:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Geometry
+            reorder: Réordonner les Geometries
+            reorder_done: Fin de réordonnancement des Geometries
+          records:
+            title: Geometries
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Geometry. Cliquer sur "Créer un(e) nouve(au/l/lle) Geometry" pour créer votre premi(er/ère) geometry.'
+          geometry:
+            view_live_html: Voir ce(t/tte) geometry <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) geometry
+            delete: Supprimer définitivement ce(t/tte) geometry
+      geometries:
+        show:
+          other: Autres Geometries
+  activerecord:
+    attributes:
+      'refinery/geometries/geometry':
+        name: Name
+        geometry_table: Geometry Table
+        geometry_image: Geometry Image
