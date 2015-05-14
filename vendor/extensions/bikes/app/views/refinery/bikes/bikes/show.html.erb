@@ -1,3 +1,4 @@
+
 <style>
   #l2-bike {background-image:url(<%= @bike.hero_background.url %>);}
 </style>
@@ -122,6 +123,31 @@
 <% end %>
 
 <%#= render '/refinery/content_page' %>
+
+<section id="l2-geometry">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <%= image_tag 'TIME-2015-geometry.png', class: 'img-responsive center-it' %>
+      </div>
+      <div class="col-lg-7">
+
+        
+
+        <% get_bike_geometry(@bike.name) %>
+          
+
+
+        <% @bike_geometry.each do |g| %>
+        <h3><%= g.name %></h3>
+        <%= g.geometry_table.html_safe %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <section id="groups">
 <%# if @bike.name == 'Skylon' %>

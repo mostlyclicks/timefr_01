@@ -3,6 +3,11 @@ class ApplicationController < ActionController::Base
 
   before_filter :load_home_features, :load_home_skylons, :load_home_izons, :load_home_fluidity, :load_home_bettini, :load_zxrs_piste, :load_road_pedals, :load_mtb_pedals
   before_filter :load_geo
+  before_filter :load_geometries
+  # before_filter :get_bike_geometry
+
+
+
 
 
 
@@ -77,5 +82,13 @@ class ApplicationController < ActionController::Base
     @mtb_pedals_mx = @mtb_pedals.where(category: 'MX')
     @mtb_pedals_dh = @mtb_pedals.where(category: 'DH')
   end
+
+  def load_geometries
+    # @skylon_geometry = Refinery::Geometries::Geometry.where(name: 'Skylon')
+    # @izon_geometry = Refinery::Geometries::Geometry.where(name: 'Izon')
+    # @fluidity_geometry = Refinery::Geometries::Geometry.where(name: 'Fluidity')
+  end
+
+
 
 end
