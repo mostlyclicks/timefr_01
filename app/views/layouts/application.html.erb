@@ -10,22 +10,17 @@
     <div id="page_container">
       <header id="header">
 
+      <nav id='locale' class="text-right">
+          <!-- combo of block and working link -->
+          <% ::Refinery::I18n.frontend_locales.each do |locale| %>
+            <% if Globalize.locale.to_s != locale.to_s %>
+              <%= link_to (image_tag 'blank.gif', class: "flag flag-#{locale}"), refinery.url_for(params.merge(locale: locale)) %>
+            <% else %>
+              <%= image_tag 'blank.gif', class: "flag flag-#{locale}", style: 'border-bottom:1px solid gray;' %>
+            <% end %>
+          <% end %>
+      </nav>
 
-<nav id='locale'>
-    <%# ::Refinery::I18n.frontend_locales.each do |locale| %>
-      <%#= link_to_if Globalize.locale.to_s != locale.to_s, locale, refinery.url_for{:locale => locale} %>
-    <%# end %>
-
-    <!-- THIS WORKS -->
-    <%# new_locale = ::Refinery::I18n.frontend_locales.detect{|locale| Globalize.locale.to_s != locale.to_s} %>
-    
-    <%#= link_to new_locale, refinery.url_for(params.merge(locale: new_locale)) %>
-
-    <!-- combo of block and working link -->
-    <% ::Refinery::I18n.frontend_locales.each do |locale| %>
-      <%= link_to_if Globalize.locale.to_s != locale.to_s, locale, refinery.url_for(params.merge(locale: locale)) %>
-    <% end %>
-</nav>
         <%= render "/refinery/header" -%>
       </header>
       <section id="page">

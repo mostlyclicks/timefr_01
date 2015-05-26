@@ -26,6 +26,23 @@ $navbar-default-link-active-bg:#efefef;
 $navbar-default-link-active-color:#cdcdcd;
 $link-color:$time-red;
 
+//Flags
+//USAGE <img src="blank.gif" class="flag flag-cz" alt="Czech Republic" />
+//- See more at: https://www.flag-sprites.com/#sthash.csnqp5rS.dpuf
+
+.flag {
+  width: 32px;
+  height: 32px;
+  background:url(flags.png) no-repeat
+}
+
+.flag.flag-de {background-position: -32px 0}
+.flag.flag-es {background-position: -64px 0}
+.flag.flag-fr {background-position: 0 -32px}
+.flag.flag-jp {background-position: -32px -32px}
+.flag.flag-en {background-position: -64px -32px}
+
+
 @mixin text-style($font-size, $font-weight, $font-color) {
   font-family:$light-sans-serif;
   font-weight:$font-weight;
