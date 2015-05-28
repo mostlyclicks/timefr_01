@@ -1,12 +1,29 @@
 cs:
   refinery:
     plugins:
+      bike_features:
+        title: Bike Features
       colors:
         title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        bike_features:
+          actions:
+            create_new: Přidat Bike Feature
+            reorder: Řadit Bike Features
+            reorder_done: Konec řazení Bike Features
+          records:
+            title: Bike Features
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Bike Features. Zvolte "Přidat
+              Bike Feature" pro přidání prvního bike feature.
+          bike_feature:
+            view_live_html: Zobrazit náhled bike feature<br/><em>(otevře se v novém
+              okně)</em>
+            edit: Upravit bike feature
+            delete: Smazat bike feature
         colors:
           actions:
             create_new: Přidat Color
@@ -35,6 +52,9 @@ cs:
             view_live_html: Zobrazit náhled bike<br/><em>(otevře se v novém okně)</em>
             edit: Upravit bike
             delete: Smazat bike
+      bike_features:
+        show:
+          other: Další Bike Features
       colors:
         show:
           other: Další Colors
@@ -43,6 +63,11 @@ cs:
           other: Další Bikes
   activerecord:
     attributes:
+      refinery/bikes/bike_feature:
+        title: Title
+        sub_title: Sub Title
+        description: Description
+        image: Image
       refinery/bikes/color:
         name: Name
         image: Image

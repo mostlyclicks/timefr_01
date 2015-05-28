@@ -1,12 +1,28 @@
 zh-CN:
   refinery:
     plugins:
+      bike_features:
+        title: Bike Features
       colors:
         title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        bike_features:
+          actions:
+            create_new: 建立新的 Bike Feature
+            reorder: 对 Bike Features 重新排序
+            reorder_done: 对 Bike Features 的重新排序结束
+          records:
+            title: Bike Features
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Bike Features . 点击 "Add New Bike Feature" 创建一个bike
+              feature.
+          bike_feature:
+            view_live_html: 查看 bike feature 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 bike feature
+            delete: 永久删除 bike feature
         colors:
           actions:
             create_new: 建立新的 Color
@@ -33,6 +49,9 @@ zh-CN:
             view_live_html: 查看 bike 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 bike
             delete: 永久删除 bike
+      bike_features:
+        show:
+          other: 其他 Bike Features
       colors:
         show:
           other: 其他 Colors
@@ -41,6 +60,11 @@ zh-CN:
           other: 其他 Bikes
   activerecord:
     attributes:
+      refinery/bikes/bike_feature:
+        title: Title
+        sub_title: Sub Title
+        description: Description
+        image: Image
       refinery/bikes/color:
         name: Name
         image: Image

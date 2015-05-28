@@ -106,6 +106,19 @@ h1 span {display:inline-block;float:right;}
     </div>
   </section>
 <div class="clearfix"></div>
+  <section>
+    <div class="field">
+      <h1><%= f.label :bike_features %> </h1>
+</button>
+      <div class="collapse" id="colorCollapse">
+      <%= f.fields_for :bike_features do |j| %>
+        <%= render 'refinery/bikes/admin/bikes/bike_feature_fields', :f => j %>
+      <% end %>
+      <%= link_to_add_fields 'Add Feature', f, :bike_features %>
+      </div>
+    </div>
+  </section>
+<div class="clearfix"></div>
 
 
   <%= render '/refinery/admin/form_actions', :f => f,

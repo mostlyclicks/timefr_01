@@ -1,12 +1,28 @@
 en:
   refinery:
     plugins:
+      bike_features:
+        title: Bike Features
       colors:
         title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        bike_features:
+          actions:
+            create_new: Add New Bike Feature
+            reorder: Reorder Bike Features
+            reorder_done: Done Reordering Bike Features
+          records:
+            title: Bike Features
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Bike Features yet. Click "Add New Bike Feature"
+              to add your first bike feature.
+          bike_feature:
+            view_live_html: View this bike feature live <br/><em>(opens in a new window)</em>
+            edit: Edit this bike feature
+            delete: Remove this bike feature forever
         colors:
           actions:
             create_new: Add New Color
@@ -35,6 +51,9 @@ en:
             view_live_html: View this bike live <br/><em>(opens in a new window)</em>
             edit: Edit this bike
             delete: Remove this bike forever
+      bike_features:
+        show:
+          other: Other Bike Features
       colors:
         show:
           other: Other Colors
@@ -43,6 +62,11 @@ en:
           other: Other Bikes
   activerecord:
     attributes:
+      refinery/bikes/bike_feature:
+        title: Title
+        sub_title: Sub Title
+        description: Description
+        image: Image
       refinery/bikes/color:
         name: Name
         image: Image

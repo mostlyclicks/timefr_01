@@ -5,7 +5,7 @@ module Refinery
       extend FriendlyId
       friendly_id :name, :use => [:slugged]
 
-      attr_accessible :name, :hero_logo_id, :hero_image_id, :hero_background_id, :hero_description, :fork_standard, :fork_standard_image_id, :fork_aktiv, :fork_aktiv_image_id, :position, :colors_attributes, :bike_type
+      attr_accessible :name, :hero_logo_id, :hero_image_id, :hero_background_id, :hero_description, :fork_standard, :fork_standard_image_id, :fork_aktiv, :fork_aktiv_image_id, :position, :colors_attributes, :bike_type, :bike_features_attributes
 
       translates :name, :hero_description, :fork_standard, :fork_aktiv, :bike_type
 
@@ -17,6 +17,10 @@ module Refinery
 
       has_many :colors
       accepts_nested_attributes_for :colors, allow_destroy: true
+
+      has_many :bike_features
+      accepts_nested_attributes_for :bike_features, allow_destroy: true
+
 
       belongs_to :hero_logo, :class_name => '::Refinery::Image'
 

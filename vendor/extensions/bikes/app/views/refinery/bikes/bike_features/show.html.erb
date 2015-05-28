@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @bike_feature.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @bike_feature.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Sub Title</h1>
+    <p>
+      <%=raw @bike_feature.sub_title %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @bike_feature.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <%= image_fu @bike_feature.image, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="bike_features">
+      <% @bike_features.each do |bike_feature| %>
+        <li>
+          <%= link_to bike_feature.title, refinery.bikes_bike_feature_path(bike_feature) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

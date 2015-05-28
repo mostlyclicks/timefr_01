@@ -1,12 +1,29 @@
 nl:
   refinery:
     plugins:
+      bike_features:
+        title: Bike Features
       colors:
         title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        bike_features:
+          actions:
+            create_new: Nieuwe Bike Feature toevoegen
+            reorder: De volgorde van de Bike Features wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Bike Feature-volgorde
+          records:
+            title: Bike Features
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Bike Features. Druk op 'Nieuwe Bike Feature
+              toevoegen' om de eerste toe te voegen.
+          bike_feature:
+            view_live_html: Deze bike feature op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze bike feature
+            delete: Deze bike feature definitief verwijderen
         colors:
           actions:
             create_new: Nieuwe Color toevoegen
@@ -37,6 +54,9 @@ nl:
               nieuw venster)</em>
             edit: Bewerk deze bike
             delete: Deze bike definitief verwijderen
+      bike_features:
+        show:
+          other: Andere Bike Features
       colors:
         show:
           other: Andere Colors
@@ -45,6 +65,11 @@ nl:
           other: Andere Bikes
   activerecord:
     attributes:
+      refinery/bikes/bike_feature:
+        title: Title
+        sub_title: Sub Title
+        description: Description
+        image: Image
       refinery/bikes/color:
         name: Name
         image: Image

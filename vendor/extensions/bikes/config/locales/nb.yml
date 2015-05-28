@@ -1,12 +1,29 @@
 nb:
   refinery:
     plugins:
+      bike_features:
+        title: Bike Features
       colors:
         title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        bike_features:
+          actions:
+            create_new: Lag en ny Bike Feature
+            reorder: Endre rekkefølgen på Bike Features
+            reorder_done: Ferdig å endre rekkefølgen Bike Features
+          records:
+            title: Bike Features
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Bike Features enda. Klikk på "Lag en ny Bike
+              Feature" for å legge til din første bike feature.
+          bike_feature:
+            view_live_html: Vis hvordan denne bike feature ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne bike feature
+            delete: Fjern denne bike feature permanent
         colors:
           actions:
             create_new: Lag en ny Color
@@ -37,6 +54,9 @@ nb:
               i et nytt vindu)</em>
             edit: Rediger denne bike
             delete: Fjern denne bike permanent
+      bike_features:
+        show:
+          other: Andre Bike Features
       colors:
         show:
           other: Andre Colors
@@ -45,6 +65,11 @@ nb:
           other: Andre Bikes
   activerecord:
     attributes:
+      refinery/bikes/bike_feature:
+        title: Title
+        sub_title: Sub Title
+        description: Description
+        image: Image
       refinery/bikes/color:
         name: Name
         image: Image
