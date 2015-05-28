@@ -2,4 +2,7 @@ engine_generators.txt
 
 rails generate refinery:engine distributor name:string address:text country:string telephone:string fax:string website:string email:string
 
-rails g refinery:geometry name:string geometry_table:text geometry_image:image --i18n name geometry_table --skip-frontend
+rails g refinery:engine geometry name:string geometry_table:text geometry_image:image --i18n name geometry_table --skip-frontend
+
+//features for bikes
+rails g refinery:engine bike_feature title:string sub_title:string description:text  image:image --extension bikes --namespace bikes --i18n title sub_title description

@@ -40,6 +40,36 @@
 
 </section>
 
+<section id="bike_features">
+  <div class="container-fluid">
+    <% @bike.bike_features.each_with_index do |bf, index| %>
+    <div class="row">
+    
+
+      <% if index % 2 > 0 %>
+        <div class="col-md-5"><%= image_tag bf.image.url, class: 'img-responsive' %></div>
+        <div class="col-md-5">
+          <h1><%= bf.title %></h1>
+          <small><%= bf.sub_title %></small>
+          <p><%= bf.description %></p>
+        </div>
+      <% else %>
+        <div class="col-md-7">
+          <h1><%= bf.title %></h1>
+          <small><%= bf.sub_title %></small>
+          <p><%= bf.description %></p>
+        </div>
+        <div class="col-md-5"><%= image_tag bf.image.url, class: 'img-responsive' %></div>
+      <% end %>
+    </div>
+
+    <% end %>
+    
+
+  </div>
+
+</section>
+
 
 
 
