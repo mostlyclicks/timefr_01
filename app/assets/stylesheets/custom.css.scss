@@ -185,6 +185,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
   }
 }
 
+#l2-bike-gallery {
+  padding:80px 0px;
+  h1 {@include text-style(40px, 100, $time-red);}
+  .carousel-caption {
+    color:rgba(0,0,0,0);text-shadow:none;
+  }
+}
+
 #l2-geometry {
   padding:80px 0px;
   h3 {@include text-style(24px, 100, $time-red);padding-top:40px;}

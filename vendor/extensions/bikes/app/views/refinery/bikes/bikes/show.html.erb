@@ -21,6 +21,45 @@
   </div>
 </section>
 
+<section id="l2-bike-gallery">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+      <h1 class="text-center"><%= @bike.name %> Gallery</h1>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <% @bike.colors.each_with_index do |color, index| %>
+            <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<% if index == 0 %>active<% end %>" style="background-color:#cdcdcd;"></li>
+            <% end %>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+
+            <% @bike.colors.each_with_index do |color, index| %>
+
+            <div class="item <% if index == 0 %>active<% end %>" >
+              <%= image_tag color.image.url, alt: color.name, class: 'img-responsive gallery-img text-center', style: 'margin:0 auto;' %>
+              <div class="carousel-caption" style="">
+                <%= color.name %>
+              </div>
+            </div>
+            <% end %>`
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="fa fa-chevron-left fa-2x"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="fa fa-chevron-right fa-2x"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- L2 AKTIV CHOICE -->
 <section id="aktiv-choice">
