@@ -40,41 +40,31 @@
 
 </section>
 
-<section id="bike_features">
+<section id="bike-features">
   <div class="container-fluid">
     <% @bike.bike_features.each_with_index do |bf, index| %>
     <div class="row">
-    
-
       <% if index % 2 > 0 %>
-        <div class="col-md-5"><%= image_tag bf.image.url, class: 'img-responsive' %></div>
-        <div class="col-md-5">
+        <div class="col-sm-6 col-sm-push-6 feature-img"><%= image_tag bf.image.url, class: 'img-responsive' %></div>
+        <div class="col-sm-6 col-sm-pull-6 feature-text right-text">
           <h1><%= bf.title %></h1>
           <small><%= bf.sub_title %></small>
           <p><%= bf.description %></p>
         </div>
       <% else %>
-        <div class="col-md-7">
+        <div class="col-sm-6 feature-img"><%= image_tag bf.image.url, class: 'img-responsive' %></div>
+        <div class="col-sm-6 feature-text left-text">
           <h1><%= bf.title %></h1>
           <small><%= bf.sub_title %></small>
           <p><%= bf.description %></p>
         </div>
-        <div class="col-md-5"><%= image_tag bf.image.url, class: 'img-responsive' %></div>
+        
       <% end %>
     </div>
-
     <% end %>
-    
-
   </div>
-
 </section>
-
-
-
-
-
-
+ 
 
 
 

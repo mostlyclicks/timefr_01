@@ -204,6 +204,21 @@
     }
   }
 
+  #bike-features {
+    .feature-text {
+      padding:40px;
+      h1 {@include header-style(48px, 100, $time-red)}
+      small {
+        @include header-style(24px, 100, $black-med);
+        line-height: 1em;
+      }
+      p {font-size:16px;}
+    }
+    .feature-img {
+      border-bottom:1px solid rgba(0,0,0,0);
+    }
+  }
+
 
 
 
@@ -281,6 +296,16 @@
     background-size:150%;
   }
 
+  #bike-features {
+    .feature-text {
+      padding:50px;
+      h1 {@include header-style(48px, 100, $time-red)}
+      small {@include header-style(24px, 100, $black-med)}
+      p {font-size:16px;}
+    }
+
+  }
+
 }
 
 
@@ -321,4 +346,15 @@
   }
 
  }
+
+#bike-features {
+  .feature-text {
+    padding:100px;
+    h1 {@include header-style(64px, 100, $time-red)}
+    small {@include header-style(24px, 100, $black-med)}
+    p {font-size:16px;}
+  }
+
+}
+
 }
