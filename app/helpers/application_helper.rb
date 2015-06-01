@@ -10,4 +10,14 @@ module ApplicationHelper
     end 
   end
 
+  def load_bike_group(bike)
+    group = Refinery::Groups::Group.all
+    if bike == 'Skylon' || 'Izon'
+      group.pop
+      @groups = group
+    else
+      @groups = group
+    end
+  end
+
 end

@@ -37,7 +37,6 @@
       </div>
     </div>
   </div>
-
 </section>
 
 <section id="bike-features">
@@ -153,7 +152,7 @@
       <div class="col-lg-7">
         <% get_bike_geometry(@bike.name) %>
         <% @bike_geometry.each do |g| %>
-        <h3><%= g.name %></h3>
+        <h3><%= g.name %> Geometry</h3>
         <%= g.geometry_table.html_safe %>
         <% end %>
       </div>
@@ -167,6 +166,7 @@
 <div class="container">
   <h1 class="text-center">Component Groups</h1>
   <div class="row">
+    <% load_bike_group(@bike.name) %>
     <% @groups.each do |d| %>
       <div class="col-md-6 group">
         <table class="table table-striped table-bordered table-condensed">
