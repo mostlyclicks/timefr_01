@@ -3,6 +3,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-groups'
+  s.author            = 'mc'
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Groups extension for Refinery CMS'
   s.date              = '2015-04-20'
