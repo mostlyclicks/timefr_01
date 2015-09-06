@@ -9,18 +9,37 @@
     <%= site_bar -%>
     <div id="page_container">
       <header id="header">
+        <div id="top-brand">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6">
+                <%= image_tag 'time-logo.png' %>
+              </div>
+              <div class="col-xs-6 text-right">
+                <% ::Refinery::I18n.frontend_locales.each do |locale| %>
+                  <% if Globalize.locale.to_s != locale.to_s %>
+                    <%= link_to (image_tag 'blank.gif', class: "flag flag-#{locale}"), refinery.url_for(params.merge(locale: locale)) %>
+                  <% else %>
+                    <%= image_tag 'blank.gif', class: "flag flag-#{locale}", style: 'border-bottom:1px solid gray;' %>
+                  <% end %>
+                <% end %>
+              </div>
 
-      <nav id='locale' class="text-right">
-          <!-- combo of block and working link -->
-          <% ::Refinery::I18n.frontend_locales.each do |locale| %>
-            <% if Globalize.locale.to_s != locale.to_s %>
-              <%= link_to (image_tag 'blank.gif', class: "flag flag-#{locale}"), refinery.url_for(params.merge(locale: locale)) %>
-            <% else %>
-              <%= image_tag 'blank.gif', class: "flag flag-#{locale}", style: 'border-bottom:1px solid gray;' %>
-            <% end %>
-          <% end %>
-      </nav>
+            </div>
+            
 
+<!--             <nav id='locale' class="text-right">
+          combo of block and working link
+          
+            </nav> -->
+
+
+          </div>
+
+
+        </div>
+        
+      
         <%= render "/refinery/header" -%>
       </header>
       <section id="page">

@@ -6,13 +6,20 @@ section {
 }
 
 #locale {
-  padding:5px 15px;
-  background-color:rgba(150,150,150,.1);
+  // padding:10px 15px;
+  // background-color:rgba(150,150,150,.1);
   img {margin-left:5px;}
 }
 
 
 //HOME
+
+#top-brand {
+  padding:10px 10px;
+  background-color:rgba(150,150,150,.1);
+
+}
+
 #home-top {
   min-height: 80vh;
   h1 {@include text-style(24px, 100, $time-red);text-align:center;}
@@ -30,6 +37,12 @@ section {
   #top-made-in-france {
     img {margin:0 auto 12px auto;}
   }
+}
+
+#header-social {
+  margin-top:12px;
+  margin-left:30px;
+  a {color:$black-light;}
 }
 
 
@@ -51,6 +64,10 @@ section {
     h1 {@include text-style(24px, 200, $time-red);text-align:center;text-transform:uppercase;}
     h3 {@include text-style(18px, 200, $time-red);text-align:center;}
   }
+}
+
+.navbar.navbar-default {
+  border-top:1px solid transparent;
 }
 
 
