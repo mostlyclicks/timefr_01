@@ -33,7 +33,7 @@ section {
   }
   h3 {@include text-style(14px, 200, $time-red);}
   .tri-nav {padding:0 5px;}
-  @include background-style(130%, 50%, 100%, no-repeat);
+  @include background-style(100%, 50%, 100%, no-repeat);
   #top-made-in-france {
     img {margin:0 auto 12px auto;}
   }
@@ -113,6 +113,7 @@ section {
   }
 }
 
+
 //HOME - PEDALS
 #pedals {
   h1 {
@@ -161,6 +162,36 @@ section {
      text-shadow:1px 1px 10px #fff;
    }
    #bike-img img {@include bike-hero-style(0px, 100%);}
+ }
+
+ #bikes-aktiv {
+  position:relative;
+  #aktiv-fork-circle {
+    position:absolute;
+    left:0%;
+    // margin-right:-395px;
+    top:0px;
+    z-index:10001;
+
+  }
+  // background-size:cover;
+  // background-image:url(aktiv-work2.png);
+  // background-repeat:no-repeat;
+  // background-position-x:-125px;
+  #bike-vibe-big {
+    background-image:url(aktiv-big-vibrations.png);
+    min-height:500px; 
+    background-size:100%;
+    background-repeat:no-repeat;
+
+
+  }
+  #bike-vibe-small {
+    background-image:url(aktiv-small-vibrations.png);
+    min-height:500px;
+    background-size:100%;
+    background-repeat:no-repeat;
+  }
  }
 
  #aktiv-choice {
