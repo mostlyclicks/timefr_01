@@ -145,3 +145,6 @@ Refinery::Distributors::Engine.load_seed
 
 # Added by Refinery CMS Geometries extension
 Refinery::Geometries::Engine.load_seed
+
+# Added by RefineryCMS Copywriting engine
+Refinery::Copywriting::Engine.load_seed
