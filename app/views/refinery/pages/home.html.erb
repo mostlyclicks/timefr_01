@@ -145,17 +145,19 @@
         <h2><%= @specialty_bike_type %></h2>
          <div class="row">
           <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <% unless @specialty_1.empty? %>
-            <% @specialty_1.each do |c| %>
-              <%= image_tag c.image.url, class: 'img-responsive' %>
-              <%= link_to c.name, bikes_bike_path(@specialty_1_path) %>
-          <% end %>
-          <% end %>
+            <% unless @specialty_1.nil? %>
+              <% @specialty_1.each do |c| %>
+                <%= image_tag c.image.url, class: 'img-responsive' %>
+                <%= link_to c.name, bikes_bike_path(@specialty_1_path) %>
+              <% end %>
+            <% end %>
           </div>
           <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <% @specialty_2.each do |s| %>
-              <%= image_tag s.image.url, class: 'img-responsive' %>
-              <%= link_to s.name, bikes_bike_path(@specialty_2_path) %>
+            <% unless @specialty_2.nil? %>
+              <% @specialty_2.each do |s| %>
+                <%= image_tag s.image.url, class: 'img-responsive' %>
+                <%= link_to s.name, bikes_bike_path(@specialty_2_path) %>
+              <% end %>
             <% end %>
           </div>
         </div>
