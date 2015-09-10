@@ -26,6 +26,8 @@ $navbar-default-link-active-bg:#efefef;
 $navbar-default-link-active-color:#cdcdcd;
 $link-color:$time-red;
 
+s, del {text-decoration:line-through;}
+
 //Flags
 //USAGE <img src="blank.gif" class="flag flag-cz" alt="Czech Republic" />
 //- See more at: https://www.flag-sprites.com/#sthash.csnqp5rS.dpuf
@@ -214,7 +216,7 @@ p {@include text-style(14px, 200, $black-med);}
   }
 }
 
-
+h1 {font-size:48px;font-weight:100;}
 
 
 
