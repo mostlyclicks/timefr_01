@@ -26,8 +26,8 @@ class ApplicationController < ActionController::Base
     bike = Refinery::Bikes::Bike.where(name: 'Skylon')
     bike.each do |b|
       @skylon_bike_type = b.bike_type
-      @skylon_aktiv = b.colors.where(name: "Skylon | Plasma AKTIV")
-      @skylon = b.colors.where(name: "Skylon | White")
+      @skylon_aktiv = b.colors.where(name: "Skylon | Metallic Orange AKTIV")
+      @skylon = b.colors.where(name: "Skylon | White Classic")
       @skylon_path = b.slug
     end
   end
@@ -36,8 +36,8 @@ class ApplicationController < ActionController::Base
     bike = Refinery::Bikes::Bike.where(name: 'Izon')
     bike.each do |b|
       @izon_bike_type = b.bike_type
-      @izon_aktiv = b.colors.where(name: "Izon | Red AKTIV")
-      @izon = b.colors.where(name: "Izon | Red/Black")
+      @izon_aktiv = b.colors.where(name: "IZON| Red AKTIV")
+      @izon = b.colors.where(name: "IZON | Graphite")
       @izon_path = b.slug
     end
   end
