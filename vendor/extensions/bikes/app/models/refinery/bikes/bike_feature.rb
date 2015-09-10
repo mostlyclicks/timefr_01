@@ -2,7 +2,7 @@ module Refinery
   module Bikes
     class BikeFeature < Refinery::Core::BaseModel
 
-      attr_accessible :title, :sub_title, :description, :image_id, :position
+      attr_accessible :title, :sub_title, :description, :image_id, :position, :left_right
 
       translates :title, :sub_title, :description
 
