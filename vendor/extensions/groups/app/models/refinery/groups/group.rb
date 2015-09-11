@@ -5,7 +5,7 @@ module Refinery
 
       attr_accessible :name, :shift_levers, :brakes, :front_derailleur, :rear_derailleur, :crankset, :cassette, :chain, :position, :pedals
 
-      translates :name, :shift_levers, :brakes, :front_derailleur, :rear_derailleur, :crankset, :cassette, :chain#, :pedals
+      translates :name, :shift_levers, :brakes, :front_derailleur, :rear_derailleur, :crankset, :cassette, :chain, :pedals
 
       class Translation
         attr_accessible :locale

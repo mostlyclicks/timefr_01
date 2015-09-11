@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150911165904) do
+ActiveRecord::Schema.define(:version => 20150911174414) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -164,6 +164,7 @@ ActiveRecord::Schema.define(:version => 20150911165904) do
     t.string   "crankset"
     t.string   "cassette"
     t.string   "chain"
+    t.string   "pedals"
   end
 
   add_index "refinery_group_translations", ["locale"], :name => "index_refinery_group_translations_on_locale"
