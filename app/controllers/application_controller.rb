@@ -46,8 +46,8 @@ class ApplicationController < ActionController::Base
     bike = Refinery::Bikes::Bike.where(name: 'Fluidity')
     bike.each do |b|
       @fluidity_bike_type = b.bike_type
-      @fluidity_aktiv = b.colors.where(name: "Fluidity | Black AKTIV")
-      @fluidity = b.colors.where(name: "Fluidity | White")
+      @fluidity_aktiv = b.colors.where(name: "Fluidity | White AKTIV")
+      @fluidity = b.colors.where(name: "Fluidity | Graphite")
       @fluidity_path = b.slug
     end
   end
