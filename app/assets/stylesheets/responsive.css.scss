@@ -2,7 +2,7 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-  // body {border:5px solid blue;}
+  //body {border:5px solid blue;}
   //HOME
   #top {min-height:95vh;}
   //MADE IN FRANCE
@@ -38,10 +38,28 @@
 
 #bikes-aktiv {
   min-height:500px;
-    // background-size:cover;
-    // background-image:url(aktiv-work2.png);
-    // background-repeat:no-repeat;
-    // background-position-x:0;
+  
+  #aktiv-fork-circle {
+    position:absolute;
+    left:50%;
+    margin-left:-250px;
+    top:16%;
+    width:500px;
+
+
+  }
+
+  #bike-vibe-big {
+    background-position-y:50%;
+    height:500px;
+    
+  }
+  #bike-vibe-small {
+    background-position-y:50%;
+    height:500px;
+
+  }
+
 
 
  }

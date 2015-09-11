@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
     bike = Refinery::Bikes::Bike.where(name: 'Izon')
     bike.each do |b|
       @izon_bike_type = b.bike_type
-      @izon_aktiv = b.colors.where(name: "IZON| Red AKTIV")
+      @izon_aktiv = b.colors.where(name: "IZON | Red AKTIV")
       @izon = b.colors.where(name: "IZON | Graphite")
       @izon_path = b.slug
     end
