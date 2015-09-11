@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150910224129) do
+ActiveRecord::Schema.define(:version => 20150911165904) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -181,6 +181,7 @@ ActiveRecord::Schema.define(:version => 20150910224129) do
     t.integer  "position"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "pedals"
   end
 
   create_table "refinery_home_feature_translations", :force => true do |t|

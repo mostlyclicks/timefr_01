@@ -3,9 +3,9 @@ module Refinery
     class Group < Refinery::Core::BaseModel
       self.table_name = 'refinery_groups'
 
-      attr_accessible :name, :shift_levers, :brakes, :front_derailleur, :rear_derailleur, :crankset, :cassette, :chain, :position
+      attr_accessible :name, :shift_levers, :brakes, :front_derailleur, :rear_derailleur, :crankset, :cassette, :chain, :position, :pedals
 
-      translates :name, :shift_levers, :brakes, :front_derailleur, :rear_derailleur, :crankset, :cassette, :chain
+      translates :name, :shift_levers, :brakes, :front_derailleur, :rear_derailleur, :crankset, :cassette, :chain#, :pedals
 
       class Translation
         attr_accessible :locale
