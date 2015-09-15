@@ -32,27 +32,27 @@
       ">
 
         <h2><%= @bike.weight %>g</h2>
-        <small>Frame weight</small>
+        <small><%= copywriting('Bike Specs - Weight', {:scope => 'bike-specs'}) %></small>
       </div>
       <div class="col-md-2 col-xs-6 text-center">
         <span class="fa fa-bolt fa-3x" id="electrical"></span><span class="fa fa-cogs fa-3x"></span>
-        <small>Electronic/Mechanical Compatible</small>
+        <small><%= copywriting('Bike Specs - Elec/Mech', {:scope => 'bike-specs'}) %><!-- Electronic/Mechanical Compatible --></small>
 
       </div>
 
       <div class="col-md-2 col-xs-6 text-center">
         <span><%= image_tag 'translink.png', height: '42' %></span><br />
-        <small>Translink Seatmast Option</small>
+        <small><%= copywriting('Bike Specs - Translink', {:scope => 'bike-specs'}) %><!-- Translink Seatmast Option --></small>
       </div>
 
       <div class="col-md-2 col-xs-6 text-center">
         <span><%= image_tag 'AKTIV-LOGO-black.png', height: '42' %></span><br />
-        <small>AKTIV Fork Option</small>
+        <small><%= copywriting('Bike Specs - AKTIV', {:scope => 'bike-specs'}) %><!-- AKTIV Fork Option --></small>
       </div>
       <% unless @bike.name == 'Skylon' %>
       <div class="col-md-2 col-xs-6 text-center">
         <span><%= image_tag 'discbrake2.png', height: '42' %></span><br />
-        <small>Disc Brake Option</small>
+        <small><%= copywriting('Bike Specs - Disc Brakes', {:scope => 'bike-specs'}) %><!-- Disc Brake Option --></small>
       </div>
       <% end %>
 
