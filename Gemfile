@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem "sass", "~> 3.2.19"
 gem 'sass-rails',   '~> 3.2.3'
 gem 'geoip', '~> 1.4.0'
+gem 'rails_12factor'
 
 
 # Gems used only for assets and not required
