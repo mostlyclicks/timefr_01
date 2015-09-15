@@ -86,7 +86,8 @@ section {
 #bikes-frames {
 
   padding:80px 20px;
-  background-color:lighten($black-light, 65%);
+  // background-color:lighten($black-light, 65%);
+  background-color:#fff;
   // background-image:url(TIME-txt.svg);
   // background-repeat:no-repeat;
   h1 {@include text-style(30px, 100, $time-red);text-align:center;}
