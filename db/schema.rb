@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150915031114) do
+ActiveRecord::Schema.define(:version => 20150915033630) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20150915031114) do
     t.text     "fork_standard"
     t.text     "fork_aktiv"
     t.string   "bike_type"
+    t.integer  "weight"
   end
 
   add_index "refinery_bike_translations", ["locale"], :name => "index_refinery_bike_translations_on_locale"

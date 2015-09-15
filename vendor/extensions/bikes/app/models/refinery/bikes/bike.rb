@@ -8,7 +8,7 @@ module Refinery
       attr_accessible :name, :hero_logo_id, :hero_image_id, :hero_background_id, :hero_description, :fork_standard, :fork_standard_image_id,
       :fork_aktiv, :fork_aktiv_image_id, :position, :colors_attributes, :bike_type, :bike_features_attributes, :weight
 
-      translates :name, :hero_description, :fork_standard, :fork_aktiv, :bike_type
+      translates :name, :hero_description, :fork_standard, :fork_aktiv, :bike_type, :weight
 
       class Translation
         attr_accessible :locale
