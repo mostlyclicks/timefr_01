@@ -3,7 +3,6 @@
   #l2-bike {background-image:url(<%= @bike.hero_background.url %>);}
 </style>
 
-
 <!-- L2 BIKE INTRO -->
 <section class="show" id="l2-bike">
   <div class="container">
@@ -19,6 +18,43 @@
       </div>
     </div>
   </div>
+</section>
+
+<section id="bike-details">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-xs-12 text-center col-md-offset-1">
+
+        <h2>999g</h2>
+        <small>Frame weight</small>
+      </div>
+      <div class="col-md-2 col-xs-6 text-center">
+        <span class="fa fa-bolt fa-3x" id="electrical"></span><span class="fa fa-cogs fa-3x"></span>
+        <small>Electronic/Mechanical Compatible</small>
+
+      </div>
+
+      <div class="col-md-2 col-xs-6 text-center">
+        <span><%= image_tag 'translink.png', height: '42' %></span><br />
+        <small>Translink Seatmast Option</small>
+      </div>
+
+      <div class="col-md-2 col-xs-6 text-center">
+        <span><%= image_tag 'discbrake2.png', height: '42' %></span><br />
+        <small>Disc Brake Option</small>
+      </div>
+
+      <div class="col-md-2 col-xs-6 text-center">
+        <span><%= image_tag 'AKTIV-LOGO-black.png', height: '42' %></span><br />
+        <small>AKTIV Fork Option</small>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
 </section>
 
 <section id="l2-bike-gallery">
@@ -60,25 +96,6 @@
     </div>
   </div>
 </section>
-
-
-
-<!-- L2 AKTIV CHOICE -->
-<!-- <section id="aktiv-choice">
-  <div class="container-fluid">
-    
-    <div class="row">
-      <div class="col-md-6">
-        <%#= image_tag @bike.fork_standard_image.url, class: 'img-responsive' %>
-        <div class="ac-desc"><%= @bike.fork_standard.html_safe %></div>
-      </div>
-      <div class="col-md-6">
-        <%#= image_tag @bike.fork_aktiv_image.url, class: 'img-responsive' %>
-        <div class="ac-desc"><%= @bike.fork_aktiv.html_safe %></div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <section id="bike-features">
   <div class="container-fluid">

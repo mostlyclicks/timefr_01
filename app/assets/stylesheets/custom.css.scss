@@ -600,3 +600,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
    height: 350px; 
  }
 
+
+#bike-details {
+  background-color:lighten($black-light, 80%);
+  padding:10px 0;
+  span {
+    padding:10px;
+    display:inline-block;
+  }
+  #electrical {border-right:1px solid rgba(0,0,0,.4);}
+}
