@@ -23,9 +23,15 @@
 <section id="bike-details">
   <div class="container">
     <div class="row">
-      <div class="col-md-2 col-xs-12 text-center col-md-offset-1">
+      <div class="col-md-2 col-xs-12 text-center 
+      <% if @bike.name == 'Skylon' %>
+        col-md-offset-2
+      <% else %>
+        col-md-offset-1
+      <% end %>
+      ">
 
-        <h2>999g</h2>
+        <h2><%= @bike.weight %>g</h2>
         <small>Frame weight</small>
       </div>
       <div class="col-md-2 col-xs-6 text-center">
@@ -40,14 +46,16 @@
       </div>
 
       <div class="col-md-2 col-xs-6 text-center">
-        <span><%= image_tag 'discbrake2.png', height: '42' %></span><br />
-        <small>Disc Brake Option</small>
-      </div>
-
-      <div class="col-md-2 col-xs-6 text-center">
         <span><%= image_tag 'AKTIV-LOGO-black.png', height: '42' %></span><br />
         <small>AKTIV Fork Option</small>
       </div>
+      <% unless @bike.name == 'Skylon' %>
+      <div class="col-md-2 col-xs-6 text-center">
+        <span><%= image_tag 'discbrake2.png', height: '42' %></span><br />
+        <small>Disc Brake Option</small>
+      </div>
+      <% end %>
+
 
 
     </div>
