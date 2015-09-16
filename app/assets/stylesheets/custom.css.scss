@@ -156,7 +156,7 @@ section {
      @extend .l2-h3-xs;
    }
    .lead {
-   @include text-style(16px, 200, $black-med);
+   @include text-style(16px, 300, $black-med);
      //@extend .l2-main-lead;
      text-align:left;
      padding:20px 0px;

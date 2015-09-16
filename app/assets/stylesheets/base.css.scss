@@ -95,12 +95,12 @@ s, del {text-decoration:line-through;}
 
 h1 {@include text-style(48px, 100, $time-red);}
 h2 {@include text-style(32px, 100, $time-red);}
-h3 {@include text-style(24px, 100, $time-red);}
+h3 {@include text-style(24px, 200, $time-red);}
 h4 {@include text-style(18px, 200, $time-red);}
 h5 {@include text-style(14px, 300, $time-red);}
 
-p.lead {@include text-style(16px, 100, $black-light);}
-p {@include text-style(14px, 200, $black-med);}
+p.lead {@include text-style(16px, 300, $black-light);}
+p {@include text-style(14px, 300, $black-med);}
 
 
 //NAV
