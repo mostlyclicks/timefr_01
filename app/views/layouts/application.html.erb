@@ -47,6 +47,17 @@
       <section id="page">
         <%= yield %>
       </section>
+
+      <section id="time-catalog">
+        <div class="container">
+          <div class="row">
+            <%= copywriting('Footer Catalog', {:scope => 'footer', :phrase_type => 'wysiwyg'}).html_safe %>
+          </div>
+        </div>
+        </div>
+      </section>
+
+
       <footer class="site-footer">
         <%= render "/refinery/footer" -%>
       </footer>

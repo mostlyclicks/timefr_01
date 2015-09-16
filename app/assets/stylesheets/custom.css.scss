@@ -615,3 +615,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
   }
   #electrical {border-right:1px solid rgba(0,0,0,.4);}
 }
+
+#time-catalog {
+  padding:60px;
+  color:#fff;
+  background-color:darken($time-red, 10%);
+  h2 {@include header-style(48px, 100, #fff);}
+  h3 {@include header-style(24px, 100, #fff);}
+  a {color:#fff;}
+}
