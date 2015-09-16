@@ -41,6 +41,15 @@
       </div>
     <% end %>
   </div>
+  <div class="row">
+    <% @road_pedals_xpresso_country.each do |cp| %>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
+        <%= image_tag cp.pedal_image.url, class: 'img-responsive' %>
+        <h3><%= cp.name %> | <%= cp.weight %></h3>
+        <small><%= cp.description %></small>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <div class="container pedals-xpresso">
