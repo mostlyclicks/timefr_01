@@ -465,23 +465,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
    }
  }
 
- #pedal-tech-road, #pedal-tech-atac {
+ #pedal-tech-road, #pedal-tech-atac, #pedal-tech-dh {
    padding:60px 20px;
-   background-color:lighten(#000, 15%);
+   background-color:lighten(#000, 65%);
    h3 {@include header-style(24px, 100, #fff)}
-   p {@include header-style(14px, 200, rgba(255,255,255,.5));}
+   p {@include header-style(14px, 200, rgba(255,255,255,.8));}
 
  }
 
  #pedal-tech-atac {
-   background-color:lighten(#000, 30%);
+   background-color:lighten(#000, 45%);
+ }
+
+ #pedal-tech-dh {
+   background-color:lighten(#000, 65%);
  }
 
   #time-pedals {
    padding:60px 20px;
     background-color:#fff;
    h3 {@include header-style(24px, 100, $time-red)}
-   p {@include header-style(14px, 200, rgba(0,0,0,.5));}
+   p {@include header-style(14px, 200, rgba(0,0,0,.8));}
   }
 
 
