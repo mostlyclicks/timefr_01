@@ -617,10 +617,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 }
 
 #time-catalog {
-  padding:60px;
+  padding:40px;
   color:#fff;
   background-color:darken($time-red, 10%);
-  h2 {@include header-style(48px, 100, #fff);}
+  h2 {@include header-style(48px, 100, #fff);margin-top:30px;}
   h3 {@include header-style(24px, 100, #fff);}
   a {color:#fff;}
 }

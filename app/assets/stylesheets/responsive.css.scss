@@ -256,6 +256,16 @@
   }
 
 
+#time-catalog {
+  padding:60px;
+
+  h2 {@include header-style(32px, 100, #fff);margin-top:0px;}
+  h3 {@include header-style(20px, 100, #fff);}
+  img {padding-right:30px;}
+  
+}
+
+
 
 
 }
