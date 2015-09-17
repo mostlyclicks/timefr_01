@@ -623,8 +623,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
   h2 {@include header-style(48px, 100, #fff);margin-top:30px;}
   h3 {@include header-style(24px, 100, #fff);}
   a {color:#fff;}
-  p {@include header-style(12px, 200, rgba(0,0,0,.8));}
+  p {@include header-style(12px, 200, rgba(255,255,255,.8));}
   input {background-color:$time-red;color:#fff;}
+  .form-control{border:1px solid lighten($time-red,5%);}
+  .form-control::-webkit-input-placeholder { color: lighten($time-red,30%); }
+  .form-control:-moz-placeholder { color: lighten($time-red,30%); }
+  .form-control::-moz-placeholder { color: lighten($time-red,30%); }
+  .form-control:-ms-input-placeholder { color: lighten($time-red,30%); }
+  input:focus, .uneditable-input:focus {   
+    // border-color: rgba(229, 103, 23, 0.8) !important;
+    box-shadow: 0 1px 1px lighten($time-red, 20%) inset, 0 0 8px lighten($time-red, 10%) !important;
+    outline: 0 none !important;
+  }
 }
 
 #generic-page {
