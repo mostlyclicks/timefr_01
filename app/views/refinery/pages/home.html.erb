@@ -58,8 +58,8 @@
               </div>
               <div class="col-lg-3 col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1 red-border1 text-center" id="home-bike-logo">
                 <%= image_tag hf.logo.url, class: 'img-responsive text-center' %>
-                
-                <h3><%= link_to hf.link_text, hf.link_url %></h3>
+                <h2><%= link_to hf.title %></h2>
+                <p><%= link_to hf.link_text, hf.link_url %></p>
               </div>
               <div class="col-lg-3 col-sm-3 col-xs-6 dhidden-xs red-border1" id="home-bike-bg">
                 <%= image_tag hf.background_image.url %>

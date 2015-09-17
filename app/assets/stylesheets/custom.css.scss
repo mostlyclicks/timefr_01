@@ -21,7 +21,10 @@ section {
 }
 
 #home-top {
-  min-height: 80vh;
+  // min-height: 80vh;
+  min-height:900px;
+  max-height:800px;
+  border:1px solid red;
   h1 {@include text-style(24px, 100, $time-red);text-align:center;}
   h2 {@include text-style(14px, 400, $time-red);text-transform:uppercase;}
   a {
@@ -33,7 +36,11 @@ section {
   }
   h3 {@include text-style(14px, 200, $time-red);}
   .tri-nav {padding:0 5px;}
-  @include background-style(100%, 50%, 100%, no-repeat);
+  @include background-style(100%, 20%, 20%, no-repeat);
+  background-size:static;
+  //@include background-style(100%, 50%, 100%, no-repeat);
+  // background-size:100%;
+  // background-repeat:no-repeat;
   #top-made-in-france {
     img {margin:0 auto 12px auto;}
   }
@@ -76,11 +83,12 @@ section {
   padding-top:40px;
   min-height:60vh;
   h1 {@include text-style(30px, 100, $time-red);text-align:center;}
-  h3 {@include text-style(18px, 200, $time-red);text-align:center;}
+  h2 {@include text-style(24px, 200, $time-red);text-align:center;}
   #home-bike-bg img {@include home-bike-feature(absolute, -1, 200px, 0px, nil, nil)};
   #home-bike-logo img {margin:0 auto;}
   #collection-link {postion:absolute;bottom:0;}
   .carousel-indicators {position:absolute;top:-10px;margin-bottom:20px;}
+  p {margin-top:-.5em;}
 }
 
 #bikes-frames {
