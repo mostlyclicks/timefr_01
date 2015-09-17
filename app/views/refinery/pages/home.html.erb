@@ -88,7 +88,7 @@
 
    <h1></h1>
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h2><%= @skylon_bike_type %></h2>
         <div class="row">
           <div class="col-md-12 col-xs-6 bikes-frames-bikes">
@@ -106,7 +106,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h2><%= @izon_bike_type %></h2>
          <div class="row">
           <div class="col-md-12 col-xs-6 bikes-frames-bikes">
@@ -124,7 +124,7 @@
         </div>
       </div>
  
-    <div class="col-md-3">
+    <div class="col-md-4">
         <h2><%= @fluidity_bike_type %></h2>
          <div class="row">
           <div class="col-md-12 col-xs-6 bikes-frames-bikes">
@@ -142,27 +142,27 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+<!--       <div class="col-md-3">
         <h2><%= @specialty_bike_type %></h2>
          <div class="row">
           <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <% unless @specialty_1.nil? %>
-              <% @specialty_1.each do |c| %>
-                <%= image_tag c.image.url, class: 'img-responsive' %>
-                <%= link_to c.name, bikes_bike_path(@specialty_1_path) %>
-              <% end %>
-            <% end %>
+            <%# unless @specialty_1.nil? %>
+              <%# @specialty_1.each do |c| %>
+                <%#= image_tag c.image.url, class: 'img-responsive' %>
+                <%#= link_to c.name, bikes_bike_path(@specialty_1_path) %>
+              <%# end %>
+            <%# end %>
           </div>
           <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <% unless @specialty_2.nil? %>
-              <% @specialty_2.each do |s| %>
-                <%= image_tag s.image.url, class: 'img-responsive' %>
-                <%= link_to s.name, bikes_bike_path(@specialty_2_path) %>
-              <% end %>
-            <% end %>
+            <%# unless @specialty_2.nil? %>
+              <%# @specialty_2.each do |s| %>
+                <%#= image_tag s.image.url, class: 'img-responsive' %>
+                <%#= link_to s.name, bikes_bike_path(@specialty_2_path) %>
+              <%# end %>
+            <%# end %>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
