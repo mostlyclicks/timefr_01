@@ -623,4 +623,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
   h2 {@include header-style(48px, 100, #fff);margin-top:30px;}
   h3 {@include header-style(24px, 100, #fff);}
   a {color:#fff;}
+  p {@include header-style(12px, 200, rgba(0,0,0,.8));}
+  input {background-color:$time-red;color:#fff;}
+}
+
+#generic-page {
+  min-height:50vh;
+  padding:40px;
+  h1 {@include header-style(48px, 100, $time-red);}
+
 }
