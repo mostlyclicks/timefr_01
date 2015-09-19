@@ -13,7 +13,7 @@ module Refinery
 
       def show
         @pedal = Pedal.friendly.find(params[:id])
-        @pedals_road = Refinery::Pedals::Pedal.where(riding_type: 'Road')
+        @pedals_road = Refinery::Pedals::Pedal.where(riding_type: 'Road').order('position ASC')
 
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @pedal in the line below:
