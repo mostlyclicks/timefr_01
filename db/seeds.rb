@@ -127,6 +127,14 @@ Refinery::Groups::Engine.load_seed
 ]
 
 
+@dealers = [
+  {account:, company:, street_address_1:, street_address_2:, postal_code:, city:, telephone_1:}
+]
+
+
+
+
+
   # @pedals.each do |p|
   #   Refinery::Pedals::Pedal.create(
   #     name: p[:name],
