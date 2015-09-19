@@ -140,6 +140,11 @@ section {
 
 // L2 Bikes
 
+canvas {
+  display: block; 
+  background-color:black;
+}
+
 #l2-bike {
   padding:20px;
   background-repeat:no-repeat;
@@ -211,6 +216,7 @@ section {
     background-size:100% 90px;
     background-repeat:no-repeat;
     background-position-y:51%;
+    border:1px solid red;
   }
  }
 
@@ -300,7 +306,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
    }
  }
 
-.pedals-xpresso, #pedals-rxs, #pedals-atac-xc, #pedals-atac-mx, #pedals-atac-dh {
+.pedals-xpresso, #pedals-rxs, #pedals-atac-xc, #pedals-atac-mx, #pedals-atac-dh, #pedals-xpresso-flag-editions {
    h3 {@include text-style(16px, 200, $time-red);margin-top:0;}
    img {@include rotate(-45deg);}
 
@@ -313,6 +319,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
    h1 {@include text-style(24px, 100, $time-red);}
    h2 {@include text-style(32px, 100, rgba(0,0,0,.7));}
    p {@include header-style(16px, 200, rgba(0,0,0,.7));}
+}
+
+#pedals-xpresso-flag-editions {
+  background-color:rgba(225,225,225,.1);
 }
 
 #pedal-atac-hero {
