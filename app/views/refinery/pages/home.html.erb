@@ -4,17 +4,19 @@
 <% @random_bg_image = @top_bg_image.sample %>
 
 <style>
-  #home-top {background-image:url(/assets/<%= @random_bg_image %>); }
+  /*#home-top {background-image:url(/assets/<%= @random_bg_image %>); }*/
 </style>
-
+<div id="home-top-wrapper">
 <section id="home-top">
   <div class="container">
     <div class="row">
       <%= raw @page.content_for(:home_main) %>
+      <%= image_tag @random_bg_image, class: 'img-responsive', id: 'half-bike' %>
+
     </div>
   </div>
 </section>
-
+</div>
 <!-- MADE IN FRANCE  ***************************** -->
 
 <% @mif_bg_image = ['made-in-france-p3.jpg','readyforresin.jpeg', 'DSC_7960-carbon-weaver.jpg'] %>
