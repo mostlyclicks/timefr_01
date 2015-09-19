@@ -11,21 +11,23 @@ section {
   img {margin-left:5px;}
 }
 
-
 //HOME
 
 #top-brand {
   padding:10px 10px;
   background-color:rgba(150,150,150,.1);
+}
 
+#home-top-wrapper {
+  position:relative;
 }
 
 #home-top {
-   min-height: 80vh;
-  
-  border:1px solid red;
+  // .row {position:absolute;}
+  min-height: 60vh;
+  #half-bike {position:absolute;bottom:0;z-index:0;}
   h1 {@include text-style(24px, 100, $time-red);text-align:center;}
-  h2 {@include text-style(14px, 400, $time-red);text-transform:uppercase;}
+  h2 {@include text-style(12px, 400, $time-red);text-transform:uppercase;}
   a {
     &:hover {text-decoration:none;}
     h2 {
@@ -34,10 +36,10 @@ section {
     img {border:1px solid $black-light;}
   }
   h3 {@include text-style(14px, 200, $time-red);}
-  .tri-nav {padding:0 5px;}
-  @include background-style(100%, 50%, 100%, no-repeat);
-  
+  .tri-nav {padding:0 15px;z-index:103;}
   #top-made-in-france {
+    position:relative;
+    z-index:104;
     img {margin:0 auto 12px auto;}
   }
 }

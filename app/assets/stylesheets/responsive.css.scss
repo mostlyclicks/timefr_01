@@ -5,6 +5,11 @@
   //body {border:5px solid blue;}
   //HOME
   #top {min-height:95vh;}
+
+  #home-top {
+    min-height:80vh;
+    #half-bike {left:0;}
+  }
   //MADE IN FRANCE
   #made-in-france {
     min-height:700px;
@@ -34,34 +39,24 @@
     }
   }
 
-
-
 #bikes-aktiv {
-  min-height:500px;
-  
+  min-height:500px;  
   #aktiv-fork-circle {
     position:absolute;
     left:50%;
     margin-left:-250px;
     top:16%;
     width:500px;
-
-
   }
 
   #bike-vibe-big {
     background-position-y:50%;
     height:500px;
-    
   }
   #bike-vibe-small {
     background-position-y:50%;
     height:500px;
-
   }
-
-
-
  }
 
 #aktiv-choice {
@@ -282,6 +277,14 @@
     h3 {font-size:18px;}
   }
 
+
+  #home-top {
+    height:90vh;
+    #half-bike{
+      // img {width:1000px;}
+    }
+  }
+
   #bikes-frames-feature {
     #home-bike-bg img {@include home-bike-feature(absolute, -1, 120px, -270px, nil, nil)};
   }
@@ -365,6 +368,13 @@
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
   //body {border-top:5px solid grey;}
+
+  #home-top {
+    #half-bike{   
+      width:2500px; //oversize to invoke img-responsive
+    }
+  }
+
   #bikes-frames-feature {
     #home-bike-bg img {@include home-bike-feature(absolute, -1, 240px, -100px, nil, nil)};
   }
