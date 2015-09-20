@@ -4,11 +4,11 @@
 @media (min-width: 768px) { 
   //body {border:5px solid blue;}
   //HOME
-  #top {min-height:95vh;}
+  // #top {min-height:95vh;}
 
   #home-top {
-    min-height:80vh;
-    #half-bike {left:0;}
+    min-height:15vh;
+    // #half-bike {left:0;}
   }
   //MADE IN FRANCE
   #made-in-france {
@@ -279,7 +279,7 @@
 
 
   #home-top {
-    height:90vh;
+    height:20vh;
     #half-bike{
       // img {width:1000px;}
     }
@@ -370,8 +370,10 @@
   //body {border-top:5px solid grey;}
 
   #home-top {
+    min-height:0vh;
+    border:1px solid red;
     #half-bike{   
-      width:2500px; //oversize to invoke img-responsive
+      // width:2500px; //oversize to invoke img-responsive
     }
   }
 

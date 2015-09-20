@@ -11,12 +11,22 @@
   <div class="container">
     <div class="row">
       <%= raw @page.content_for(:home_main) %>
-      <%= image_tag @random_bg_image, class: 'img-responsive', id: 'half-bike' %>
-
     </div>
   </div>
 </section>
 </div>
+
+<section id="home-top-bike">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <%= image_tag @random_bg_image, class: 'img-responsive', id: 'half-bike' %>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 <!-- MADE IN FRANCE  ***************************** -->
 
 <% @mif_bg_image = ['made-in-france-p3.jpg','readyforresin.jpeg', 'DSC_7960-carbon-weaver.jpg'] %>
@@ -83,6 +93,25 @@
    
   </div>
 </section>
+
+
+
+
+
+<section>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+  <canvas id="c"></canvas>
+</div>
+<div class="col-md-6">
+
+</div>
+</div>
+</div>
+
+</section>
+
 
 <!-- BIKE/FRAMES 2015 COLLECTION  ***************************** -->
 <!-- 
