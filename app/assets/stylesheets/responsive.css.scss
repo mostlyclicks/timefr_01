@@ -2,14 +2,14 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-  //body {border:5px solid blue;}
+  
   //HOME
   // #top {min-height:95vh;}
 
   #home-top {
-    min-height:15vh;
-    // #half-bike {left:0;}
+  
   }
+
   //MADE IN FRANCE
   #made-in-france {
     min-height:700px;
@@ -269,9 +269,9 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
- //body {border-top:5px solid green;}
+ 
   #top {
-    min-height:95vh;
+    // min-height:95vh;
     h1 {font-size:48px !important;margin:48px 0 !important;}
     h2 {font-size:18px;font-weight:200;}
     h3 {font-size:18px;}
@@ -279,9 +279,7 @@
 
 
   #home-top {
-    height:20vh;
     #half-bike{
-      // img {width:1000px;}
     }
   }
 
@@ -367,13 +365,10 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-  //body {border-top:5px solid grey;}
+  
 
   #home-top {
-    min-height:0vh;
-    border:1px solid red;
     #half-bike{   
-      // width:2500px; //oversize to invoke img-responsive
     }
   }
 
