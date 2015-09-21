@@ -37,10 +37,10 @@ $(document).ready(function(){
     points = [],
     tick = 0,
     opt = {
-      count:150,
+      count:75,
       range: {
         x: 1,
-        y: 300
+        y: 200
         
       },
       duration: {

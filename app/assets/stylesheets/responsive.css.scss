@@ -40,24 +40,16 @@
   }
 
 #bikes-aktiv {
-  min-height:500px;  
-  #aktiv-fork-circle {
-    position:absolute;
-    left:50%;
-    margin-left:-250px;
-    top:16%;
-    width:500px;
-  }
 
-  #bike-vibe-big {
-    background-position-y:50%;
-    height:500px;
-  }
-  #bike-vibe-small {
-    background-position-y:50%;
-    height:500px;
-  }
- }
+
+}
+
+#aktiv-text {
+
+  left:26%;
+
+
+}
 
 #aktiv-choice {
   padding:80px 0px;
@@ -289,6 +281,12 @@
   #aktiv {
       @include gradient-bg(#000, #fff, 80%);//$start-color, $end-color, $gradient-point
   }
+
+  #aktiv-text {
+  left:32%;
+ }
+
+
   #aktiv-biker {
    padding-top:200px;
    background-position-x:-500px;
@@ -371,6 +369,10 @@
     #half-bike{   
     }
   }
+
+  #aktiv-text {
+  left:37%;
+ }
 
   #bikes-frames-feature {
     #home-bike-bg img {@include home-bike-feature(absolute, -1, 240px, -100px, nil, nil)};

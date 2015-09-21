@@ -134,24 +134,9 @@ section {
 
 // L2 Bikes
 
-#aktiv-canvas {
-  position:relative;
-  #aktiv-graphic {
-    position:absolute;
-    color:white;
-    z-index:12000;
-    top:2px;
-    left:50%;
-    margin-left:-150px;
-  }
-}
 
-canvas {
-  display: block; 
-  background-color:black;
-  width:100%;
-  height:280px;
-}
+
+
 
 #l2-bike {
   padding:20px;
@@ -185,10 +170,11 @@ canvas {
  }
 
 #pre-aktiv {
-  padding:40px 20px 0px 20px;
+  padding:40px 20px 20px 20px;
 
   h3 {@include text-style(24px, 100, $white-alpha7);letter-spacing:.05em;}
   background-color:black;
+
 }
 
  #bikes-aktiv {
@@ -196,37 +182,66 @@ canvas {
   height:400px;
   background-color:black;
   position:relative;
-  #aktiv-fork-circle {
-    position:absolute;
-    left:50%;
-    margin-left:-250px;
-    top:7%;
-    width:500px;
-    z-index:99;
 
-  }
-  // background-size:cover;
-  // background-image:url(aktiv-work2.png);
-  // background-repeat:no-repeat;
-  // background-position-x:-125px;
-  #bike-vibe-big {
-    background-image:url(aktiv-ani.gif);
-    min-height:400px; 
-    background-size:100% 460px;
-    background-repeat:no-repeat;
-    background-position-y:50%;
-
-
-  }
-  #bike-vibe-small {
-    background-image:url(aktiv-ani.gif);
-    min-height:400px;
-    background-size:100% 90px;
-    background-repeat:no-repeat;
-    background-position-y:51%;
-    border:1px solid red;
-  }
  }
+
+#aktiv-canvas {
+  position:relative;
+  margin-top:-1px;
+}
+
+#aktiv-text {
+  p {color:#fff;font-size:15px;font-style:italic;}
+  #top-english {line-height:10px;margin-bottom:1.25em;}
+  position:absolute;
+  top:70px;
+  left:14%;
+  z-index:51;
+  span {vertical-align:middle;margin-left:8px;}
+  
+}
+
+#aktiv-graphic {
+    height:300px;
+    width:300px;
+    border-top:1px solid rgba(255,255,255,.5);
+    background:url('aktiv-fork-sprite-3.png') left center;
+    animation: play .8s steps(10) infinite;
+    -webkit-animation: play .8s steps(10) infinite;
+    
+     position:absolute;
+     color:white;
+     z-index:50;
+     top:2px;
+     left:50%;
+     margin-left:-150px;
+  }
+@keyframes play {
+  100% { background-position: -3000px; }
+}
+
+@-webkit-keyframes play {
+    from { background-position: 0px; }
+    to { background-position: -3000px; }
+}
+
+@-moz-keyframes play {
+    from { background-position: 0px; }
+    to { background-position: -3000px; }
+}
+
+@keyframes play {
+    from { background-position: 0px; }
+    to { background-position: -3000px; }
+}
+
+
+canvas {
+  display: block;
+  background-color:black;
+  width:100%;
+  height:300px;
+}
 
  #aktiv-choice {
   padding:40px 0px;
@@ -330,7 +345,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 }
 
 #pedals-xpresso-flag-editions {
-  background-color:rgba(225,225,225,.1);
+  background-color:rgba(200,200,200,.1);
 }
 
 #pedal-atac-hero {

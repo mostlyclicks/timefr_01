@@ -143,17 +143,24 @@
 </div>
 </section>
 
-<section id="bikes-aktiv">
+<section id="aktiv-canvas">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="aktiv-graphic"></div>
+        <div id="aktiv-text"><p id="top-english">Tuned Mass Dampers <span class="fa fa-caret-right fa-2x"></span><br />
+                  Stop vibrations</p>
+                  <p>Batteur dynamique<br />Stoppe les vibrations</p></div>
+      </div>
+    </div>
+  </div>
 <div class="container-fluid">
   <div class="row">
-    <div id="aktiv-fork-circle">
-      <%= image_tag 'aktiv-fork-circle-ani.gif', class: 'img-responsive' %>
+    <div class="col-xs-6">
+      <canvas id="c"></canvas>
     </div>
-    <div class="col-xs-6" id="bike-vibe-big">
-
-    </div>
-
-    <div class="col-xs-6" id="bike-vibe-small">
+    <div class="col-xs-6">
+      <canvas id="d"></canvas>
     </div>
   </div>
 </div>
