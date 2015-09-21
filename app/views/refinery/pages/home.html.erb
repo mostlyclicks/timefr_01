@@ -30,8 +30,8 @@
 
 <!-- MADE IN FRANCE  ***************************** -->
 
-<% @mif_bg_image = ['made-in-france-p3.jpg','readyforresin.jpeg', 'DSC_7960-carbon-weaver.jpg'] %>
-<% @random_mif_image = @mif_bg_image.sample %>
+<%# @mif_bg_image = ['made-in-france-p3.jpg','readyforresin.jpeg', 'DSC_7960-carbon-weaver.jpg'] %>
+<%# @random_mif_image = @mif_bg_image.sample %>
 
 <style>
   #home-made-in-france {background-image:url(/assets/<%= @random_mif_image %>); }
@@ -40,7 +40,25 @@
 <section id="home-made-in-france">
   <div class="container-fluid">
     <div class="row">
+      
+        
+      
       <%= raw @page.content_for(:home_made_in_france) %>
+      <!-- <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-12 text-center " id="headline">
+        
+      </div> -->
+      <!-- <div class="col-lg-7 col-md-7 col-md-offset-0 col-sm-8 col-sm-offset-2" id="description">
+        <p>Made in France. Our frames are born and raised here. Starting from single carbon fibers woven into tube shapes to our Resin Transfer Molding (RTM) process, we control every step of creating a TIME frame, in-house at our factory near Lyon, France. What you get is the legendary TIME ride.</p>
+          <h3 class="text-center">
+            <a href="#bikes-frames-feature" class="scroll-btn text-center">See what's new for 2016</a>
+          </h3>
+      </div> -->
+      <div class="embed-responsive embed-responsive-16by9">
+      <video autoplay loop >
+        <!-- <source src="webm" type="video/webm" />  poster="/assets/DSC_7960-carbon-weaver.jpg"-->
+        <source src="/assets/made-in-france.mp4" type="video/mp4" />
+      </video>
+      </div>
     </div>
   </div>
 </section>
@@ -96,98 +114,9 @@
 </section>
 
 
-
-
-
-
-
-
 <!-- BIKE/FRAMES 2015 COLLECTION  ***************************** -->
-<!-- 
-<section id="bikes-frames" class="time-text white">
-  <div class="container-fluid">
+<%#= render 'shared/bikes_collection' %>
 
-   <h1></h1>
-    <div class="row">
-      <div class="col-md-4">
-        <h2><%#= @skylon_bike_type %></h2>
-        <div class="row">
-          <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <%# @skylon_aktiv.each do |c| %>
-              <%#= image_tag c.image.url, class: 'img-responsive' %>
-              <%#= link_to c.name, bikes_bike_path(@skylon_path) %>
-          <%# end %>
-          </div>
-          <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <%# @skylon.each do |s| %>
-              <%#= image_tag s.image.url, class: 'img-responsive' %>
-              <%#= link_to s.name, bikes_bike_path(@skylon_path) %>
-            <%# end %>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <h2><%#= @izon_bike_type %></h2>
-         <div class="row">
-          <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <%# @izon_aktiv.each do |c| %>
-              <%#= image_tag c.image.url, class: 'img-responsive' %>
-              <%#= link_to c.name, bikes_bike_path(@izon_path) %>
-          <%# end %>
-          </div>
-          <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <%# @izon.each do |s| %>
-              <%#= image_tag s.image.url, class: 'img-responsive' %>
-              <%#= link_to s.name, bikes_bike_path(@izon_path) %>
-            <%# end %>
-          </div>
-        </div>
-      </div>
- 
-    <div class="col-md-4">
-        <h2><%#= @fluidity_bike_type %></h2>
-         <div class="row">
-          <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <%# @fluidity_aktiv.each do |c| %>
-              <%#= image_tag c.image.url, class: 'img-responsive' %>
-              <%#= link_to c.name, bikes_bike_path(@fluidity_path) %>
-          <%# end %>
-          </div>
-          <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <%# @fluidity.each do |s| %>
-              <%#= image_tag s.image.url, class: 'img-responsive' %>
-              <%#= link_to s.name, bikes_bike_path(@fluidity_path) %>
-            <%# end %>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <h2><%#= @specialty_bike_type %></h2>
-         <div class="row">
-          <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <%# unless @specialty_1.nil? %>
-              <%# @specialty_1.each do |c| %>
-                <%#= image_tag c.image.url, class: 'img-responsive' %>
-                <%#= link_to c.name, bikes_bike_path(@specialty_1_path) %>
-              <%# end %>
-            <%# end %>
-          </div>
-          <div class="col-md-12 col-xs-6 bikes-frames-bikes">
-            <%# unless @specialty_2.nil? %>
-              <%# @specialty_2.each do |s| %>
-                <%#= image_tag s.image.url, class: 'img-responsive' %>
-                <%#= link_to s.name, bikes_bike_path(@specialty_2_path) %>
-              <%# end %>
-            <%# end %>
-          </div>
-        </div>
-      </div> 
-
-    </div>
-  </div>
-</section>-->
 
 <!-- AKTIV  ***************************** -->
 <section id="aktiv">
@@ -217,8 +146,6 @@
       </div>
       <div class="col-lg-6 col-lg-offset-3 text-center" id="pedal-txt">
         <%= raw @page.content_for(:pedal_section) %>
-        
-          
         </p>
       </div>
     </div>

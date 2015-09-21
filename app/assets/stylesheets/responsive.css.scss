@@ -11,14 +11,21 @@
   }
 
   //MADE IN FRANCE
-  #made-in-france {
-    min-height:700px;
-    @include background-style(cover, 50%, 50%, no-repeat);
-    .row {
-      padding:40px 0;
-      background-color:rgba(0,0,0,.6) !important;
-      p {font-size:14px;margin-top:1em;}
-      h3 {@include text-style(24px, 200, $time-red);text-align:center;}
+  #home-made-in-france {
+
+    p {
+      position:absolute;
+      top:18%;
+      left:20%;
+      display:block;
+      width:60%;
+      height:auto;
+      background-color:rgba(0,0,0,.8);
+      z-index:54;
+      color:#fff;
+      font-size:20px;
+      padding:40px;
+      img {text-align:center;margin:20px auto 10px auto;width:200px;}
     }
   }
 
@@ -269,6 +276,24 @@
     h3 {font-size:18px;}
   }
 
+  #home-made-in-france {
+
+    p {
+      position:absolute;
+      top:18%;
+      left:25%;
+      display:block;
+      width:50%;
+      height:auto;
+      background-color:rgba(0,0,0,.8);
+      z-index:54;
+      color:#fff;
+      font-size:24px;
+      padding:40px;
+      img {text-align:center;margin:20px auto 10px auto;width:200px;}
+    }
+  }
+
 
   #home-top {
     #half-bike{
@@ -363,6 +388,24 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+
+  #home-made-in-france {
+
+    p {
+      position:absolute;
+      top:25%;
+      left:33%;
+      display:block;
+      width:33%;
+      height:auto;
+      background-color:rgba(0,0,0,.8);
+      z-index:54;
+      color:#fff;
+      font-size:24px;
+      padding:40px;
+      img {text-align:center;margin:20px auto 10px auto;width:200px;}
+    }
+  }
   
 
   #home-top {
