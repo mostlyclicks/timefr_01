@@ -6,3 +6,6 @@ rails g refinery:engine geometry name:string geometry_table:text geometry_image:
 
 //features for bikes
 rails g refinery:engine bike_feature title:string sub_title:string description:text  image:image --extension bikes --namespace bikes --i18n title sub_title description
+
+//dealers
+rails g refinery:engine dealer_name:string street_address_1:string street_address_2:string postal_code:string city:string telephone_1:string state_province:string country:string email:string website:string --skip-frontend

@@ -1,0 +1,60 @@
+<%= form_for [refinery, :dealers_admin, @dealer] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @dealer,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :dealer_name -%>
+    <%= f.text_field :dealer_name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :street_address_1 -%>
+    <%= f.text_field :street_address_1 -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :street_address_2 -%>
+    <%= f.text_field :street_address_2 -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :postal_code -%>
+    <%= f.text_field :postal_code -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :city -%>
+    <%= f.text_field :city -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :telephone_1 -%>
+    <%= f.text_field :telephone_1 -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :state_province -%>
+    <%= f.text_field :state_province -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :country -%>
+    <%= f.text_field :country -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :website -%>
+    <%= f.text_field :website -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.dealers.admin.dealers.dealer'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @dealer.dealer_name) -%>
+<% end -%>

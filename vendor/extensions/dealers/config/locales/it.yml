@@ -1,0 +1,36 @@
+it:
+  refinery:
+    plugins:
+      dealers:
+        title: Dealers
+    dealers:
+      admin:
+        dealers:
+          actions:
+            create_new: Aggiungi Nuovo Dealer
+            reorder: Riordina Dealers
+            reorder_done: Termina il Riordino di Dealers
+          records:
+            title: Dealers
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Dealers. Clicca "Aggiungi Nuovo Dealer" per aggiungere il tuo primo dealer.
+          dealer:
+            view_live_html: Guarda live questo dealer <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo dealer
+            delete: Rimuovi per sempre questo dealer
+      dealers:
+        show:
+          other: Altri Dealers
+  activerecord:
+    attributes:
+      'refinery/dealers/dealer':
+        dealer_name: Dealer Name
+        street_address_1: Street Address 1
+        street_address_2: Street Address 2
+        postal_code: Postal Code
+        city: City
+        telephone_1: Telephone 1
+        state_province: State Province
+        country: Country
+        email: Email
+        website: Website

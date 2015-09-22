@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Dealers::Admin::DealersController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.dealers_admin_dealers_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_dealers_admin_dealer_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Dealers::Admin::DealersController.sortable? && ::Refinery::Dealers::Dealer.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Dealers"),
+                 refinery.dealers_admin_dealers_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Dealers"),
+                 refinery.dealers_admin_dealers_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

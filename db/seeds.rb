@@ -128,7 +128,7 @@ Refinery::Groups::Engine.load_seed
 
 
 # @dealers = [
-#   # {account:, company:, street_address_1:, street_address_2:, postal_code:, city:, telephone_1:}
+#   # {account:, dealer_name:, street_address_1:, street_address_2:, postal_code:, city:, telephone_1:, country:, email:, website:}
 
 # { account: '001143', company: 'GUERRIER - VELOLAND - SARL ACC',             street_address_1: '44 RUE DU PLATEAU', street_address_2: 'PARC D ACTIVITE DE LA NEUVE', postal_code: '01440', city: 'VIRIAT', telephone_1: '04.74.22.29.48'},
 # { account: '101216', company: 'AC CYCLES & MOTOS',                          street_address_1: '45 AVENUE ALBERT THOMAS', street_address_2:"", postal_code: '03100','MONTLUCON','04.70.03.86.64'},
@@ -290,3 +290,6 @@ Refinery::Geometries::Engine.load_seed
 
 # Added by RefineryCMS Copywriting engine
 Refinery::Copywriting::Engine.load_seed
+
+# Added by Refinery CMS Dealers extension
+Refinery::Dealers::Engine.load_seed

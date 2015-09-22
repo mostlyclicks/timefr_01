@@ -3,6 +3,8 @@ PATH
   specs:
     refinerycms-bikes (1.0)
       refinerycms-core (~> 2.1.5)
+    refinerycms-dealers (1.0)
+      refinerycms-core (~> 2.1.5)
     refinerycms-distributors (1.0)
       refinerycms-core (~> 2.1.5)
     refinerycms-geometries (1.0)
@@ -322,6 +324,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 1.0.0)
   refinerycms-bikes!
   refinerycms-copywriting
+  refinerycms-dealers!
   refinerycms-distributors!
   refinerycms-geometries!
   refinerycms-groups!

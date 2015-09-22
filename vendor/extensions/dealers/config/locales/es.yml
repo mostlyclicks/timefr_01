@@ -1,0 +1,37 @@
+es:
+  refinery:
+    plugins:
+      dealers:
+        title: Dealers
+#        article: masculino/femenino
+    dealers:
+      admin:
+        dealers:
+          actions:
+            create_new: Crear nuevo dealer
+            reorder: Reordenar dealers
+            reorder_done: Reordenación de dealers completada
+          records:
+            title: Dealers
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay dealers todavía. Pulsa en "Crear nuevo Dealer" para crear tu primer dealer.
+          dealer:
+            view_live_html: Ver este dealer como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este dealer
+            delete: Borrar este dealer para siempre
+      dealers:
+        show:
+          other: Otros dealers
+  activerecord:
+    attributes:
+      'refinery/dealers/dealer':
+        dealer_name: Dealer Name
+        street_address_1: Street Address 1
+        street_address_2: Street Address 2
+        postal_code: Postal Code
+        city: City
+        telephone_1: Telephone 1
+        state_province: State Province
+        country: Country
+        email: Email
+        website: Website

@@ -1,0 +1,36 @@
+tr:
+  refinery:
+    plugins:
+      dealers:
+        title: Dealers
+    dealers:
+      admin:
+        dealers:
+          actions:
+            create_new: Yeni Ekle Dealer
+            reorder: Tekrar sirala Dealers
+            reorder_done: Tekrar siralama tamamlandiDealers
+          records:
+            title: Dealers
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Dealers yok henuz.  Tikla "Yeni Ekle Dealer" eklemek senin ilk dealer.
+          dealer:
+            view_live_html: Bunu canlu dealer goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle dealer
+            delete: Bunu Sil dealer sonsuza dek
+      dealers:
+        show:
+          other: Diger Dealers
+  activerecord:
+    attributes:
+      'refinery/dealers/dealer':
+        dealer_name: Dealer Name
+        street_address_1: Street Address 1
+        street_address_2: Street Address 2
+        postal_code: Postal Code
+        city: City
+        telephone_1: Telephone 1
+        state_province: State Province
+        country: Country
+        email: Email
+        website: Website

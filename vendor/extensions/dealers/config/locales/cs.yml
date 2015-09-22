@@ -1,0 +1,36 @@
+cs:
+  refinery:
+    plugins:
+      dealers:
+        title: Dealers
+    dealers:
+      admin:
+        dealers:
+          actions:
+            create_new: Přidat Dealer
+            reorder: Řadit Dealers
+            reorder_done: Konec řazení Dealers
+          records:
+            title: Dealers
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Dealers. Zvolte "Přidat Dealer" pro přidání prvního dealer.
+          dealer:
+            view_live_html: Zobrazit náhled dealer<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit dealer
+            delete: Smazat dealer
+      dealers:
+        show:
+          other: Další Dealers
+  activerecord:
+    attributes:
+      'refinery/dealers/dealer':
+        dealer_name: Dealer Name
+        street_address_1: Street Address 1
+        street_address_2: Street Address 2
+        postal_code: Postal Code
+        city: City
+        telephone_1: Telephone 1
+        state_province: State Province
+        country: Country
+        email: Email
+        website: Website

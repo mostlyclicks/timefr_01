@@ -1,0 +1,36 @@
+nb:
+  refinery:
+    plugins:
+      dealers:
+        title: Dealers
+    dealers:
+      admin:
+        dealers:
+          actions:
+            create_new: Lag en ny Dealer
+            reorder: Endre rekkefølgen på Dealers
+            reorder_done: Ferdig å endre rekkefølgen Dealers
+          records:
+            title: Dealers
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Dealers enda. Klikk på "Lag en ny Dealer" for å legge til din første dealer.
+          dealer:
+            view_live_html: Vis hvordan denne dealer ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne dealer
+            delete: Fjern denne dealer permanent
+      dealers:
+        show:
+          other: Andre Dealers
+  activerecord:
+    attributes:
+      'refinery/dealers/dealer':
+        dealer_name: Dealer Name
+        street_address_1: Street Address 1
+        street_address_2: Street Address 2
+        postal_code: Postal Code
+        city: City
+        telephone_1: Telephone 1
+        state_province: State Province
+        country: Country
+        email: Email
+        website: Website

@@ -1,0 +1,38 @@
+zh-CN:
+  refinery:
+    plugins:
+      dealers:
+        title: Dealers
+    dealers:
+      admin:
+        dealers:
+          actions:
+            create_new: 建立新的 Dealer
+            reorder: 对 Dealers 重新排序
+            reorder_done: 对 Dealers 的重新排序结束
+          records:
+            title: Dealers
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Dealers yet. Click "Add New Dealer" to add your first dealer.
+            no_items_yet: 目前没有 Dealers . 点击 "Add New Dealer" 创建一个dealer.
+          dealer:
+            view_live_html: 查看 dealer 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 dealer
+            delete: 永久删除 dealer
+      dealers:
+        show:
+          other: 其他 Dealers
+  activerecord:
+    attributes:
+      'refinery/dealers/dealer':
+        dealer_name: Dealer Name
+        street_address_1: Street Address 1
+        street_address_2: Street Address 2
+        postal_code: Postal Code
+        city: City
+        telephone_1: Telephone 1
+        state_province: State Province
+        country: Country
+        email: Email
+        website: Website

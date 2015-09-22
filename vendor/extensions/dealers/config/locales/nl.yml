@@ -1,0 +1,36 @@
+nl:
+  refinery:
+    plugins:
+      dealers:
+        title: Dealers
+    dealers:
+      admin:
+        dealers:
+          actions:
+            create_new: Nieuwe Dealer toevoegen
+            reorder: De volgorde van de Dealers wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Dealer-volgorde
+          records:
+            title: Dealers
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Dealers. Druk op 'Nieuwe Dealer toevoegen' om de eerste toe te voegen.
+          dealer:
+            view_live_html: Deze dealer op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze dealer
+            delete: Deze dealer definitief verwijderen
+      dealers:
+        show:
+          other: Andere Dealers
+  activerecord:
+    attributes:
+      'refinery/dealers/dealer':
+        dealer_name: Dealer Name
+        street_address_1: Street Address 1
+        street_address_2: Street Address 2
+        postal_code: Postal Code
+        city: City
+        telephone_1: Telephone 1
+        state_province: State Province
+        country: Country
+        email: Email
+        website: Website

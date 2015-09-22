@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150915033630) do
+ActiveRecord::Schema.define(:version => 20150922134325) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -118,6 +118,22 @@ ActiveRecord::Schema.define(:version => 20150915033630) do
   end
 
   add_index "refinery_copywriting_phrases", ["name", "scope"], :name => "index_copywriting_phrases_on_name_and_scope"
+
+  create_table "refinery_dealers", :force => true do |t|
+    t.string   "dealer_name"
+    t.string   "street_address_1"
+    t.string   "street_address_2"
+    t.string   "postal_code"
+    t.string   "city"
+    t.string   "telephone_1"
+    t.string   "state_province"
+    t.string   "country"
+    t.string   "email"
+    t.string   "website"
+    t.integer  "position"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "refinery_distributors", :force => true do |t|
     t.string   "name"
