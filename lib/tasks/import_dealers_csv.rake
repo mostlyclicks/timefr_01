@@ -10,4 +10,4 @@ namespace :import_dealers_csv do
 end
 
 # rake task--
-# heroku run rake import_dealers_csv:create_dealers
+# heroku run rake import_dealers_csv:create_dealersXXS,M,L

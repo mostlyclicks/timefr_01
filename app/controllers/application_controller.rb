@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   before_filter :load_home_features, :load_home_skylons, :load_home_izons, :load_home_fluidity, :load_home_bettini, :load_zxrs_piste, :load_road_pedals, :load_mtb_pedals
   before_filter :load_geo
   before_filter :load_geometries
+  before_filter :load_fr_dealers
+  before_filter :load_us_dealers
   # before_filter :get_bike_geometry
 
 
@@ -13,6 +15,14 @@ class ApplicationController < ActionController::Base
 
 
   protected
+
+  def load_fr_dealers
+    @fr_dealers = Refinery::Dealers::Dealer.where(country: 'France')
+  end
+
+  def load_us_dealers
+    @us_dealers = Refinery::Dealers::Dealer.where(country: 'USA')
+  end
 
   def load_geo
     @geoip = GeoIP.new(Rails.root.join("GeoIP.dat"))
