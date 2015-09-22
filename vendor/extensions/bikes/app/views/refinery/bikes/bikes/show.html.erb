@@ -25,9 +25,9 @@
     <div class="row">
       <div class="col-md-2 col-xs-12 text-center 
       <% if @bike.name == 'Skylon' %>
-        col-md-offset-2
-      <% else %>
         col-md-offset-1
+      <% else %>
+        col-md-offset-0
       <% end %>
       ">
 
@@ -48,6 +48,10 @@
       <div class="col-md-2 col-xs-6 text-center">
         <span><%= image_tag 'AKTIV-LOGO-black.png', height: '42' %></span><br />
         <small><%= copywriting('Bike Specs - AKTIV', {:scope => 'bike-specs'}) %><!-- AKTIV Fork Option --></small>
+      </div>
+      <div class="col-md-2 col-xs-6 text-center">
+        <span><%= image_tag 'gloss-matte-icon.png', height: '42' %></span><br />
+        <small><%= copywriting('Bike Specs - Finishes', {:scope => 'bike-specs'}) %><!-- Finishes --></small>
       </div>
       <% unless @bike.name == 'Skylon' %>
       <div class="col-md-2 col-xs-6 text-center">
