@@ -73,7 +73,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
-      <h1 class="text-center"><%= @bike.name %> Gallery</h1>
+      <h1 class="text-center"><%= @bike.name.upcase unless @bike.name == 'Fluidity' %> Gallery</h1>
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
