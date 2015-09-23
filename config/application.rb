@@ -17,6 +17,49 @@ end
 
 module Timefr01
   class Application < Rails::Application
+
+    require 'rack/rewrite'  
+
+    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+        r301 '/about.htm', '/about-us'
+        r301 '/pedales/xpresso_17.aspx', '/pedals/road-pedals'
+        r301 'http://www.dropbox.com/s/u5d0zxe2o4ih57g/CATALOGUE%20TIME%202015.pdf?dl=0', 'https://timefr-01.herokuapp.com/system/resources/W1siZiIsIjIwMTUvMDkvMTYvMTYvMTUvMjUvNS8yMDE2X1RJTUVTUE9SVF9DQVRBTE9HX3dlYi5wZGYiXV0/2016_TIMESPORT_CATALOG_web.pdf'
+        r301 '/univers-time/club-time.aspx?me=131', '/warranty-registration'
+        r301 '/velos-montes/skylon-aktiv_38.aspx', '/bikes/skylon'
+        r301 '/time-france/maison-time_79.aspx?me=126', '/'
+        r301 '/time-france/historique-time_88.aspx?me=127', '/'
+        r301 '/time-france/technologie-rtm_82.aspx?me=128', '/technologies/resin-transfer-molding'
+        r301 '/recherche-developpement/time-r-et-d_74.aspx?me=130', '/technologies/resin-transfer-molding'
+        r301 '/pedalers-automatiques-time_80.aspx?me=129', '/technologies/road-pedals'
+        r301 'velos-montes/velos-montes.aspx', '/'
+        r301 '/cadres/cadres.aspx', '/'
+        r301 '/pedales/pedales.aspx' '/pedals/mtb-pedals'
+        r301 '/accessoires/accessoires.aspx', '/accessories'
+        r301 '/textiles/textiles.aspx', '/accessories'
+        r301 '/distributeurs-velos/distributeurs.aspx', '/distributors'
+        r301 '/univers-time/news.aspx?me=99', '/'
+        r301 'univers-time/club-time.aspx?me=131', '/'
+        r301 '/univers-time/time-experience_84.aspx?me=132', '/'
+        r301 '/evenements/evenements.aspx?me=133', '/'
+        r301 '/partenaires_87.aspx?me=134', '/'
+        r301 '/pages/langues.aspx', '/'
+        r301 '/time/mentions-legales_56.aspx', '/'
+        r301 '/time-france/credits_90.aspx', '/'
+        r301 '/velo-time/faq_81.aspx', '/'
+        r301 '/time-france/contact.aspx', '/'
+
+        r301 'http://www.timesportusa.com/framesets/skylon', '/bike/skylon'
+        r301 'http://www.timesportusa.com/framesets/izon', '/bike/izon'
+        r301 'http://www.timesportusa.com/framesets/fluidity', '/bike/fluidity'
+        r301 'http://www.timesportusa.com/framesets/first', '/'
+        r301 '/technologies/pedal-systems', '/technologies/pedal-technology'
+        r301 '/contact', '/'
+        r301 '/framesets/limited-edition-bettini-vxrs', '/limited-edition-bettini-vxrs'
+        r301 'https://www.facebook.com/timesportusa', 'https://www.facebook.com/VELOTIME'
+    end
+
+
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
