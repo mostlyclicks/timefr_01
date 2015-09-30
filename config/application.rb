@@ -49,7 +49,7 @@ module Timefr01
          r301 '/time-france/contact.aspx', '/'
          r301 '/cadres/fluidity-aktiv_36.aspx', '/bikes/fluidity'
          r301 '/pedales/atac-mx-dh_16_m45.aspx', '/pedals/mtb-pedals'
-         
+         r301 '/velos-montes/fludity-aktiv_41.aspx', '/bikes/fluidity'
 
          r301 'http://www.timesportusa.com/framesets/skylon', '/bike/skylon'
          r301 'http://www.timesportusa.com/framesets/izon', '/bike/izon'
