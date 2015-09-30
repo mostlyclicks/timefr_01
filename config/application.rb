@@ -18,7 +18,7 @@ end
 module Timefr01
   class Application < Rails::Application
 
-    # require 'rack/rewrite'  
+    require 'rack/rewrite'  
 
      config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
          r301 '/about.htm', '/about-us'
@@ -31,7 +31,7 @@ module Timefr01
          r301 '/time-france/technologie-rtm_82.aspx?me=128', '/technologies/resin-transfer-molding'
          r301 '/recherche-developpement/time-r-et-d_74.aspx?me=130', '/technologies/resin-transfer-molding'
          r301 '/pedalers-automatiques-time_80.aspx?me=129', '/technologies/road-pedals'
-         r301 'velos-montes/velos-montes.aspx', '/'
+         r301 '/velos-montes/velos-montes.aspx', '/'
          r301 '/cadres/cadres.aspx', '/'
          r301 '/pedales/pedales.aspx', '/pedals/mtb-pedals'
          r301 '/accessoires/accessoires.aspx', '/accessories'
@@ -47,6 +47,9 @@ module Timefr01
          r301 '/time-france/credits_90.aspx', '/'
          r301 '/velo-time/faq_81.aspx', '/'
          r301 '/time-france/contact.aspx', '/'
+         r301 '/cadres/fluidity-aktiv_36.aspx', '/bikes/fluidity'
+         r301 '/pedales/atac-mx-dh_16_m45.aspx', '/pedals/mtb-pedals'
+         
 
          r301 'http://www.timesportusa.com/framesets/skylon', '/bike/skylon'
          r301 'http://www.timesportusa.com/framesets/izon', '/bike/izon'
