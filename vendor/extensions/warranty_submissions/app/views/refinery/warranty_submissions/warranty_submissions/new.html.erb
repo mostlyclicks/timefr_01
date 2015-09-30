@@ -1,0 +1,75 @@
+<% content_for :body do %>
+  <div class='warranty_submissions'>
+    <%#=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) %>
+
+    <%= form_for [refinery, :warranty_submissions, @warranty_submission] do |f| %>
+      <%= render '/refinery/admin/error_messages',
+                 :object => @warranty_submission,
+                 :include_object_name => true  %>
+
+      <div class='field name_field string_field'>
+        <%= f.required_label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class='field address_1_field string_field'>
+        <%= f.label :address_1 %>
+        <%= f.text_field :address_1 %>
+      </div>
+
+      <div class='field address_2_field string_field'>
+        <%= f.label :address_2 %>
+        <%= f.text_field :address_2 %>
+      </div>
+
+      <div class='field state_province_field string_field'>
+        <%= f.label :state_province %>
+        <%= f.text_field :state_province %>
+      </div>
+
+      <div class='field postal_code_zip_field string_field'>
+        <%= f.label :postal_code_zip %>
+        <%= f.text_field :postal_code_zip %>
+      </div>
+
+      <div class='field country_field string_field'>
+        <%= f.label :country %>
+        <%= f.text_field :country %>
+      </div>
+
+      <div class='field time_bike_model_field string_field'>
+        <%= f.label :time_bike_model %>
+        <%= f.text_field :time_bike_model %>
+      </div>
+
+      <div class='field serial_number_field string_field'>
+        <%= f.label :serial_number %>
+        <%= f.text_field :serial_number %>
+      </div>
+
+      <div class='field purchase_date_field date_field'>
+        <%= f.label :purchase_date %>
+        <%= f.date_select :purchase_date %>
+      </div>
+
+      <div class='field purchased_at_field string_field'>
+        <%= f.label :purchased_at %>
+        <%= f.text_field :purchased_at %>
+      </div>
+
+      <div class='field receipt_field resource_field'>
+        <%= f.label :receipt %>
+        <%= render '/refinery/admin/resource_picker',
+               :f => f,
+               :field => :receipt_id,
+               :resource => @warranty_submission.receipt_id,
+               :toggle_image_display => false -%>
+      </div>
+
+      <div class='actions'>
+        <%= f.submit t('.send') %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%= render '/refinery/content_page' %>

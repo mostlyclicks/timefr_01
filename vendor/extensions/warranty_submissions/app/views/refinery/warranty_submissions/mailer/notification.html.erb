@@ -1,0 +1,24 @@
+<%= t('.greeting') %>,<br/>
+<br/>
+<%= t('.you_recieved_new_warranty_submission') %><br/>
+<br/>
+<%= t('.warranty_submission_starts') %><br/>
+<br/>
+<%= t('.name', :default => t('activerecord.attributes.warranty_submission.name')) %>: <%= @warranty_submission.name %><br/>
+<%= t('.address_1', :default => t('activerecord.attributes.warranty_submission.address_1')) %>: <%= @warranty_submission.address_1 %><br/>
+<%= t('.address_2', :default => t('activerecord.attributes.warranty_submission.address_2')) %>: <%= @warranty_submission.address_2 %><br/>
+<%= t('.state_province', :default => t('activerecord.attributes.warranty_submission.state_province')) %>: <%= @warranty_submission.state_province %><br/>
+<%= t('.postal_code_zip', :default => t('activerecord.attributes.warranty_submission.postal_code_zip')) %>: <%= @warranty_submission.postal_code_zip %><br/>
+<%= t('.country', :default => t('activerecord.attributes.warranty_submission.country')) %>: <%= @warranty_submission.country %><br/>
+<%= t('.time_bike_model', :default => t('activerecord.attributes.warranty_submission.time_bike_model')) %>: <%= @warranty_submission.time_bike_model %><br/>
+<%= t('.serial_number', :default => t('activerecord.attributes.warranty_submission.serial_number')) %>: <%= @warranty_submission.serial_number %><br/>
+<%= t('.purchase_date', :default => t('activerecord.attributes.warranty_submission.purchase_date')) %>: <%= @warranty_submission.purchase_date %><br/>
+<%= t('.purchased_at', :default => t('activerecord.attributes.warranty_submission.purchased_at')) %>: <%= @warranty_submission.purchased_at %><br/>
+<%= t('.receipt', :default => t('activerecord.attributes.warranty_submission.receipt')) %>: <%= @warranty_submission.receipt %><br/>
+<br/>
+<%= t('.warranty_submission_ends') %><br/>
+<br/>
+<%= t('.closing_line') %>,<br/>
+<%= Refinery::Core.site_name %><br/>
+<br/>
+<%= t('.ps_html') %>

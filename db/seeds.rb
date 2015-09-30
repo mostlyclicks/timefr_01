@@ -293,3 +293,5 @@ Refinery::Copywriting::Engine.load_seed
 
 # Added by Refinery CMS Dealers extension
 Refinery::Dealers::Engine.load_seed
+
+Refinery::WarrantySubmissions::Engine.load_seed

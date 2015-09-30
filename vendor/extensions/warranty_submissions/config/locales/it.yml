@@ -1,0 +1,74 @@
+it:
+  refinery:
+    plugins:
+      warranty_submissions:
+        title: Warranty Submissions
+    warranty_submissions:
+      warranty_submissions:
+        new:
+          header_message: "Un problema si è verificato"
+          message: "I seguenti problemi devono essere corretti:"
+          send: Invia messaggio
+          privacy_policy: "Noi diamo valore alla tua privacy"
+      admin:
+        warranty_submissions:
+          warranty_submission:
+            move_warranty_submission_to_closed: Spostare questa inchiesta chiusa
+            move_warranty_submission_to_open: Spostare questa indagine per aprire
+            read_warranty_submission: Leggi l'inchiesta
+            remove_warranty_submission: "Sei sicuro di voler cancellare la richiesta di '%{name}'?"
+            title: Warranty Submissions
+          toggle_status:
+            closed: "Inchiesta '%{warranty_submission}' è chiuso"
+            reopened: "Inchiesta '%{warranty_submission}' si riapre"
+          index:
+            no_warranty_submissions: Non hai ancora ricevuto alcuna richiesta in.
+          show:
+            details: Dettagli
+            click_to_email: Clicca per e-mail
+            status: Stato
+            open: Aperto
+            closed: Chiuso
+            age: Età
+            actions: Azioni
+            back_to_all_warranty_submissions: Torna a tutte le richieste
+            warranty_submission: Warranty Submission
+          submenu:
+            update_notified: Aggiornamento chi viene notificata
+            edit_confirmation_email: Modifica email di conferma
+        settings:
+          update:
+            updated: "'%{setting}' stato aggiornato con successo."
+          notification_recipients_form:
+            settings_value_name: Invia a notifiche
+            explanation: "Ogni volta che qualcuno ti contatti sul suo sito web, Refinery invia una mail a dire che c'è una nuova indagine."
+            hint: "Inserisci un indirizzo email di cui sopra. Vuoi la notifica di andare a più di una persona? Inserisci più indirizzi email separati da virgole."
+            example: "E.g. me@domain.com, friend@msn.com, workmate@work.com"
+          confirmation_email_form:
+            to: A
+            from: Da
+            subject: Soggetto
+            click_to_edit_subject: Clicca qui per modificare l'oggetto
+            explanation: "Ogni volta che qualcuno ti contatti sul suo sito web, Refinery invia una e-mail per confermare la richiesta con la persona che ha reso."
+            below_edit_email_sent: Qui di seguito è possibile modificare l'e-mail che viene inviata.
+            the_customer_making_warranty_submission: Il cliente rendendo l'indagine
+            message: Messaggio
+            note: "Nota: inserire il testo %name% dove desideri che il nome del cliente a comparire nella e-mail"
+          subject_form:
+            subject_value_name: Soggetto
+  activerecord:
+    models:
+      warranty_submission: Warranty Submission
+    attributes:
+      warranty_submission:
+        name: Name
+        address_1: Address 1
+        address_2: Address 2
+        state_province: State province
+        postal_code_zip: Postal code zip
+        country: Country
+        time_bike_model: Time bike model
+        serial_number: Serial number
+        purchase_date: Purchase date
+        purchased_at: Purchased at
+        receipt: Receipt

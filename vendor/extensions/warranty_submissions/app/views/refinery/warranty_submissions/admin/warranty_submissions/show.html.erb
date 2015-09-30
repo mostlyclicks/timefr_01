@@ -1,0 +1,136 @@
+<div id='records'>
+  <h2><%= t('.warranty_submission') %></h2>
+  <table id='warranty_submission' class='inquiry'>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.name', :default => t('activerecord.attributes.warranty_submission.name')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.address_1', :default => t('activerecord.attributes.warranty_submission.address_1')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.address_1 %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.address_2', :default => t('activerecord.attributes.warranty_submission.address_2')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.address_2 %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.state_province', :default => t('activerecord.attributes.warranty_submission.state_province')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.state_province %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.postal_code_zip', :default => t('activerecord.attributes.warranty_submission.postal_code_zip')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.postal_code_zip %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.country', :default => t('activerecord.attributes.warranty_submission.country')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.country %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.time_bike_model', :default => t('activerecord.attributes.warranty_submission.time_bike_model')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.time_bike_model %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.serial_number', :default => t('activerecord.attributes.warranty_submission.serial_number')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.serial_number %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.purchase_date', :default => t('activerecord.attributes.warranty_submission.purchase_date')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.purchase_date %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.purchased_at', :default => t('activerecord.attributes.warranty_submission.purchased_at')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.purchased_at %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.receipt', :default => t('activerecord.attributes.warranty_submission.receipt')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @warranty_submission.receipt %>
+        </td>
+      </tr>
+  </table>
+</div>
+<div id='actions'>
+  <h2><%= t('.details')%></h2>
+  <p>
+    <strong><%= t('.age') %>:</strong> <%= time_ago_in_words(@warranty_submission.created_at) %>
+  </p>
+  <h2><%= t('.actions') %></h2>
+  <ul>
+    <li>
+      <%= link_to t('.back_to_all_warranty_submissions'), refinery.url_for(:action => 'index'),
+                   :class => "back_icon" %>
+    </li>
+    <li>
+      <%= link_to t('delete', :scope => 'refinery.warranty_submissions.admin.warranty_submissions'),
+                  refinery.warranty_submissions_admin_warranty_submission_path(@warranty_submission),
+                  :class => 'delete_icon no-tooltip confirm-delete',
+                  :title => t('delete', :scope => 'refinery.warranty_submissions.admin.warranty_submissions'),
+                  :'data-confirm' => t('message', :scope => 'refinery.admin.delete', :title => @warranty_submission.name),
+                  :'data-method' => "delete" %>
+    </li>
+  </ul>
+</div>

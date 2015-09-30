@@ -1,0 +1,74 @@
+es:
+  refinery:
+    plugins:
+      warranty_submissions:
+        title: Warranty Submissions
+    warranty_submissions:
+      warranty_submissions:
+        new:
+          header_message: "Mil disculpas hay un pequeño problema."
+          message: "Los siguientes problemas necesitan ser corregidos:"
+          send: Enviar mensaje
+          privacy_policy: "Nosotros valoramos tu privacidad"
+      admin:
+        warranty_submissions:
+          warranty_submission:
+            move_warranty_submission_to_closed: Cambiar esta consulta a cerrada
+            move_warranty_submission_to_open: Cambiar esta consulta a abierta
+            read_warranty_submission: Leer esta consulta
+            remove_warranty_submission: "Estas seguro que quieres borrar esta consulta de '%{name}'?"
+            title: Warranty Submissions
+          toggle_status:
+            closed: "La consulta '%{warranty_submission}' esta cerrada"
+            reopened: "La consulta '%{warranty_submission}' esta abierta"
+          index:
+            no_warranty_submissions: No has recibido ninguna consulta aun.
+          show:
+            details: Detalles
+            click_to_email: Click al email
+            status: Estatus
+            open: Abierto
+            closed: Cerrado
+            age: Edad
+            actions: Acciones
+            back_to_all_warranty_submissions: Regresar a todas las consultas
+            warranty_submission: Warranty Submission
+          submenu:
+            update_notified: "Actualizar a quien será notificado"
+            edit_confirmation_email: "Editar email de confirmación"
+        settings:
+          update:
+            updated: "'%{setting}' fue actualizado exitosamente."
+          notification_recipients_form:
+            settings_value_name: Mandar notificaciones a
+            explanation: "Cada vez que alguien se comunique con usted en su sitio web, Refinery enviara un correo electrónico respecto a esta nueva consulta."
+            hint: "Ingrese una dirección de correo. Ingrese la dirección de correo de las persona que vaya a ser notificada, si quiere que varias personas sean notificadas ingrese las direcciones de correo separadas por comas."
+            example: "Ejemplo: me@domain.com, friend@msn.com, workmate@work.com"
+          confirmation_email_form:
+            to: Para
+            from: De
+            subject: Asunto
+            click_to_edit_subject: Click aqui para modificar el asunto
+            explanation: "Cada vez que alguien se comunique con usted en su sitio web, Refinery enviara un correo electrónico respecto a esta nueva consulta."
+            below_edit_email_sent: "Abajo usted puede editar el email a donde la consulta será enviado."
+            the_customer_making_warranty_submission: El cliente haciendo la consulta
+            message: Mensaje
+            note: "Nota: ingrese el texto %name% donde quiera que el nombre del cliente aparezca en el email"
+          subject_form:
+            subject_value_name: Asunto
+  activerecord:
+    models:
+      warranty_submission: Warranty Submission
+    attributes:
+      warranty_submission:
+        name: Name
+        address_1: Address 1
+        address_2: Address 2
+        state_province: State province
+        postal_code_zip: Postal code zip
+        country: Country
+        time_bike_model: Time bike model
+        serial_number: Serial number
+        purchase_date: Purchase date
+        purchased_at: Purchased at
+        receipt: Receipt

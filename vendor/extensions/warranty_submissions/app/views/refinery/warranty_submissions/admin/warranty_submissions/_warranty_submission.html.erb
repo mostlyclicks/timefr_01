@@ -1,0 +1,16 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>'>
+  <span class='title'>
+    <%= link_to warranty_submission.name, refinery.warranty_submissions_admin_warranty_submission_path(warranty_submission) %> <%= t('.said') %>
+    <span class="preview"><%= truncate(strip_tags(sanitize(warranty_submission.message)), :length => 60) -%></span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag('delete.png'), refinery.warranty_submissions_admin_warranty_submission_path(warranty_submission),
+                :class => "cancel confirm-delete",
+                :title => t('admin.warranty_submissions.delete'),
+                :'data-confirm' => t('shared.admin.delete.message', :title => warranty_submission.name),
+                :'data-method' => "delete" -%>
+
+    <%= link_to refinery_icon_tag('zoom.png'), refinery.warranty_submissions_admin_warranty_submission_path(warranty_submission),
+                :title => t('.read_warranty_submission') -%>
+  </span>
+</li>

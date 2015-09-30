@@ -1,0 +1,86 @@
+nl:
+  refinery:
+    plugins:
+      warranty_submissions:
+        title: Warranty Submissions
+        description: Contactformulier en beheer van warranty submissions
+    warranty_submissions:
+      warranty_submissions:
+        new:
+          send: Bericht verzenden
+          privacy_policy: Wij respecteren uw privacy
+      admin:
+        warranty_submissions:
+          delete: Deze warranty submission definitief verwijderen
+          warranty_submission:
+            read_warranty_submission: Lees de warranty submission
+            said: zei
+            mark_as_spam: Als spam markeren
+            mark_as_ham: Naar de inbox verplaatsen
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Wijzigen wie op de hoogte wordt gesteld
+            edit_confirmation_email: Bevestigings-e-mail bewerken
+          index:
+            no_warranty_submissions: U heeft nog geen warranty submissions ontvangen.
+          spam:
+            no_spam: Hoera! U heeft geen spam.
+          show:
+            details: Details
+            age: Leeftijd
+            actions: Acties
+            back_to_all_warranty_submissions: Terug naar alle warranty submissions
+            spam: Spam
+            spam_yes: 'ja'
+            warranty_submission: Warranty Submission
+            to: Aan
+            from: Van
+            click_to_email: Klik hier om een e-mail te sturen naar dit adres
+            phone: Telefoonnummer
+            date: Datum
+            message: Bericht
+        settings:
+          notification_recipients_form:
+            settings_value_name: Stuur notificaties naar
+            explanation: "Telkens wanneer iemand het contactformulier invult op uw website, stuurt Refinery een bevestiging naar de verzender."
+            hint: "Wilt u naar meerdere adressen notificaties sturen? Vul dan meerdere e-mailadressen in gescheiden door komma's"
+            example: "Bijvoorbeeld: jan@werk.nl, els@kantoor.nl"
+          confirmation_email_form:
+            to: Aan
+            from: Van
+            subject: Onderwerp
+            click_to_edit_subject: Klik hier om het onderwerp bewerken
+            explanation: "Telkens wanneer iemand het contactformulier invult op uw website, stuurt Refinery een bevestiging naar de verzender."
+            below_edit_email_sent: Hieronder kunt u de email die verzonden wordt bewerken.
+            the_customer_making_warranty_submission: De persoon die de warranty submission heeft ingezonden
+            message: Bericht
+            note: "N.B.: plaats de tekst %name% overal in de email waar u de naam van de klant persoon wilt invoegen"
+      mailer:
+        notification:
+          greeting: Hallo
+          you_recieved_new_warranty_submission: U hebt een nieuwe warranty submission ontvangen via de website.
+          warranty_submission_starts: --- begin van de warranty submission ---
+          warranty_submission_ends: --- einde van de warranty submission ---
+          from: Van
+          email: E-mail
+          phone: Telefoon
+          message: Bericht
+          closing_line: Met vriendelijke groet,
+          ps_html: P.S. Alle warranty submissions worden opgeslagen in de sectie Warranty Submissions van Refinery.
+  activerecord:
+    models:
+      warranty_submission: Warranty Submission
+    attributes:
+      warranty_submission:
+        name: Name
+        address_1: Address 1
+        address_2: Address 2
+        state_province: State province
+        postal_code_zip: Postal code zip
+        country: Country
+        time_bike_model: Time bike model
+        serial_number: Serial number
+        purchase_date: Purchase date
+        purchased_at: Purchased at
+        receipt: Receipt

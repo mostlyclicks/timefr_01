@@ -1,0 +1,85 @@
+ru:
+  refinery:
+    plugins:
+      warranty_submissions:
+        title: Warranty Submissions
+    warranty_submissions:
+      warranty_submissions:
+        new:
+          header_message: "Упс. Возникла небольшая проблемка."
+          message: "Нужно исправить следующие ошибки:"
+          send: "Отправить сообщение"
+          privacy_policy: "Мы относимся с уважением к вашим личным данным"
+      admin:
+        warranty_submissions:
+          warranty_submission:
+            move_warranty_submission_to_closed: "Переместить этот запрос в закрытые"
+            move_warranty_submission_to_open: "Переместить этот запрос в открытые"
+            read_warranty_submission: "Прочитать запрос"
+            remove_warranty_submission: "Вы уверены, что хотите удалить запрос от '%{name}'?"
+            title: Warranty Submissions
+            said: "пишет"
+            mark_as_spam: "Пометить как спам"
+            mark_as_ham: "Переместить во Входящие"
+          toggle_status:
+            closed: "Запрос '%{warranty_submission}' закрыт"
+            reopened: "Запрос '%{warranty_submission}' открыт заново"
+          submenu:
+            inbox: "Входящие"
+            spam: "Спам"
+            update_notified: Изменить получателей уведомлений
+            edit_confirmation_email: "Редактировать письмо-подтверждение"
+          index:
+            no_warranty_submissions: "Вы еще не получили ни одного запроса."
+          spam:
+            no_spam: "Ура! Вы не получили спам."
+          show:
+            details: "Подробности"
+            click_to_email: "Нажмите, чтобы отправить"
+            status: "Статус"
+            open: "Открыт"
+            closed: "Закрыт"
+            age: "Срок"
+            actions: "Действия"
+            back_to_all_warranty_submissions: "Назад ко всем запросам"
+            spam: "Спам"
+            spam_yes: 'да'
+            warranty_submission: Warranty Submission
+            title: Warranty Submissions
+        settings:
+          update:
+            updated: "'%{setting}' были успешно обновлены."
+          notification_recipients_form:
+            settings_value_name: "Отправить уведомления"
+            explanation: "Каждый раз, когда кто-то связывается с вами посредством вашего сайта, Refinery CMS отправляет уведомление на электронную почту."
+            hint: "Когда поступит новый запрос, Refinery CMS отправит вам уведомление на электронную почту."
+            example: "Введите адрес(а) электронной почты через запятую: anna@mail.ru, ivanov@yandex.ru"
+          confirmation_email_form:
+            to: "Кому"
+            from: "От"
+            subject: "Тема сообщения"
+            click_to_edit_subject: "Редактировать тему сообщения"
+            explanation: "Каждый раз, когда кто-то связывается с вами посредством вашего сайта, Refinery CMS отправляет ему письмо, подтверждающее принятие запроса."
+            below_edit_email_sent: Ниже вы можете отредактировать отсылаемое письмо
+            the_customer_making_warranty_submission: "Клиент, делающий запрос"
+            message: "Сообщение"
+            note: "Примечание: поместите текст %name% там, где вы хотите, чтобы появилось имя клиента."
+          subject_form:
+            subject_value_name: "Тема сообщения"
+  activerecord:
+    models:
+      warranty_submission: Warranty Submission
+      setting: "Настройки запроса"
+    attributes:
+      warranty_submission:
+        name: Name
+        address_1: Address 1
+        address_2: Address 2
+        state_province: State province
+        postal_code_zip: Postal code zip
+        country: Country
+        time_bike_model: Time bike model
+        serial_number: Serial number
+        purchase_date: Purchase date
+        purchased_at: Purchased at
+        receipt: Receipt

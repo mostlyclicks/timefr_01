@@ -1,0 +1,86 @@
+en:
+  refinery:
+    plugins:
+      warranty_submissions:
+        title: Warranty Submissions
+        description: Provides a contact form and stores warranty submissions
+    warranty_submissions:
+      warranty_submissions:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+      admin:
+        warranty_submissions:
+          delete: Remove this warranty submission forever
+          warranty_submission:
+            read_warranty_submission: Read the warranty submission
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+          index:
+            no_warranty_submissions: You have not received any warranty submissions yet.
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_warranty_submissions: Back to all warranty submissions
+            spam: Spam
+            spam_yes: 'yes'
+            warranty_submission: Warranty Submission
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        settings:
+          notification_recipients_form:
+            settings_value_name: Send notifications to
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to say there is a new warranty submission.
+            hint: When a new warranty submission is submitted, Refinery will send an email notification to you.
+            example: "Enter your email address(es) like: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: To
+            from: From
+            subject: Subject
+            click_to_edit_subject: Click here to edit the subject
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to confirm the warranty submission with the person who made it.
+            below_edit_email_sent: Below you can edit the email that is sent out.
+            the_customer_making_warranty_submission: The customer making the warranty submission
+            message: Message
+            note: "Note: place the text %name% where you'd like the customer's name to appear in the email"
+      mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_warranty_submission: You just received a new warranty submission on your website.
+          warranty_submission_starts: --- warranty submission starts ---
+          warranty_submission_ends: --- warranty submission ends ---
+          from: From
+          email: Email
+          phone: Phone
+          message: Message
+          closing_line: Kind Regards
+          ps_html: P.S. All your warranty submissions are stored in the "Warranty Submissions" section of Refinery should you ever want to view it later there.
+  activerecord:
+    models:
+      warranty_submission: Warranty Submission
+    attributes:
+      warranty_submission:
+        name: Name
+        address_1: Address 1
+        address_2: Address 2
+        state_province: State province
+        postal_code_zip: Postal code zip
+        country: Country
+        time_bike_model: Time bike model
+        serial_number: Serial number
+        purchase_date: Purchase date
+        purchased_at: Purchased at
+        receipt: Receipt
