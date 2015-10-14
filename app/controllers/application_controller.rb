@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_geometries
   before_filter :load_fr_dealers
   before_filter :load_us_dealers
+  before_filter :load_me_dealers
   # before_filter :get_bike_geometry
 
 
@@ -23,7 +24,11 @@ class ApplicationController < ActionController::Base
   def load_us_dealers
     @us_dealers = Refinery::Dealers::Dealer.where(country: 'USA')
   end
-  
+
+  def load_me_dealers
+    @me_dealers = Refinery::Dealers::Dealer.where(country: ['Bahrain', 'Oman', 'Qatar', 'UAE'])
+  end
+
 
   def load_geo
     @geoip = GeoIP.new(Rails.root.join("GeoIP.dat"))
