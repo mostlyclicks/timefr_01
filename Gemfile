@@ -12,7 +12,7 @@ gem "sass", "~> 3.2.19"
 gem 'sass-rails',   '~> 3.2.3'
 gem 'geoip', '~> 1.4.0'
 gem 'rails_12factor'
-gem 'unicorn'
+# gem 'unicorn'
 gem 'rack-rewrite', '~> 1.5.0'
 
 
@@ -53,7 +53,7 @@ gem 'refinerycms-nested_models'
 gem 'refinerycms-copywriting'
 
 #  gem 'refinerycms-blog', '~> 2.1.0'
-#  gem 'refinerycms-inquiries', '~> 2.1.0'
+gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 # gem 'refinerycms-page-images', '~> 2.1.0'
 
