@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   def load_instagram
     #@instatime = Instagram.tag_search('timesport')#.limit(12)
     instatime = Instagram.user_recent_media#.limit(12)
-    @instatime = Instagram.user_recent_media(count:18)
+    @instatime = Instagram.user_recent_media(count:12)
     #@instatime = Instagram.tag_recent_media('timebikes')#.limit(12)
   end
 
