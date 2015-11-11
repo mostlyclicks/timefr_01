@@ -14,6 +14,7 @@ gem 'geoip', '~> 1.4.0'
 gem 'rails_12factor'
 gem 'unicorn'
 gem 'rack-rewrite', '~> 1.5.0'
+gem 'instagram'
 
 
 # Gems used only for assets and not required

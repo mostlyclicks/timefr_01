@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_fr_dealers
   before_filter :load_us_dealers
   before_filter :load_me_dealers
+  before_filter :load_instagram
   # before_filter :get_bike_geometry
 
 
@@ -16,6 +17,13 @@ class ApplicationController < ActionController::Base
 
 
   protected
+
+  def load_instagram
+    #@instatime = Instagram.tag_search('timesport')#.limit(12)
+    instatime = Instagram.user_recent_media#.limit(12)
+    @instatime = Instagram.user_recent_media(count:8)
+    #@instatime = Instagram.tag_recent_media('timebikes')#.limit(12)
+  end
 
   def load_fr_dealers
     @fr_dealers = Refinery::Dealers::Dealer.where(country: 'France')

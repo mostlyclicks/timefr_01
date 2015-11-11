@@ -330,6 +330,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
   background-color:rgba(240,240,240,.1);
 }
 
+.instagram-image {
+  img {
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+    &:hover {opacity:.5;}
+  }
+}
+
 #pedal-xpresso-hero {
   min-height:120vh;
  
