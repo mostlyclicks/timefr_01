@@ -5,6 +5,9 @@ PATH
       refinerycms-core (~> 2.1.5)
     refinerycms-dealers (1.0)
       refinerycms-core (~> 2.1.5)
+    refinerycms-design_submissions (1.0)
+      refinerycms-core (~> 2.1.5)
+      refinerycms-settings (~> 2.1.0)
     refinerycms-distributors (1.0)
       refinerycms-core (~> 2.1.5)
     refinerycms-geometries (1.0)
@@ -346,6 +349,7 @@ DEPENDENCIES
   refinerycms-bikes!
   refinerycms-copywriting
   refinerycms-dealers!
+  refinerycms-design_submissions!
   refinerycms-distributors!
   refinerycms-geometries!
   refinerycms-groups!

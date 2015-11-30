@@ -1,0 +1,73 @@
+it:
+  refinery:
+    plugins:
+      design_submissions:
+        title: Design Submissions
+    design_submissions:
+      design_submissions:
+        new:
+          header_message: "Un problema si è verificato"
+          message: "I seguenti problemi devono essere corretti:"
+          send: Invia messaggio
+          privacy_policy: "Noi diamo valore alla tua privacy"
+      admin:
+        design_submissions:
+          design_submission:
+            move_design_submission_to_closed: Spostare questa inchiesta chiusa
+            move_design_submission_to_open: Spostare questa indagine per aprire
+            read_design_submission: Leggi l'inchiesta
+            remove_design_submission: "Sei sicuro di voler cancellare la richiesta di '%{name}'?"
+            title: Design Submissions
+          toggle_status:
+            closed: "Inchiesta '%{design_submission}' è chiuso"
+            reopened: "Inchiesta '%{design_submission}' si riapre"
+          index:
+            no_design_submissions: Non hai ancora ricevuto alcuna richiesta in.
+          show:
+            details: Dettagli
+            click_to_email: Clicca per e-mail
+            status: Stato
+            open: Aperto
+            closed: Chiuso
+            age: Età
+            actions: Azioni
+            back_to_all_design_submissions: Torna a tutte le richieste
+            design_submission: Design Submission
+          submenu:
+            update_notified: Aggiornamento chi viene notificata
+            edit_confirmation_email: Modifica email di conferma
+        settings:
+          update:
+            updated: "'%{setting}' stato aggiornato con successo."
+          notification_recipients_form:
+            settings_value_name: Invia a notifiche
+            explanation: "Ogni volta che qualcuno ti contatti sul suo sito web, Refinery invia una mail a dire che c'è una nuova indagine."
+            hint: "Inserisci un indirizzo email di cui sopra. Vuoi la notifica di andare a più di una persona? Inserisci più indirizzi email separati da virgole."
+            example: "E.g. me@domain.com, friend@msn.com, workmate@work.com"
+          confirmation_email_form:
+            to: A
+            from: Da
+            subject: Soggetto
+            click_to_edit_subject: Clicca qui per modificare l'oggetto
+            explanation: "Ogni volta che qualcuno ti contatti sul suo sito web, Refinery invia una e-mail per confermare la richiesta con la persona che ha reso."
+            below_edit_email_sent: Qui di seguito è possibile modificare l'e-mail che viene inviata.
+            the_customer_making_design_submission: Il cliente rendendo l'indagine
+            message: Messaggio
+            note: "Nota: inserire il testo %name% dove desideri che il nome del cliente a comparire nella e-mail"
+          subject_form:
+            subject_value_name: Soggetto
+  activerecord:
+    models:
+      design_submission: Design Submission
+    attributes:
+      design_submission:
+        name: Name
+        email: Email
+        street_address: Street address
+        city: City
+        state: State
+        zip: Zip
+        country: Country
+        phone_number: Phone number
+        design_description: Design description
+        design_image: Design image

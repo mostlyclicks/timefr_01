@@ -1,0 +1,85 @@
+pt-BR:
+  refinery:
+    plugins:
+      design_submissions:
+        title: Design Submissions
+        description: Gerenciar contatos
+    design_submissions:
+      design_submissions:
+        new:
+          send: Enviar mensagem
+          privacy_policy: "Nós valorizamos sua privacidade"
+      admin:
+        design_submissions:
+          delete: Remover esta mensagem para sempre
+          design_submission:
+            read_design_submission: Ler a mensagem
+            said: disse
+            mark_as_spam: Marcar como spam
+            mark_as_ham: Marcar como segura
+          submenu:
+            inbox: Caixa de Entrada
+            spam: Spam
+            update_notified: Atualizar quem recebe a notificação
+            edit_confirmation_email: Editar email de confirmação
+          index:
+            no_design_submissions: "Não exitem mensagens."
+          spam:
+            no_spam: Não existem mensagens de spam.
+          show:
+            details: Detalhes
+            age: Quando
+            actions: Ações
+            back_to_all_design_submissions: Voltar para todas as Mensagens
+            spam: Spam
+            spam_yes: 'sim'
+            design_submission: Design Submission
+            to: Para
+            from: De
+            click_to_email: Clique para enviar email
+            phone: Telefone
+            date: Data
+            message: Mensagem
+        settings:
+          notification_recipients_form:
+            settings_value_name: Enviar notificações para
+            explanation: "Toda vez que alguém contactar você no seu website, enviamos um email para notificar a essa pessoa o recebimento de uma mensagem."
+            hint: "Digite um endereço de email acima. Deseja que a notificação vá para mais de uma pessoa? Digite vários endereços de email separados por vírgulas."
+            example: "Digite os endereços da seguinte forma: eu@dominio.com, amigo@msn.com, colegadetrabalho@trabalho.com"
+          confirmation_email_form:
+            to: Para
+            from: De
+            subject: Assunto
+            click_to_edit_subject: Clique aqui para editar o assunto
+            explanation: "Toda vez que alguém contatar você no seu website, enviamos um email para confirmar o recebimento da mensagem para esta pessoa."
+            below_edit_email_sent: Abaixo você pode editar o texto a ser enviado no e-mail.
+            the_customer_making_design_submission: O cliente fazendo o contato
+            message: Mensagem
+            note: "Nota: posicione o texto %name% onde você desejar que o nome do cliente apareça no email."
+      mailer:
+        notification:
+          greeting: Olá
+          you_recieved_new_design_submission: Você recebeu um novo contato pelo website.
+          design_submission_starts: --- começo da mensagem ---
+          design_submission_ends: --- fim da mensagem ---
+          from: De
+          email: Email
+          phone: Telefone
+          message: Mensagem
+          closing_line: Atenciosamente
+          ps_html: OBS. Todos os contatos são armazenados na seção "Contatos" do website.
+  activerecord:
+    models:
+      design_submission: Design Submission
+    attributes:
+      design_submission:
+        name: Name
+        email: Email
+        street_address: Street address
+        city: City
+        state: State
+        zip: Zip
+        country: Country
+        phone_number: Phone number
+        design_description: Design description
+        design_image: Design image

@@ -1,0 +1,84 @@
+ru:
+  refinery:
+    plugins:
+      design_submissions:
+        title: Design Submissions
+    design_submissions:
+      design_submissions:
+        new:
+          header_message: "Упс. Возникла небольшая проблемка."
+          message: "Нужно исправить следующие ошибки:"
+          send: "Отправить сообщение"
+          privacy_policy: "Мы относимся с уважением к вашим личным данным"
+      admin:
+        design_submissions:
+          design_submission:
+            move_design_submission_to_closed: "Переместить этот запрос в закрытые"
+            move_design_submission_to_open: "Переместить этот запрос в открытые"
+            read_design_submission: "Прочитать запрос"
+            remove_design_submission: "Вы уверены, что хотите удалить запрос от '%{name}'?"
+            title: Design Submissions
+            said: "пишет"
+            mark_as_spam: "Пометить как спам"
+            mark_as_ham: "Переместить во Входящие"
+          toggle_status:
+            closed: "Запрос '%{design_submission}' закрыт"
+            reopened: "Запрос '%{design_submission}' открыт заново"
+          submenu:
+            inbox: "Входящие"
+            spam: "Спам"
+            update_notified: Изменить получателей уведомлений
+            edit_confirmation_email: "Редактировать письмо-подтверждение"
+          index:
+            no_design_submissions: "Вы еще не получили ни одного запроса."
+          spam:
+            no_spam: "Ура! Вы не получили спам."
+          show:
+            details: "Подробности"
+            click_to_email: "Нажмите, чтобы отправить"
+            status: "Статус"
+            open: "Открыт"
+            closed: "Закрыт"
+            age: "Срок"
+            actions: "Действия"
+            back_to_all_design_submissions: "Назад ко всем запросам"
+            spam: "Спам"
+            spam_yes: 'да'
+            design_submission: Design Submission
+            title: Design Submissions
+        settings:
+          update:
+            updated: "'%{setting}' были успешно обновлены."
+          notification_recipients_form:
+            settings_value_name: "Отправить уведомления"
+            explanation: "Каждый раз, когда кто-то связывается с вами посредством вашего сайта, Refinery CMS отправляет уведомление на электронную почту."
+            hint: "Когда поступит новый запрос, Refinery CMS отправит вам уведомление на электронную почту."
+            example: "Введите адрес(а) электронной почты через запятую: anna@mail.ru, ivanov@yandex.ru"
+          confirmation_email_form:
+            to: "Кому"
+            from: "От"
+            subject: "Тема сообщения"
+            click_to_edit_subject: "Редактировать тему сообщения"
+            explanation: "Каждый раз, когда кто-то связывается с вами посредством вашего сайта, Refinery CMS отправляет ему письмо, подтверждающее принятие запроса."
+            below_edit_email_sent: Ниже вы можете отредактировать отсылаемое письмо
+            the_customer_making_design_submission: "Клиент, делающий запрос"
+            message: "Сообщение"
+            note: "Примечание: поместите текст %name% там, где вы хотите, чтобы появилось имя клиента."
+          subject_form:
+            subject_value_name: "Тема сообщения"
+  activerecord:
+    models:
+      design_submission: Design Submission
+      setting: "Настройки запроса"
+    attributes:
+      design_submission:
+        name: Name
+        email: Email
+        street_address: Street address
+        city: City
+        state: State
+        zip: Zip
+        country: Country
+        phone_number: Phone number
+        design_description: Design description
+        design_image: Design image

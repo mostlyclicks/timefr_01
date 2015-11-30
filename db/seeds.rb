@@ -298,3 +298,5 @@ Refinery::Dealers::Engine.load_seed
 
 # Added by Refinery CMS Inquiries engine
 Refinery::Inquiries::Engine.load_seed
+
+Refinery::DesignSubmissions::Engine.load_seed

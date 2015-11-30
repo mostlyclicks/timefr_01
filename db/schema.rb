@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151102192237) do
+ActiveRecord::Schema.define(:version => 20151130201509) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -135,6 +135,23 @@ ActiveRecord::Schema.define(:version => 20151102192237) do
     t.datetime "updated_at",       :null => false
     t.string   "account_number"
   end
+
+  create_table "refinery_design_submissions", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "country"
+    t.string   "phone_number"
+    t.text     "design_description"
+    t.integer  "design_image_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "refinery_design_submissions", ["id"], :name => "index_refinery_design_submissions_on_id"
 
   create_table "refinery_distributors", :force => true do |t|
     t.string   "name"

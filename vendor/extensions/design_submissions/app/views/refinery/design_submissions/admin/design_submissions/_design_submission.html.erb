@@ -1,0 +1,16 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>'>
+  <span class='title'>
+    <%= link_to design_submission.name, refinery.design_submissions_admin_design_submission_path(design_submission) %> <%= t('.said') %>
+    <span class="preview"><%= truncate(strip_tags(sanitize(design_submission.message)), :length => 60) -%></span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag('delete.png'), refinery.design_submissions_admin_design_submission_path(design_submission),
+                :class => "cancel confirm-delete",
+                :title => t('admin.design_submissions.delete'),
+                :'data-confirm' => t('shared.admin.delete.message', :title => design_submission.name),
+                :'data-method' => "delete" -%>
+
+    <%= link_to refinery_icon_tag('zoom.png'), refinery.design_submissions_admin_design_submission_path(design_submission),
+                :title => t('.read_design_submission') -%>
+  </span>
+</li>

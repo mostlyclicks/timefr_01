@@ -1,0 +1,74 @@
+sl:
+  refinery:
+    plugins:
+      design_submissions:
+        title: Design Submissions
+    design_submissions:
+      design_submissions:
+        new:
+          header_message: "Ups prišlo je do majhnega problema"
+          message: "Prosimo odpravite sledeče napake:"
+          send: Pošlji sporočilo
+          privacy_policy: "Cenimo vašo zasebnost"
+      admin:
+        design_submissions:
+          design_submission:
+            said: pravi
+            move_design_submission_to_closed: Premakni povpraševanje v zaprto
+            move_design_submission_to_open: Premakni povpraševanje v odprto
+            read_design_submission: Preberi povpraševanje
+            remove_design_submission: "Ali ste prepričani da želite odstraniti povpraševanje od '%{name}'?"
+            title: Design Submissions
+          toggle_status:
+            closed: "Povpraševanje '%{design_submission}' je zaprto"
+            reopened: "Povpraševanje '%{design_submission}' je ponovno odprto"
+          index:
+            no_design_submissions: Trenutno še ni nobenega povpraševanja.
+          submenu:
+            update_notified: Uredi prejemnike obvestila
+            edit_confirmation_email: Uredni potrditveni email
+          show:
+            details: Podrobnosti
+            click_to_email: Pošlji email sporočilo
+            status: Status
+            open: Odprto
+            closed: Zaprto
+            age: Starost
+            actions: Možnosti
+            back_to_all_design_submissions: Nazaj na vsa povpraševanja
+            design_submission: Design Submission
+        settings:
+          update:
+            updated: "'%{setting}' je bila uspešno posodobljena."
+          notification_recipients_form:
+            settings_value_name: Pošlji obvestilo na
+            explanation: "Vedno ko vas nekdo kontaktira na vaši spletni strani, vam Refinery pošlje email obvestilo o novem povpraševanju."
+            hint: "V zgornje polje vnesite email naslov. Želite da obvestila prejme več oseb? Vnesite več email naslovov ločenih z vejicami."
+            example: "Primer: jaz@domena.com, prijatelj@msn.com, sodelavec@work.com"
+          confirmation_email_form:
+            to: Za
+            from: Od
+            subject: Zadeva
+            click_to_edit_subject: Uredi zadevo
+            explanation: "Vedno ko vas nekdo kontaktira na vaši spletni strani mu Refinery pošlje email obvestilo o prejetem povpraševanju."
+            below_edit_email_sent: Spodaj lahko uredite vsebino email sporočila.
+            the_customer_making_design_submission: Stranka, ki je poslala povpraševanje
+            message: Sporočilo
+            note: "Opomba: vstavite tekst %name% kjer želite, da se pojavi ime stranke v email sporočilu."
+          subject_form:
+            subject_value_name: Zadeva
+  activerecord:
+    models:
+      design_submission: Design Submission
+    attributes:
+      design_submission:
+        name: Name
+        email: Email
+        street_address: Street address
+        city: City
+        state: State
+        zip: Zip
+        country: Country
+        phone_number: Phone number
+        design_description: Design description
+        design_image: Design image
