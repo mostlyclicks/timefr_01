@@ -1,66 +1,102 @@
+<style>
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+</style>
+
+
 <% content_for :body do %>
-  <div class='design_submissions'>
+  <div class='design_submissions2' style="margin:50px 20px;"s>
     <%#=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) %>
 
-    <%= form_for [refinery, :design_submissions, @design_submission] do |f| %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<div class="container">
+<div class="row">
+    <h1>Design Submission</h1>
+
+    <%= form_for [refinery, :design_submissions, @design_submission], html: {class: 'form-horizontal', role: 'form'} do |f| %>
       <%= render '/refinery/admin/error_messages',
                  :object => @design_submission,
                  :include_object_name => true  %>
 
-      <div class='field name_field string_field'>
-        <%= f.required_label :name %>
-        <%= f.text_field :name %>
+      <div class='field form-group'><!-- name_field string_field -->
+        <%= f.required_label :name, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><%= f.text_field :name, class: 'text form-control', placeholder: 'Nom complet' %></div>
       </div>
 
-      <div class='field email_field string_field'>
-        <%= f.label :email %>
-        <%= f.text_field :email %>
+      <div class='field email_field string_field form-group'>
+        <%= f.label :email, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><%= f.text_field :email, class: 'form-control', placeholder: 'Email' %></div>
       </div>
 
-      <div class='field street_address_field string_field'>
-        <%= f.label :street_address %>
-        <%= f.text_field :street_address %>
+      <div class='field street_address_field string_field form-group'>
+        <%= f.label :street_address, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><%= f.text_field :street_address, class: 'form-control', placeholder: 'Addresse'  %></div>
       </div>
 
-      <div class='field city_field string_field'>
-        <%= f.label :city %>
-        <%= f.text_field :city %>
+      <div class='field city_field string_field form-group'>
+        <%= f.label :city, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><%= f.text_field :city, class: 'form-control', placeholder: 'Ville'  %></div>
       </div>
 
-      <div class='field state_field string_field'>
-        <%= f.label :state %>
-        <%= f.text_field :state %>
+      <div class='field state_field string_field form-group'>
+        <%= f.label :state, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><%= f.text_field :state, class: 'form-control', placeholder: 'département'  %></div>
       </div>
 
-      <div class='field zip_field string_field'>
-        <%= f.label :zip %>
-        <%= f.text_field :zip %>
+      <div class='field zip_field string_field form-group'>
+        <%= f.label :zip, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><%= f.text_field :zip, class: 'form-control', placeholder: 'Code Postal'  %></div>
       </div>
 
-      <div class='field country_field string_field'>
-        <%= f.label :country %>
-        <%= f.text_field :country %>
+      <div class='field country_field string_field form-group'>
+        <%= f.label :country, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><%= f.text_field :country, class: 'form-control', placeholder: 'Pays'  %></div>
       </div>
 
-      <div class='field phone_number_field string_field'>
-        <%= f.label :phone_number %>
-        <%= f.text_field :phone_number %>
+      <div class='field phone_number_field string_field form-group'>
+        <%= f.label :phone_number, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><%= f.text_field :phone_number, class: 'form-control', placeholder: 'Numéro de téléphone'  %></div>
       </div>
 
-      <div class='field design_description_field text_field'>
-        <%= f.label :design_description %>
-        <%= f.text_area :design_description, :rows => 8 %>
+      <div class='field design_description_field text_field form-group'>
+        <%= f.label :design_description, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><%= f.text_area :design_description, :rows => 8, class: 'form-control', placeholder: 'Description de la Conception' %></div>
       </div>
 
-      <div class='field design_image_field image_field'>
-        <%= f.label :design_image %>
-        <%= f.file_field :design_image %>
+      <div class='field design_image_field image_field form-group'>
+        <%= f.label :design_image, class: 'col-md-2 control-label' %>
+        <div class="col-md-4"><span class="btn btn-primary btn-file">Choose IMAGE File<%= f.file_field :design_image %></span><br /><small>Only .JPG or .PNG will be accepted<br />Seuls les fichiers .JPG ou .PNG seront acceptées</small></div>
       </div>
 
-      <div class='actions'>
-        <%= f.submit t('.send') %>
+      <div class='actions form-group'>
+        <div class="col-md-2"></div>
+        <div class="col-md-4"><%= f.submit t('.send'), class: 'btn btn-success btn-lg', value: 'Submit | Soumettre'  %></div>
       </div>
     <% end %>
   </div>
 <% end %>
-<%= render '/refinery/content_page' %>
+
+</div></div>
+
+    <%= render '/refinery/content_page' %>
+
+
+

@@ -3,7 +3,7 @@ module Refinery
     class DesignSubmission < Refinery::Core::BaseModel
       self.table_name = 'refinery_design_submissions'
 
-      attr_accessible :name, :email, :street_address, :city, :state, :zip, :country, :phone_number, :design_description, :design_image_id, :position, :design_image
+      attr_accessible :name, :email, :street_address, :city, :state, :zip, :country, :phone_number, :design_description, :design_image_id, :position, :design_image, :resource_id
 
       alias_attribute :message, :design_description
 

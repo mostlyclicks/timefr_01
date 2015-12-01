@@ -17,8 +17,9 @@ module Refinery
       end
 
       def create
-        resource = Resource.create(file: params[:design_submission][:attachment])
-        @design_submission = DesignSubmission.new(params[:design_submission].merge({attachement:resource}))
+        # resource = Resource.create(file: params[:design_submission][:attachment])
+        design_image = Refinery::Image.create(image: params[:design_submission][:design_image])
+        @design_submission = DesignSubmission.new(params[:design_submission].merge({design_image: design_image}))
 
         if @design_submission.save
           begin
