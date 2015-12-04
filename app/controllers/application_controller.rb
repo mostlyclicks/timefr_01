@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_fr_dealers
   before_filter :load_us_dealers
   before_filter :load_me_dealers
-  before_filter :load_instagram
+  #before_filter :load_instagram
   # before_filter :get_bike_geometry
 
 
