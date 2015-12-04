@@ -728,3 +728,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .more-btm-padding {
   margin-bottom:40px;
 }
+
+#design-top {
+  height:150px;
+  img {margin:0 auto;}
+}
+
+#design-image {
+  img {margin:0 auto;}
+}
+
+#design-body {
+  img {margin:0 auto;}
+  h2 {@include header-style(36px, 100, rgba(0,0,0,.8));margin-top:1.5em;}
+  h3 {@include header-style(24px, 100, rgba(0,0,0,.5));}
+  p {@include header-style(16px, 200, rgba(0,0,0,.6));margin-top:1.5em;}
+  margin-bottom:60px;
+}
+
