@@ -97,14 +97,34 @@
         </td>
       </tr>
       <tr>
+          <td>&nbsp;</td>
+          <td>
+            <strong>Terms and Conditions Agreement</strong><br />
+            <% if @design_submission %>
+              <% if @design_submission.agree_terms == true %>
+                <%= "#{@design_submission.name} has agreed to the contest terms and conditions" %>
+              <% else %>
+                <%= "#{@design_submission.name} HAS NOT agreed to the contest terms and conditions" %>
+              <% end %>
+            <% end %>
+          </td>
+          
+
+        </tr>
+      <tr>
         <td>
           <strong>
             <%= t('.design_image', :default => t('activerecord.attributes.design_submission.design_image')) %>
           </strong>
         </td>
         <td>
-          <%= image_tag @design_submission.design_image.url, style: "width:550px;" %>
+          <% if @design_submission.design_image %>
+            <%= image_tag @design_submission.design_image.url, style: "width:550px;" %>
+          <% else %>
+            <%= 'No image submitted' %>
+          <% end %>
         </td>
+        
       </tr>
   </table>
 </div>

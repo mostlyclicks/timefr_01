@@ -36,7 +36,9 @@ aside {
 <div class="row">
   <div class="col-md-6">
 
-    <h1>Design Submission</h1>
+    <h1>Le défi - Design Submission</h1>
+    <p>Please carefully fill out the form below to submit your design.<br />
+      <small>* Required fields</small></p>
 
     <%= form_for [refinery, :design_submissions, @design_submission], html: {class: 'form-horizontal', role: 'form'} do |f| %>
       <%= render '/refinery/admin/error_messages',
@@ -49,7 +51,7 @@ aside {
       </div>
 
       <div class='field email_field string_field form-group'>
-        <%= f.label :email, class: 'col-md-3 control-label' %>
+        <%= f.required_label :email, class: 'col-md-3 control-label' %>
         <div class="col-md-8"><%= f.text_field :email, class: 'form-control', placeholder: 'Email' %></div>
       </div>
 
@@ -79,7 +81,7 @@ aside {
       </div>
 
       <div class='field phone_number_field string_field form-group'>
-        <%= f.label :phone_number, class: 'col-md-3 control-label' %>
+        <%= f.required_label :phone_number, class: 'col-md-3 control-label' %>
         <div class="col-md-8"><%= f.text_field :phone_number, class: 'form-control', placeholder: 'Numéro de téléphone'  %></div>
       </div>
 
@@ -92,6 +94,18 @@ aside {
         <%= f.label :design_image, class: 'col-md-3 control-label' %>
         <div class="col-md-8"><span class="btn btn-primary btn-file">Choose IMAGE File<%= f.file_field :design_image %></span><br /><small>Only .JPG or .PNG will be accepted<br />Seuls les fichiers .JPG ou .PNG seront acceptées</small></div>
       </div>
+
+      <div class="field form-group">
+        <%= f.label :agree_terms, 'Terms', class: 'col-md-3 control-label' %>
+        <div class="col-md-8 ">
+          <%#= f.label :agree_terms, class: 'control-label' %>
+          <div class="agree-terms"> 
+            <div style="float:left;"><%= f.check_box :agree_terms, class: 'checkbox-lg' %></div>
+             <div>I have a read and agree to all terms and conditions for the "Le Défi by ..." design contest.</div>
+           </div>
+         </div>
+      </div>
+
 
       <div class='actions form-group'>
         <div class="col-md-3"></div>
