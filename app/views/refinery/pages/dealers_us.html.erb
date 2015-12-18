@@ -16,6 +16,7 @@
   <% @us_dealers.each do |d| %>
 <div class="col-xs-2 dealers">
   <%= d.dealer_name %><br />
+  <%= d.latitude %> | <%= d.longitude %><br />
   <%= d.street_address_1 %><br />
   <% unless d.street_address_2.empty? %>
     <%= d.street_address_2 %><br />
@@ -31,6 +32,17 @@
     <%= d.website %><br />
   <% end %> 
 </div>
+
+<script>
+$(document).ready(function(){
+    var company = #{d.to_json}    // pass ruby variable to javascript
+    gmap_show(company);    // init show map for company card (only print marker)
+  });
+</script>
+
+
+
 <% end %>
 </div>
 </div>
+
