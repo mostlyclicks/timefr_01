@@ -175,10 +175,12 @@ GEM
     formatador (0.2.5)
     friendly_id (4.0.10.1)
       activerecord (>= 3.0, < 4.0)
+    geocoder (1.2.13)
     geoip (1.4.0)
     globalize (3.1.0)
       activemodel (>= 3.1.0, < 4.0.0)
       activerecord (>= 3.1.0, < 4.0.0)
+    gmaps4rails (2.1.2)
     hashie (3.4.3)
     hike (1.2.3)
     i18n (0.7.0)
@@ -194,7 +196,6 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.2)
-    kgio (2.10.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -240,7 +241,6 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    raindrops (0.15.0)
     rake (10.4.2)
     rdoc (3.12.2)
       json (~> 1.4)
@@ -322,10 +322,7 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unicorn (4.9.0)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
+    underscore-rails (1.8.3)
     warden (1.2.3)
       rack (>= 1.0)
     will_paginate (3.0.7)
@@ -337,7 +334,9 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.4)
   coffee-rails (~> 3.2.1)
   fog
+  geocoder
   geoip (~> 1.4.0)
+  gmaps4rails
   instagram
   jquery-rails
   pg
@@ -360,7 +359,7 @@ DEPENDENCIES
   sass (~> 3.2.19)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
-  unicorn
+  underscore-rails
 
 BUNDLED WITH
    1.10.5

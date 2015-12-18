@@ -47,7 +47,8 @@ module Refinery
     protected
 
       def find_page
-        @page = Refinery::Page.find_by_link_url('/design_submissions/new', :include => [:parts])
+        # @page = Refinery::Page.find_by_link_url('/design_submissions/new', :include => [:parts])
+        @page = Refinery::Page.find_by_path('/design_submissions/new')
       end
 
     end
