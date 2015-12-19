@@ -1,14 +1,6 @@
 <section id="dist-top"></section>
 
-<style>
-#map{:style => "width: 550px; height: 350px;"}
-</style>
 
-<div id="map">Hello</div>
-
-<script>
-    markers = handler.addMarkers(<%= raw @hash.to_json %>);
-</script>
 
 <section id="dist-text">
   <div class="container">
@@ -42,12 +34,38 @@
     <%= d.website %><br />
   <% end %> 
 </div>
-
-
-
-
 <% end %>
 </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers([
+    {
+      "lat": 0,
+      "lng": 0,
+      "picture": {
+        "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+        "width":  32,
+        "height": 32
+      },
+      "infowindow": "hello!"
+    }
+  ]);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+
+</script>
+
+
+<div style='width: 800px;'>
+  <div id="map_us" style='width: 800px; height: 400px;'></div>
 </div>
 
 
