@@ -14,6 +14,4 @@
 //= require jquery_ujs
 //= require jquery.easing.1.3.min
 //= require bootstrap-sprockets
-//= require underscore
-//= require gmaps/google
 //= require_tree .

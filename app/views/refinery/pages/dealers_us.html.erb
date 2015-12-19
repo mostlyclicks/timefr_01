@@ -6,6 +6,10 @@
 
 <div id="map">Hello</div>
 
+<script>
+    markers = handler.addMarkers(<%= raw @hash.to_json %>);
+</script>
+
 <section id="dist-text">
   <div class="container">
     <div class="row">
@@ -39,18 +43,18 @@
   <% end %> 
 </div>
 
-<script>
-$(document).ready(function(){
-
-    var dealer = #{d.to_json}    // pass ruby variable to javascript
-    gmap_show(dealer);    // init show map for company card (only print marker)
-
-  });
-</script>
 
 
 
 <% end %>
 </div>
 </div>
+
+
+
+
+
+
+
+
 
