@@ -71,18 +71,7 @@ section {
     img {text-align:center;margin:20px auto 10px auto;width:150px;}
     font-weight:100;
   }
-  //background-image:url(made-in-france-p3.jpg);
-  // @include background-style(cover, 50%, -190px, no-repeat);
-  // .row {
-  //   background-color:rgba(0,0,0,1);
-  //   padding:20px 20px 20px 20px;
-  //   position:absolute;
-  //   bottom:0;
-  //   p {@include text-style(18px, 200, $white-alpha7);padding-top:10px;}
-  //   img {margin:10px auto 10px auto;}
-  //   h1 {@include text-style(24px, 200, $time-red);text-align:center;text-transform:uppercase;}
-  //   h3 {@include text-style(18px, 200, $time-red);text-align:center;}
-  // }
+
 
   video {
     min-width:100%;
@@ -203,11 +192,9 @@ section {
 }
 
  #bikes-aktiv {
-
   height:400px;
   background-color:black;
   position:relative;
-
  }
 
 #aktiv-canvas {
@@ -223,24 +210,23 @@ section {
   left:14%;
   z-index:51;
   span {vertical-align:middle;margin-left:8px;}
-  
 }
 
 #aktiv-graphic {
-    height:300px;
-    width:300px;
-    border-top:1px solid rgba(255,255,255,.5);
-    background:url('aktiv-fork-sprite-3.png') left center;
-    animation: play .8s steps(10) infinite;
-    -webkit-animation: play .8s steps(10) infinite;
-    
-     position:absolute;
-     color:white;
-     z-index:50;
-     top:2px;
-     left:50%;
-     margin-left:-150px;
-  }
+  height:300px;
+  width:300px;
+  border-top:1px solid rgba(255,255,255,.5);
+  background:url('aktiv-fork-sprite-3.png') left center;
+  animation: play .8s steps(10) infinite;
+  -webkit-animation: play .8s steps(10) infinite;
+   position:absolute;
+   color:white;
+   z-index:50;
+   top:2px;
+   left:50%;
+   margin-left:-150px;
+}
+
 @keyframes play {
   100% { background-position: -3000px; }
 }
@@ -261,7 +247,7 @@ section {
 }
 
 
-canvas {
+#c, #d {
   display: block;
   background-color:black;
   width:100%;
@@ -767,6 +753,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
     margin-top:0px;
   }
 }
+
+.maps {margin-bottom:80px;}
 
 
 

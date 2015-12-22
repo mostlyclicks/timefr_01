@@ -88,9 +88,7 @@ s, del {text-decoration:line-through;}
   -ms-transform: rotate($angle);
 }
 
-// body {background-color:$time-red;}
-// .row {background-color:#fff;}
-// section, header {background-color:#fff;}
+
 
 
 h1 {@include text-style(48px, 100, $time-red);}
@@ -194,14 +192,6 @@ p {@include text-style(14px, 300, $black-med);}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 ); /* IE6-9 */
 }
 
-
-
-
-// .time-text {
-//   fill:#ffffff;
-//   width:100%;
-
-// }
 
 @function timeText($fillColor) {
   @return url('data:image/svg+xml,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 139" enable-background="new 0 0 1600 139" xml:space="preserve"><defs><rect id="SVGID_1_" x="12.4" y="7.1" width="1574.6" height="125"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_"  overflow="visible"/></clipPath><path clip-path="url(#SVGID_2_)" fill="' + $fillColor + '" d="M1015.6,7.2L828.2,56.8L812.5,7.3l-145.5,0L467.4,132l11.7,0l126.3-0.1l131.7-82.2l15.6,54.6h52.4c0.9-0.3,127.3-35.7,176-49.4L858,132l5.2,0l0.1,0l5.4,0l105.7,0l0.1-0.1l5.9,0.1L1182.3,7L1015.6,7.2zM414.7,33.2L456,7.3l-353,0L40.6,33.2l129.7,0L12.4,132l140,0l157.8-98.8L414.7,33.2z M487.7,7.3L288.2,132H322l107.2,0L628.8,7.2L487.7,7.3z M1519,33.2l68-25.9l-362.5,0L1024.9,132l359.2,0l65.9-25h-262.7l38.4-24.1l126,0l67.2-25.7l-152.1,0l38.4-24L1519,33.2z"/></svg>');

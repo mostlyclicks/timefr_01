@@ -15,10 +15,12 @@
 
 <div class="container more-btm-padding">
 <div class="row">
+  <% @js_array = [] %>
   <% @us_dealers.each do |d| %>
 <div class="col-xs-2 dealers">
+  <% @collection = [d.dealer_name, d.latitude, d.longitude] %>
+  <% @js_array << @collection %>
   <%= d.dealer_name %><br />
-  <%= d.latitude %> | <%= d.longitude %><br />
   <%= d.street_address_1 %><br />
   <% unless d.street_address_2.empty? %>
     <%= d.street_address_2 %><br />
@@ -40,33 +42,55 @@
 
 
 
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+  <div id="map_us" style='width:100%; height: 800px;' class="maps"></div>
+</div>
+</div>
+<style>
+#map_us { -webkit-transform: translateZ(0) !important; }
+</style>
 
 
 <script type="text/javascript">
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers([
-    {
-      "lat": 0,
-      "lng": 0,
-      "picture": {
-        "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-        "width":  32,
-        "height": 32
-      },
-      "infowindow": "hello!"
+
+
+function initMap() {
+    var locations = <%= raw @js_array %>;
+
+    var map = new google.maps.Map(document.getElementById('map_us'), {
+      zoom: 4,
+      center: new google.maps.LatLng(37.09024, -95.712891),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.title = "Hey";
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
     }
-  ]);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
+}
+
 
 </script>
 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_8tnzed9azG-izQV6zqi96yPsQDoV_qc&callback=initMap"></script>
 
-<div style='width: 800px;'>
-  <div id="map_us" style='width: 800px; height: 400px;'></div>
-</div>
+
+
 
 
 
