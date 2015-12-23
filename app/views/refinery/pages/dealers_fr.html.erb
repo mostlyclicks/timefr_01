@@ -10,11 +10,11 @@
     </div>
   </div>
 </section>
-
+<section id="dealer-list">
 <div class="container more-btm-padding">
 <div class="row">
   <% @fr_dealers.each do |d| %>
-<div class="col-xs-3 dealers">
+<div class="col-xs-6 col-md-2 dealers">
   <%= d.dealer_name %><br />
   <%= d.street_address_1 %><br />
   <% unless d.street_address_2.empty? %>
@@ -33,4 +33,4 @@
 </div>
 <% end %>
 </div>
-</div>
+</div></section>

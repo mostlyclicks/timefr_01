@@ -644,6 +644,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 }
 
 #dist-text {
+  padding:0px 20px;
   h1 {
     @include header-style(48px, 100, $time-red);
     margin-top:1em;
@@ -709,6 +710,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 .dealers {
   font-size:11px;
   height:11em;
+  padding:0 20px 0 20px;
+}
+
+#dealer-list {
+  padding:20px;
 }
 
 .more-btm-padding {
