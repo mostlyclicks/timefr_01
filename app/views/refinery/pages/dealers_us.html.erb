@@ -17,7 +17,7 @@
 <div class="row">
   <% @js_array = [] %>
   <% @us_dealers.each do |d| %>
-<div class="col-xs-2 dealers">
+<div class="col-xs-6 col-md-2 dealers">
   <% @collection = [d.dealer_name, d.latitude, d.longitude] %>
   <% @js_array << @collection %>
   <%= d.dealer_name %><br />
