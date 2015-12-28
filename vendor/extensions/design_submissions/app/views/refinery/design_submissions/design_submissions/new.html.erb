@@ -36,9 +36,9 @@ aside {
 <div class="row">
   <div class="col-md-6">
 
-    <h1>Le défi - Design Submission</h1>
-    <p>Please carefully fill out the form below to submit your design.<br />
-      <small>* Required fields</small></p>
+
+    <%= raw copywriting('Defi Header', {:scope => 'defi', :phrase_type => 'wysiwyg'}) %>
+    
 
     <%= form_for [refinery, :design_submissions, @design_submission], html: {class: 'form-horizontal', role: 'form'} do |f| %>
       <%= render '/refinery/admin/error_messages',
@@ -67,7 +67,7 @@ aside {
 
       <div class='field state_field string_field form-group'>
         <%= f.label :state, class: 'col-md-3 control-label' %>
-        <div class="col-md-8"><%= f.text_field :state, class: 'form-control', placeholder: 'département'  %></div>
+        <div class="col-md-8"><%= f.text_field :state, class: 'form-control', placeholder: 'Etat'  %></div>
       </div>
 
       <div class='field zip_field string_field form-group'>
@@ -86,22 +86,23 @@ aside {
       </div>
 
       <div class='field design_description_field text_field form-group'>
-        <%= f.label :design_description, class: 'col-md-3 control-label' %>
+        <%= f.required_label :design_description, class: 'col-md-3 control-label' %>
         <div class="col-md-8"><%= f.text_area :design_description, :rows => 8, class: 'form-control', placeholder: 'Description de la Conception' %></div>
       </div>
 
       <div class='field design_image_field image_field form-group'>
-        <%= f.label :design_image, class: 'col-md-3 control-label' %>
+        <%= f.label :design_image, label: 'Submit your design',class: 'col-md-3 control-label' %>
         <div class="col-md-8"><span class="btn btn-primary btn-file">Choose IMAGE File<%= f.file_field :design_image %></span><br /><small>Only .JPG or .PNG will be accepted<br />Seuls les fichiers .JPG ou .PNG seront acceptées</small></div>
       </div>
 
       <div class="field form-group">
-        <%= f.label :agree_terms, 'Terms', class: 'col-md-3 control-label' %>
+        <%= f.label :agree_terms, copywriting('Defi Terms label', {:scope => 'defi', :phrase_type => 'wysiwyg'}), class: 'col-md-3 control-label' %>
         <div class="col-md-8 ">
           <%#= f.label :agree_terms, class: 'control-label' %>
           <div class="agree-terms"> 
             <div style="float:left;"><%= f.check_box :agree_terms, class: 'checkbox-lg' %></div>
-             <div>I have a read and agree to all terms and conditions for the "Le Défi by ..." design contest.</div>
+            <div><%= raw copywriting('Defi Terms checkbox', {:scope => 'defi', :phrase_type => 'wysiwyg'}) %></div>
+             <div>I have read and agree to all terms and conditions for the "Le Défi by ..." design contest.</div>
            </div>
          </div>
       </div>
