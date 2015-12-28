@@ -92,7 +92,7 @@ aside {
 
       <div class='field design_image_field image_field form-group'>
         <%= f.label :design_image, copywriting('Submit Design label', {:scope => 'defi', :phrase_type => 'wysiwyg'}) ,class: 'col-md-3 control-label' %>
-        <div class="col-md-8"><span class="btn btn-primary btn-file">Choose IMAGE File<%= f.file_field :design_image %></span><br /><small>Only .JPG or .PNG will be accepted<br />Seuls les fichiers .JPG ou .PNG seront acceptés</small></div>
+        <div class="col-md-8"><span class="btn btn-primary btn-file"><%= copywriting('Choose IMAGE file', {:scope => 'defi', :phrase_type => 'wysiwyg'}) %><%= f.file_field :design_image %></span><br /><small>Only .JPG or .PNG will be accepted<br />Seuls les fichiers .JPG ou .PNG seront acceptés</small></div>
       </div>
 
       <div class="field form-group">
@@ -110,7 +110,7 @@ aside {
 
       <div class='actions form-group'>
         <div class="col-md-3"></div>
-        <div class="col-md-8"><%= f.submit t('.send'), class: 'btn btn-success btn-lg', value: 'Submit | Soumettre'  %></div>
+        <div class="col-md-8"><%= f.submit t('.send'), class: 'btn btn-success btn-lg', value: copywriting('Submit Button', {:scope => 'defi', :phrase_type => 'wysiwyg'})  %></div>
       </div>
     <% end %>
     </div>
