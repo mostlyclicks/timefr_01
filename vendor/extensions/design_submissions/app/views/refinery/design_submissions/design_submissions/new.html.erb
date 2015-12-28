@@ -91,7 +91,7 @@ aside {
       </div>
 
       <div class='field design_image_field image_field form-group'>
-        <%= f.label :design_image, label: 'Submit your design',class: 'col-md-3 control-label' %>
+        <%= f.label :design_image, label: copywriting('submit design label', {:scope => 'defi', :phrase_type => 'wysiwyg'}) ,class: 'col-md-3 control-label' %>
         <div class="col-md-8"><span class="btn btn-primary btn-file">Choose IMAGE File<%= f.file_field :design_image %></span><br /><small>Only .JPG or .PNG will be accepted<br />Seuls les fichiers .JPG ou .PNG seront acceptées</small></div>
       </div>
 
