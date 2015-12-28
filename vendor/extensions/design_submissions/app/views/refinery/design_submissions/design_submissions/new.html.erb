@@ -91,8 +91,8 @@ aside {
       </div>
 
       <div class='field design_image_field image_field form-group'>
-        <%= f.label :design_image, label: copywriting('submit design label', {:scope => 'defi', :phrase_type => 'wysiwyg'}) ,class: 'col-md-3 control-label' %>
-        <div class="col-md-8"><span class="btn btn-primary btn-file">Choose IMAGE File<%= f.file_field :design_image %></span><br /><small>Only .JPG or .PNG will be accepted<br />Seuls les fichiers .JPG ou .PNG seront acceptées</small></div>
+        <%= f.label :design_image, copywriting('Submit Design label', {:scope => 'defi', :phrase_type => 'wysiwyg'}) ,class: 'col-md-3 control-label' %>
+        <div class="col-md-8"><span class="btn btn-primary btn-file">Choose IMAGE File<%= f.file_field :design_image %></span><br /><small>Only .JPG or .PNG will be accepted<br />Seuls les fichiers .JPG ou .PNG seront acceptés</small></div>
       </div>
 
       <div class="field form-group">
@@ -102,7 +102,7 @@ aside {
           <div class="agree-terms"> 
             <div style="float:left;"><%= f.check_box :agree_terms, class: 'checkbox-lg' %></div>
             <div><%= raw copywriting('Defi Terms checkbox', {:scope => 'defi', :phrase_type => 'wysiwyg'}) %></div>
-             <div>I have read and agree to all terms and conditions for the "Le Défi by ..." design contest.</div>
+             
            </div>
          </div>
       </div>
