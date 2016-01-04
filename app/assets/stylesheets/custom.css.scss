@@ -744,7 +744,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
   height:570px;
   overflow:scroll;
   margin-top:65px;
-  p {font-size:11px;font-weight:400;}
+  p, li {font-size:11px;font-weight:400;color:rgba(0,0,0,.6);}
 }
 
 .agree-terms {
