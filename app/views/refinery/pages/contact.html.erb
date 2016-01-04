@@ -1,5 +1,5 @@
 <% content_for :body do %>
-  <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>adafdfa
+  <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
   
   <div class='inquiries'>
     <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
@@ -39,4 +39,6 @@
     <% end %>
   </div>
 <% end %>
-<%= render "/refinery/content_page" %>
+
+<div class="container">
+<%= render "/refinery/content_page" %></div>

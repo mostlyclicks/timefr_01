@@ -7,7 +7,7 @@ module Refinery
 
       alias_attribute :message, :design_description
 
-    
+
       # Add some validation here if you want to validate the user's input
       # We have validated the first string field for you.
       validates :name, :presence => true
