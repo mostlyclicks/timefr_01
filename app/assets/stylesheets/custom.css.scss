@@ -22,7 +22,8 @@ section {
 #home-top {
   min-height: 5vh;
   h1 {@include text-style(24px, 100, $time-red);text-align:center;}
-  h2 {@include text-style(12px, 400, $time-red);text-transform:uppercase;}
+  h2 {@include text-style(12px, 400, $time-red);text-transform:uppercase;} /*display:block;height:2em;*/
+
   a {
     &:hover {text-decoration:none;}
     h2 {
@@ -39,6 +40,10 @@ section {
 
 #home-top-bike {
   
+}
+
+#home-the-challenge {
+  h1 {@include text-style(36px, 100, $time-red);text-transform:uppercase;padding-top:1em;}
 }
 
 #header-social {
@@ -278,7 +283,7 @@ section {
 #bike-features {
 
   .row {
-    background: -moz-linear-gradient(top,  rgba(225,225,225,.3) 0%, rgba(249,249,249,.2) 100%); /* FF3.6+ */
+    background: -moz-linear-gradient(top,  rgba(225,225,225,.3) 0%, rgba(249,249,249,.2) 100%); /* FF3.6+ 
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(225,225,225,.3)), color-stop(100%,rgba(249,249,249,.2))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top,  rgba(225,225,225,.3) 0%,rgba(249,249,249,.2) 100%); /* Chrome10+,Safari5.1+ */
 background: -o-linear-gradient(top,  rgba(225,225,225,.3) 0%,rgba(249,249,249,.2) 100%); /* Opera 11.10+ */
