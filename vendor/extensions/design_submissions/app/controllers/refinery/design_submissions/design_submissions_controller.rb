@@ -23,14 +23,14 @@ module Refinery
 
         if @design_submission.save
           begin
-            Mailer.notification(@design_submission, request).deliver
+            ActionMailer.notification(@design_submission, request).deliver
           rescue => e
             logger.warn "There was an error delivering the design_submission notification.\n#{e.message}\n"
           end
 
           if DesignSubmission.column_names.map(&:to_s).include?('email')
             begin
-              Mailer.confirmation(@design_submission, request).deliver
+              ActionMailer.confirmation(@design_submission, request).deliver
             rescue => e
               logger.warn "There was an error delivering the design_submission confirmation:\n#{e.message}\n"
             end
