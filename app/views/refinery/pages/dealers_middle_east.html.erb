@@ -10,11 +10,18 @@
     </div>
   </div>
 </section>
+
+
+<% content_for :dealer_list do %>
+
 <section id="dealer-list">
 <div class="container more-btm-padding">
 <div class="row">
+  <% @js_array = [] %>
   <% @me_dealers.each do |d| %>
 <div class="col-xs-6 col-md-2 dealers" style="height:15em;">
+  <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website] %>
+    <% @js_array << @collection %>
   <%= d.dealer_name %><br />
   <%= d.street_address_1 %><br />
   <% unless d.street_address_2.empty? %>
@@ -34,3 +41,61 @@
 <% end %>
 </div>
 </div></section>
+
+<% end %>
+
+
+
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+  <div id="map_us" style='width:100%; height: 800px;' class="maps"></div>
+</div>
+</div>
+<style>
+#map_us { -webkit-transform: translateZ(0) !important; }
+</style>
+
+
+<script type="text/javascript">
+
+function initMap() {
+    var locations = <%= raw @js_array %>;
+
+    var map = new google.maps.Map(document.getElementById('map_us'), {
+      zoom: 7,
+      center: new google.maps.LatLng(24.09911, 53.49077),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });    
+
+      var contentString = '<strong>' + locations[i][0] + '</strong>' + '<br />' +
+                          locations[i][3] + '<br />' +
+                          locations[i][5] + ', ' + locations[i][6] + '<br />' +
+                          locations[i][8] + '<br />' +
+                          '<a href="http://' + locations[i][9] + '">' + locations[i][9] + '</a>';
+
+      var infowindow = new google.maps.InfoWindow()
+
+      google.maps.event.addListener(marker, 'click', (function(marker,contentString,infowindow) {
+        return function() {
+          infowindow.setContent(contentString);
+          // infowindow.title = "Hey";
+          infowindow.open(map, marker);
+        }
+      })(marker, contentString, infowindow));
+    }
+}
+
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpiBspL5NRA3GNCMf84NOVT3wA_Q4A4wk&callback=initMap"></script>
+
+<%= content_for :dealer_list %>
+

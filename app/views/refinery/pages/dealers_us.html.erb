@@ -1,45 +1,49 @@
 <section id="dist-top"></section>
 
-
-
 <section id="dist-text">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h1><%= @page.title %></h1>
-        <%= raw @page.content_for(:body) %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><%= @page.title %></h1>
+          <%= raw @page.content_for(:body) %>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="dealer-list">
-<div class="container more-btm-padding">
-<div class="row">
-  <% @js_array = [] %>
-  <% @us_dealers.each do |d| %>
-<div class="col-xs-6 col-md-2 dealers">
-  <% @collection = [d.dealer_name, d.latitude, d.longitude] %>
-  <% @js_array << @collection %>
-  <%= d.dealer_name %><br />
-  <%= d.street_address_1 %><br />
-  <% unless d.street_address_2.empty? %>
-    <%= d.street_address_2 %><br />
-  <% end %>
-  <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
-  <%= d.country %><br />
+  </section>
 
-  TEL: <%= d.telephone_1 %><br />
-  <% unless d.email.empty? %>
-    <%= d.email %><br />
+
+<% content_for :dealer_list do %>
+  
+  <section id="dealer-list">
+  <div class="container more-btm-padding">
+  <div class="row">
+    <% @js_array = [] %>
+    <% @us_dealers.each do |d| %>
+  <div class="col-xs-6 col-md-2 dealers">
+    <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website] %>
+    <% @js_array << @collection %>
+    <%= d.dealer_name %><br />
+    <%= d.street_address_1 %><br />
+    <% unless d.street_address_2.empty? %>
+      <%= d.street_address_2 %><br />
+    <% end %>
+    <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
+    <%= d.country %><br />
+
+    TEL: <%= d.telephone_1 %><br />
+    <% unless d.email.empty? %>
+      <%= d.email %><br />
+    <% end %>
+    <% unless d.website.empty? %>
+      <%= d.website %><br />
+    <% end %> 
+  </div>
   <% end %>
-  <% unless d.website.empty? %>
-    <%= d.website %><br />
-  <% end %> 
-</div>
+  </div>
+  </div>
+  </section>
 <% end %>
-</div>
-</div>
-</section>
+
 
 
 <div class="row">
@@ -54,7 +58,6 @@
 
 <script type="text/javascript">
 
-
 function initMap() {
     var locations = <%= raw @js_array %>;
 
@@ -64,30 +67,37 @@ function initMap() {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
-    var infowindow = new google.maps.InfoWindow();
-
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {  
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map
-      });
+      });    
 
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      var contentString = '<strong>' + locations[i][0] + '</strong>' + '<br />' +
+                          locations[i][3] + '<br />' +
+                          locations[i][5] + ', ' + locations[i][6] + '<br />' +
+                          locations[i][8] + '<br />' +
+                          '<a href="http://' + locations[i][9] + '">' + locations[i][9] + '</a>';
+
+      var infowindow = new google.maps.InfoWindow()
+
+      google.maps.event.addListener(marker, 'click', (function(marker,contentString,infowindow) {
         return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.title = "Hey";
+          infowindow.setContent(contentString);
+          // infowindow.title = "Hey";
           infowindow.open(map, marker);
         }
-      })(marker, i));
+      })(marker, contentString, infowindow));
     }
 }
-
 
 </script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpiBspL5NRA3GNCMf84NOVT3wA_Q4A4wk&callback=initMap"></script>
+
+<%= content_for :dealer_list %>
 
 
 
