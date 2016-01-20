@@ -19,7 +19,7 @@
 <div class="row">
   <% @js_array = [] %>
   <% @fr_dealers.each do |d| %>
-<div class="col-xs-6 col-md-2 dealers">
+<div class="col-xs-6 col-md-3 dealers">
   <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website] %>
   <% @js_array << @collection unless d.latitude.blank? || d.longitude.blank? %>
   <%= d.dealer_name %><br />
