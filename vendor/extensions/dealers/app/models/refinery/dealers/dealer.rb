@@ -3,9 +3,10 @@ module Refinery
     class Dealer < Refinery::Core::BaseModel
       self.table_name = 'refinery_dealers'
 
-      geocoded_by :full_street_address
+      geocoded_by :address
       # after_validation :geocode
-      after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
+      after_validation :geocode
+      # , if: ->(obj){ obj.address.present? and obj.address_changed? }
 
       attr_accessible :account_number, :dealer_name, :street_address_1, :street_address_2, :postal_code, :city, :telephone_1, :state_province, :country, :email, :website, :position, :latitude, :longitude
 
@@ -14,7 +15,7 @@ module Refinery
 
       # Gprivate 
 
-        def full_street_address
+        def address
           [street_address_1, city, state_province, country, postal_code].compact.join(', ')
         end
 
