@@ -126,6 +126,37 @@
         </td>
         
       </tr>
+
+      <tr>
+        <td>
+          <strong>
+            <%= t('.design_image2', :default => t('activerecord.attributes.design_submission.design_image2')) %>
+          </strong>
+        </td>
+        <td>
+          <% if @design_submission.design_image2 %>
+            <%= image_tag @design_submission.design_image2.url, style: "width:550px;" %>
+          <% else %>
+            <%= 'No image submitted' %>
+          <% end %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>
+            <%= t('.design_image3', :default => t('activerecord.attributes.design_submission.design_image3')) %>
+          </strong>
+        </td>
+        <td>
+          <% if @design_submission.design_image3 %>
+            <%= image_tag @design_submission.design_image3.url, style: "width:550px;" %>
+          <% else %>
+            <%= 'No image submitted' %>
+          <% end %>
+        </td>
+      </tr>
+
   </table>
 </div>
 <div id='actions'>

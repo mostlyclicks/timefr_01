@@ -19,7 +19,9 @@ module Refinery
       def create
         # resource = Resource.create(file: params[:design_submission][:attachment])
         design_image = Refinery::Image.create(image: params[:design_submission][:design_image])
-        @design_submission = DesignSubmission.new(params[:design_submission].merge({design_image: design_image}))
+        design_image2 = Refinery::Image.create(image: params[:design_submission][:design_image2])
+        design_image3 = Refinery::Image.create(image: params[:design_submission][:design_image3])
+        @design_submission = DesignSubmission.new(params[:design_submission].merge({design_image: design_image, design_image2: design_image2, design_image3: design_image3}))
 
         if @design_submission.save
           begin
