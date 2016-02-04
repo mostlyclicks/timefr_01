@@ -18,7 +18,7 @@
   <div class="container more-btm-padding">
   <div class="row">
     <% @js_array = [] %>
-    <% @us_dealers.each do |d| %>
+    <% @asia_dealers.each do |d| %>
   <div class="col-xs-6 col-md-2 dealers">
     <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website] %>
     <% @js_array << @collection %>
@@ -63,7 +63,7 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map_us'), {
       zoom: 4,
-      center: new google.maps.LatLng(37.09024, -95.712891),
+      center: new google.maps.LatLng(35.0000, 103.0000),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
