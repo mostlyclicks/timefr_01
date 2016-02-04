@@ -33,10 +33,6 @@ class ApplicationController < ActionController::Base
   def load_us_dealers
     @us_dealers = Refinery::Dealers::Dealer.where(country: 'USA')
     @first_dealer = Refinery::Dealers::Dealer.first
-    # @hash = Gmaps4rails.build_markers(@us_dealers) do |dealer, marker|
-    #   marker.lat dealer.latitude
-    #   marker.lng dealer.longitude
-    # end
   end
 
   def load_me_dealers
