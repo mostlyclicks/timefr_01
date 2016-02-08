@@ -396,6 +396,50 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
    }
  }
 
+ //Edition Francaise
+ #ef-header {
+  background-image:url(fg-bg.png);
+    h1 {
+      @include header-style(24px, 100, $time-red)
+    }
+    h1 {
+      letter-spacing:.05em;
+    }
+  background-color:white;
+  background-size:100%;
+  background-repeat:no-repeat;
+  height:70vh;
+  img {
+    width:100%;
+    position:relative;left:0px;
+  }
+ }
+
+ #ef-text {
+padding:80px 20px;
+
+  .text-lead {
+    margin-bottom:40px;
+    font-size:24px;
+    font-weight:100;
+  }
+}
+
+#ef-models {
+  padding:80px 0px 80px 0px;
+  background-color:#f9f9f9;
+}
+
+#ef-bar-stem {
+  padding:80px 20px 0px 20px;
+  h1 {
+      @include header-style(36px, 100, $time-red)
+    }
+    h1 {
+      letter-spacing:.05em;
+    }
+}
+
 
  //AKTIV PAGE
   #aktiv-header {
