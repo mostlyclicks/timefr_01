@@ -5,7 +5,7 @@ module Refinery
 
       geocoded_by :address
       # after_validation :geocode
-      after_validation :geocode#, if: ->(obj){ obj.address.present? and obj.address_changed? }
+      after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
 
       attr_accessible :account_number, :dealer_name, :street_address_1, :street_address_2, :postal_code, :city, :telephone_1, :state_province, :country, :email, :website, :position, :latitude, :longitude
 
