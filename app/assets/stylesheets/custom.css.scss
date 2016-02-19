@@ -824,5 +824,39 @@ padding:80px 20px;
 
 .maps {margin-bottom:80px;}
 
+#megeve-top {
+  background-image:url(TOF_1989-2.jpg);
+  background-position-y:-70px;
+  background-size:260%;  
+  min-height:645px;
+  max-height:750px;
+  background-repeat:no-repeat;
+  #logo-megeve {
+    margin:40px 0 40px;
+  }
+}
+#megeve-headline {
+  margin:80px 20px;
+  h1 {@include header-style(36px, 100, $time-red);}
+  h3 {@include header-style(18px, 600, $time-red); text-transform:uppercase;letter-spacing:.15em;}
+  .lead {color:rgba(0,0,0,.4);margin:1.5em 0;}
+}
+
+#megeve-izon {
+  padding:80px 20px;
+  h1 {@include header-style(36px, 100, $time-red);letter-spacing:.10em;}
+  background-color:#f7f7f7;
+  .lead {color:rgba(0,0,0,.4);margin:1.5em 0;}
+}
+
+#megeve-map {
+  h1 {@include header-style(36px, 100, $time-red);letter-spacing:.10em;}
+  h3 {@include header-style(18px, 600, $time-red); text-transform:uppercase;letter-spacing:.15em;}
+  padding:20px 0px;
+  .col-md-4 {padding:0 10px;}
+
+@include gradient-bg(#e4e4e4, #ffffff, 100%);
+
+}
 
 
