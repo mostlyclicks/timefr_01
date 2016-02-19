@@ -12,12 +12,15 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2 col-sm-12">
         <%= image_tag 'time-megeve.png', class: 'img-responsive text-center', width: '300px', style: 'margin:0 auto 40px auto;' %>
-        <h1 class="text-center">13ème TIME Megève Mt. Blanc</h1>
+        <%= raw @page.content_for(:megeve_main) %>
+        <!-- <h1 class="text-center">13ème TIME Megève Mt. Blanc</h1>
         <h3 class="text-center">June 5, 2016</h3>
         <p class="lead">
-          Join us in celebrating our 30th anniversary with the 13th running of the TIME Megeve Mt. Blanc ride. All participants will have a chance to win a TIME IZON AKTIV. The 90km, 120km, 149km courses all feature challenging climbs over the majestic peaks of the French Alps. This is a ride you will not want to miss.
+          Join us in celebrating our 30th anniversary with the 13th running of the TIME Megeve Mt. Blanc ride. All participants will have a chance to win a <a href="#megeve-izon" class="scroll-btn">TIME IZON AKTIV.</a> The 90km, 120km, 149km courses all feature challenging climbs over the majestic peaks of the French Alps. This is a ride you will not want to miss.
         </p>
-        <div class="text-center"><%= link_to 'Register', 'http://link.com', class: 'btn btn-lg btn-danger' %></div>
+        <div class="text-center">
+          <a href="http://www.csportsmegeve.com" class="btn btn-lg btn-danger">REGISTER</a>
+        </div> -->
       </div>
     </div>
   </div>
@@ -26,11 +29,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-center">WIN AN IZON | AKTIV!</h1>
+        <%= raw @page.content_for(:megeve_izon) %>
+        <!-- 
+        <h1 class="text-center">WIN AN IZON AKTIV!</h1>
          <p class="lead text-center">
           All participants will be entered for a chance to win a Megève Mt. Blanc Special Edition IZON AKTIV.
         </p>
-        <p class="text-center"><%= link_to 'Learn more about the IZON AKTIV', '/bikes/izon' %></p>
+        <p class="text-center">
+          <a href="/bikes/izon">Learn more about the IZON AKTIV</a>
+        </p>
+ -->
         <%= image_tag 'Izon-AKTIV-red-bike.png', class: 'img-responsive' %>
       </div>
     </div>
