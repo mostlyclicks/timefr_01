@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_us_dealers
   before_filter :load_me_dealers
   before_filter :load_asia_dealers
+  before_filter :load_gb_dealers
   #before_filter :load_instagram
   # before_filter :get_bike_geometry
 
@@ -33,6 +34,10 @@ class ApplicationController < ActionController::Base
   def load_us_dealers
     @us_dealers = Refinery::Dealers::Dealer.where(country: 'USA')
     @first_dealer = Refinery::Dealers::Dealer.first
+  end
+
+  def load_gb_dealers
+    @gb_dealers = Refinery::Dealers::Dealer.where(country: 'GB')
   end
 
   def load_me_dealers

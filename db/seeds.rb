@@ -126,6 +126,36 @@ Refinery::Groups::Engine.load_seed
 #   {name: 'ATAC DH 2', riding_type: 'MTB', category: 'DH', weight: 258, description: ''}
 # ]
 
+@gb_dealers = [
+  # {account: '', dealer_name: '', street_address_1: '', street_address_2: '', postal_code: '', city: '', telephone_1: '', state_province: '', country: '', email: '', website: ''},
+  {account: '', dealer_name: 'FINE-BICYCLE', street_address_1: '77A BROUGHTON STREET', street_address_2: '', postal_code: 'EH1 3RJ', city: 'EDINBURGH', telephone_1: '0131 237 3821', state_province: '', country: 'GB', email: 'info@fine-bicycle.com', website: ''},
+  {account: '', dealer_name: 'TEN-POINT', street_address_1: '36 BOIS LANE', street_address_2: '', postal_code: 'HP6 6BP', city: 'AMERSHAM', telephone_1: '01494 433124', state_province: 'BUCKS', country: 'GB', email: '10pt@ten-point.co.uk', website: 'www.ten-point.co.uk'},
+  {account: '', dealer_name: '700', street_address_1: '68 PEASCOD STREET', street_address_2: '', postal_code: 'SL4 1DE', city: 'WINDSOR', telephone_1: '01753 858777', state_province: 'BERKSHIRE', country: 'GB', email: 'dave@7hundred.co.uk', website: 'www.7hundred.co.uk'},
+  {account: '', dealer_name: 'ATHLETE SERVICE', street_address_1: 'THE OAST HOUSE', street_address_2: 'GREYS ROAD CAR PARK', postal_code: 'RG9 2AA', city: 'HENLEY ON THAMES', telephone_1: '01491 598089', state_province: 'OXFORDSHIRE', country: 'GB', email: 'sales@athleteservice.com', website: 'www.athleteservice.com'},
+  {account: '', dealer_name: 'SO CYCLE LTD', street_address_1: '72 MAIN STREET', street_address_2: '', postal_code: 'BT77 0BG', city: 'AUGHER', telephone_1: '028 8554 8289', state_province: 'CO TYRONE', country: 'GB', email: 'info@so-cycle.com', website: 'www.so-cycle.com'},
+  {account: '', dealer_name: 'LE BICYCLE LTD', street_address_1: '105 STATION ROAD', street_address_2: '', postal_code: 'BR4 0PX', city: 'WEST WICKHAM', telephone_1: '020 8916 9029', state_province: '', country: 'GB', email: 'alex@lebicycle.co.uk', website: 'www.lebicycle.co.uk'},
+  {account: '', dealer_name: 'WEALDEN CYCLES', street_address_1: 'UNIT 1', street_address_2: 'PARK LANE', postal_code: 'TN6 2QN', city: 'CROWBOROUGH', telephone_1: '01892 653736', state_province: '', country: 'GB', email: 'sales@wealdencycles.co.uk', website: 'www.wealdencycles.co.uk'},
+  {account: '', dealer_name: 'INDEPENDENT BIKEWORKS', street_address_1: 'UNIT 3', street_address_2: 'THE EXCHANGE, BREWERY COURT', postal_code: 'GL7 1JL', city: 'CIRENCESTER', telephone_1: '01285 238184', state_province: '', country: 'GB', email: 'info@independent-works.co.uk', website: 'www.independent-works.co.uk'},
+  {account: '', dealer_name: 'CLIMB ON BIKES LTD', street_address_1: '24/25 CONINGSBY STREET', street_address_2: '', postal_code: 'HR1 2DY', city: 'HEREFORD', telephone_1: '01432 261211', state_province: '', country: 'GB', email: 'climbonbikes@aol.com', website: 'www.climbonbikes.co.uk'},
+
+]
+
+
+ @gb_dealers.each do |gb|
+   Refinery::Dealers::Dealer.create(
+     dealer_name: gb[:dealer_name],
+     street_address_1: gb[:street_address_1],
+     street_address_2: gb[:street_address_2],
+     postal_code: gb[:postal_code],
+     city: gb[:city],
+     telephone_1: gb[:telephone_1],
+     state_province: gb[:state_province],
+     country: gb[:country],
+     email: gb[:email],
+     website: gb[:website]
+   )
+ end
+
 
 # @dealers = [
 #   # {account:, dealer_name:, street_address_1:, street_address_2:, postal_code:, city:, telephone_1:, country:, email:, website:}
