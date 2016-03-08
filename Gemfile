@@ -22,9 +22,12 @@ gem 'geocoder'
 gem 'test-unit'
 
 
-group :production do
-  gem 'unicorn'
-end
+# group :production do
+  # gem 'unicorn'
+# end
+
+gem 'puma'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
