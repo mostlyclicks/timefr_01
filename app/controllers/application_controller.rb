@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_me_dealers
   before_filter :load_asia_dealers
   before_filter :load_gb_dealers
+  before_filter :load_germany_dealers
   #before_filter :load_instagram
   # before_filter :get_bike_geometry
 
@@ -46,6 +47,10 @@ class ApplicationController < ActionController::Base
 
   def load_asia_dealers
     @asia_dealers = Refinery::Dealers::Dealer.where(country: ['China', 'Japan', 'Korea', 'New Zealand', 'Malaysia', 'Singapore', 'Taiwan', 'Thailand', 'Vietnam'])
+  end
+
+  def load_germany_dealers
+    @germany_dealers = Refinery::Dealers::Dealer.where(country: 'Germany')
   end
 
 
