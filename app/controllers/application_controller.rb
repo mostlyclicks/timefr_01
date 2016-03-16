@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  before_filter :load_all_pedals
   before_filter :load_home_features, :load_home_skylons, :load_home_izons, :load_home_fluidity, :load_home_bettini, :load_zxrs_piste, :load_road_pedals, :load_mtb_pedals
+  
   before_filter :load_geo
   before_filter :load_geometries
   before_filter :load_fr_dealers
@@ -110,18 +112,32 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def load_all_pedals
+    @all_pedals = Refinery::Pedals::Pedal.all
+  end
+
   def load_road_pedals
-    @road_pedals = Refinery::Pedals::Pedal.where(riding_type: 'Road').order('position ASC')
-    @road_pedals_xpresso = @road_pedals.where(category: 'Xpresso')
-    @road_pedals_xpresso_country = @road_pedals.where(category: 'Country')
-    @road_pedals_rxs = @road_pedals.where(category: 'RXS')
+    @road_pedals = @all_pedals.select { |q| q.riding_type == 'Road' }
+    @road_pedals_xpresso = @road_pedals.select { |x| x.category == 'Xpresso' }
+    @road_pedals_xpresso_country = @road_pedals.select { |x| x.category == 'Country' }
+    @road_pedals_rxs = @road_pedals.select { |x| x.category == 'RXS' }
+    
+    # @road_pedals = Refinery::Pedals::Pedal.where(riding_type: 'Road').order('position ASC')
+    # @road_pedals_xpresso = @road_pedals.where(category: 'Xpresso')
+    # @road_pedals_xpresso_country = @road_pedals.where(category: 'Country')
+    # @road_pedals_rxs = @road_pedals.where(category: 'RXS')
   end
 
   def load_mtb_pedals
-    @mtb_pedals = Refinery::Pedals::Pedal.where(riding_type: 'MTB')
-    @mtb_pedals_xc = @mtb_pedals.where(category: 'XC')
-    @mtb_pedals_mx = @mtb_pedals.where(category: 'MX')
-    @mtb_pedals_dh = @mtb_pedals.where(category: 'DH')
+    @mtb_pedals = @all_pedals.select { |mtb| mtb.riding_type == 'MTB' }
+    @mtb_pedals_xc = @mtb_pedals.select { |xc| xc.category == 'XC' }
+    @mtb_pedals_mx = @mtb_pedals.select { |mx| mx.category == 'MX' }
+    @mtb_pedals_dh = @mtb_pedals.select { |dh| dh.category == 'DH' }
+
+    # @mtb_pedals = Refinery::Pedals::Pedal.where(riding_type: 'MTB')
+    # @mtb_pedals_xc = @mtb_pedals.where(category: 'XC')
+    # @mtb_pedals_mx = @mtb_pedals.where(category: 'MX')
+    # @mtb_pedals_dh = @mtb_pedals.where(category: 'DH')
   end
 
   def load_geometries
