@@ -26,6 +26,8 @@
   </div>
 </section>
 
+<% content_for :pedal_section do %>
+
 <div class="container pedals-xpresso">
     <div class="row">
       <div class="col-lg-3 col-lg-offet-1">
@@ -78,3 +80,7 @@
     <% end %>
   </div>
 </div>
+
+<% end %>
+
+<%= yield :pedal_section %>
