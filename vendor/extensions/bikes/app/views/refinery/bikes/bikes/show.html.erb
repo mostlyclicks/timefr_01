@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-8 col-lg-8" id="bike-img">
         <%#= image_fu @bike.hero_image, '1200x765c', class: 'img-responsive' %>
-        <%= image_fu @bike.hero_image, '1200x', class: 'img-responsive2' %>
+        <%= image_tag @bike.hero_image.url, width: '100%', class: 'img-responsive2' %>
       </div>
       <div class="col-md-4 col-lg-4" id="bike-main-txt">
         <%= image_fu @bike.hero_logo, '500x', class: 'img-responsive' %>
