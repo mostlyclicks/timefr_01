@@ -3,6 +3,8 @@
   #l2-bike {background-image:url(<%= @bike.hero_background.url %>);}
 </style>
 
+
+<% content_for :bike_intro do %>
 <!-- L2 BIKE INTRO -->
 <section class="show" id="l2-bike">
   <div class="container">
@@ -19,6 +21,9 @@
     </div>
   </div>
 </section>
+<% end %>
+
+<%= yield :bike_intro %>
 
 <section id="bike-details">
   <div class="container">
