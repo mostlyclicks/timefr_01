@@ -176,7 +176,7 @@ section {
      @include header-style(20px, 100, $black-med);
      display:inline-block;
      margin:0 .25em;
-     @extend .l2-h3-xs;
+     // @extend .l2-h3-xs;
    }
    .lead {
    @include text-style(16px, 300, $black-med);
