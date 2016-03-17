@@ -2,7 +2,7 @@
 <style>
   #l2-bike {background-image:url(<%= @bike.hero_background.url %>);}
 </style>
-
+<% @b_image = @bike.hero_image.url %>
 
 <% content_for :bike_intro do %>
 <!-- L2 BIKE INTRO -->
@@ -11,8 +11,10 @@
     <%#= render '/refinery/content_page' %>
     <div class="row">
       <div class="col-sm-12 col-md-8 col-lg-8" id="bike-img">
+        <img src="<%= @b_image %>" width-"100%"%>
         <%#= image_fu @bike.hero_image, '1200x765c', class: 'img-responsive' %>
-        <%= image_tag @bike.hero_image.url, width: '100%', class: 'img-responsive2' %>
+        <%#= image_fu @bike.hero_image, '1200x765c' %>
+
       </div>
       <div class="col-md-4 col-lg-4" id="bike-main-txt">
         <%= image_fu @bike.hero_logo, '500x', class: 'img-responsive' %>
