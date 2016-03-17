@@ -25,7 +25,7 @@
     </div>
     <% @mtb_pedals_xc.each do |xc| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-      <%= image_tag xc.pedal_image.url, class: 'img-responsive' %>
+      <%= image_tag xc.pedal_image.url, width: '100%', class: 'img-responsive' %>
       <h3><%= xc.name %> | <%= xc.weight %></h3>
       <small><%= xc.description.html_safe %></small>
     </div>
@@ -43,7 +43,7 @@
     </div>
     <% @mtb_pedals_mx.each do |mx| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-      <%= image_tag mx.pedal_image.url, class: 'img-responsive' %>
+      <%= image_tag mx.pedal_image.url, width: '100%', class: 'img-responsive' %>
       <h3><%= mx.name %> | <%= mx.weight %></h3>
       <small><%= mx.description.html_safe %></small>
     </div>
@@ -61,7 +61,7 @@
     </div>
     <% @mtb_pedals_dh.each do |dh| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-      <%= image_tag dh.pedal_image.url, class: 'img-responsive' %>
+      <%= image_tag dh.pedal_image.url, width: '100%', class: 'img-responsive' %>
       <h3><%= dh.name %> | <%= dh.weight %></h3>
       <small><%= dh.description.html_safe %></small>
     </div>
