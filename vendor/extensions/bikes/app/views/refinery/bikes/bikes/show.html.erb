@@ -88,7 +88,7 @@
             <% @bike.colors.each_with_index do |color, index| %>
 
             <div class="item <% if index == 0 %>active<% end %>" >
-              <%= image_tag color.image.url, alt: color.name, class: 'img-responsive gallery-img text-center', style: 'margin:0 auto;' %>
+              <%= image_tag color.image.url, width: '100%', alt: color.name, class: 'img-responsive gallery-img text-center', style: 'margin:0 auto;' %>
               <div class="carousel-caption" style="">
                 <%= color.name %>
               </div>
@@ -115,14 +115,14 @@
     <div class="row">
       <%# if index % 2 > 0 %>
       <% if bf.left_right == 'right' %>
-        <div class="col-sm-6 col-sm-push-6 feature-img"><%= image_tag bf.image.url, class: 'img-responsive' %></div>
+        <div class="col-sm-6 col-sm-push-6 feature-img"><%= image_tag bf.image.url, width: '100%', class: 'img-responsive' %></div>
         <div class="col-sm-6 col-sm-pull-6 feature-text right-text">
           <h1><%= bf.title %></h1>
           <small><%= bf.sub_title %></small>
           <p><%= bf.description %></p>
         </div>
       <% else %>
-        <div class="col-sm-6 feature-img"><%= image_tag bf.image.url, class: 'img-responsive' %></div>
+        <div class="col-sm-6 feature-img"><%= image_tag bf.image.url, width: '100%', class: 'img-responsive' %></div>
         <div class="col-sm-6 feature-text left-text">
           <h1><%= bf.title %></h1>
           <small><%= bf.sub_title %></small>
