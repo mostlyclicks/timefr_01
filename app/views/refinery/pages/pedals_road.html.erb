@@ -30,14 +30,14 @@
 
 <div class="container pedals-xpresso">
     <div class="row">
-      <div class="col-lg-3 col-lg-offet-1">
-        <%= image_tag 'LOGO-XPRESSO.png', class: 'img-responsive atac-logo' %>
+      <div class="col-lg-3 col-lg-offset-1">
+        <%= image_fu 'LOGO-XPRESSO.png',  '500x', class: 'img-responsive atac-logo' %>
       </div>
     </div>
   <div class="row">
     <% @road_pedals_xpresso.each do |rp| %>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-        <%= image_tag rp.pedal_image.url, class: 'img-responsive' %>
+        <%= image_fu rp.pedal_image, '500x', class: 'img-responsive' %>
         <h3><%= rp.name %> | <%= rp.weight %></h3>
         <small><%= rp.description.html_safe %></small>
       </div>
@@ -48,7 +48,7 @@
 <section id="pedals-xpresso-flag-editions">
       <div class="row">
       <div class="col-lg-2 col-lg-offset-1">
-        <%= image_tag 'LOGO-XPRESSO.png', class: 'img-responsive atac-logo' %>
+        <%= image_fu 'LOGO-XPRESSO.png', class: 'img-responsive atac-logo' %>
         <h2>Flag Editions</h2>
       </div>
     </div>
@@ -56,7 +56,7 @@
   
     <% @road_pedals_xpresso_country.each do |cp| %>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-        <%= image_tag cp.pedal_image.url, class: 'img-responsive' %>
+        <%= image_fu cp.pedal_image, '500x', class: 'img-responsive' %>
         <h3><%= cp.name %> | <%= cp.weight %></h3>
         <small><%= cp.description.html_safe %></small>
       </div>
@@ -67,13 +67,13 @@
 <div class="container pedals-xpresso">
     <div class="row">
       <div class="col-lg-3 col-lg-offet-1">
-        <%= image_tag 'LOGO-RXS.png', class: 'img-responsive atac-logo' %>
+        <%= image_fu 'LOGO-RXS.png', '500x', class: 'img-responsive atac-logo' %>
       </div>
     </div>
   <div class="row">
     <% @road_pedals_rxs.each do |rp| %>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-        <%= image_tag rp.pedal_image.url, class: 'img-responsive' %>
+        <%= image_fu rp.pedal_image, '500x', class: 'img-responsive' %>
         <h3><%= rp.name %> | <%= rp.weight %></h3>
         <small><%= rp.description.html_safe %></small>
       </div>
