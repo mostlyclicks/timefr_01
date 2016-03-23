@@ -2,7 +2,7 @@
 <style>
   #l2-bike {background-image:url(<%= @bike.hero_background.url %>);}
 </style>
-<% @b_image = @bike.hero_image.thumbnail('1200x').url %>
+<% @b_image = @bike.hero_image.thumbnail(geometry: '1200x').url %>
 
 <% content_for :bike_intro do %>
 <!-- L2 BIKE INTRO -->
@@ -17,7 +17,7 @@
 
       </div>
       <div class="col-md-4 col-lg-4" id="bike-main-txt">
-        <%= image_tag @bike.hero_logo.thumbnail('500x').url, class: 'img-responsive' %>
+        <%= image_tag @bike.hero_logo.thumbnail(geometry: '500x').url, class: 'img-responsive' %>
         <%=raw @bike.hero_description %>
       </div>
     </div>
