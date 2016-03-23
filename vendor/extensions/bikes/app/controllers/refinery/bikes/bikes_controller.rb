@@ -14,6 +14,7 @@ module Refinery
 
       def show
         @bike = Bike.find(params[:id])
+        fresh_when @bike
 
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @bike in the line below:
@@ -24,6 +25,7 @@ module Refinery
 
       def find_all_bikes
         @bikes = Bike.order('position ASC')
+
       end
 
       def find_page

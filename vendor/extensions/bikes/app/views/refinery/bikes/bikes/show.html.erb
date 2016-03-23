@@ -2,7 +2,7 @@
 <style>
   #l2-bike {background-image:url(<%= @bike.hero_background.url %>);}
 </style>
-<% @b_image = @bike.hero_image.url %>
+<% @b_image = @bike.hero_image.thumbnail('1200x').url %>
 
 <% content_for :bike_intro do %>
 <!-- L2 BIKE INTRO -->
@@ -17,7 +17,7 @@
 
       </div>
       <div class="col-md-4 col-lg-4" id="bike-main-txt">
-        <%= image_fu @bike.hero_logo, '500x', class: 'img-responsive' %>
+        <%= image_tag @bike.hero_logo.thumbnail('500x').url, class: 'img-responsive' %>
         <%=raw @bike.hero_description %>
       </div>
     </div>
@@ -95,7 +95,7 @@
             <% @bike.colors.each_with_index do |color, index| %>
 
             <div class="item <% if index == 0 %>active<% end %>" >
-              <%= image_tag color.image.url, width: '100%', alt: color.name, class: 'img-responsive gallery-img text-center', style: 'margin:0 auto;' %>
+              <%= image_tag color.image.thumbnail('1200x').url, alt: color.name, class: 'img-responsive gallery-img text-center', style: 'margin:0 auto;' %>
               <div class="carousel-caption" style="">
                 <%= color.name %>
               </div>
