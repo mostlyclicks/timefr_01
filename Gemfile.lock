@@ -377,6 +377,7 @@ DEPENDENCIES
   jquery-rails
   pg
   puma
+  rack-cache
   rack-rewrite (~> 1.5.0)
   rails (= 3.2.18)
   rails_12factor

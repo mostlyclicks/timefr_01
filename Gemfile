@@ -28,6 +28,10 @@ gem 'test-unit'
 
 gem 'puma'
 
+group :production do
+  gem 'rack-cache'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
