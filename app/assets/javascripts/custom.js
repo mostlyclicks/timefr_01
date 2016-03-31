@@ -25,6 +25,12 @@ $(document).ready(function(){
 // });
 
 
+// $(document).ready(function(){
+//   console.log('hello');
+//   $('#elevation_graph').css('height':'200px');
+// })
+
+
 
 //WAVEmATION CREDIT Jack Rugile
 

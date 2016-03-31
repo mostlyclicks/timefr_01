@@ -1,3 +1,17 @@
+
+<script>
+$(document).ready(function(){
+  alert("Hello");
+  console.log('hello');
+// // $('#elevation_graph').css('height':'200px !important');
+
+//   $("#route_map").contents().find("#elevation_graph").css('height':'200px !important');
+});
+
+
+</script>
+
+
 <section id="megeve-top">
   <div class="container">
     <div class="row">
@@ -36,7 +50,7 @@
         <%= image_tag 'sponsors-trophee.png', class: 'img-responsive' %>
       </div>
       <div class="col-xs-2">
-        <%= image_tag 'sponsors-sport-club.png', class: 'img-responsive' %>
+        <%= link_to (image_tag 'sponsors-sport-club.png', class: 'img-responsive'), 'http://www.csportsmegeve.com/fr' %>
       </div>
       <div class="col-xs-2">
         <%= image_tag 'sponsors-radio.png', class: 'img-responsive' %>
@@ -70,35 +84,73 @@
 </section>
 
 
-<style>
 
-#mapmyfitness_route > h2 {
-  font-size:18px !important;
-}
 
-</style>
+
+
 
 <section id="megeve-map">
   <div class="container-fluid">
     <div class="row">
       <h1 class="text-center">Course Maps</h1>
       <div class="col-md-4">
-        <h3 class="text-center">149KM</h3>
+        <!-- <h3 class="text-center">149KM</h3> -->
         <!-- <iframe height='385' width='100%' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/segments/4363002/embed'></iframe> -->
-        <iframe id="mapmyfitness_route" src="//snippets.mapmycdn.com/routes/view/embedded/215006969?width=600&height=400&elevation=true&line_color=E60f0bdb&rgbhex=DB0B0E&distance_markers=0&unit_type=metric&map_mode=ROADMAP&last_updated=2013-05-26T03:34:09-05:00&show_marker_every=14" height="630px" width="100%" frameborder="0"></iframe>
-      </div>
-      <div class="col-md-4">
-        <h3 class="text-center">120KM</h3>
-        <iframe id="mapmyfitness_route" src="//snippets.mapmycdn.com/routes/view/embedded/219736659?width=600&height=400&elevation=true&line_color=E60f0bdb&rgbhex=DB0B0E&distance_markers=0&unit_type=metric&map_mode=ROADMAP&last_updated=2013-06-03T04:05:42-05:00&show_marker_every=6" height="630px" width="100%" frameborder="0"></iframe>
-        <!-- <iframe height='385' width='100%' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/segments/4366161/embed'></iframe> -->
+        <!-- <iframe id="mapmyfitness_route" src="//snippets.mapmycdn.com/routes/view/embedded/215006969?width=600&height=400&elevation=true&line_color=E60f0bdb&rgbhex=DB0B0E&distance_markers=0&unit_type=metric&map_mode=ROADMAP&last_updated=2013-05-26T03:34:09-05:00&show_marker_every=14" height="630px" width="100%" frameborder="0"></iframe> -->
+
+        <iframe src="http://www.mapmyride.com/courses/embedded/1560209?width=600&height=400&line_color=E60f0bdb&distance_markers=1&map_mode=ROADMAP" height="450px" width="100%" frameborder="0"></iframe><div style="text-align: right; padding-right: 20px;">
+                <a href="http://www.mapmyride.com/courses/1560209" target="_blank">View this Course</a> on <a href="http://mapmyride.com" target="_blank">MapMyRide</a>
+            </div>
+
 
       </div>
       <div class="col-md-4">
-        <h3 class="text-center">90KM</h3>
-        <iframe id="mapmyfitness_route" src="//snippets.mapmycdn.com/routes/view/embedded/18048966?width=600&height=400&elevation=true&line_color=E60f0bdb&rgbhex=DB0B0E&distance_markers=0&unit_type=metric&map_mode=ROADMAP&last_updated=2010-06-06T12:44:11-05:00&show_marker_every=5" height="630px" width="100%" frameborder="0"></iframe>
+        <!-- <h3 class="text-center">120KM</h3> -->
+        <iframe src="http://www.mapmyride.com/courses/embedded/1560253?width=600&height=400&line_color=7f0000ff&distance_markers=1&map_mode=ROADMAP" height="450px" width="100%" frameborder="0"></iframe><div style="text-align: right; padding-right: 20px;">
+                <a href="http://www.mapmyride.com/courses/1560253" target="_blank">View this Course</a> on <a href="http://mapmyride.com" target="_blank">MapMyRide</a>
+            </div>
+
+      </div>
+      <div class="col-md-4">
+        <!-- <h3 class="text-center">90KM</h3> -->
+        <iframe src="http://www.mapmyride.com/courses/embedded/1560254?width=600&height=400&&line_color=7f0000ff&distance_markers=1&map_mode=ROADMAP" height="450px" width="100%" frameborder="0"></iframe><div style="text-align: right; padding-right: 20px;">
+                <a href="http://www.mapmyride.com/courses/1560254" target="_blank">View this Course</a> on <a href="http://mapmyride.com" target="_blank">MapMyRide</a>
+            </div>
         <!-- <iframe height='385' width='100%' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/segments/4366171/embed'></iframe> -->
 
       </div>
     </div>
   </div>
 </section>
+
+
+<style>
+
+#mapmyfitness_route > h2 {
+  font-size:18px !important;
+
+}
+
+#map_my_embed_tool > h2.notranslate {
+  display:hidden !important;
+  color:#fff;
+}
+
+div#elevation_graph {
+  height:200px !important;
+}
+
+</style>
+
+
+<script>
+$(document).ready(function(){
+  alert("Hello");
+  console.log('hello');
+// // $('#elevation_graph').css('height':'200px !important');
+
+//   $("#route_map").contents().find("#elevation_graph").css('height':'200px !important');
+});
+
+
+</script>
