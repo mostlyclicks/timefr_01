@@ -46,6 +46,24 @@ section {
   h1 {@include text-style(36px, 100, $time-red);text-transform:uppercase;padding-top:1em;}
 }
 
+#home-promo {
+ 
+ padding:80px 20px;
+ a {text-decoration:none;}
+ h1 {@include text-style(36px, 800, $time-red);padding-top:1em;text-transform:uppercase;} 
+ p {@include text-style(18px, 200, $time-red);padding-top:1em;} 
+ p {
+  display:block;background-color:rgba(255,255,255,.7);padding:20px;margin-top:20px;margin-bottom:40px;
+  &:hover {
+    background-color:rgba(255,255,255,.9);
+
+  }
+}
+ background-image:url(/assets/TOF_1989-bw.jpg);
+ background-size:cover;
+ height:1000px;
+}
+
 #header-social {
   margin-top:12px;
   margin-left:30px;
