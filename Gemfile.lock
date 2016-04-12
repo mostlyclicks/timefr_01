@@ -72,6 +72,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    dalli (2.7.6)
     decorators (1.0.5)
       railties (>= 3.0.19)
     devise (2.2.8)
@@ -371,6 +372,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.3.4)
   coffee-rails (~> 3.2.1)
+  dalli
   fog
   geocoder
   geoip (~> 1.4.0)

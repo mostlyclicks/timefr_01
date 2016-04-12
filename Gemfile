@@ -30,6 +30,7 @@ gem 'puma'
 
 group :production do
   gem 'rack-cache'
+  gem 'dalli'
 end
 
 
