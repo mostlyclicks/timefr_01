@@ -54,6 +54,11 @@
 
 }
 
+
+#home-promo {
+ h1 {@include text-style(24px, 800, $time-red);padding-top:1em;text-transform:uppercase;} 
+}
+
 #aktiv-text {
 
   left:26%;
@@ -304,6 +309,10 @@
       text-shadow: 2px 2px 6px rgba(0,0,0,1);
     }
   }
+
+#home-promo {
+ h1 {@include text-style(36px, 800, $time-red);padding-top:1em;text-transform:uppercase;} 
+}
 
 
   #home-top {
