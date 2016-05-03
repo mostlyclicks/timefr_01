@@ -387,7 +387,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
    margin-bottom:2em;
    h1 {@include text-style(24px, 100, $time-red);}
    h2 {@include text-style(32px, 100, rgba(0,0,0,.7));}
-   p {@include header-style(16px, 200, rgba(0,0,0,.7));}
+   // p {@include header-style(16px, 200, rgba(0,0,0,.7));}
+   p {display:inline; margin:0;}
 }
 
 #pedals-xpresso-flag-editions {
