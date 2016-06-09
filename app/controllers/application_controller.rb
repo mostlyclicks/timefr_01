@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_gb_dealers
-    @gb_dealers = Refinery::Dealers::Dealer.where(country: 'GB', 'Ireland', 'England', 'Northern Ireland', 'Scotland')
+    @gb_dealers = Refinery::Dealers::Dealer.where(country: ['GB', 'Ireland', 'England', 'Northern Ireland', 'Scotland'])
   end
 
   def load_me_dealers
