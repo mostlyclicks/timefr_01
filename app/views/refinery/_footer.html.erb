@@ -63,7 +63,8 @@
       </small>
       <small class="text-center" style="padding-bottom:3em;">
         <% if @geoip.country(@r).country_name == 'France' %>
-          <%= link_to 'LEGAL INFORMATION', '/fr/legal-information' %>
+          <%= link_to 'LEGAL INFORMATION', '/fr/legal-information' %> | 
+          <%= link_to 'PRIVACY POLICY', '/fr/privacy-policy' %>
         <% else %>
           <%= link_to 'LEGAL INFORMATION', '/legal-information' %> | 
           <%= link_to 'PRIVACY POLICY', '/privacy-policy' %>
