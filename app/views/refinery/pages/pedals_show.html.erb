@@ -27,7 +27,8 @@
 
     </div>
     <div class="col-xs-6">
-      <%= image_tag 'http://placehold.it/1000x1000', class: 'img-responsive' %>
+      <%#= image_tag 'http://placehold.it/1000x1000', class: 'img-responsive' %>
+      <%= image_tag p.pedal_image.url, class: 'img-responsive' %>
     </div>
   </div>
   <% end %>
