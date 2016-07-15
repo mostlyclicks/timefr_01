@@ -20,4 +20,8 @@ module ApplicationHelper
     #end
   end
 
+  def load_current_pedal(page)
+    @current_pedal = page.slug
+  end
+
 end

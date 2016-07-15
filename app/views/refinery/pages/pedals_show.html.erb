@@ -1,0 +1,40 @@
+<style>
+#pedals-show-main {
+  height:80vh;
+  background-color:#fff;
+}
+
+
+</style>
+
+
+<% load_current_pedal(@page) %>
+
+<section id="pedals-show-main">
+<div class="container">
+  
+
+
+  
+
+  <% @pedal = Refinery::Pedals::Pedal.where(slug: @current_pedal) %>
+  <% @pedal.each do |p| %>
+  <div class="row">
+    <div class="col-xs-6">
+      <h1><%= p.name %></h1>
+      <%= p.description %>
+      <%= p.weight %>
+
+    </div>
+    <div class="col-xs-6">
+      <%= image_tag 'http://placehold.it/1000x1000', class: 'img-responsive' %>
+    </div>
+  </div>
+  <% end %>
+
+
+
+</div>
+
+
+</section>
