@@ -18,7 +18,13 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <p><%= link_to 'Back to road pedals', '/pedals/road-pedals' %></p>
+          <p style="margin-top:1em;">
+            <% if p.riding_type == 'Road' %>
+              <%= link_to 'Back to road pedals', '/pedals/road-pedals' %>
+            <% else %>
+              <%= link_to 'Back to mtb pedals', '/pedals/mtb-pedals' %>
+            <% end %>
+          </p>
         </div>
       </div>
       
