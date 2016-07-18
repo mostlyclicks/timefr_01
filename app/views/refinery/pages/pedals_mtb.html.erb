@@ -25,8 +25,19 @@
     </div>
     <% @mtb_pedals_xc.each do |xc| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-      <%= image_tag xc.pedal_image.url, width: '100%', class: 'img-responsive' %>
-      <h3><%= xc.name %> | <%= xc.weight %></h3>
+      <% if xc.link? %>
+        <%= link_to (image_tag xc.pedal_image.url, width: '100%', class: 'img-responsive'), xc.link %>
+      <% else %>
+        <%= image_tag xc.pedal_image.url, width: '100%', class: 'img-responsive' %>
+      <% end %>
+      
+      <h3>
+        <% if xc.link? %>
+          <%= link_to xc.name, xc.link %>
+        <% else %>
+          <%= xc.name %>
+        <% end %>
+         | <%= xc.weight %></h3>
       <small><%= raw xc.description %></small>
     </div>
     <% end %>
@@ -43,8 +54,18 @@
     </div>
     <% @mtb_pedals_mx.each do |mx| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-      <%= image_tag mx.pedal_image.url, width: '100%', class: 'img-responsive' %>
-      <h3><%= mx.name %> | <%= mx.weight %></h3>
+      <% if mx.link? %>
+        <%= link_to (image_tag mx.pedal_image.url, width: '100%', class: 'img-responsive'), mx.link %>
+      <% else %>
+        <%= image_tag mx.pedal_image.url, width: '100%', class: 'img-responsive' %>
+      <% end %>
+      <h3>
+        <% if mx.link? %>
+          <%= link_to mx.name, mx.link %>
+        <% else %>
+          <%= mx.name %>
+        <% end %>
+         | <%= mx.weight %></h3>
       <small><%= raw mx.description %></small>
     </div>
     <% end %>
@@ -61,8 +82,17 @@
     </div>
     <% @mtb_pedals_dh.each do |dh| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-      <%= image_tag dh.pedal_image.url, width: '100%', class: 'img-responsive' %>
-      <h3><%= dh.name %> | <%= dh.weight %></h3>
+      <% if dh.link? %>
+        <%= link_to (image_tag dh.pedal_image.url, width: '100%', class: 'img-responsive'), dh.link %>
+      <% else %>
+        <%= image_tag dh.pedal_image.url, width: '100%', class: 'img-responsive' %>
+      <% end %>
+      <h3>
+        <% if dh.link? %>
+          <%= link_to dh.name, dh.link %>
+        <% else %>
+          <%= dh.name %>
+        <% end %> | <%= dh.weight %></h3>
       <small><%= raw dh.description %></small>
     </div>
     <% end %>
