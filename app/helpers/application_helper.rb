@@ -29,7 +29,7 @@ module ApplicationHelper
     when 'Xpresso'
       'XPRESSO'
     when 'Country'
-      'Country'
+      'XPRESSO'
     when 'RXS'
       'RXS'
     when 'XC'
