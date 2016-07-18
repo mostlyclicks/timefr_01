@@ -1,8 +1,8 @@
 Refinery::Core::Engine.routes.draw do
 
-  # namespace :pedals do
-  #   resources :pedals, :path => '', :only => [:index, :show]
-  # end
+   # namespace :pedals do
+   #   resources :pedals, :path => '', :only => [:index, :show]
+   # end
 
  
 
