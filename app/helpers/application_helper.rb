@@ -24,4 +24,21 @@ module ApplicationHelper
     @current_pedal = page.slug
   end
 
+  def load_pedal_category_image(pedal_category)
+    case pedal_category
+    when 'Xpresso'
+      'XPRESSO'
+    when 'Country'
+      'Country'
+    when 'RXS'
+      'RXS'
+    when 'XC'
+      'XC'
+    when 'MX'
+      'MX'
+    else 'DH'
+      'DH'
+    end
+  end
+
 end

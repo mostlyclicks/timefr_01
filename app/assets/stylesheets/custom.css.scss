@@ -883,4 +883,30 @@ padding:80px 20px;
   padding:0px 20px 60px 20px;
 }
 
+#pedals-show-main {
+  
+  height:100vh;
+  background-color:#fff;
+  padding:40px 20px;
+  h1 {@include header-style(24px, 200, $time-red); text-transform:uppercase;margin:1em auto 1em auto;}
+  .cat-logo {margin:0 auto;}
+  
+  .pedal-weight {
+    position:relative;
+    h3 {@include header-style(24px, 900, $black-med); 
+      text-transform:uppercase;
+      margin:0 auto;
+      height:40px;
+      line-height:40px;
+      white-space:no-wrap;
+      background-color:lighten($black-light, 40%);
+      &::after {
+        content:'g';
+        text-transform:lowercase;
+      }
+    }
+  }
+
+}
+
 
