@@ -10,7 +10,7 @@
       <h1 class="text-center"><%= p.name %></h1>
       <div class="row">
         <div class="col-xs-8 col-sm-12 col-md-7">
-          <p><%= raw p.description %></p>
+          <p style="margin-top:0;"><%= raw p.description %></p>
         </div>
         <div class="col-xs-4 col-sm-12 col-md-5 pedal-weight">
           <h3 class="text-center"><%= raw p.weight %></h3>
@@ -22,8 +22,8 @@
       
     </div>
     <div class="col-sm-7">
-      <%#= image_tag 'PEDALS-road-xpress15-comp.png', class: 'img-responsive' %>
-      <%= image_tag p.pedal_image.url, class: 'img-responsive text-center' %>
+      <%= image_tag 'PEDALS-road-xpress15-comp.png', class: 'img-responsive' %>
+      <%#= image_tag p.pedal_image.url, class: 'img-responsive text-center' %>
     </div>
   </div>
   <% end %>
