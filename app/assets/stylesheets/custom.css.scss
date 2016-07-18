@@ -903,10 +903,10 @@ padding:80px 20px;
       white-space:no-wrap;
       padding:0;
       background-color:lighten($black-light, 40%);
-      &::after {
-        content:'g';
-        text-transform:lowercase;
-      }
+      // &::after {
+      //   content:'g';
+      //   text-transform:lowercase;
+      // }
     }
   }
 
