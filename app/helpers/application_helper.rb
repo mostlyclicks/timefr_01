@@ -33,11 +33,11 @@ module ApplicationHelper
     when 'RXS'
       'RXS'
     when 'XC'
-      'XC'
+      'ATAC-XC'
     when 'MX'
-      'MX'
+      'ATAC-MX'
     else 'DH'
-      'DH'
+      'ATAC-DH'
     end
   end
 
