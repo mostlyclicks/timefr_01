@@ -895,7 +895,7 @@ padding:80px 20px;
     position:relative;
     h3 {@include header-style(24px, 900, $black-med); 
       text-transform:uppercase;
-      margin:0 auto;
+      // margin:0 auto;
       height:40px;
       line-height:40px;
       white-space:no-wrap;
