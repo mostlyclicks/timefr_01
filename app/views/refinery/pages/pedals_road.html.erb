@@ -44,11 +44,13 @@
         <% end %>
         
         <h3>
-          <%= if rp.link?
+          <span>
+            <%= if rp.link?
               link_to rp.name, rp.link
             else
               rp.name 
-            end  %> | 
+             end  %>
+          </span> | 
           <%= rp.weight %>
         </h3>
         <small><%= rp.description.html_safe %></small>

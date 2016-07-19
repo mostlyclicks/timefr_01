@@ -376,7 +376,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
  }
 
 .pedals-xpresso, #pedals-rxs, #pedals-atac-xc, #pedals-atac-mx, #pedals-atac-dh, #pedals-xpresso-flag-editions {
-   h3 {@include text-style(16px, 200, $time-red);margin-top:0;}
+   h3 {
+    @include text-style(16px, 200, $time-red);margin-top:0;
+    span {text-transform:uppercase;}
+  }
    img {@include rotate(-45deg);}
 
    .atac-logo {@include rotate(0deg);}
