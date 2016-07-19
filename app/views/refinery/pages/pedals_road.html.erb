@@ -80,11 +80,13 @@
 
         
         <h3>
+          <span>
           <%= if cp.link?
               link_to cp.name, cp.link
             else
               cp.name
-            end %> | 
+            end %></span>
+             | 
           <%= cp.weight %>
         </h3>
         <small><%= cp.description.html_safe %></small>
