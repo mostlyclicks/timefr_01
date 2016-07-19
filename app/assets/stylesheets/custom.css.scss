@@ -896,7 +896,7 @@ padding:80px 20px;
   .pedal-weight {
     position:relative;
     h3 {@include header-style(24px, 900, $black-med); 
-      text-transform:uppercase;
+      // text-transform:uppercase;
       margin:0 auto;
       height:40px;
       line-height:40px;
