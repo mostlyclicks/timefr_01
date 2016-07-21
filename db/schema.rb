@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160718205758) do
+ActiveRecord::Schema.define(:version => 20160721213553) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -346,6 +346,7 @@ ActiveRecord::Schema.define(:version => 20160718205758) do
     t.string   "category"
     t.text     "description"
     t.string   "weight"
+    t.text     "link"
   end
 
   add_index "refinery_pedal_translations", ["locale"], :name => "index_refinery_pedal_translations_on_locale"
@@ -362,7 +363,6 @@ ActiveRecord::Schema.define(:version => 20160718205758) do
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.string   "slug"
-    t.text     "link"
   end
 
   add_index "refinery_pedals", ["slug"], :name => "index_refinery_pedals_on_slug"
