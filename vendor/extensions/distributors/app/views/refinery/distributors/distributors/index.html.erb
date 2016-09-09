@@ -22,8 +22,8 @@
       <% @distributors.each do |d| %>
         <div class="col-md-3 col-sm-4 distributors">
           <strong><%= d.name.html_safe %></strong><br />
-          <%= d.address.html_safe %><br />
-          TEL: <%= d.telephone %><br />
+          <% if d.address.present? %><%= d.address.html_safe %><br /><% end %>
+          <% if d.telephone.present? %>TEL: <%= d.telephone %><br /><% end %>
           <% if d.fax.present? %>FAX: <%= d.fax %><% end %>
         </div>
       <% end %>
