@@ -23,7 +23,7 @@
         <div class="col-md-3 col-sm-4 distributors">
           <strong><%= d.name.html_safe %></strong><br />
           <% if d.address.present? %><%= d.address.html_safe %><% end %>
-          <% if d.telephone.present? %>TEL: <%= d.telephone %><br /><% end %>
+          <% if d.telephone.present? %><br />TEL: <%= d.telephone %><br /><% end %>
           <% if d.fax.present? %>FAX: <%= d.fax %><% end %>
         </div>
       <% end %>
