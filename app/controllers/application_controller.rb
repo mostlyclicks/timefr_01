@@ -13,16 +13,33 @@ class ApplicationController < ActionController::Base
   before_filter :load_asia_dealers
   before_filter :load_gb_dealers
   before_filter :load_germany_dealers
+  before_filter :set_locale
   #before_filter :load_instagram
+
   # before_filter :get_bike_geometry
 
 
-
+def set_locale
+  I18n.locale = extract_locale_from_accept_language_header
+  #I18n.locale = 'fr'
+  #@locale = I18n.locale
+end
 
 
 
 
   protected
+
+  def extract_locale_from_accept_language_header
+    case request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+      when 'en'
+        'en'
+      when 'fr'
+        'fr'
+      else
+        'en'
+    end
+  end
 
   def load_instagram
     #@instatime = Instagram.tag_search('timesport')#.limit(12)
