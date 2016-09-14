@@ -920,19 +920,22 @@ padding:80px 20px;
 
 
 #link-header {
-  img {margin-top:10vh;} 
+  padding:20px;
+  img.link-logo {margin:20px auto 0px auto;width:60%;} 
+  img.link-pedal {margin:20px auto 0px auto;width:100%;} 
   background-image:url(/assets/link-header-bg2.jpg);
-  background-size:120%;
+  background-size:250%;
   background-repeat:no-repeat;
   background-position:fixed;
   // background-position-x:-100px;
   background-position-y:50%;
-  height:60vh;
-  padding-top:5vh;
+  background-position-x:30%;
+  height:80vh;
+  
   color:#fff;
   h1 {@include header-style(36px, 200, white); display:none;}
-  h3 {@include header-style(24px, 100, white); text-transform:uppercase;letter-spacing:.05em;}
-  p {@include header-style(14px, 200, white); letter-spacing:.05em; opacity:.7;}
+  h3 {@include header-style(24px, 100, white); text-transform:uppercase;letter-spacing:.05em;padding:0 40px;text-align:center;}
+  p {@include header-style(16px, 200, white); letter-spacing:.05em; opacity:.7;text-align:center;}
 
 }
 

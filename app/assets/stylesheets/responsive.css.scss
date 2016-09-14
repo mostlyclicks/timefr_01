@@ -273,6 +273,16 @@
     height:100vh;
   }
 
+  #link-header {
+    background-size:200%;
+    img.link-logo {margin:20px auto 0px auto;width:50%;} 
+    img.link-pedal {margin:20px auto 0px auto;width:90%;} 
+    padding-top:5vh;
+    h3 {@include header-style(30px, 100, white); text-transform:uppercase;letter-spacing:.05em;}
+    p {@include header-style(16px, 200, white); letter-spacing:.05em; opacity:.7;text-align:center;padding:0 40px;}
+    min-height:60vh;
+  }
+
 
 
 }
@@ -397,8 +407,6 @@
 
   }
 
-
- 
 #home-the-challenge {
   min-height:60vh;
   margin-top:100px;
@@ -425,6 +433,16 @@
     background-size:160%;
     min-height:700px;
     max-height: 750px;
+  }
+
+  #link-header {
+    background-size:120%;
+    img.link-logo {margin:20px auto 0px auto;width:60%;} 
+    img.link-pedal {margin:20px auto 0px auto;width:100%;} 
+    padding-top:15vh;
+    h3 {@include header-style(28px, 100, white); text-transform:uppercase;letter-spacing:.05em;text-align:left;}
+    p {@include header-style(16px, 200, white); letter-spacing:.05em; opacity:.7;text-align:center;padding:0 40px;text-align:left;}
+    min-height:50vh;
   }
 
 
@@ -531,5 +549,15 @@
   // min-height:750px;
   // max-height: 800px;
 }
+
+  #link-header {
+    background-size:120%;
+    img.link-logo {margin:40px auto 0px auto;width:60%;} 
+    img.link-pedal {margin:20px auto 0px auto;width:100%;} 
+    padding-top:10vh;
+    h3 {@include header-style(24px, 100, white); text-transform:uppercase;letter-spacing:.05em;text-align:left;}
+    p {@include header-style(16px, 200, white); letter-spacing:.05em; opacity:.7;text-align:center;padding:0 40px;text-align:left;}
+    min-height:50vh;
+  }
 
 }
