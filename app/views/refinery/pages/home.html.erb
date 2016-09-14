@@ -108,7 +108,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <%= image_tag @random_bg_image, class: 'img-responsive' %>
+        <% if @random_bg_image == 'top-bg-link.png' %>
+          <%= link_to (image_tag @random_bg_image, class: 'img-responsive'), '/pedals/city-pedal-link' %>
+        <% else %>
+          <%= image_tag @random_bg_image, class: 'img-responsive' %>
+        <% end %>
       </div>
     </div>
   </div>
