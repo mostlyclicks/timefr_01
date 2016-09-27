@@ -4,7 +4,7 @@ module ApplicationHelper
     if bike == 'Skylon' 
       @bike_geometry = Refinery::Geometries::Geometry.where(name: 'Skylon')
     elsif bike == 'SCYLON' 
-      @bike_geometry = Refinery::Geometries::Geometry.where(name: 'Skylon')
+      @bike_geometry = Refinery::Geometries::Geometry.where(name: 'SCYLON')
     elsif bike == 'Izon' 
       @bike_geometry = Refinery::Geometries::Geometry.where(name: 'Izon')
     else 
