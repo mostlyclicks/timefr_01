@@ -142,11 +142,13 @@ section {
 //HOME - AKTIV
 #aktiv {
   padding:40px 20px 100px 20px;
-  @include gradient-bg(#000, #fff, 100%);//$start-color, $end-color, $gradient-point
+  img {margin-top:-40px;}
+  @include gradient-bg(#dddddd, #fff, 100%);//$start-color, $end-color, $gradient-point
+
   #aktiv-txt {
-    h3 {@include text-style(24px, 100, $time-red);}
-    h4 {@include text-style(20px, 100, $time-red);}
-    p {@include text-style(14px, 200, $white-alpha7);}
+    h3 {@include text-style(24px, 200, $time-red);}
+    h4 {@include text-style(20px, 200, $time-red);}
+    p {@include text-style(14px, 200, #000);}
     img {margin:0 auto;}
   }
 }
