@@ -95,7 +95,7 @@
             <% @bike.colors.each_with_index do |color, index| %>
 
             <div class="item <% if index == 0 %>active<% end %>" >
-              <%= image_tag color.image.thumbnail('1200x').url, alt: color.name, class: 'img-responsive gallery-img text-center', style: 'margin:0 auto;' %>
+              <%= image_tag color.image.thumbnail('1200x').url, alt: '2017 TIME Sport ' + color.name, title: 'TIME ' + color.name + ' bicycle', class: 'img-responsive gallery-img text-center', style: 'margin:0 auto;' %>
               <div class="carousel-caption" style="">
                 <%= color.name %>
               </div>
