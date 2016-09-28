@@ -8,8 +8,8 @@ Timefr01::Application.routes.draw do
   mount Refinery::Core::Engine, :at => '/'
 
   # Google verify.
-match '/googlea0427c565247873d.html', 
-      :to => proc { |env| [200, {}, ["google-site-verification: googlea0427c565247873d.html"]] }
+# match '/googlea0427c565247873d.html', 
+#       :to => proc { |env| [200, {}, ["google-site-verification: googlea0427c565247873d.html"]] }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
