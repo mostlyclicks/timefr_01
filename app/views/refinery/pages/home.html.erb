@@ -12,91 +12,6 @@
     <div class="row">
       <%= raw @page.content_for(:home_main) %>
 
-      <!-- FROM LIVE BEGIN -->
-
-<!-- <div class="row col-centered" style="margin:0 auto;border:0px solid blue;">
-      <div class="col-lg-8 col-lg-offset-2 col-md-offset-1 col-md-10 text-center" style="border:0px solid red;text-align:center;">
-        <div class="row">
-          <div class="col-xs-3 col-md-3 text-center tri-nav">
-            <a href="#aktiv" class="scroll-btn">
-              <h2 style="display:block;height:2em;">Technologies</h2>
-            </a>
-            <a href="#aktiv" class="scroll-btn">
-              <img src="/assets/top-AKTIV.png" class="img-responsive img-circle" />
-            </a>
-          </div>
-          <div class="col-xs-3 col-md-3  text-center tri-nav">
-            <a href="#home-features" class="scroll-btn">
-              <h2 style="display:block;height:2em;">Bikes/Frames</h2>
-            </a>
-            <a href="#home-features" class="scroll-btn">
-              <img src="/assets/top-bike-4.png" class="img-responsive img-circle" />
-            </a>
-          </div>
-          <div class="col-xs-3 col-md-3 text-center tri-nav">
-            <a href="#pedals" class="scroll-btn">
-              <h2 style="display:block;height:2em;">The Challenge</h2>
-            </a>
-            <a href="#home-the-challenge" class="scroll-btn">
-              <img src="/assets/ledefi-home-top.png" class="img-responsive img-circle" />
-            </a>
-          </div>
-          <div class="col-xs-3 col-md-3 text-center tri-nav">
-            <a href="#pedals" class="scroll-btn">
-              <h2 style="display:block;height:2em;">Pedals</h2>
-            </a>
-            <a href="#pedals" class="scroll-btn">
-              <img src="/assets/top-pedal.png" class="img-responsive img-circle" />
-            </a>
-          </div>
-          
-        </div>
-      </div>
-    </div> -->
-
-<!--
-
-    <div class="row col-centered" style="margin:0 auto;border:0px solid blue;"><div class="col-lg-8 col-lg-offset-2 col-md-offset-1 col-md-10 text-center" style="border:0px solid red;text-align:center;"><div class="row">
-      <div class="col-xs-3 col-md-3 text-center tri-nav">
-            <a href="#aktiv" class="scroll-btn">
-<h2>Technologies</h2>
-              <img src="/assets/top-AKTIV.png" class="img-responsive img-circle" />
-            </a>
-          </div>
-          <div class="col-xs-3 col-md-3  text-center tri-nav">
-            <a href="#home-features" class="scroll-btn">
-              <h2>Vélos/Cadres</h2>
-            </a>
-            <a href="#home-features" class="scroll-btn">
-              <img src="/assets/top-bike-4.png" class="img-responsive img-circle" />
-            </a>
-          </div>
-          <div class="col-xs-3 col-md-3 text-center tri-nav">
-            <a href="#pedals" class="scroll-btn">
-              <h2>Le défi</h2>
-            </a>
-            <a href="#home-the-challenge" class="scroll-btn">
-              <img src="/assets/ledefi-home-top.png" class="img-responsive img-circle" />
-            </a>
-          </div>
-          <div class="col-xs-3 col-md-3 text-center tri-nav">
-            <a href="#pedals" class="scroll-btn">
-              <h2>Pédales</h2>
-            </a>
-            <a href="#pedals" class="scroll-btn">
-              <img src="/assets/top-pedal.png" class="img-responsive img-circle" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
--->
-
-      <!-- FROM LIVE END -->
-
-
-
 
     </div>
   </div>
@@ -121,8 +36,6 @@
 
 <!-- MADE IN FRANCE  ***************************** -->
 
-<%# @mif_bg_image = ['made-in-france-p3.jpg','readyforresin.jpeg', 'DSC_7960-carbon-weaver.jpg'] %>
-<%# @random_mif_image = @mif_bg_image.sample %>
 
 <style>
   #home-made-in-france {background-image:url(/assets/<%= @random_mif_image %>); }
@@ -132,22 +45,8 @@
   <div class="container-fluid">
     <div class="row">
       
-<!--        <p><strong>Made in France.</strong>
-<span style="font-weight: 400;"> Our frames are born and raised here. Starting from single carbon fibers woven into tube shapes to our Resin Transfer Molding (RTM) process, we control every step of creating a TIME frame, in-house at our factory near Lyon, France. What you get is the legendary TIME ride.<br /><img src="/assets/made-in-france-bars.png" class="img-responsive col-centered" /></span>
-</p> -->
-
-      
-      
       <%= raw @page.content_for(:home_made_in_france) %>
-      <!-- <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-12 text-center " id="headline">
-        
-      </div> -->
-      <!-- <div class="col-lg-7 col-md-7 col-md-offset-0 col-sm-8 col-sm-offset-2" id="description">
-        <p>Made in France. Our frames are born and raised here. Starting from single carbon fibers woven into tube shapes to our Resin Transfer Molding (RTM) process, we control every step of creating a TIME frame, in-house at our factory near Lyon, France. What you get is the legendary TIME ride.</p>
-          <h3 class="text-center">
-            <a href="#bikes-frames-feature" class="scroll-btn text-center">See what's new for 2016</a>
-          </h3>
-      </div> -->
+
 <div class="embed-responsive embed-responsive-16by9"> <!-- poster="/assets/DSC_7960-carbon-weaver.jpg"-->
       <video autoplay loop >
         <source src="/assets/made-in-france.webm" type="video/webm" />
@@ -159,32 +58,6 @@
 </section>
 </div>
 
-
-
-
-
-
-<!-- <section id="home-the-challenge">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4 col-md-offset-1 " style="padding:20px;">
-
-        <%#= raw @page.content_for(:home_the_challenge) %>
-        
-        <h1>The Challenge</h1>
-        <p>Your challenge is to create a graphic/paint design for a SKYLON frame. The winning design will be included in our 2016/2017 collection as a limited edition and will be released at Eurobike 2016. The person with the winning design will receive a limited edition SKYLON frame (SKYLON frame + translink + Aktiv fork + stem + handlebar)</p>
-        <a href="/the-challenge" class="btn btn-danger">Learn more</a>
-      
-
-      </div>
-      <div class="col-md-7">
-        <%#= image_tag 'Skylon-concour-01-2-web.jpg', class: 'img-responsive' %>
-      </div>
-    </div>
-  </div>
-
-
-</section> -->
 
 <!-- HOME FEATURES  ***************************** -->
 <section id="home-features">
@@ -249,7 +122,7 @@
         <%= image_tag 'TIME-SCYLON-AKTIV-T30.png', class: 'img-responsive', id: 'aktiv-scylon' ,style: 'margin-left:-20px;' %>
       </div>
       <div class="col-lg-3 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0" id="aktiv-txt">
-        <%= image_tag 'AKTIV-LOGO-black.png', class: 'img-responsive' %>
+        <%= image_tag 'AKTIV-LOGO-black.png', class: 'img-responsive', alt: 'TIME AKTIV logo', title: 'TIME AKTIV logo' %>
         <%= raw @page.content_for(:aktiv_section) %>
       </div>
     </div>
@@ -265,7 +138,7 @@
     </div>
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
-        <%= image_tag 'Xpresso-15-profil.png', class: 'img-responsive' %>
+        <%= image_tag 'Xpresso-15-profil.png', class: 'img-responsive', alt: 'TIME XPRESSO 15 pedals with carbon fiber body and CERAMIC SPEED bearings', title: 'TIME XPRESSO 15 pedal' %>
       </div>
       <div class="col-lg-6 col-lg-offset-3 text-center" id="pedal-txt">
         <%= raw @page.content_for(:pedal_section) %>
