@@ -141,6 +141,7 @@ section {
 
 //HOME - AKTIV
 #aktiv {
+  margin-top:100px;
   padding:40px 20px 100px 20px;
   img {margin-top:-40px;}
   @include gradient-bg(#dddddd, #fff, 100%);//$start-color, $end-color, $gradient-point
