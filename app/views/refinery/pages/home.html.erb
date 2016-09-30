@@ -130,19 +130,52 @@
 </section>
 
 <!-- PEDALS  ***************************** -->
-<section id="pedals">
+<!-- <section id="pedals">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-      <h1><%= raw @page.content_for(:pedal_title) %></h1></div>
+      <h1><%#= raw @page.content_for(:pedal_title) %></h1></div>
     </div>
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
-        <%= image_tag 'Xpresso-15-profil.png', class: 'img-responsive', alt: 'TIME XPRESSO 15 pedals with carbon fiber body and CERAMIC SPEED bearings', title: 'TIME XPRESSO 15 pedal' %>
+        <%#= image_tag 'Xpresso-15-profil.png', class: 'img-responsive', alt: 'TIME XPRESSO 15 pedals with carbon fiber body and CERAMIC SPEED bearings', title: 'TIME XPRESSO 15 pedal' %>
       </div>
       <div class="col-lg-6 col-lg-offset-3 text-center" id="pedal-txt">
-        <%= raw @page.content_for(:pedal_section) %>
+        <%#= raw @page.content_for(:pedal_section) %>
         </p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="time-pedals">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>2017 TIME Sport Pedals</h1>
+        <p>From the smoothest of roads to the most extreme trails, TIME Sport pedals set the standard in ergonomics, ease of use and performance.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1 pedal-col text-center">
+        <h3><%= link_to 'ROAD', '/pedals/road-pedals/' %></h3>
+        <%= image_tag 'http://timefr-01.herokuapp.com/system/images/W1siZiIsIjIwMTYvMDUvMDQvMDIvMDUvMjIvMjk1L1BFREFMU19yb2FkX3hwcmVzczEyX2NvbXAucG5nIl0sWyJwIiwidGh1bWIiLCI1MDB4Il1d/PEDALS-road-xpress12-comp.png', class: 'img-responsive' %>
+      </div>
+      <div class="col-md-2 pedal-col text-center">
+        <h3><%= link_to 'CITY', '/pedals/city-pedal-link' %></h3>
+        <%= image_tag 'TIME-Link-Face-Clip.png', class: 'img-responsive' %>
+      </div>
+      <div class="col-md-2 pedal-col text-center">
+        <h3><%= link_to 'CROSS COUNTRY', '/pedals/mtb-pedals' %></h3>
+        <%= image_tag 'http://timefr-01.herokuapp.com/system/images/W1siZiIsIjIwMTYvMDUvMDQvMDIvMDYvMzUvOTM1L1BFREFMU19tdGJfYXRhY194YzhfY29tcC5wbmciXV0/PEDALS-mtb-atac-xc8-comp.png', class: 'img-responsive' %>
+      </div>
+      <div class="col-md-2 pedal-col text-center">
+        <h3><%= link_to 'ENDURO / TRAIL', '/pedals/mtb-pedals' %></h3>
+        <%= image_tag 'http://timefr-01.herokuapp.com/system/images/W1siZiIsIjIwMTYvMDUvMDQvMDIvMDYvMzYvNTM1L1BFREFMU19tdGJfYXRhY19teDEyX2NvbXAucG5nIl1d/PEDALS-mtb-atac-mx12-comp.png', class: 'img-responsive' %>
+      </div>
+      <div class="col-md-2 pedal-col text-center">
+        <h3><%= link_to 'DOWNHILL', '/pedals/mtb-pedals' %></h3>
+        <%= image_tag 'http://timefr-01.herokuapp.com/system/images/W1siZiIsIjIwMTYvMDUvMDQvMDIvMDYvMzgvODM1L1BFREFMU19tdGJfYXRhY19ESDRfY29tcC5wbmciXV0/PEDALS-mtb-atac-DH4-comp.png', class: 'img-responsive' %>
       </div>
     </div>
   </div>

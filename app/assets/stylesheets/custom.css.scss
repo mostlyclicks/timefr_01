@@ -1017,7 +1017,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
     }
 
+}
+
+#time-pedals {
+  h1 {
+    @include header-style(32px, 100, black);
+    letter-spacing: .5px;
   }
+  padding-top:100px;
+  padding-bottom:100px;
+  h3 {
+    @include header-style(21px, 100, $time-red);
+    letter-spacing: 1px;
+    margin-left:32px;
+    a {
+      display:inline-block;
+      padding:10px;
+      &:hover {
+        background-color:#efefef;
+        text-decoration: none;
+        color:#000;
+
+      }
+    }
+  };
+}
   
 
 
