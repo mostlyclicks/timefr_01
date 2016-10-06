@@ -1041,9 +1041,106 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
       }
     }
-  };
+  }
 }
-  
+
+
+
+// SCYLON ULTEAM 30 section
+
+#presenting-scylon-ulteam {
+padding-top:100px;
+padding-bottom:100px;
+
+ h1 {@include header-style(32px, 100, black);
+    letter-spacing: .5px;
+    margin-bottom:1.5em;
+  }  
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#efefef+0,ffffff+7,fcfcfc+55,c9c9c9+100 */
+background: #efefef; /* Old browsers */
+background: -moz-linear-gradient(top,  #efefef 0%, #ffffff 7%, #fcfcfc 55%, #c9c9c9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #efefef 0%,#ffffff 7%,#fcfcfc 55%,#c9c9c9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #efefef 0%,#ffffff 7%,#fcfcfc 55%,#c9c9c9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
+}
+
+#scylon-30-ans {
+  background-color:darken($time-red, 10%);
+  // padding:100px 0;
+  min-height:100vh;
+  color:#fff;
+  p {@include header-style(18px, 200, #fff); line-height:2em;margin-bottom:2em;letter-spacing:1px;}
+
+}
+
+#scylon-image {
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+#scylon-build-kits {
+  padding-top:100px;
+  padding-bottom:100px;
+  background-color:#0d0d0d;
+  p {color:rgba(255,255,255,.7);}
+  h1 {@include header-style(32px, 100, $time-red);
+
+    table tr td {border:1px solid rgba(255,255,255,.3);}
+ 
+
+  letter-spacing: .5px;}  
+
+  table {
+  border-top:none;
+  margin-top:30px;
+  }
+
+  table th:first-child {
+
+  background-color:transparent;
+  }
+
+  table th {
+  border-top: 1px solid transparent;
+  background-color:transparent;
+  text-align:center;
+  color:rgba(255,255,255,.5);
+  }
+
+    table td {
+    color:rgba(255,255,255,.5);
+    border:1px solid #343434;
+  }
+
+
+  table tr:first-child {
+  border-top: 1px solid #fff;
+  background-color:transparent;
+  }
+
+    table tr:last-child {
+  border-bottom: 1px solid transparent;
+  background-color:transparent;
+  }
+
+  table td:first-child {
+  text-align:right;
+  border-right:1px solid #343434;
+  border-left:1px solid transparent;
+  }
+
+  table td:nth-child(2) {
+  border-right:1px solid #343434;
+  }
+
+
+
+
+
+  table td:nth-child(3) {
+  border-right:1px solid transparent;
+  }
+}
 
 
 
