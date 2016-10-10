@@ -21,6 +21,8 @@ gem 'underscore-rails'
 gem 'geocoder'
 gem 'test-unit'
 
+gem 'masonry-rails'
+
 
 # group :production do
   # gem 'unicorn'

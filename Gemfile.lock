@@ -229,6 +229,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    masonry-rails (0.2.4)
+      railties
     mime-types (1.25.1)
     mini_portile2 (2.0.0)
     multi_json (1.11.2)
@@ -377,6 +379,7 @@ DEPENDENCIES
   gmaps4rails
   instagram
   jquery-rails
+  masonry-rails
   pg
   puma
   rack-cache

@@ -12,8 +12,16 @@
  * require refinery/theme
  * require_self
  * require_tree .
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
  */
 @import 'custom.css.scss';
 @import 'responsive.css.scss';
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
