@@ -1,15 +1,4 @@
-<style>
 
-#presenting-scylon-ulteam {
-
-
-
-
-
-}
-
-
-</style>
 
 
 <section id="presenting-scylon-ulteam">
@@ -171,11 +160,70 @@
 
 </section>
 
+
+<style>
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+.grid {}/*max-width:1200px ;margin:100px auto;*/
+.grid-item { border:1px solid white;}
+/*.grid-item--width2 { width:396px;}*/
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+</style>
+
+<% @scylon_grid = [
+  'SCYLON_DSC_0533.jpg',
+  'SCYLON_DSC_0548.jpg',
+  'SCYLON_DSC_0543.jpg',
+  'SCYLON_DSC_0542.jpg',
+  'SCYLON_IMG_5368.jpg',
+  'SCYLON_IMG_5364.jpg',
+  'Scylon_Ulteam30_focus02.jpg',
+  'Scylon_Ulteam30_highlights2.jpg',
+  'Scylon_Ulteam30_focus04.jpg',
+  'Scylon_Ulteam30_focus01.jpg'
+  ] %>
+
 <section id="scylon-image-gallery">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        IMAGES GO HERE
+          <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 400 }'>
+            <!-- data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 33.3% }' -->
+          <div class="grid-sizer"></div>
+
+            <% @scylon_grid.shuffle.each_with_index do |sc, index| %>
+              <div class="grid-item"><%= image_tag sc %></div>
+            <% end %>
+
+          </div>
       </div>
     </div>
   </div>
@@ -198,3 +246,38 @@
     </div>
   </div>
 </section>
+
+
+<script>
+// var $grid = $('.grid').masonry({
+//   // options...
+// });
+
+// $grid.imagesLoaded().progress( function() {
+//   $grid.masonry('layout');
+//   // options
+//   itemSelector: '.grid-item',
+//   columnWidth: 300
+// });
+// $grid.imagesLoaded().progress( function() {
+//   $grid.masonry('layout');
+// });
+
+  // init Masonry
+ var $grid = $('.grid').masonry({
+  itemSelector: '.grid-item',
+  percentPosition: true,
+  columnWidth: '.grid-sizer'
+});
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry();
+}); 
+
+
+
+</script>
+
+
+
+
