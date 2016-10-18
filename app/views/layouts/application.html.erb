@@ -2,6 +2,7 @@
 <%= render "/refinery/html_tag" %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
+    <%= tag(:meta, name: 'description', content: @meta.meta_description) if @meta.meta_description.present? -%>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= render "/refinery/head" %>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
