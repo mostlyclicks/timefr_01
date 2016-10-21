@@ -283,7 +283,19 @@
     min-height:60vh;
   }
 
+  #pro-road-cycling-teams-intro {
+    // border:3px solid red;
+    background-size:170%;
+  }
 
+  #pro-mtb-vtt {
+    background-size:120%;
+    background-position-y:10%;
+  }
+
+  #pro-triathlon {
+    background-size:150%;
+  }
 
 }
 
@@ -445,10 +457,20 @@
     min-height:50vh;
   }
 
+  #pro-road-cycling-teams-intro {
+    //border:3px solid yellow;
+    background-size:130%;
+  }
 
+  #pro-mtb-vtt {
+    min-height: 70vh;
+    background-size:125%;
+    background-position-y:10%;
+  }
 
- 
-
+  #pro-triathlon {
+    background-size:120%;
+  }
 
 }
 
@@ -462,9 +484,6 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-
-
-
 
   // #home-the-challenge h1 {border:1px solid red;}
 
@@ -533,22 +552,22 @@
     background-position-y:-75px;
  }
 
-#bike-features {
-  .feature-text {
-    padding:100px;
-    h1 {@include header-style(64px, 100, $time-red)}
-    small {@include header-style(24px, 100, $black-med)}
-    p {font-size:16px;}
+  #bike-features {
+    .feature-text {
+      padding:100px;
+      h1 {@include header-style(64px, 100, $time-red)}
+      small {@include header-style(24px, 100, $black-med)}
+      p {font-size:16px;}
+    }
+
   }
 
-}
-
-#megeve-top {
-  background-size:cover;
-  // background-size:130%;
-  // min-height:750px;
-  // max-height: 800px;
-}
+  #megeve-top {
+    background-size:cover;
+    // background-size:130%;
+    // min-height:750px;
+    // max-height: 800px;
+  }
 
   #link-header {
     background-size:120%;
@@ -560,4 +579,25 @@
     min-height:50vh;
   }
 
+  #pro-road-cycling-teams-intro {
+    // border:3px solid blue;
+    min-height:80vh;
+    background-size:130%;
+    // background-position-x:120% !important;
+  }
+
+  #pro-mtb-vtt {
+    min-height: 80vh;
+    background-size:120%;
+    background-position-y:10%;
+  }
+
+  #pro-triathlon {
+    min-height:80vh;
+    background-size:120%;
+  }
+
+
 }
+
+

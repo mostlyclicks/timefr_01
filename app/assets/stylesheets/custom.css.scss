@@ -905,18 +905,13 @@ padding:80px 20px;
   
   .pedal-weight {
     position:relative;
-    h3 {@include header-style(24px, 900, $black-med); 
-      // text-transform:uppercase;
+    h3 {@include header-style(24px, 900, $black-med);
       margin:0 auto;
       height:40px;
       line-height:40px;
       white-space:no-wrap;
       padding:0;
       background-color:lighten($black-light, 40%);
-      // &::after {
-      //   content:'g';
-      //   text-transform:lowercase;
-      // }
     }
   }
 }
@@ -930,11 +925,9 @@ padding:80px 20px;
   background-size:250%;
   background-repeat:no-repeat;
   background-position:fixed;
-  // background-position-x:-100px;
   background-position-y:50%;
   background-position-x:30%;
   height:100vh;
-  
   color:#fff;
   h1 {@include header-style(36px, 200, white); display:none;}
   h3 {@include header-style(24px, 100, white); text-transform:uppercase;letter-spacing:.05em;padding:0 40px;text-align:center;}
@@ -1191,5 +1184,83 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
     padding:0px 0 40px 0;
   }
 }
+
+
+
+// PRO ATHLETES
+
+#pro-athlete-intro {
+  min-height:100vh;
+  background-color:#fff;
+
+}
+
+#pro-road-cycling-teams-intro {
+  min-height:60vh;
+  background-color:#fff;
+  padding:20px;
+  background-image:url(https://s3.amazonaws.com/timefr01/2016/web-2M2V9548.jpg);
+  background-size:250%;
+  background-repeat:no-repeat;
+  background-position:fixed;
+  background-position-y:50%;
+  background-position-x:90% !important;
+  h1 {@include header-style(30px, 100, white);text-align:right;}
+  a {color:#fff;font-weight:900;text-transform:uppercase;text-align:right;}
+}
+
+#pro-road-cycling-teams-content {
+  background-color:#fff;
+  padding:80px 20px;
+  h1 {@include header-style(30px, 200, #74aae3);}
+  h2 {@include header-style(22px, 200, black);}
+}
+
+#pro-mtb-vtt {
+  padding:20px;
+  min-height:40vh;
+  background-color:gray;
+  background-image:url(https://s3.amazonaws.com/timefr01/2016/web3_DSC4839.jpg);
+  background-size:170%;
+  background-repeat:no-repeat;
+  background-position:fixed;
+  background-position-y:90%;
+  background-position-x:30% !important;
+  h1 {@include header-style(30px, 100, white);text-align:right;}
+  a {color:#fff;font-weight:900;text-align:right;}
+}
+
+#pro-mtb-vtt-content {
+  padding:80px 20px;
+  background-color:#fff;
+  h1 {@include header-style(26px, 200, #000);}
+  h2 {@include header-style(22px, 200, black);}
+  caption {margin-left:40px;border:1px solid red;}
+}
+
+#pro-triathlon {
+  min-height:50vh;
+  padding:20px;
+  background-color:red;
+  background-image:url(https://s3.amazonaws.com/timefr01/2016/web-160519-180436-1688-1DX.jpg);
+  background-size:200%;
+  background-repeat:no-repeat;
+  background-position:fixed;
+  background-position-y:5000%;
+  background-position-x:20% !important;
+  h1 {@include header-style(30px, 100, white);}
+  a {color:#fff;font-weight:900;text-transform:uppercase;}
+}
+
+#pro-triathlon-content {
+  background-color:#fff;
+  padding:80px 20px;
+  h1 {@include header-style(30px, 200, #000);}
+  h2 {@include header-style(22px, 200, black);}
+}
+
+
+
+// END PRO ATHLETES
 
 
