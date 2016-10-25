@@ -1060,14 +1060,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
 #scylon-30-ans {
   background-color:darken($time-red, 10%);
   // padding:100px 0;
-  min-height:100vh;
+  min-height:95vh;
+  padding:0 20px;
   color:#fff;
 
   img {padding-bottom:50px;}
 
   p {
     @include header-style(18px, 200, #fff);
-    line-height:2em;
+    line-height:1.85em;
     margin-bottom:2em;
     letter-spacing:1px;
 
