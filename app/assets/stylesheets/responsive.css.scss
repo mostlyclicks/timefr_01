@@ -301,7 +301,18 @@
 
 
 
-/* Medium devices (desktops, 992px and up) */
+
+
+
+
+
+
+
+
+
+
+
+/* Medium devices (desktops, 992px and up) ************************/
 @media (min-width: 992px) { 
  
   #top {
@@ -458,7 +469,7 @@
   }
 
   #pro-road-cycling-teams-intro {
-    //border:3px solid yellow;
+    // border:3px solid yellow;
     background-size:130%;
   }
 
@@ -473,6 +484,13 @@
   }
 
 }
+
+
+
+
+
+
+
 
 
 
@@ -564,9 +582,6 @@
 
   #megeve-top {
     background-size:cover;
-    // background-size:130%;
-    // min-height:750px;
-    // max-height: 800px;
   }
 
   #link-header {
@@ -583,12 +598,12 @@
     // border:3px solid blue;
     min-height:80vh;
     background-size:130%;
-    // background-position-x:120% !important;
+    
   }
 
   #pro-mtb-vtt {
     min-height: 80vh;
-    background-size:120%;
+    background-size:130%;
     background-position-y:10%;
   }
 

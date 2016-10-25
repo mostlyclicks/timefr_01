@@ -1235,7 +1235,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
   background-color:#fff;
   h1 {@include header-style(26px, 200, #000);}
   h2 {@include header-style(22px, 200, black);}
-  caption {margin-left:40px;border:1px solid red;}
+  figcaption {
+    margin-left:60px;
+  }
 }
 
 #pro-triathlon {
@@ -1257,6 +1259,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
   padding:80px 20px;
   h1 {@include header-style(30px, 200, #000);}
   h2 {@include header-style(22px, 200, black);}
+}
+
+.hide-image {
+  opacity:0;
 }
 
 
