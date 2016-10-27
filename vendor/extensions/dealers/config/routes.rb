@@ -1,5 +1,10 @@
 Refinery::Core::Engine.routes.draw do
 
+  # Frontend routes
+  namespace :dealers do
+    resources :dealers, :path => '', :only => [:index, :show]
+  end
+
   # Admin routes
   namespace :dealers, :path => '' do
     namespace :admin, :path => Refinery::Core.backend_route do

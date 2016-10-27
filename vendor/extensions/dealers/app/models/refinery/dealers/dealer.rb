@@ -18,6 +18,15 @@ module Refinery
           [street_address_1, city, state_province, country, postal_code].compact.join(', ')
         end
 
+       def self.search_me(search)
+         if search
+           find(:all, :conditions => ['dealer_name ILIKE ?', "%#{search}%"])
+           # @message = "yes there are params"
+         else
+           find(:all)
+         end
+       end
+
     end
   end
 end

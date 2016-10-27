@@ -1,0 +1,36 @@
+<h1>Dealers Index</h1>
+
+<%#= render 'shared/dealer_search' %>
+
+
+
+<%# @dealers.each do |d| %>
+  <%#= d.dealer_name %>
+<%# end %>
+
+
+<%= form_tag refinery.dealers_dealers_path, method: 'get' do %>
+  <%= label_tag 'query', t('.search_label') %>
+  <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search])} %>
+  <%= submit_tag t(".go") %>
+<% end %>
+
+
+
+<% if @message.present? %>
+  <%= @message %>
+  <%= @params %>
+
+
+  <% if @results.blank? %>
+   <%= 'There are no matches for ' + params[:search] %> 
+  <% end %>
+
+  <h3>There <%= @results.count %> <%= 'dealer'.pluralize %> that match your query</h3>
+
+  <% @results.each do |r| %>
+
+    <strong><%= r.dealer_name %></strong>
+  <% end %>
+  <%= @results %>
+<% end %>

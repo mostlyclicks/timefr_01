@@ -48,6 +48,10 @@ class ApplicationController < ActionController::Base
     #@instatime = Instagram.tag_recent_media('timebikes')#.limit(12)
   end
 
+  # def load_dealers
+  #   @dealers = Refinery::Dealers::Dealer.all
+  # end
+
   def load_fr_dealers
     @fr_dealers = Refinery::Dealers::Dealer.where(country: 'France')
   end
