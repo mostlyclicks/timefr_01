@@ -1,0 +1,307 @@
+<section id="triathlon-bike-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 section-box">
+        <div class="section-text">
+
+          <div>
+            <h1 class="text-center">SCYLON AKTIV T10 | T30 </h1>
+            <%= raw @page.content_for(:triathlon_main) %>
+
+            <p class="text-center"><a href="#triathlon-bike-image" class="scroll-btn"><span class="fa fa-chevron-down fa-3x"></span></a></p>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="triathlon-bike-image">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- carousel for t10 and t30 -->
+        <%#= raw @page.content_for(:triathlon_image) %>
+
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <%= image_tag 'Scylon_T30.jpg', class: 'img-responsive', alt: 'Scylon T30', title: 'Scylon T30' %>
+            
+            <div class="carousel-caption">
+              <small>SCYLON T30</small>
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag 'Scylon_T10.jpg', class: 'img-responsive', alt: 'Scylon T10', title: 'Scylon T10' %>
+            <div class="carousel-caption">
+              <small>SCYLON T10</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="fa fa-angle-left fa-4x"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="fa fa-angle-right fa-4x"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <p class="text-center"><a href="#triathlon-bike-components" class="scroll-btn" style="color:rgba(0,0,0,.1);"><span class="fa fa-chevron-down fa-3x"></span></a></p>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="triathlon-bike-components">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= raw @page.content_for(:triathlon_components) %>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="triathlon-bike-geometry">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= raw @page.content_for(:triathlon_geometry) %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% content_for :tri_page do %>
+
+<p>Our new Triathlon range combines Scylon Frame’s performance, Aktiv fork’s comfort, and a saddle support studied to promote a perfect bike for triathlete.</p>
+
+<p class="text-lead">
+Our new Triathlon range combines Scylon frame's performance, Aktiv fork's comfort, and a seatpost that puts you in the perfect position for triathlons.
+
+...and a seatpost that puts you in a more forward position well-suited for triathlon training and competition.
+
+</p>
+
+<p>The aggressive position of the steering support allows an aerodynamic profile which is reducing vibrations. The centre of gravity is lowest which is improving the stability.</p>
+
+
+
+
+<strong>
+
+</strong>
+
+
+
+<p>This bike combines aerodynamic advantage and an optimal comfort both, which is increasing the speed with comfort.</p> 
+
+
+<table class="table">
+  <tr>
+    <th></th>
+    <th>Scylon Aktiv T10</th>
+    <th>Scylon Aktiv T30</th>
+  </tr>
+  <tr>
+    <td>Group</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra DI2</td>
+  </tr>
+  <tr>
+    <td>Cassette</td>
+    <td>Shimano Ultegra 11-25</td>
+    <td>Shimano Ultegra 11-25</td>
+  </tr>
+  <tr>
+    <td>Front derailleur</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra DI2</td>
+  </tr>
+  <tr>
+    <td>Rear derailleur</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra DI2</td>
+  </tr>
+  <tr>
+    <td>Crankset</td>
+    <td>ROTOR 3D30 50/34</td>
+    <td>ROTOR 3D30 50/34</td>
+  </tr>
+  <tr>
+    <td>Brakes</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra</td>
+  </tr>
+  <tr>
+    <td>Saddle</td>
+    <td>Italia SLR Tri Gel</td>
+    <td>Italia SLR Tri Gel</td>
+  </tr>
+  <tr>
+    <td>Saddle support</td>
+    <td>Classique</td>
+    <td>Translink</td>
+  </tr>
+  <tr>
+    <td>Levers</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra DI2 triathlon shifter</td>
+  </tr>
+  <tr>
+    <td>Stem</td>
+    <td>Deda Zero 2</td>
+    <td>Deda Spresso + Mono Link</td>
+  </tr>
+  <tr>
+    <td>Handlebar</td>
+    <td>Deda Zero 2</td>
+    <td>Deda Zero 2</td>
+  </tr>
+  <tr>
+    <td>Wheels</td>
+    <td>Mavic Ksyrium</td>
+    <td>Mavic Ksyrium</td>
+  </tr>
+  <tr>
+    <td>Pedals</td>
+    <td>Time Xpresso 10</td>
+    <td>Time Xpresso 10</td>
+  </tr>
+  <tr>
+    <td>Extender</td>
+    <td>Deda Carbon Blast </td>
+    <td>Inclus</td>
+  </tr>
+</table>
+
+
+
+<p>Notre nouvelle gamme triathlon, combine la performance des cadres SCYLON, le confort de la fourche AKTIV, et la position de la tige de selle étudiée, afin de proposer aux triathlètes le vélo idéal pour atteindre leurs objectifs.</p> 
+<p>La position agressive du poste de pilotage permet d’obtenir un profil aérodynamique réduisant les forces de trainée. Le centre de gravité plus bas améliore la stabilité.</p> 
+<p>Profitant de cet avantage aérodynamique ainsi que du confort sans égal, le triathlète peut tenir son allure plus longtemps dans les efforts solitaires.</p>
+
+
+
+<table class="table">
+  <tr>
+    <th></th>
+    <th>Scylon Aktiv T10</th>
+    <th>Scylon Aktiv T30</th>
+  </tr>
+  <tr>
+    <td>Groupe</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra DI2</td>
+  </tr>
+  <tr>
+    <td>Cassette</td>
+    <td>Shimano Ultegra 11-25</td>
+    <td>Shimano Ultegra 11-25 </td>
+  </tr>
+  <tr>
+    <td>Dérailleur avant</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra DI2</td>
+  </tr>
+  <tr>
+    <td>Dérailleur arrière</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra DI2</td>
+  </tr>
+  <tr>
+    <td>Pédalier</td>
+    <td>ROTOR 3D30 50/34</td>
+    <td>ROTOR 3D30 50/34</td>
+  </tr>
+  <tr>
+    <td>Freins</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra</td>
+  </tr>
+  <tr>
+    <td>Selle</td>
+    <td>Italia SLR Tri Gel</td>
+    <td>Italia SLR Tri Gel</td>
+  </tr>
+  <tr>
+    <td>Tige</td>
+    <td>Classique</td>
+    <td>Translink</td>
+  </tr>
+  <tr>
+    <td>Manette</td>
+    <td>Shimano Ultegra</td>
+    <td>Shimano Ultegra DI2 triathlon shifter</td>
+  </tr>
+  <tr>
+    <td>Potence</td>
+    <td>Deda Zero 2</td>
+    <td>Deda Spresso + Mono Link</td>
+  </tr>
+  <tr>
+    <td>Cintre</td>
+    <td>Deda Zero 2</td>
+    <td>Deda Zero 2</td>
+  </tr>
+  <tr>
+    <td>Roues</td>
+    <td>Mavic Ksyrium</td>
+    <td>Mavic Ksyrium</td>
+  </tr>
+  <tr>
+    <td>Pédales</td>
+    <td>Time Xpresso 10</td>
+    <td>Time Xpresso 10</td>
+  </tr>
+  <tr>
+    <td>Prolongateur</td>
+    <td>Deda Carbon Blast</td>
+    <td>Inclus</td>
+  </tr>
+</table>
+
+<% end %>
