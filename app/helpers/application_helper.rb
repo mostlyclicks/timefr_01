@@ -1,4 +1,12 @@
 module ApplicationHelper
+
+  def is_demo_center(d)
+    if d == true
+      'demo_center'
+    else
+      ''
+    end
+  end
   
   def get_bike_geometry(bike)
     if bike == 'Skylon' 

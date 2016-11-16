@@ -22,7 +22,7 @@
   <div class="col-xs-6 col-md-2 dealers">
     <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website] %>
     <% @js_array << @collection %>
-    <%= d.dealer_name %><br />
+    <span class="<%= is_demo_center(d.demo_center) %>"><%= d.dealer_name %></span><br />
     <%= d.street_address_1 %><br />
     <% unless d.street_address_2.empty? %>
       <%= d.street_address_2 %><br />

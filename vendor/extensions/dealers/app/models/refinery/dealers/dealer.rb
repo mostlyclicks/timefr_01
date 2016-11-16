@@ -7,7 +7,8 @@ module Refinery
       # after_validation :geocode
       after_validation :geocode#, if: ->(obj){ obj.address.present? and obj.address_changed? }
 
-      attr_accessible :account_number, :dealer_name, :street_address_1, :street_address_2, :postal_code, :city, :telephone_1, :state_province, :country, :email, :website, :position, :latitude, :longitude
+      attr_accessible :account_number, :dealer_name, :street_address_1, :street_address_2, :postal_code, :city, 
+                      :telephone_1, :state_province, :country, :email, :website, :position, :latitude, :longitude, :demo_center
 
       #validates :dealer_name, :presence => true, :uniqueness => true
       #validates :account_number, :presence => true, :uniqueness => true
