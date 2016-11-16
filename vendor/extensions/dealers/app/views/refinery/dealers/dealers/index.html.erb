@@ -12,25 +12,99 @@
 <%= form_tag refinery.dealers_dealers_path, method: 'get' do %>
   <%= label_tag 'query', t('.search_label') %>
   <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search])} %>
+
   <%= submit_tag t(".go") %>
 <% end %>
 
 
 
-<% if @message.present? %>
-  <%= @message %>
-  <%= @params %>
+<% if @results.blank? %>
+  <%= "We found no dealers near you: #{@params}" %>
+<% else %>
+ <div class="container">
+  <div class="row">
+  <% @js_array =[] %>
+  <% @results.each do |d| %>
+    <div class="col-xs-6 col-md-2 dealers">
+      <!-- populate for gmap -->
+      <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website] %>
+      <% @js_array << @collection %>
 
+      <%= d.dealer_name %><br />
+      <%= d.street_address_1 %><br />
+      <% unless d.street_address_2.blank? %>
+      <%= d.street_address_2 %><br />
+      <% end %>
+      <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
+      <%= d.country %><br />
 
-  <% if @results.blank? %>
-   <%= 'There are no matches for ' + params[:search] %> 
+      TEL: <%= d.telephone_1 %><br />
+      <% unless d.email.blank? %>
+      <%= d.email %><br />
+      <% end %>
+      <% unless d.website.blank? %>
+      <%= d.website %><br />
+      <% end %> 
+
+    </div>
   <% end %>
-
-  <h3>There <%= @results.count %> <%= 'dealer'.pluralize %> that match your query</h3>
-
-  <% @results.each do |r| %>
-
-    <strong><%= r.dealer_name %></strong>
-  <% end %>
-  <%= @results %>
+  </div>
+</div> 
 <% end %>
+
+<style>
+  #map_us { -webkit-transform: translateZ(0) !important; }
+</style>
+
+<div class="container">
+  <div class="col-md-10 col-md-offset-1">
+    <div id="map_us" style="width:100% height: 800px;" class="maps">
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+function initMap() {
+    var locations = <%= raw @js_array %>;
+
+    var map = new google.maps.Map(document.getElementById('map_us'), {
+      zoom: 4,
+      center: new google.maps.LatLng(37.09024, -95.712891),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });    
+
+      var contentString = '<strong>' + locations[i][0] + '</strong>' + '<br />' +
+                          locations[i][3] + '<br />' +
+                          locations[i][5] + ', ' + locations[i][6] + '<br />' +
+                          locations[i][8] + '<br />' +
+                          '<a href="http://' + locations[i][9] + '">' + locations[i][9] + '</a>';
+
+      var infowindow = new google.maps.InfoWindow()
+
+      google.maps.event.addListener(marker, 'click', (function(marker,contentString,infowindow) {
+        return function() {
+          infowindow.setContent(contentString);
+          // infowindow.title = "Hey";
+          infowindow.open(map, marker);
+        }
+      })(marker, contentString, infowindow));
+    }
+}
+
+</script>
+
+
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn7yDGg8P2U61uzckRxdLLMD5_CkZuzY&callback=initMap">
+  </script>
+

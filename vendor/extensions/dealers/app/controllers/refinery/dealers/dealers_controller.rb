@@ -17,8 +17,7 @@ module Refinery
          if params[:search]
            
            @params = params[:search]
-           @params_length = @params.size
-           @message = @params_length
+           @message = "You searched #{@params}"
            # @message = "TIME dealers near - #{@params}"
            # @results = Refinery::Dealers::Dealer.search_me(params[:search])
            @results = Refinery::Dealers::Dealer.near(params[:search], 500, :order => :distance)

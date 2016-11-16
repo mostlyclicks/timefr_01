@@ -1,0 +1,37 @@
+<section id="dealer-search">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Find your nearest TIME dealer US</h1>
+
+        <%= form_tag refinery.dealers_dealers_path, method: 'get' do %>
+        <%= label_tag 'query', t('.search_label') %>
+        <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search])} %>
+        
+        <%= submit_tag t(".go") %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<% if @message.present? %>
+  <%= @message %>
+  <%#= @params %>
+
+
+  <% if @results.blank? %>
+   <%= 'There are no matches for ' + params[:search] %> 
+  <% end %>
+
+  <h3>There <%= @results.count %> <%= 'dealer'.pluralize %> that match your query</h3>
+
+  <% @results.each do |r| %>
+
+    <strong><%= r.dealer_name %></strong>
+  <% end %>
+  <%= @results %>
+<% end %>
