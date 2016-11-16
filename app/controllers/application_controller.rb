@@ -53,7 +53,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_us_dealers
-    @us_dealers = Refinery::Dealers::Dealer.where(country: 'USA')
+    @us_dealers = Refinery::Dealers::Dealer.where(country: 'USA').order('dealer_name ASC')
     @first_dealer = Refinery::Dealers::Dealer.first
   end
 
