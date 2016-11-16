@@ -5,7 +5,7 @@
         <% form_tag dealers_admin_dealers_path, :method => 'get' do %>
         <p>
           <%#= text_field_tag :search, params[:search] %>
-          <%= text_field_tag :search, params[:search], placeholder: 'Search Dealer' %>
+          <%= text_field_tag :search, params[:search], placeholder: 'City, State or ZIP' %>
           <%= submit_tag "Search", :name => nil %>
         </p>
       <% end %>

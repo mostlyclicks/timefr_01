@@ -18,6 +18,7 @@ module Refinery
           [street_address_1, city, state_province, country, postal_code].compact.join(', ')
         end
 
+       # method is bypassed by geocoder near method 
        def self.search_me(search)
          if search
            find(:all, :conditions => ['dealer_name ILIKE ?', "%#{search}%"])
