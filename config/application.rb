@@ -17,7 +17,7 @@ end
 
 module Timefr01
   class Application < Rails::Application
-
+    config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
     require 'rack/rewrite'  
 
      config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
