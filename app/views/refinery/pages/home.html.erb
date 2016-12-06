@@ -1,24 +1,12 @@
-<!-- HOME TOP  ***************************** -->
 <% @top_bg_image = ['top-bg-10.png', 'top-bg-11.png', 'top-bg-13.png', 'top-bg-12.png', 'top-bg-link.png', 'scylon-ulteam-30.jpg'] %>
-<!-- ,, 'top-bg-4.png', 'top-bg-5.png' -->
 <% @random_bg_image = @top_bg_image.sample %>
-
-<style>
-  /*#home-top {background-image:url(/assets/<%= @random_bg_image %>); }*/
-</style>
-
 <section id="home-top">
   <div class="container">
     <div class="row">
       <%= raw @page.content_for(:home_main) %>
-
-
     </div>
   </div>
 </section>
-
-
-
 <div id="home-top-bike">
   <div class="container">
     <div class="row">
@@ -33,12 +21,7 @@
       </div>
     </div>
   </div>
-
 </div>
-
-<!-- MADE IN FRANCE  ***************************** -->
-
-
 <style>
   #home-made-in-france {background-image:url(/assets/<%= @random_mif_image %>); }
 </style>
@@ -46,10 +29,8 @@
 <section id="home-made-in-france">
   <div class="container-fluid">
     <div class="row">
-      
       <%= raw @page.content_for(:home_made_in_france) %>
-
-<div class="embed-responsive embed-responsive-16by9"> <!-- poster="/assets/DSC_7960-carbon-weaver.jpg"-->
+    <div class="embed-responsive embed-responsive-16by9">
       <video autoplay loop >
         <source src="/assets/made-in-france.webm" type="video/webm" />
         <source src="/assets/made-in-france.mp4" type="video/mp4" />
@@ -59,30 +40,20 @@
   </div>
 </section>
 </div>
-
-
-<!-- HOME FEATURES  ***************************** -->
 <section id="home-features">
   <div class="container-fluid">
     <div class="row">
       <h1 class="text-center"><%= raw @page.content_for(:whats_new) %></h1>
-
         <div id="bike-frame-carousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
           <ol class="carousel-indicators">
             <% @home_features.each_with_index do |hf, index| %>
             <li data-target="#bike-frame-carousel" data-slide-to="<%= index %>" class="<% if index == 0 %>active<% end %>"></li>
             <% end %>
           </ol>
-
-          <!-- Wrapper for slides -->
           <div class="carousel-inner" >
-
             <% @home_features.each_with_index do |hf, index| %>
             <div class="item <% if index == 0 %>active<% end %>">
-
               <div class="col-lg-9 col-sm-9 red-border1" id="home-bike-image">
-
                 <%= image_tag hf.main_image.url, alt: hf.title, class: 'img-responsive' %>
               </div>
               <div class="col-lg-3 col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1 red-border1 text-center" id="home-bike-logo">
@@ -96,8 +67,6 @@
             </div>
             <% end %>
           </div>
-
-          <!-- Controls -->
           <a class="left carousel-control" href="#bike-frame-carousel" role="button" data-slide="prev">
             <span class="fa fa-angle-left fa-4x"></span>
           </a>
@@ -107,16 +76,8 @@
         </div>
       </div>
     </div>
-   
   </div>
 </section>
-
-
-<!-- BIKE/FRAMES 2015 COLLECTION  ***************************** -->
-<%#= render 'shared/bikes_collection' %>
-
-
-<!-- AKTIV  ***************************** -->
 <section id="aktiv">
   <div class="container-fluid">
     <div class="row">
@@ -130,26 +91,6 @@
     </div>
   </div>
 </section>
-
-<!-- PEDALS  ***************************** -->
-<!-- <section id="pedals">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-      <h1><%#= raw @page.content_for(:pedal_title) %></h1></div>
-    </div>
-    <div class="row">
-      <div class="col-lg-10 col-lg-offset-1">
-        <%#= image_tag 'Xpresso-15-profil.png', class: 'img-responsive', alt: 'TIME XPRESSO 15 pedals with carbon fiber body and CERAMIC SPEED bearings', title: 'TIME XPRESSO 15 pedal' %>
-      </div>
-      <div class="col-lg-6 col-lg-offset-3 text-center" id="pedal-txt">
-        <%#= raw @page.content_for(:pedal_section) %>
-        </p>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 <section id="time-pedals">
   <div class="container-fluid">
     <div class="row">
@@ -182,8 +123,3 @@
     </div>
   </div>
 </section>
-
-<!-- INSTAGRAM -->
-
-<%= render 'shared/instagram' %>
-

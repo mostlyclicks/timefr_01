@@ -7,14 +7,11 @@
     <%= render "/refinery/head" %>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
     <link rel="prefetch" href="/bikes/skylon">
     <link rel="prefetch" href="/bikes/izon">
     <link rel="prefetch" href="/bikes/fluidity">
     <link rel="prefetch" href="/pedals/mtb-pedals">
     <link rel="prefetch" href="/pedals/road-pedals">
-    
-
   </head>
   <body id="<%= canonical_id @page %>">
     <%= site_bar -%>
@@ -36,28 +33,14 @@
                   <% end %>
                 <% end %>
               </div>
-
             </div>
-            
-
-<!--             <nav id='locale' class="text-right">
-          combo of block and working link
-          
-            </nav> -->
-
-
           </div>
-
-
         </div>
-        
-      
         <%= render "/refinery/header" -%>
       </header>
       <section id="page">
         <%= yield %>
       </section>
-
       <section id="time-catalog">
         <div class="container">
           <div class="row">
@@ -66,19 +49,11 @@
         </div>
         </div>
       </section>
-
-
       <footer class="site-footer">
         <%= render "/refinery/footer" -%>
       </footer>
     </div>
-
-
     <%= render "/refinery/javascripts" %>
-
     <%= yield :map_js %>
-    
-
-
   </body>
 </html>
