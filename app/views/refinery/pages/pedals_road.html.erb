@@ -31,14 +31,14 @@
 <div class="container pedals-xpresso">
     <div class="row">
       <div class="col-lg-3 col-lg-offset-1">
-        <%= image_tag 'LOGO-XPRESSO.png', width: '100%', class: 'img-responsive atac-logo', title: 'TIME XPRESSO logo' %>
+        <%= image_tag 'LOGO-XPRESSO.png', width: '100%', class: 'img-responsive atac-logo', title: 'TIME XPRESSO logo', alt: 'TIME XPRESSO logo' %>
       </div>
     </div>
   <div class="row">
     <% @road_pedals_xpresso.each do |rp| %>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
         
-          <%= link_to (image_fu rp.pedal_image, '500x', class: 'img-responsive', title: rp.name), rp.link %>
+          <%= link_to (image_fu rp.pedal_image, '500x', class: 'img-responsive', title: rp.name + ' Road Pedals', alt: rp.name + ' Road Pedals'), rp.link %>
         
         
         <h3>
@@ -65,7 +65,7 @@
     <% @road_pedals_xpresso_country.each do |cp| %>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
         
-          <%= link_to (image_tag cp.pedal_image.url, width: '100%', class: 'img-responsive'), cp.link %>
+          <%= link_to (image_tag cp.pedal_image.url, width: '100%', class: 'img-responsive', alt: cp.name + ' Road Pedals'), cp.link %>
         
         
         <h3>
