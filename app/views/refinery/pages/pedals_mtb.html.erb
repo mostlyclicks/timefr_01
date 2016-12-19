@@ -23,7 +23,7 @@
     </div>
     <% @mtb_pedals_xc.each do |xc| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-      <%= link_to (image_tag xc.pedal_image.url, width: '100%', class: 'img-responsive', title: 'TIME ' + xc.name + ' pedals', alt: xc.name + ' MTB pedals'), xc.link %>
+      <%= link_to (image_tag xc.pedal_image.url, width: '100%', class: 'img-responsive', title: 'TIME ' + xc.name + ' pedals'), xc.link %>
       <h3><%= link_to xc.name + ' MTB pedals', xc.link %> | <%= xc.weight %></h3>
       <small><%= raw xc.description %></small>
     </div>
@@ -40,7 +40,7 @@
     </div>
     <% @mtb_pedals_mx.each do |mx| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-      <%= link_to (image_tag mx.pedal_image.url, width: '100%', class: 'img-responsive', title: 'TIME ' + mx.name + ' pedals', alt: mx.name + ' enduro pedals'), mx.link %>
+      <%= link_to (image_tag mx.pedal_image.url, width: '100%', class: 'img-responsive', title: 'TIME ' + mx.name + ' pedals'), mx.link %>
       <h3><%= link_to mx.name, mx.link %> | <%= mx.weight %></h3>
       <small><%= raw mx.description %></small>
     </div>
@@ -57,7 +57,7 @@
     </div>
     <% @mtb_pedals_dh.each do |dh| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
-        <%= link_to (image_tag dh.pedal_image.url, width: '100%', class: 'img-responsive', title: 'TIME ' + dh.name + ' pedals', alt: dh.name + ' Downhill pedal'), dh.link %>
+        <%= link_to (image_tag dh.pedal_image.url, width: '100%', class: 'img-responsive', title: 'TIME ' + dh.name + ' pedals'), dh.link %>
       <h3><%= link_to dh.name + Downhill pedal, dh.link %> | <%= dh.weight %></h3>
       <small><%= raw dh.description %></small>
     </div>
