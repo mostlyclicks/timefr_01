@@ -58,7 +58,7 @@
     <% @mtb_pedals_dh.each do |dh| %>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
         <%= link_to (image_tag dh.pedal_image.url, width: '100%', class: 'img-responsive', title: 'TIME ' + dh.name + ' pedals'), dh.link %>
-      <h3><%= link_to dh.name + Downhill pedal, dh.link %> | <%= dh.weight %></h3>
+      <h3><%= link_to dh.name + 'Downhill pedal', dh.link %> | <%= dh.weight %></h3>
       <small><%= raw dh.description %></small>
     </div>
     <% end %>
