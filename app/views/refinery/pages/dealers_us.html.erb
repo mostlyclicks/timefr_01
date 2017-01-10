@@ -31,7 +31,8 @@
   <div class="col-xs-6 col-md-2 dealers">
     <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website, d.demo_center] %>
     <% @js_array << @collection %>
-    <span class="<%= is_demo_center(d.demo_center) %>"><%= d.dealer_name %></span><br />
+    <span class="<%#= is_demo_center(d.demo_center) %>"><%= d.dealer_name %></span><br />
+    <% if d.demo_center %><a href="time-test-center"><span class="demo_center"></span></a><br /><% end %>
     <%= d.street_address_1 %><br />
     <% unless d.street_address_2.empty? %>
       <%= d.street_address_2 %><br />

@@ -3,6 +3,7 @@
 .demo_center {
   // color:red;
   // font-weight:900;
+
   &:after {
     color:white;
     background-color:red;
@@ -10,7 +11,9 @@
     display:inline-block;
     margin:0;
     padding:2px 4px;
+    
     content: "\ATIME TEST CENTER";
+    // white-space:pre;
   }
 
 }
