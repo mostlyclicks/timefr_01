@@ -15,6 +15,21 @@
 
 }
 
+#test-center-bikes {
+  margin:60px 0px;
+
+}
+
+#test-centers-text {
+  background-color:$time-red;
+  padding:40px 0px 60px 0px;
+  h1 {@include text-style(36px, 100, white);}
+  .lead {color:#fff;font-size:130%;}
+
+}
+
+
+
 section {
   // height:600px;
   padding:0px 0px;

@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_geometries
   before_filter :load_fr_dealers
   before_filter :load_us_dealers
+  before_filter :load_us_test_centers
   before_filter :load_me_dealers
   before_filter :load_asia_dealers
   before_filter :load_gb_dealers
@@ -55,6 +56,10 @@ class ApplicationController < ActionController::Base
   def load_us_dealers
     @us_dealers = Refinery::Dealers::Dealer.where(country: 'USA').order('dealer_name ASC')
     @first_dealer = Refinery::Dealers::Dealer.first
+  end
+
+  def load_us_test_centers
+    @us_test_centers = Refinery::Dealers::Dealer.where(country: 'USA', demo_center: true).order('dealer_name ASC')
   end
 
   def load_gb_dealers

@@ -1,0 +1,158 @@
+<section id="test-center-bikes">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        <%= image_tag 'http://www.timesport.com/system/images/W1siZiIsIjIwMTYvMDQvMjAvMjEvMDMvNTkvMzEzL1NreWxvbl9HcmFwaGl0ZV9iaWtlX2NvbXAucG5nIl0sWyJwIiwidGh1bWIiLCIxMjAweCJdLFsicCIsInN0cmlwIl1d/Skylon-Graphite-bike-comp.png', alt: "TIME TEST Center Bike", class: 'img-responsive' %>
+      </div>
+      <div class="col-xs-4">
+        <%= image_tag 'http://www.timesport.com/system/images/W1siZiIsIjIwMTYvMDQvMjAvMjEvMTIvMzIvOTg3L1NreWxvbl9UZWFtX0FrdGl2X2NvbXAucG5nIl0sWyJwIiwidGh1bWIiLCIxMjAweCJdLFsicCIsInN0cmlwIl1d/Skylon-Team-Aktiv-comp.png', alt: "TIME TEST Center Bike", class: 'img-responsive' %>
+      </div>
+      <div class="col-xs-4">
+        <%= image_tag 'http://www.timesport.com/system/images/W1siZiIsIjIwMTYvMDQvMjAvMjEvMDMvNTgvNDU2L1NreWxvbl9XaGl0ZV9Ba3Rpdl9jb21wLnBuZyJdLFsicCIsInRodW1iIiwiMTIwMHgiXSxbInAiLCJzdHJpcCJdXQ/Skylon-White-Aktiv-comp.png', alt: "TIME TEST Center Bike", class: 'img-responsive' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section id="dist-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center"><%= @page.title.pluralize %></h1>
+        <%#= raw @page.content_for(:body) %>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<% content_for :dealer_list do %>
+<section id="test-centers-text">
+  <div class="container dealer-header" >
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>TIME TEST Centers - US</h1>
+        <p class="lead text-center">
+          If a picture paints a thousand words then a ride on a TIME bike paints a million – maybe even a billion.<br />
+          Experience the legendary ride of a TIME bike at these exclusive TIME dealers.
+        </p>
+
+        <p></p>
+
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="dealer-list">
+  <div class="container more-btm-padding">
+  <div class="row">
+    <% @js_array = [] %>
+    <% @us_test_centers.each do |d| %>
+  <div class="col-xs-6 col-md-2 col-md-offset-2 dealers">
+    <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website, d.demo_center] %>
+    <% @js_array << @collection %>
+    <span class="<%#= is_demo_center(d.demo_center) %>"><%= d.dealer_name %></span><br />
+    <%= d.street_address_1 %><br />
+    <% unless d.street_address_2.empty? %>
+      <%= d.street_address_2 %><br />
+    <% end %>
+    <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
+    <%= d.country %><br />
+
+    TEL: <%= d.telephone_1 %><br />
+    <% unless d.email.empty? %>
+      <%= d.email %><br />
+    <% end %>
+    <% unless d.website.empty? %>
+      <%= d.website %><br />
+    <% end %> 
+  </div>
+  <% end %>
+  </div>
+  </div>
+  </section>
+<% end %>
+
+<%= content_for :dealer_list %>
+
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+  <div id="map_us" style='width:100%; height: 800px;' class="maps"></div>
+</div>
+</div>
+
+
+<style>
+#map_us { -webkit-transform: translateZ(0) !important; }
+</style>
+
+
+<script type="text/javascript">
+
+function initMap() {
+    var locations = <%= raw @js_array %>;
+
+    var map = new google.maps.Map(document.getElementById('map_us'), {
+      zoom: 4,
+      center: new google.maps.LatLng(37.09024, -95.712891),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });    
+
+      var contentString = '<strong>' + locations[i][0] + '</strong>' + '<br />' +
+                          locations[i][3] + '<br />' +
+                          locations[i][5] + ', ' + locations[i][6] + '<br />' +
+                          locations[i][8] + '<br />' +
+                          '<a href="http://' + locations[i][9] + '">' + locations[i][9] + '</a>';
+
+      var infowindow = new google.maps.InfoWindow()
+
+      google.maps.event.addListener(marker, 'click', (function(marker,contentString,infowindow) {
+        return function() {
+          infowindow.setContent(contentString);
+          // infowindow.title = "Hey";
+          infowindow.open(map, marker);
+        }
+      })(marker, contentString, infowindow));
+    }
+}
+
+</script>
+
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn7yDGg8P2U61uzckRxdLLMD5_CkZuzY&callback=initMap"></script> -->
+
+
+
+
+
+<div class="container dealer-header">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h3 class="text-center">Pedal Dealers - US / COMING SOON</h2>
+
+    </div>
+  </div>
+</div>
+
+<%= content_for :map_js do %>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn7yDGg8P2U61uzckRxdLLMD5_CkZuzY&callback=initMap"></script>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
