@@ -59,8 +59,7 @@
         <%= t('.copyright', :year => Time.now.year,
                             :site_name => Refinery::Core.site_name) %>
                             
-                            <% @r = request.remote_ip %>
-                            <%# @r = '2.15.255.255' %>
+                            
                             
                             <%= @geoip.country(@r).country_name %> 
       </small>

@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_asia_dealers
   before_filter :load_gb_dealers
   before_filter :load_germany_dealers
+  before_filter :get_country_ip
   # before_filter :set_locale
   #before_filter :load_instagram
 
@@ -40,6 +41,11 @@ class ApplicationController < ActionController::Base
       else
         'en'
     end
+  end
+
+  def get_country_ip
+    @r = request.remote_ip
+    #@r = '2.15.255.255' -- test France ip
   end
 
   def load_instagram
