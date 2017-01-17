@@ -1,68 +1,113 @@
-<h1>Dealers Index</h1>
+<section id="dealer-search">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Find your nearest TIME dealer</h1>
+        <% if Rails.env.development? %>
+          <h1>DEALER INDEX</h1>
+        <% end %>
+        <%= form_tag refinery.dealers_dealers_path, method: 'get' do %>
+        <div class="form-group">
+        <%#= label_tag 'query', t('.search_label') %>
+        <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search]), class: 'form-control input-lg'} %>
+        </div>
+        <%= select_tag :distance, options_for_select([[ "Select distance in miles", "10"],"50", "100", "250"], selected: "10"), class: 'form-control' %>
+        <div class="checkbox input-lg">
+        <%= check_box_tag :pedal_dealer, value = true, checked = false %><span>SHOW ME PEDAL DEALERS</span><%#= label_tag t('.search_pedal_dealers') %>
+        </div>
+        <%= submit_tag "SEARCH", class: "btn btn-success btn-lg" %>
+        <% end %>
 
-<%#= render 'shared/dealer_search' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="results-message">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <% if @results.blank? %>
+          <h3><%= "We're sorry, there are no dealers near you: #{params[:search]}" %></h3>
+          <p>Please try increasing the distance of your search area.</p>
+        <% else %>
+          <h3><%= "We found #{@results.count} TIME dealer(s) within #{params[:distance]} miles from your location (#{params[:search]})" %></h3>
+          <%= content_for :dealer_list %>
+          
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
-<%# @dealers.each do |d| %>
-  <%#= d.dealer_name %>
-<%# end %>
 
+<% content_for :dealer_list do %>
+<% unless @results.blank? %>
 
-<%= form_tag refinery.dealers_dealers_path, method: 'get' do %>
-  <%= label_tag 'query', t('.search_label') %>
-  <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search])} %>
-
-  <%= submit_tag t(".go") %>
-<% end %>
-
-
-
-<% if @results.blank? %>
-  <%= "We found no dealers near you: #{@params}" %>
-<% else %>
  <div class="container">
   <div class="row">
-  <% @js_array =[] %>
-  <% @results.each do |d| %>
-    <div class="col-xs-6 col-md-2 dealers">
+  
+    <div class="col-md-4 "> <!-- dealers -->
+      <% @js_array =[] %>
+      <% @results.each do |d| %>
       <!-- populate for gmap -->
       <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website] %>
       <% @js_array << @collection %>
+      <!-- end populate for gmap -->
 
-      <%= d.dealer_name %><br />
-      <%= d.street_address_1 %><br />
-      <% unless d.street_address_2.blank? %>
-      <%= d.street_address_2 %><br />
-      <% end %>
-      <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
-      <%= d.country %><br />
-
-      TEL: <%= d.telephone_1 %><br />
-      <% unless d.email.blank? %>
-      <%= d.email %><br />
-      <% end %>
-      <% unless d.website.blank? %>
-      <%= d.website %><br />
-      <% end %> 
-
+      <h4><%= d.dealer_name %></h4>
+      <p class="lead"><%= d.street_address_1 %><br />
+              <% unless d.street_address_2.blank? %>
+                <%= d.street_address_2 %><br />
+              <% end %>
+            <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
+            <%= d.country %><br />
+      
+              TEL: <%= d.telephone_1 %><br />
+              <% unless d.email.blank? %>
+                <%= d.email %><br />
+              <% end %>
+              <% unless d.website.blank? %>
+                <%= d.website %><br />
+              <% end %> 
+            <% end %></p>
     </div>
-  <% end %>
+  
+  <div class="col-md-8">
+    <div id="map_us" style='width:100%; height: 800px;' class="maps"></div>
+  </div>
   </div>
 </div> 
+
+<% else %>
+Hey nothing here
+
 <% end %>
+<% end %>
+
+
 
 <style>
   #map_us { -webkit-transform: translateZ(0) !important; }
 </style>
 
-<div class="container">
+<!-- <div class="container">
   <div class="col-md-10 col-md-offset-1">
-    <div id="map_us" style="width:100% height: 800px;" class="maps">
+    <div id="map_us" style="width:100% height: 800px;" class="maps">adfadfsdfd
     </div>
   </div>
-</div>
+</div> -->
 
+<% @top_result = @js_array.first unless @js_array.blank? %>
+<%#= @top_result[1] %>
+<% unless @js_array.blank? %>
+  <% @js_array.each do |j| %>
+    <p><%= j[0] %>, <%= j[1] %>, <%= j[2] %></p>
+  <% end %>
+<% end %>
 
 <script type="text/javascript">
 
@@ -70,8 +115,8 @@ function initMap() {
     var locations = <%= raw @js_array %>;
 
     var map = new google.maps.Map(document.getElementById('map_us'), {
-      zoom: 4,
-      center: new google.maps.LatLng(37.09024, -95.712891),
+      zoom: 9,
+      center: new google.maps.LatLng(<%= raw @top_result[1] %>, <%= raw @top_result[2] %>),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
@@ -103,8 +148,11 @@ function initMap() {
 
 </script>
 
+<%= content_for :map_js do %>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn7yDGg8P2U61uzckRxdLLMD5_CkZuzY&callback=initMap&sensor=false"></script>
+<% end %>
 
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn7yDGg8P2U61uzckRxdLLMD5_CkZuzY&callback=initMap">
-  </script>
+
+
 

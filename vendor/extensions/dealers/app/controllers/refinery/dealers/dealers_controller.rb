@@ -9,33 +9,28 @@ module Refinery
       # before_filter :find_page
 
       def index
-         # @dealers = Dealer.all
-
-         # @dealers = Refinery::Dealers::Dealer.all
-
-
-         if params[:search]
-           
-           @params = params[:search]
-           @message = "You searched #{@params}"
-           # @message = "TIME dealers near - #{@params}"
-           # @results = Refinery::Dealers::Dealer.search_me(params[:search])
-           @results = Refinery::Dealers::Dealer.near(params[:search], 500, :order => :distance)
-           
-            
-           
+        if params[:search]
+          @params = params[:search]
+          @distance = params[:distance]
+          @message = params[:pedal_dealer]
+            if params[:pedal_dealer]
+              # @message_search = "Hey"
+              @results = Refinery::Dealers::Dealer.where(pedal_dealer: true).near(params[:search], @distance, :order => :distance)
+             else 
+              @results = Refinery::Dealers::Dealer.near(params[:search], @distance, :order => :distance)
+            end 
          else
           @message = "no matches"
-           @dealers = Refinery::Dealers::Dealer.all
-           
+          @dealers = Refinery::Dealers::Dealer.all
          end
-
-
-
       end
 
       def show
 
+      end
+
+      def dealers_uk
+        "This is UK"
       end
 
       protected

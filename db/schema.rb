@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160721213553) do
+ActiveRecord::Schema.define(:version => 20170114000406) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20160721213553) do
     t.string   "bike_type"
     t.string   "slug"
     t.integer  "weight"
+    t.string   "browser_title"
   end
 
   add_index "refinery_bikes", ["slug"], :name => "index_refinery_bikes_on_slug"
@@ -131,11 +132,14 @@ ActiveRecord::Schema.define(:version => 20160721213553) do
     t.string   "email"
     t.string   "website"
     t.integer  "position"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.string   "account_number"
     t.float    "latitude"
     t.float    "longitude"
+    t.boolean  "demo_center",      :default => false
+    t.boolean  "pedal_dealer",     :default => false
+    t.boolean  "full_dealer",      :default => false
   end
 
   create_table "refinery_design_submissions", :force => true do |t|

@@ -1,25 +1,30 @@
 <section id="dealer-search">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-8 col-md-offset-2">
         <h1>Find your nearest TIME dealer US</h1>
 
         <%= form_tag refinery.dealers_dealers_path, method: 'get' do %>
-        <%= label_tag 'query', t('.search_label') %>
-        <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search])} %>
-        
-        <%= submit_tag t(".go") %>
+        <div class="form-group">
+        <%#= label_tag 'query', t('.search_label') %>
+        <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search]), class: 'form-control input-lg'} %>
+        </div>
+        <div class="checkbox input-lg">
+        <%= check_box_tag :pedal_dealer, value = true, checked = false %><span>SHOW ME PEDAL DEALERS</span><%#= label_tag t('.search_pedal_dealers') %>
+        </div>
+        <%= submit_tag t(".go"), class: "btn btn-success btn-lg" %>
         <% end %>
 
       </div>
     </div>
   </div>
 </section>
-
+adfafd
 
 
 <% if @message.present? %>
   <%= @message %>
+  <%= @message_search %>
   <%#= @params %>
 
 
