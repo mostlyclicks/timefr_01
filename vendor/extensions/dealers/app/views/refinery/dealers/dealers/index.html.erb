@@ -1,3 +1,7 @@
+<style>
+  #map_us { -webkit-transform: translateZ(0) !important; }
+</style>
+
 <section id="dealer-search">
   <div class="container">
     <div class="row">
@@ -11,7 +15,7 @@
         <%#= label_tag 'query', t('.search_label') %>
         <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search]), class: 'form-control input-lg'} %>
         </div>
-        <%= select_tag :distance, options_for_select([[ "Select distance in miles", "10"],"50", "100", "250"], selected: "10"), class: 'form-control' %>
+        <%= select_tag :distance, options_for_select([[ "Select distance in miles", "50"],"50", "100", "250"], selected: "10"), class: 'form-control' %>
         <div class="checkbox input-lg">
         <%= check_box_tag :pedal_dealer, value = true, checked = false %><span>SHOW ME PEDAL DEALERS</span><%#= label_tag t('.search_pedal_dealers') %>
         </div>
@@ -23,18 +27,148 @@
   </div>
 </section>
 
+<h1><%= @pedal_dealer_check %></h1>
 
+<h1><%= @message %></h1>
+<!-- IF SEARCH RETURNS A RESULT -->
+<% content_for :no_result do %>
+  <h3><%= "We're sorry, there are no dealers near you: #{params[:search]}" %></h3>
+  <p>Please try increasing the distance of your search area or check the map below to see dealers in your country or region.</p>
+  <% @zoom = 4 %>
+  <!-- AND SHOW ZOOMED OUT MAP with country -->
+<% end %>
+
+<% content_for :result do %>
+  <h3><%= "We found #{@results.count} TIME dealer(s) within #{params[:distance]} miles from your location (#{params[:search]})" %></h3>
+  <!-- SHOW MAP ZOOMED IN TO AREA -->
+<% end %>
+
+<!-- This contains the search result, creates the result list and populates the map -->
+<!-- Get the top result to center the map -->
+<% content_for :dealer_list_map do %>
+  <% if @results.present? %>
+
+   <div class="container">
+    <div class="row">
+    
+      <div class="col-md-4 "> <!-- dealers -->
+        <% @js_array =[] %>
+        <% @results.each do |d| %>
+        <% populate_map_array(d) %>
+
+
+
+        <h4><%= d.dealer_name %></h4>
+        <small><%= d.latitude %> | <%= d.longitude %></small>
+        <p>
+          <%= d.street_address_1 %><br />
+            <% unless d.street_address_2.blank? %>
+              <%= d.street_address_2 %><br />
+            <% end %>
+          <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
+          
+    
+            TEL: <%= d.telephone_1 %><br />
+            <% unless d.email.blank? %>
+              <%= d.email %><br />
+            <% end %>
+            <% unless d.website.blank? %>
+              <%= d.website %><br />
+            <%= d.pedal_dealer %>
+            <% if d.pedal_dealer == true %>
+              'I AM A PEDAL DEALER'
+            <% end %>
+
+
+            <% end %> 
+          <% end %></p>
+
+      </div>
+
+      <!-- top result -->
+      <!-- recenter map with top_result[1] top_result[2] -->
+      <!-- reset zoom -->
+      <% @top_result = @js_array.first unless @js_array.blank? %>
+
+      <% if @top_result.present? %>
+        <% @zoom = 8 %>
+        <% @map_center = [] %>
+        <!-- Map center changes depending on country and result or no result -->
+        <% @map_center[0] = @top_result[1] %>
+        <% @map_center[1] = @top_result[2] %> 
+      <% else %>
+        <% @zoom = 4 %>
+      <% end %>
+    
+    <div class="col-md-8">
+      <div id="map_us" style='width:100%; height: 800px;' class="maps"></div>
+    </div>
+    </div>
+  </div> 
+
+  <% else %>
+
+    <% @zoom = 4 %>
+
+    <% country_switcher(@current_country) %>
+    <!-- POPULATES FALLBACK MAP IN COUNTRY IF NO RESULTS ARE FOUND -->
+    <%#= @dealers.count %>
+
+   <div class="container">
+    <div class="row">
+    
+      <div class="col-md-4 ">
+
+    <% @js_array = [] %>
+    <% @dealers.each do |d| %>
+      <% populate_map_array(d) %>
+
+      <h4><%= d.dealer_name %></h4>
+        <p>
+          <%= d.street_address_1 %><br />
+            <% unless d.street_address_2.blank? %>
+              <%= d.street_address_2 %><br />
+            <% end %>
+          <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
+          
+    
+            TEL: <%= d.telephone_1 %><br />
+            <% unless d.email.blank? %>
+              <%= d.email %><br />
+            <% end %>
+            <% unless d.website.blank? %>
+              <%= d.website %><br />
+            <% end %> 
+          </p>
+
+          <%= d.pedal_dealer %>
+          <% if d.pedal_dealer == true %>
+            'I AM A PEDAL DEALER'
+          <% end %>
+          <p></p>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+
+    <!-- SHOW FALLBACK MAP -->
+    <div id="map_us" style='width:100%; height: 800px;' class="maps"></div>
+
+    <%= @current_country %>
+ </div>
+  <% end %>
+<% end %>
+
+
+
+<!-- DISPLAY CONTENT - no result or result -->
 <section id="results-message">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
         <% if @results.blank? %>
-          <h3><%= "We're sorry, there are no dealers near you: #{params[:search]}" %></h3>
-          <p>Please try increasing the distance of your search area.</p>
+         <%= content_for :no_result %>
         <% else %>
-          <h3><%= "We found #{@results.count} TIME dealer(s) within #{params[:distance]} miles from your location (#{params[:search]})" %></h3>
-          <%= content_for :dealer_list %>
-          
+          <%= content_for :result %>
         <% end %>
       </div>
     </div>
@@ -42,100 +176,29 @@
 </section>
 
 
-
-
-<% content_for :dealer_list do %>
-<% unless @results.blank? %>
-
- <div class="container">
-  <div class="row">
-  
-    <div class="col-md-4 "> <!-- dealers -->
-      <% @js_array =[] %>
-      <% @results.each do |d| %>
-      <!-- populate for gmap -->
-      <% @collection = [d.dealer_name, d.latitude, d.longitude, d.street_address_1, d.street_address_2, d.city, d.state_province, d.postal_code, d.telephone_1, d.website] %>
-      <% @js_array << @collection %>
-      <!-- end populate for gmap -->
-
-      <h4><%= d.dealer_name %></h4>
-      <p class="lead"><%= d.street_address_1 %><br />
-              <% unless d.street_address_2.blank? %>
-                <%= d.street_address_2 %><br />
-              <% end %>
-            <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
-            <%= d.country %><br />
-      
-              TEL: <%= d.telephone_1 %><br />
-              <% unless d.email.blank? %>
-                <%= d.email %><br />
-              <% end %>
-              <% unless d.website.blank? %>
-                <%= d.website %><br />
-              <% end %> 
-            <% end %></p>
-    </div>
-  
-  <div class="col-md-8">
-    <div id="map_us" style='width:100%; height: 800px;' class="maps"></div>
-  </div>
-  </div>
-</div> 
-
-<% else %>
-Hey nothing here
-
-<% end %>
-<% end %>
-
-
-
-<style>
-  #map_us { -webkit-transform: translateZ(0) !important; }
-</style>
-
-<!-- <div class="container">
-  <div class="col-md-10 col-md-offset-1">
-    <div id="map_us" style="width:100% height: 800px;" class="maps">adfadfsdfd
-    </div>
-  </div>
-</div> -->
-
-<% @top_result = @js_array.first unless @js_array.blank? %>
-<%#= @top_result[1] %>
-<% unless @js_array.blank? %>
-  <% @js_array.each do |j| %>
-    <p><%= j[0] %>, <%= j[1] %>, <%= j[2] %></p>
-  <% end %>
-<% end %>
-
+<!-- DISPLAY MAP -->
 <script type="text/javascript">
 
 function initMap() {
     var locations = <%= raw @js_array %>;
-
     var map = new google.maps.Map(document.getElementById('map_us'), {
-      zoom: 9,
-      center: new google.maps.LatLng(<%= raw @top_result[1] %>, <%= raw @top_result[2] %>),
+      zoom: <%= raw @zoom %>,
+      center: new google.maps.LatLng(<%= @map_center[0] %>, <%= @map_center[1] %> ),
       mapTypeId: google.maps.MapTypeId.ROADMAP
+      // long_name: 'United States'
     });
-
     var marker, i;
-
     for (i = 0; i < locations.length; i++) {  
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map
       });    
-
       var contentString = '<strong>' + locations[i][0] + '</strong>' + '<br />' +
                           locations[i][3] + '<br />' +
                           locations[i][5] + ', ' + locations[i][6] + '<br />' +
                           locations[i][8] + '<br />' +
                           '<a href="http://' + locations[i][9] + '">' + locations[i][9] + '</a>';
-
       var infowindow = new google.maps.InfoWindow()
-
       google.maps.event.addListener(marker, 'click', (function(marker,contentString,infowindow) {
         return function() {
           infowindow.setContent(contentString);
@@ -145,14 +208,15 @@ function initMap() {
       })(marker, contentString, infowindow));
     }
 }
-
 </script>
 
 <%= content_for :map_js do %>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn7yDGg8P2U61uzckRxdLLMD5_CkZuzY&callback=initMap&sensor=false"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn7yDGg8P2U61uzckRxdLLMD5_CkZuzY&callback=initMap"></script>
 <% end %>
 
 
+
+<%= content_for :dealer_list_map %>
 
 
 

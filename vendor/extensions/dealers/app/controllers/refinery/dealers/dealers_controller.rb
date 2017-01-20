@@ -12,12 +12,21 @@ module Refinery
         if params[:search]
           @params = params[:search]
           @distance = params[:distance]
-          @message = params[:pedal_dealer]
-            if params[:pedal_dealer]
-              # @message_search = "Hey"
+
+          if params[:pedal_dealer]
+            @pedal_dealer_check = "trues"
+          end
+
+
+          #@message = params[:pedal_dealer]
+            if @pedal_dealer_check == true
+              # all dealers plus ones that are dealer true
+            
               @results = Refinery::Dealers::Dealer.where(pedal_dealer: true).near(params[:search], @distance, :order => :distance)
              else 
-              @results = Refinery::Dealers::Dealer.near(params[:search], @distance, :order => :distance)
+              # all dealers
+              @results = Refinery::Dealers::Dealer.where(full_dealer: true).near(params[:search], @distance, :order => :distance)
+
             end 
          else
           @message = "no matches"
@@ -29,9 +38,22 @@ module Refinery
 
       end
 
-      def dealers_uk
-        "This is UK"
-      end
+
+
+
+
+
+
+# all dealers
+
+# get all dealers that are checked pedal dealers and regular dealers
+
+# get dealers that are not that are not checked pedal dealers
+
+
+
+
+
 
       protected
 
@@ -42,6 +64,12 @@ module Refinery
       def find_page
         # @dealers = ::Refinery::Page::
       end
+
+
+
+
+
+
     end
   end
 end

@@ -18,6 +18,8 @@ module Refinery
           [street_address_1, city, state_province, country, postal_code].compact.join(', ')
         end
 
+      scope :pedal_dealers_only, -> { where(pedal_dealers: true) }
+
        # method is bypassed by geocoder near method 
        def self.search_me(search)
          if search
@@ -26,7 +28,9 @@ module Refinery
          else
            find(:all)
          end
-       end
+       end 
+
+       scope :pedal_dealers_only, -> { where(pedal_dealer: true) }
 
     end
   end
