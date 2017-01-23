@@ -55,6 +55,23 @@ class ApplicationController < ActionController::Base
     #@instatime = Instagram.tag_recent_media('timebikes')#.limit(12)
   end
 
+  # def load_dealers
+  #   @dealers = Refinery::Dealers::Dealer.all
+  # end
+
+  def get_country_ip
+    @r = request.remote_ip
+    #@r = '2.31.255.255'
+    @current_country = @geoip.country(@r).country_name
+
+    # FR          2.15.255.255
+    # Germany     2.175.255.255
+    # UK            2.31.255.255
+    # Vietnam       1.55.255.255
+    # Saudi Arabia  2.91.255.255
+    # us            3.255.255.255
+  end
+
   def load_fr_dealers
     @fr_dealers = Refinery::Dealers::Dealer.where(country: 'France')
   end

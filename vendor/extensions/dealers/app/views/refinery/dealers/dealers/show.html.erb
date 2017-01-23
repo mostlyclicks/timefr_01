@@ -1,0 +1,41 @@
+<style>
+  #map_us { -webkit-transform: translateZ(0) !important; }
+</style>
+
+<section id="dealer-search">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Find your nearest TIME dealer</h1>
+        <% if Rails.env.development? %>
+          <h1>DEALER ShOW</h1>
+        <% end %>
+        <%= form_tag refinery.dealers_dealers_path, method: 'get' do %>
+        <div class="form-group">
+        <%#= label_tag 'query', t('.search_label') %>
+        <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search]), class: 'form-control input-lg'} %>
+        </div>
+        <%= select_tag :distance, options_for_select([[ "Select distance in miles", "50"],"50", "100", "250"], selected: "10"), class: 'form-control' %>
+
+        <%= submit_tag "SEARCH", class: "btn btn-danger btn-lg", style: "margin-top:40px;" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h1><%= @pedal_dealer_check %></h1>
+
+<h1><%= @message %></h1>
+<!-- IF SEARCH RETURNS A RESULT -->
+<% content_for :no_result do %>
+  <h3><%#= "We're sorry, there are no dealers near you: #{params[:search]}" %></h3>
+  <p>Please try increasing the distance of your search area or check the map below to see dealers in your country or region.</p>
+  <% @zoom = 4 %>
+  <!-- AND SHOW ZOOMED OUT MAP with country -->
+<% end %>
+
+<% content_for :result do %>
+  <h3><%#= "We found #{@results.count} TIME dealer(s) within #{params[:distance]} miles from your location (#{params[:search]})" %></h3><br /><br />
+  <!-- SHOW MAP ZOOMED IN TO AREA -->
+<% end %>

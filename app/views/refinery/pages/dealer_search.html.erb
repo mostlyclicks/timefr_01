@@ -1,0 +1,19 @@
+<section id="dealer-search">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <% form_tag dealers_admin_dealers_path, :method => 'get' do %>
+        <p>
+          <%#= text_field_tag :search, params[:search] %>
+          <%= text_field_tag :search, params[:search], placeholder: 'City, State or ZIP' %>
+          <%= submit_tag "Search", :name => nil %>
+        </p>
+      <% end %>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/dealer_search' %>
+
