@@ -9,31 +9,31 @@ module Refinery
       # before_filter :find_page
 
       def index
-<<<<<<< HEAD
-         # @dealers = Dealer.all
+# <<<<<<< HEAD
+#          # @dealers = Dealer.all
 
-         # @dealers = Refinery::Dealers::Dealer.all
+#          # @dealers = Refinery::Dealers::Dealer.all
 
 
-         if params[:search]
+#          if params[:search]
            
-           @params = params[:search]
-           @message = "You searched #{@params}"
-           # @message = "TIME dealers near - #{@params}"
-           # @results = Refinery::Dealers::Dealer.search_me(params[:search])
-           @results = Refinery::Dealers::Dealer.near(params[:search], 500, :order => :distance)
+#            @params = params[:search]
+#            @message = "You searched #{@params}"
+#            # @message = "TIME dealers near - #{@params}"
+#            # @results = Refinery::Dealers::Dealer.search_me(params[:search])
+#            @results = Refinery::Dealers::Dealer.near(params[:search], 500, :order => :distance)
            
             
            
-         else
-          @message = "no matches"
-           @dealers = Refinery::Dealers::Dealer.all
+#          else
+#           @message = "no matches"
+#            @dealers = Refinery::Dealers::Dealer.all
            
-         end
+#          end
 
 
 
-=======
+# =======
         if params[:search]
           @params = params[:search]
           @distance = params[:distance]
@@ -59,19 +59,19 @@ module Refinery
           @message = "no matches"
           @dealers = Refinery::Dealers::Dealer.all
          end
->>>>>>> add_pedal_testcenter_search
+          # add_pedal_testcenter_search
       end
 
       def show
 
       end
 
-<<<<<<< HEAD
-      protected
+# <<<<<<< HEAD
+#       protected
 
-      def find_all_dealers
-        @dealers = Dealer.order('dealer_name ASC')
-=======
+#       def find_all_dealers
+#         @dealers = Dealer.order('dealer_name ASC')
+# =======
 
 
 
@@ -93,21 +93,20 @@ module Refinery
 
       def find_all_dealers
         @dealers = Dealer.order('position DESC')
->>>>>>> add_pedal_testcenter_search
+        # add_pedal_testcenter_search
       end
 
       def find_page
         # @dealers = ::Refinery::Page::
       end
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> add_pedal_testcenter_search
+
+    # add_pedal_testcenter_search
     end
   end
 end
