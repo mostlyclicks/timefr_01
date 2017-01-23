@@ -2,7 +2,7 @@ Refinery::Core::Engine.routes.draw do
 
   # Frontend routes
   namespace :dealers do
-    resources :dealers, :path => '', :only => [:index, :show] #, :show
+    resources :dealers, :path => '', :only => [:index] #, :show
     # get :dealers, to: 'dealers#index'
   end
 
