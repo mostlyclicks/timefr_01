@@ -17,17 +17,19 @@ module Refinery
             @pedal_dealer_check = "trues"
           end
 
+          @results = Refinery::Dealers::Dealer.near(params[:search], @distance, :order => ("distance, full_dealer DESC")) #, :order => :full_dealer
+
 
           #@message = params[:pedal_dealer]
-            if @pedal_dealer_check == true
-              # all dealers plus ones that are dealer true
+            # if @pedal_dealer_check == true
+            #   # all dealers plus ones that are dealer true
             
-              @results = Refinery::Dealers::Dealer.where(pedal_dealer: true).near(params[:search], @distance, :order => :distance)
-             else 
-              # all dealers
-              @results = Refinery::Dealers::Dealer.where(full_dealer: true).near(params[:search], @distance, :order => :distance)
+            #   @results = Refinery::Dealers::Dealer.where(pedal_dealer: true).near(params[:search], @distance, :order => :distance)
+            #  else 
+            #   # all dealers
+            #   @results = Refinery::Dealers::Dealer.where(full_dealer: true).near(params[:search], @distance, :order => :distance)
 
-            end 
+            # end 
          else
           @message = "no matches"
           @dealers = Refinery::Dealers::Dealer.all

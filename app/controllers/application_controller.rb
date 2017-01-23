@@ -54,8 +54,8 @@ class ApplicationController < ActionController::Base
   # end
 
   def get_country_ip
-    # @r = request.remote_ip
-    @r = '3.255.255.255'
+    @r = request.remote_ip
+    #@r = '2.31.255.255'
     @current_country = @geoip.country(@r).country_name
 
     # FR          2.15.255.255

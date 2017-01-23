@@ -1302,9 +1302,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
     //   width:150px;
     // }
   }
+}
 
-  
+#search-results-list {
+  .icon-row {
+    margin-bottom:30px;
+    
+  }
 
+  h4 {margin-bottom:0px;}
+}
+
+#result-key {
+  margin-top:-60px;
+  small {line-height:1.15em;color:rgba(100,100,100,.5);display:block;}
 }
 
 
