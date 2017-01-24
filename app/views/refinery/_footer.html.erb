@@ -59,14 +59,14 @@
         <%= t('.copyright', :year => Time.now.year,
                             :site_name => Refinery::Core.site_name) %>
                             
-
-                            <%# @r = '2.15.255.255' %>
-                            <% @r = request.remote_ip %>
+                            <% if Rails.env.development? %>
+                              <% @r = '2.15.255.255' %>
+                            <% else %>
+                              <% @r = request.remote_ip %>
+                            <% end %>
+                            
                             <%= @geoip.country(@r).country_name %> 
 
-                            
-                            
-                            
                             <% @current_country %> 
 
       </small>

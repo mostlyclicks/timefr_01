@@ -15,7 +15,7 @@
         <%#= label_tag 'query', t('.search_label') %>
         <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search]), class: 'form-control input-lg'} %>
         </div>
-        <%= select_tag :distance, options_for_select([[ "Select distance in miles", "50"],"50", "100", "250"], selected: "10"), class: 'form-control' %>
+        <%= select_tag :distance, options_for_select([[ "Select distance in miles", "10"],"50", "100", "250"], selected: "10"), class: 'form-control' %>
 
         <%= submit_tag "SEARCH", class: "btn btn-danger btn-lg", style: "margin-top:40px;" %>
         <% end %>
@@ -30,7 +30,7 @@
 <!-- IF SEARCH RETURNS A RESULT -->
 <% content_for :no_result do %>
   <h3><%= "We're sorry, there are no dealers near you: #{params[:search]}" %></h3>
-  <p>Please try increasing the distance of your search area or check the map below to see dealers in your country or region.</p>
+  <p style="margin-bottom:80px;">Please try increasing the distance of your search area or check the map below to see dealers in your country or region.</p>
   <% @zoom = 4 %>
   <!-- AND SHOW ZOOMED OUT MAP with country -->
 <% end %>
@@ -53,6 +53,9 @@
         <% @results.each do |d| %>
         <% populate_map_array(d) %>
         <h4><%= d.dealer_name %></h4>
+        <% if Rails.env.development? %>
+          <small><%= d.latitude %> | <%= d.longitude %></small>
+        <% end %>
         
         <p>
           <%= d.street_address_1 %><br />
@@ -72,7 +75,7 @@
                 <div class="col-md-8">
                 <% if d.demo_center == true %>
                   <div class="col-md-2" style="margin-right:10px;">
-                    <%= image_tag 'dealer-icons-test-center-red.png', class: 'img-responsive', alt: 'TIME TEST Center icon', title: 'TIME TEST Center' %>
+                    <%= link_to (image_tag 'dealer-icons-test-center-red.png', class: 'img-responsive', alt: 'TIME TEST Center icon', title: 'TIME TEST Center'), '/dealers-us/time-test-centers' %>
                   </div>
                 <% end %>
                 <% if d.full_dealer == true %>
@@ -181,8 +184,7 @@
     <% @map_center[1] = 0 %> 
     <% @zoom = 1 %>
 
-    <%= @results.blank?
-     %>
+ 
 
   </div>
   <div class="col-md-8">
