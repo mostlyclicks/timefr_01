@@ -39,10 +39,11 @@ module Refinery
           @distance = params[:distance]
 
           if params[:pedal_dealer]
-            @pedal_dealer_check = "trues"
+            @pedal_dealer_check = "true"
           end
 
-          @results = Refinery::Dealers::Dealer.near(params[:search], @distance, :order => ("distance, full_dealer DESC")) #, :order => :full_dealer
+          # http://stackoverflow.com/questions/3587776/ruby-on-rails-how-do-i-sort-with-two-columns-using-activerecord
+          @results = Refinery::Dealers::Dealer.near(params[:search], @distance, :order => ("distance"), :order => ("full_dealer DESC"), :order => ("demo_center DESC"))
 
 
           #@message = params[:pedal_dealer]

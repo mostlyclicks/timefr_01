@@ -22,12 +22,12 @@ en:
       dealers:
         show:
           other: Other Dealers
-          search_site_for: Search TIME dealers - city, state or zip
+          search_site_for: Search TIME dealers - city and state or zip
           search_pedal_dealers: INCLUDE PEDAL DEALERS
           go: SEARCH
         index:
           other: Other Dealers
-          search_site_for: Search TIME dealers - city, state or zip
+          search_site_for: Search TIME dealers - city and state or zip
           search_pedal_dealers: INCLUDE PEDAL DEALERS
           go: SEARCH
   activerecord:
