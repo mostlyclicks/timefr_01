@@ -154,7 +154,7 @@
             <% unless d.street_address_2.blank? %>
               <%= d.street_address_2 %><br />
             <% end %>
-          <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
+          <%= d.city %>, <%= d.state_province %> <%= d.postal_code %><br />
             TEL: <%= d.telephone_1 %><br />
             <% unless d.email.blank? %>
               <%= d.email %><br />
