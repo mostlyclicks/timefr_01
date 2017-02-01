@@ -43,7 +43,8 @@ module Refinery
           end
 
           # http://stackoverflow.com/questions/3587776/ruby-on-rails-how-do-i-sort-with-two-columns-using-activerecord
-          @results = Refinery::Dealers::Dealer.near(params[:search], @distance, :order => ("distance"), :order => ("full_dealer DESC"), :order => ("demo_center DESC"))
+          # @results = Refinery::Dealers::Dealer.near(params[:search], @distance, :order => ("distance"), :order => ("full_dealer"), :order => ("demo_center DESC"))
+          @results = Refinery::Dealers::Dealer.near(params[:search], @distance, :order => ("full_dealer DESC"))
 
 
           #@message = params[:pedal_dealer]
