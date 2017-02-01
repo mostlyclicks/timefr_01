@@ -1359,6 +1359,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
     
   }
 
+  .result-scroll {
+    width:100%;height:600px;overflow:scroll;padding:20px;background-color:rgba(200,200,200,.1);
+  }
+
   h4 {margin-bottom:0px;}
 }
 

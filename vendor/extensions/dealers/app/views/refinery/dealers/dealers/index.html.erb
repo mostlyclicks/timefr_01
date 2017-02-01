@@ -45,10 +45,15 @@
 <% content_for :dealer_list_map do %>
   <% if @results.present? %>
 
-   <div class="container" id="search-results-list">
+   <div class="container-fluid" id="search-results-list">
     <div class="row">
     
-      <div class="col-md-4"> <!-- dealers -->
+      <div class="col-md-3"> 
+
+
+        <div class="result-scroll">
+        
+        <!-- dealers -->
         <% @js_array =[] %>
         <% @results.each do |d| %>
         <% populate_map_array(d) %>
@@ -62,7 +67,7 @@
             <% unless d.street_address_2.blank? %>
               <%= d.street_address_2 %><br />
             <% end %>
-          <%= d.city + ',' %> <%= d.state_province %> <%= d.postal_code %><br />
+          <%= d.city %>, <%= d.state_province %> <%= d.postal_code %><br />
           
             TEL: <%= d.telephone_1 %><br />
             <% unless d.email.blank? %>
@@ -74,20 +79,22 @@
               <div class="row icon-row" >
                 <div class="col-md-8">
                 <% if d.demo_center == true %>
-                  <div class="col-md-2" style="margin-right:10px;">
+                  <div class="col-md-2 col-xs-1" style="margin-right:10px;">
                     <%= link_to (image_tag 'dealer-icons-test-center-red.png', class: 'img-responsive', alt: 'TIME TEST Center icon', title: 'TIME TEST Center'), '/dealers/dealers-us/time-test-centers' %>
                   </div>
                 <% end %>
                 <% if d.full_dealer == true %>
-                  <div class="col-md-2"><%= image_tag 'dealer-icons-full-dealer.png', class: 'img-responsive', alt: 'TIME Frame, Accessories dealer icon', title: 'TIME Frame, Accessories dealer' %></div>
+                  <div class="col-md-2 col-xs-1"><%= image_tag 'dealer-icons-full-dealer.png', class: 'img-responsive', alt: 'TIME Frame, Accessories dealer icon', title: 'TIME Frame, Accessories dealer' %></div>
                 <% end %>
                 <% if d.pedal_dealer == true %>
-                  <div class="col-md-2"><%= image_tag 'dealer-icons-pedal-dealer.png', class: 'img-responsive', alt: 'Pedal dealer icon', title: 'TIME Pedal dealer' %></div>
+                  <div class="col-md-2 col-xs-1"><%= image_tag 'dealer-icons-pedal-dealer.png', class: 'img-responsive', alt: 'Pedal dealer icon', title: 'TIME Pedal dealer' %></div>
                 <% end %>
                 </div>
               </div>
           <% end %>
         </p>
+
+        </div>
 
       </div>
 
@@ -106,7 +113,7 @@
         <% @zoom = 4 %>
       <% end %>
     
-    <div class="col-md-8">
+    <div class="col-md-9">
       <div id="map_us" style='width:100%; height: 600px;' class="maps"></div> 
 
       <% if @current_country == 'United States' %>
@@ -130,7 +137,14 @@
     </div>
   </div> 
 
+
+
+
   <% else %>
+
+
+
+
 
     <% @zoom = 4 %>
 
