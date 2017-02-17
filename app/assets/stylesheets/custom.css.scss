@@ -975,7 +975,7 @@ padding:80px 20px;
   height:100vh;
   color:#fff;
   h1 {@include header-style(36px, 200, white); display:none;}
-  h3 {@include header-style(24px, 100, white); text-transform:uppercase;letter-spacing:.05em;padding:0 40px;text-align:center;}
+  h3 {@include header-style(18px, 100, white); text-transform:uppercase;letter-spacing:.05em;padding:0 40px;text-align:center;}
   p {@include header-style(16px, 200, white); letter-spacing:.05em; opacity:.7;text-align:center;}
 
 }
@@ -983,7 +983,7 @@ padding:80px 20px;
 #link-commute-trail {
 
     h1 {@include header-style(36px, 100, black);}
-    h3 {@include header-style(24px, 200, #b1b1b1); text-transform:normal;letter-spacing:.05em;padding:0 80px;}
+    h3 {@include header-style(18px, 200, #b1b1b1); text-transform:normal;letter-spacing:.05em;padding:0 80px;}
   #commute {
     img:first-of-type {margin:0 auto;height:150px;}
     
@@ -1021,6 +1021,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     
     
   }
+}
+
+#easy-cleat {
+  padding:40px;
+   h1 {@include header-style(36px, 100, black);}
+    h3 {@include header-style(18px, 200, #b1b1b1); text-transform:normal;letter-spacing:.05em;padding:0 80px;}
+
 }
 
 .rider-pedals {
