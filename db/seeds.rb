@@ -140,21 +140,46 @@ Refinery::Groups::Engine.load_seed
 
 # ]
 
+@gb_dealers = [
 
- # @gb_dealers.each do |gb|
- #   Refinery::Dealers::Dealer.create(
- #     dealer_name: gb[:dealer_name],
- #     street_address_1: gb[:street_address_1],
- #     street_address_2: gb[:street_address_2],
- #     postal_code: gb[:postal_code],
- #     city: gb[:city],
- #     telephone_1: gb[:telephone_1],
- #     state_province: gb[:state_province],
- #     country: gb[:country],
- #     email: gb[:email],
- #     website: gb[:website]
- #   )
- # end
+
+{account: '', dealer_name: 'GEOFFREY BUTLER CYCLES', street_address_1: '429 BRIGHTON ROAD', street_address_2: '', city: 'SOUTH CROYDON', state_province: 'SURREY', postal_code: 'CR2 6EU', email: 'shop@gbcycles.co.uk', website: 'www.gbcycles.co.uk', telephone_1: '02086885094'},
+{account: '', dealer_name: 'BROMLEY BICYCLE CO', street_address_1: '27 WIDMORE ROAD', street_address_2: '', city: 'BROMLEY', state_province: 'KENT', postal_code: 'BR1 1RW', email: 'info@bromleybike.com', website: 'www.bromleybike.co.uk', telephone_1: '02084604852'},
+{account: '', dealer_name: 'CLIMB ON BIKES LTD', street_address_1: '24/25 CONINGSBY STREET', street_address_2: '', city: 'HEREFORD', postal_code: 'HR1 2DY', email: 'climbonbikes@aol.com',  website: 'www.climbonbikes.co.uk',  telephone_1: '01432261211'},
+{account: '', dealer_name: 'RICCI LTD', street_address_1: '82 MOUNT AMBROSE', street_address_2: '', city: 'REDRUTH', state_province: 'CORNWALL', postal_code: 'TR15 1QR', email: 'bikechainsales@live.com', website: 'www.bikechainricci.co.uk', telephone_1: '01209215270'},
+{account: '', dealer_name: 'CYCLEWORXS', street_address_1: '79 REPLINGHAM ROAD', street_address_2: '', city: 'SOUTHFIELDS', city: 'LONDON', postal_code: 'SW18 5LU', email: 'ben@cycleworx.co.uk', website: 'www.cycleworx.co.uk',  email: '02086164049'},
+{account: '', dealer_name: '10PT LTD T/A TEN-POINT', street_address_1: '36 BOIS LANE', street_address_2: '', city: 'AMERSHAM', state_province: 'BUCKS', postal_code: 'HP6 6BP,', email: '10pt@ten-point.co.uk',  website: 'www.ten-point.co.uk', telephone_1: '01494433124'},
+{account: '', dealer_name: 'CADENCE LIMITED', street_address_1: '9 CHELSEA ROAD', street_address_2: '', city: 'BATH', postal_code: 'BA1 3PP', email: 'info@cadencebikeshop.com', website: 'www.cadencebikeshop.com', telephone_1: '01225446887'},
+{account: '', dealer_name: 'ATHLETE SERVICE', street_address_1: 'THE OAST HOUSE, GREYS ROAD CAR PARK', street_address_2: '', city: 'HENLEY ON THAMES', state_province: 'OXFORDSHIRE', postal_code: 'RG9 2AA', email: 'sales@athleteservice.com', website: 'www.athleteservice.com', telephone_1: '01491598089'},
+{account: '', dealer_name: 'WEALDEN CYCLES', street_address_1: 'UNIT 1, PARK LANE', street_address_2: '', city: 'CROWBOROUGH', state_province: 'EAST SUSSEX', postal_code: 'TN6 2QN', email: 'sales@wealdencycles.co.uk', website: 'www.wealdencycles.co.uk', telephone_1: '01892653736'},
+{account: '', dealer_name: 'THE GORILLA FIRM LTD', street_address_1: 'UNIT 2', street_address_2: 'OUNDLE WHARF', city: 'STATION ROAD', state_province: 'OUNDLE', postal_code: 'PE8 4DE', email: 'thegorillas@thegorillafirm.com', website: 'www.gorillafirmcycling.com', telephone_1:  '01832273783'},
+{account: '', dealer_name: 'COMTAT CYCLING', street_address_1: 'FAREHAM INNOVATION CENTRE, UNIT 8', street_address_2: '', city: 'METEOR WAY', state_province: 'LEE ON SOLENT', postal_code: 'PO13 9FU', email: 'sales@comtat.co.uk', website: 'www.comtat.co.uk',  telephone_1: '08452996103'},
+{account: '', dealer_name: 'ABBOTTS ANN CYCLES', street_address_1: 'WILLIAMS GARAGE SALISBURY ROAD', street_address_2: '', city: 'ABBOTTS ANN', state_province: 'ANDOVER', postal_code: 'SP11 7NS', email: 'sales@abbottsanncycles.co.uk', website:  'www.abbottsanncycles.co.uk', telephone_1: '01264353322'},
+{account: '', dealer_name: 'PUSH CARTEL', street_address_1: 'OLD MILL BRIDGE', street_address_2: 'NORTH ROAD', city: 'AMBLESIDE', postal_code: 'LA22 9DT', email: 'info@pushcartel.co.uk', website: 'www.pushcartel.co.uk', telephone_1: '01539431408'},
+{account: '', dealer_name: 'CYCLEOLOGY LTD', street_address_1: '3 COLLEGE STREET', street_address_2: '', city: 'ARMAGH', state_province: 'CO ARMAGH', country: 'NORTHERN IRELAND', postal_code: 'BT61 9BT', telephone_1: '02837528223'},
+{account: '', dealer_name: 'HOLLINGSWORTH BIKES LTD', street_address_1: '1 DRUMMARTIN ROAD', street_address_2: 'KILMACUD ROAD LOWER', city: 'DUBLIN', postal_code: '14', country: 'IRELAND', email: 'HOLLYBIKES@HOTMAIL.COM',  website: 'www.mycycle.ie',  telephone_1: '0035312960225'},
+{account: '', dealer_name: 'SYNERGY SPORTS T/A SYNERGY', street_address_1: '171 HIGH STREET', street_address_2: '', city: 'AUCHTERARDER', postal_code: 'PH3 1AD', email: 'info@synergycycles.cc', website: 'www.synergycycles.cc', telephone_1: '01764664251'},
+{account: '', dealer_name: 'VELORUTION  (ISLINGTON)', street_address_1: '123 ESSEX ROAD', street_address_2: 'ISLINGTON', city: 'LONDON', postal_code: 'N1 2SN',   email: 'islington@velorution.com',  website: 'www.velorution.com',  telephone_1: '02072268765'},
+{account: '', dealer_name: 'The Hub Bike For Life', street_address_1: 'COONAGH CROSS, ENNIS ROAD', city: 'LIMERICK', country: 'IRELAND', email: 'info@thehubbikes.ie', website: 'www.thehubbikes.ie',  telephone_1: '0035361324444'}
+
+
+]
+
+
+  @gb_dealers.each do |gb|
+    Refinery::Dealers::Dealer.create(
+      dealer_name: gb[:dealer_name],
+      street_address_1: gb[:street_address_1],
+      street_address_2: gb[:street_address_2],
+      postal_code: gb[:postal_code],
+      city: gb[:city],
+      telephone_1: gb[:telephone_1],
+      state_province: gb[:state_province],
+      country: gb[:country],
+      email: gb[:email],
+      website: gb[:website]
+    )
+  end
 
 
 #  @p_dealers_us = [
@@ -359,56 +384,56 @@ Refinery::Groups::Engine.load_seed
 #  ]
 
 
-@p_dealers_us = [
+# @p_dealers_us = [
  
-{account: '', dealer_name: 'Coral Way Bike Shop', street_address_1: '2237 Coral Way', street_address_2: '', city: 'Miami', state_province: 'FL', postal_code: '33145', telephone_1: '(305) 856-5731', country: 'USA', email: '', website: 'http://www.coralwaybicycles.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'TWO HUBS', street_address_1:  '27231 Burbank', street_address_2: 'Suite 201', city: 'Foothill Ranch', state_province: 'CA', postal_code: '92610',  telephone_1: '(877) 480-2453', country: 'USA', email: '', website:  'https://www.twohubs.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'Cycle Fast USA', street_address_1: '643 E Jericho Turnpike', street_address_2: 'Huntington Station', state_province: 'NY', postal_code: '11746', telephone_1: '(631) 673-2211', country: 'USA', email: '', website: 'http://www.bicyclebuys.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'Suncycling Cycle & Fitness Shop', street_address_1: '132 Hialeah Dr', street_address_2: '', city: 'Hialeah', state_province: 'FL', postal_code: '33010', telephone_1: '(786) 409-2663', country: 'USA', website: 'http://suncycling.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'BG BICYCLES', street_address_1: '6860 W Park Ave d', city: 'Houma', state_province: 'LA', postal_code: '70364', telephone_1: '(985) 327-8709', country: 'USA', website: 'http://www.bgbicycles.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'BIKE IMPROVE ', street_address_1: '10929 California', street_address_2: 'Route 2', city: 'Los Angeles', state_province: 'CA', postal_code: '90025', telephone_1: '(310) 400-0363', country: 'USA', website: 'http://www.bike-improve.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'DAVE\'S BIKE SHOP', street_address_1: '367 W Broadway', street_address_2: '', city: 'St Idaho Falls', state_province: 'ID', postal_code: '83402', telephone_1: '(208) 529-6886', country: 'USA', website: '', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'NICE BIKE', street_address_1: '2439 S Broadway', street_address_2: '', city: 'Denver', state_province: 'CO', postal_code: '80210', telephone_1: '(720) 242-6455', country: 'USA', website: 'http://ridenicebike.com', pedal_dealer: true, full_dealer: true, demo_center: false},
-{account: '', dealer_name: 'The Dropout', street_address_1: '935 N Virginia St a', street_address_2: '', city: 'Reno', state_province: 'NV', postal_code: '89503', telephone_1: '(775) 432-1311', country: 'USA', website: 'http://www.thedropoutbikeshop.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'SBR CYCLES', street_address_1: '858 State St', street_address_2: '', city: 'Orem', state_province: 'UT', postal_code: '84097', telephone_1: '(801) 225-0076', country: 'USA', website: 'http://www.sbrutah.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'Coral Way Bike Shop', street_address_1: '2237 Coral Way', street_address_2: '', city: 'Miami', state_province: 'FL', postal_code: '33145', telephone_1: '(305) 856-5731', country: 'USA', email: '', website: 'http://www.coralwaybicycles.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'TWO HUBS', street_address_1:  '27231 Burbank', street_address_2: 'Suite 201', city: 'Foothill Ranch', state_province: 'CA', postal_code: '92610',  telephone_1: '(877) 480-2453', country: 'USA', email: '', website:  'https://www.twohubs.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'Cycle Fast USA', street_address_1: '643 E Jericho Turnpike', street_address_2: 'Huntington Station', state_province: 'NY', postal_code: '11746', telephone_1: '(631) 673-2211', country: 'USA', email: '', website: 'http://www.bicyclebuys.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'Suncycling Cycle & Fitness Shop', street_address_1: '132 Hialeah Dr', street_address_2: '', city: 'Hialeah', state_province: 'FL', postal_code: '33010', telephone_1: '(786) 409-2663', country: 'USA', website: 'http://suncycling.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'BG BICYCLES', street_address_1: '6860 W Park Ave d', city: 'Houma', state_province: 'LA', postal_code: '70364', telephone_1: '(985) 327-8709', country: 'USA', website: 'http://www.bgbicycles.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'BIKE IMPROVE ', street_address_1: '10929 California', street_address_2: 'Route 2', city: 'Los Angeles', state_province: 'CA', postal_code: '90025', telephone_1: '(310) 400-0363', country: 'USA', website: 'http://www.bike-improve.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'DAVE\'S BIKE SHOP', street_address_1: '367 W Broadway', street_address_2: '', city: 'St Idaho Falls', state_province: 'ID', postal_code: '83402', telephone_1: '(208) 529-6886', country: 'USA', website: '', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'NICE BIKE', street_address_1: '2439 S Broadway', street_address_2: '', city: 'Denver', state_province: 'CO', postal_code: '80210', telephone_1: '(720) 242-6455', country: 'USA', website: 'http://ridenicebike.com', pedal_dealer: true, full_dealer: true, demo_center: false},
+# {account: '', dealer_name: 'The Dropout', street_address_1: '935 N Virginia St a', street_address_2: '', city: 'Reno', state_province: 'NV', postal_code: '89503', telephone_1: '(775) 432-1311', country: 'USA', website: 'http://www.thedropoutbikeshop.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'SBR CYCLES', street_address_1: '858 State St', street_address_2: '', city: 'Orem', state_province: 'UT', postal_code: '84097', telephone_1: '(801) 225-0076', country: 'USA', website: 'http://www.sbrutah.com', pedal_dealer: true, full_dealer: false, demo_center: false},
 
-{account: '', dealer_name: 'Velo Concepts', street_address_1: '19014 Crossroad Pkwy', street_address_2: '', city: 'Culpeper', state_province: 'VA', postal_code: '22701', telephone_1: '(540) 773-2400', country: 'USA', website: 'http://www.veloconcepts.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'VELOSCIENCE BIKE WORKS', street_address_1: '220 Market St', street_address_2: '', city: 'New Albany', state_province: 'OH', postal_code: '43054', telephone_1: '(614) 855-9590', country: 'USA', website: 'http://velosciencebikeworks.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'College Cyclery', street_address_1: '622 S Virginia St', street_address_2: '', city: 'Reno', state_province: 'NV', postal_code: '89501', telephone_1: '(775) 323-1809', country: 'USA', website: 'http://www.collegecyclery.net', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'FLANDERS BROS', street_address_1: '2707 Lyndale Ave S', street_address_2: '', city: 'Minneapolis', state_province: 'MN', postal_code: '55408', telephone_1: '(612) 872-6994', country: 'USA', website: 'http://flandersbros.com', pedal_dealer: true, full_dealer: true, demo_center: false},
-{account: '', dealer_name: 'PERPETUAL MOTION BICYCLES', street_address_1: '1002 Maple St', street_address_2: '', city: 'Carrollton', state_province: 'GA', postal_code: '30117', telephone_1: '(770) 834-3278', country: 'USA', website: 'http://www.perpetualmotionbikes.com/hub/', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'DAVIS WHEELWORKS', street_address_1: '247 F St', street_address_2: '', city: 'Davis', state_province: 'CA', postal_code: '95616', telephone_1: '(530) 753-3118', country: 'USA', website: 'http://daviswheelworks.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'REAL WHEELS BICYCLE STUDIO', street_address_1: '121 Argall Way', street_address_2: '', city: 'Nevada City', state_province: 'CA', postal_code: '95959', telephone_1: '(530) 478-5888', country: 'USA', website:' http://realwheelsbike.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'TRISPORTS.COM', street_address_1: '4495 S. Coach Dr.', city: 'Tuscon', state_province: 'AZ', postal_code: '85714', telephone_1: '(520) 884-8743', country: 'USA', website: 'http://www.trisports.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'BICI SPORT', street_address_1: '143 Kentucky St', street_address_2: '', city: 'Petaluma', state_province: 'CA', postal_code: '94952', telephone_1: '(707) 775-4676', country: 'USA', website: 'http://www.bicisportusa.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'TRANSITION AREA', street_address_1: '5011 N Ocean Blvd #1', street_address_2: '', city: 'Ocean Ridge', state_province: 'FL', postal_code: '33435', telephone_1: '(561) 337-4593', country: 'USA', website: 'http://www.transition-area.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'Velo Concepts', street_address_1: '19014 Crossroad Pkwy', street_address_2: '', city: 'Culpeper', state_province: 'VA', postal_code: '22701', telephone_1: '(540) 773-2400', country: 'USA', website: 'http://www.veloconcepts.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'VELOSCIENCE BIKE WORKS', street_address_1: '220 Market St', street_address_2: '', city: 'New Albany', state_province: 'OH', postal_code: '43054', telephone_1: '(614) 855-9590', country: 'USA', website: 'http://velosciencebikeworks.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'College Cyclery', street_address_1: '622 S Virginia St', street_address_2: '', city: 'Reno', state_province: 'NV', postal_code: '89501', telephone_1: '(775) 323-1809', country: 'USA', website: 'http://www.collegecyclery.net', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'FLANDERS BROS', street_address_1: '2707 Lyndale Ave S', street_address_2: '', city: 'Minneapolis', state_province: 'MN', postal_code: '55408', telephone_1: '(612) 872-6994', country: 'USA', website: 'http://flandersbros.com', pedal_dealer: true, full_dealer: true, demo_center: false},
+# {account: '', dealer_name: 'PERPETUAL MOTION BICYCLES', street_address_1: '1002 Maple St', street_address_2: '', city: 'Carrollton', state_province: 'GA', postal_code: '30117', telephone_1: '(770) 834-3278', country: 'USA', website: 'http://www.perpetualmotionbikes.com/hub/', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'DAVIS WHEELWORKS', street_address_1: '247 F St', street_address_2: '', city: 'Davis', state_province: 'CA', postal_code: '95616', telephone_1: '(530) 753-3118', country: 'USA', website: 'http://daviswheelworks.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'REAL WHEELS BICYCLE STUDIO', street_address_1: '121 Argall Way', street_address_2: '', city: 'Nevada City', state_province: 'CA', postal_code: '95959', telephone_1: '(530) 478-5888', country: 'USA', website:' http://realwheelsbike.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'TRISPORTS.COM', street_address_1: '4495 S. Coach Dr.', city: 'Tuscon', state_province: 'AZ', postal_code: '85714', telephone_1: '(520) 884-8743', country: 'USA', website: 'http://www.trisports.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'BICI SPORT', street_address_1: '143 Kentucky St', street_address_2: '', city: 'Petaluma', state_province: 'CA', postal_code: '94952', telephone_1: '(707) 775-4676', country: 'USA', website: 'http://www.bicisportusa.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'TRANSITION AREA', street_address_1: '5011 N Ocean Blvd #1', street_address_2: '', city: 'Ocean Ridge', state_province: 'FL', postal_code: '33435', telephone_1: '(561) 337-4593', country: 'USA', website: 'http://www.transition-area.com', pedal_dealer: true, full_dealer: false, demo_center: false},
 
-{account: '', dealer_name: 'BIKE EFFECT', street_address_1: '910 Broadway #100', street_address_2: '', city: 'Santa Monica', state_province: 'CA', postal_code: '90401', telephone_1: '(310) 393-4348', country: 'USA', website: 'http://www.bikeeffect.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'BICYCLE PRO SHOP', street_address_1: '3240 Duke St', street_address_2: '', city: 'Alexandria', state_province: 'VA', postal_code: '22313', telephone_1: '(703) 212-2453', country: 'USA', website: 'www.bicycleproshop.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'FREE-FLITE BICYCLES', street_address_1: '6014 Sandy Springs Cir', street_address_2: '', city: 'Alanta', state_province: 'GA', postal_code: '30328', telephone_1: '(404) 252-2453', country: 'USA', website: 'www.freeflite.com', pedal_dealer: true, full_dealer: false, demo_center: false},
-{account: '', dealer_name: 'VELO RENO', street_address_1: '3450 Lakeside Drive', street_address_2: '', city: 'Reno', state_province: 'NV', postal_code: '89509', telephone_1: '(775) 827-3277', country: 'USA', website: 'www.veloreno.com', pedal_dealer: true, full_dealer: true, demo_center: false}
+# {account: '', dealer_name: 'BIKE EFFECT', street_address_1: '910 Broadway #100', street_address_2: '', city: 'Santa Monica', state_province: 'CA', postal_code: '90401', telephone_1: '(310) 393-4348', country: 'USA', website: 'http://www.bikeeffect.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'BICYCLE PRO SHOP', street_address_1: '3240 Duke St', street_address_2: '', city: 'Alexandria', state_province: 'VA', postal_code: '22313', telephone_1: '(703) 212-2453', country: 'USA', website: 'www.bicycleproshop.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'FREE-FLITE BICYCLES', street_address_1: '6014 Sandy Springs Cir', street_address_2: '', city: 'Alanta', state_province: 'GA', postal_code: '30328', telephone_1: '(404) 252-2453', country: 'USA', website: 'www.freeflite.com', pedal_dealer: true, full_dealer: false, demo_center: false},
+# {account: '', dealer_name: 'VELO RENO', street_address_1: '3450 Lakeside Drive', street_address_2: '', city: 'Reno', state_province: 'NV', postal_code: '89509', telephone_1: '(775) 827-3277', country: 'USA', website: 'www.veloreno.com', pedal_dealer: true, full_dealer: true, demo_center: false}
 
-]
+# ]
 
 
 
- @p_dealers_us.each do |pd|
-   Refinery::Dealers::Dealer.create(
-     dealer_name: pd[:dealer_name],
-     street_address_1: pd[:street_address_1],
-     street_address_2: pd[:street_address_2],
-     postal_code: pd[:postal_code],
-     city: pd[:city],
-     telephone_1: pd[:telephone_1],
-     state_province: pd[:state_province],
-     country: pd[:country],
-     email: pd[:email],
-     website: pd[:website],
-     pedal_dealer: pd[:pedal_dealer],
-     full_dealer: pd[:full_dealer],
-     demo_center: pd[:demo_center]
-   )
- end
+ # @p_dealers_us.each do |pd|
+ #   Refinery::Dealers::Dealer.create(
+ #     dealer_name: pd[:dealer_name],
+ #     street_address_1: pd[:street_address_1],
+ #     street_address_2: pd[:street_address_2],
+ #     postal_code: pd[:postal_code],
+ #     city: pd[:city],
+ #     telephone_1: pd[:telephone_1],
+ #     state_province: pd[:state_province],
+ #     country: pd[:country],
+ #     email: pd[:email],
+ #     website: pd[:website],
+ #     pedal_dealer: pd[:pedal_dealer],
+ #     full_dealer: pd[:full_dealer],
+ #     demo_center: pd[:demo_center]
+ #   )
+ # end
 
 
 # @dealers = [
