@@ -20,11 +20,11 @@
   <div class="container">
     <div class="row">
       <% @distributors.each do |d| %>
-        <div class="col-md-3 col-sm-4 distributors">
-          <h3><%= d.country.upcase %></h3>
+        <div class="col-md-4 col-sm-4 distributors">
+          <h4><%= d.country.upcase %></h4>
           <strong><%= d.name.html_safe %></strong><br />
-          <% if d.address.present? %><%= d.address.html_safe %><% end %>
-          <% if d.telephone.present? %><br />TEL: <%= d.telephone %><br /><% end %>
+          <% if d.address.present? %><%= d.address.html_safe %><br /><% end %>
+          <% if d.telephone.present? %>TEL: <%= d.telephone %><br /><% end %>
           <!-- <%# if d.fax.present? %>FAX: <%#= d.fax %><%# end %> -->
         </div>
       <% end %>
