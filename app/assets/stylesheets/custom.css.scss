@@ -1484,6 +1484,101 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
   
 }
 
+#pedal-trade-up-xpresso-10, #pedal-trade-up-atac-xc-8 {
+  height:600px;
+}
+
+#pedal-trade-up-pedal-text  {
+  // background-image:url(pedal-trade-up-red-bg.png);
+  // height:600px;
+  // width:100%;
+  // height:100%;
+  
+
+}
+
+#forty-off {
+  font-family: 'Montserrat', sans-serif;
+  h1 {font-weight:900;color:#fff;font-size:48px;text-transform:uppercase;}
+  background-color:$time-red;
+  height:70vh;
+  margin-bottom:40px;
+  padding-top:30%;
+  p.lead {
+    color:#fff;
+    font-size:24px;
+  }
+  h3 {
+    font-weight:900;
+    color:#fff;
+    letter-spacing: 2px;
+
+  }
+}
+
+
+.trade-up-text {
+  display:block;
+  position:relative;
+  width:90%;
+  // height: 600px;
+  // top:200px;
+  // left:200px;
+  top:50px;
+  left:20px;
+  font-family: 'Montserrat', sans-serif;
+  h1 {font-weight:900;color:$time-red;}
+
+}
+
+.trade-up-pedals {
+  display:relative;
+  img {
+    display:absolute;
+    left:-100px;
+  }
+}
+
+#or {
+  div {
+
+    display:block;
+    width:125px;
+    height:125px;
+    margin:0 auto;
+    background-color:$time-red;
+    border-radius: 50%;
+    margin-top:-100px;
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size:42px;
+      font-weight: 900;
+      line-height:125px;
+      color:#fff;
+
+    }
+
+  }
+
+}
+
+#trade-up-dealers {
+  font-family: 'Montserrat', sans-serif;
+  h1 {
+    font-size:36px;
+    font-weight:900;
+    color:$time-red;
+  }
+  .p-dealers {
+    min-height:10em;
+    
+    font-size:12px;
+    padding:2em;
+  }
+  padding-bottom:40px;
+}
+
 
 
 

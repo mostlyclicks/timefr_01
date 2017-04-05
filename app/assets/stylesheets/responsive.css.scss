@@ -5,7 +5,7 @@
   
   //HOME
   // #top {min-height:95vh;}
-
+ // html {border:5px solid green;}
   #home-top {
   
   }
@@ -298,6 +298,43 @@
     background-size:150%;
   }
 
+  .trade-up-text {
+  position:absolute;
+  width:280px;
+  top:0px;
+  left:100px;
+
+  } 
+
+  #forty-off {
+
+  padding-top:20%;
+
+  }
+
+  #or {
+  div {
+    display:block;
+    width:150px;
+    height:150px;
+    margin:0 auto;
+    background-color:$time-red;
+    border-radius: 50%;
+    margin-top:0px;
+    margin-bottom: 120px;
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size:50px;
+      font-weight: 900;
+      line-height:150px;
+      color:#fff;
+
+    }
+
+  }
+}
+
 }
 
 
@@ -315,7 +352,7 @@
 
 /* Medium devices (desktops, 992px and up) ************************/
 @media (min-width: 992px) { 
- 
+ // html {border:5px solid blue;}
   #top {
     // min-height:95vh;
     h1 {font-size:48px !important;margin:48px 0 !important;}
@@ -484,6 +521,20 @@
     background-size:120%;
   }
 
+  .trade-up-text {
+
+  width:300px;
+  top:0px;
+  left:200px;
+  h1 {font-size:44px;}
+
+  } 
+  #forty-off {
+
+  padding-top:20%;
+
+  }
+
 }
 
 
@@ -503,7 +554,7 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-
+// html {border:5px solid yellow;}
   // #home-the-challenge h1 {border:1px solid red;}
 
   #home-made-in-france {
@@ -612,6 +663,45 @@
     min-height:80vh;
     background-size:120%;
   }
+
+  .trade-up-text {
+  width:400px;
+  top:90px;
+  left:200px;
+  h1 {font-size:56px;}
+
+  } 
+
+  #forty-off {
+  h1 {font-size:64px;}
+  padding-top:13%;
+
+  }
+
+  #or {
+  div {
+    display:block;
+    width:200px;
+    height:200px;
+    margin:0 auto;
+    background-color:$time-red;
+    border-radius: 50%;
+    margin-top:-150px;
+    margin-bottom: 100px;
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size:64px;
+      font-weight: 900;
+      line-height:200px;
+      color:#fff;
+
+    }
+
+  }
+}
+
+
 
 
 }
