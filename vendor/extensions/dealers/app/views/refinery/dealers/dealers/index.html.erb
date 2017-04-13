@@ -15,7 +15,7 @@
         <%#= label_tag 'query', t('.search_label') %>
         <%= text_field_tag :search, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:search] if params[:search]), class: 'form-control input-lg'} %>
         </div>
-        <%= select_tag :distance, options_for_select([[ "Select distance in miles", "10"],"50", "100", "250"], selected: "10"), class: 'form-control' %>
+        <%= select_tag :distance, options_for_select([[ "Select distance in miles", "50"],"50", "100", "250"], selected: "10"), class: 'form-control' %>
 
         <%= submit_tag "SEARCH", class: "btn btn-danger btn-lg", style: "margin-top:40px;" %>
         <% end %>
