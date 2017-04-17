@@ -1,4 +1,12 @@
-<% @top_bg_image = ['top-bg-10-comp.png', 'top-bg-11-comp.png', 'top-bg-13-comp.png', 'top-bg-12-comp.png', 'top-bg-link-comp.png', 'scylon-ulteam-30-comp.jpg'] %>
+<% if @geoip.country(@r).country_name == 'United States' %>
+   <% @top_bg_image = ['top-bg-10-comp.png', 'top-bg-11-comp.png', 'top-bg-13-comp.png', 'top-bg-12-comp.png', 'top-bg-link-comp.png', 'home-pedal-trade-up.atac.png', 'home-pedal-trade-up-xpresso.png'] %>
+<% else %>
+  <% @top_bg_image = ['top-bg-10-comp.png', 'top-bg-11-comp.png', 'top-bg-13-comp.png', 'top-bg-12-comp.png', 'top-bg-link-comp.png', 'scylon-ulteam-30-comp.jpg'] %>
+<% end %>
+
+
+
+<%# @top_bg_image = ['top-bg-10-comp.png', 'top-bg-11-comp.png', 'top-bg-13-comp.png', 'top-bg-12-comp.png', 'top-bg-link-comp.png', 'scylon-ulteam-30-comp.jpg'] %>
 <% @random_bg_image = @top_bg_image.sample %>
 <section id="home-top">
   <div class="container">
@@ -15,6 +23,8 @@
           <%= link_to (image_tag @random_bg_image, class: 'img-responsive'), '/pedals/city-pedal-link' %>
         <% elsif @random_bg_image == 'scylon-ulteam-30-comp.jpg' %>
           <%= link_to (image_tag @random_bg_image, class: 'img-responsive'), '/scylon-ulteam-30' %>
+        <% elsif @random_bg_image == 'home-pedal-trade-up.atac.png' || 'home-pedal-trade-up-xpresso.png' %>
+          <%= link_to (image_tag @random_bg_image, class: 'img-responsive'), '/pedal-trade-up' %>
         <% else %>
           <%= image_tag @random_bg_image, class: 'img-responsive' %>
         <% end %>
@@ -123,3 +133,20 @@
     </div>
   </div>
 </section>
+<!-- <section id="instagram">
+  <div class="container-fluid">
+    <div class="row">
+
+    </div>
+    <div class="row">
+    <%# @instatime.each do |i| %>
+      <div class="col-md-3">
+        <%#= image_tag i.images.thumbnail.url, class: 'img-responsive', width: '100%' %>
+      </div>
+
+
+    <%# end %>
+    </div>
+  </div>
+
+</section> -->
