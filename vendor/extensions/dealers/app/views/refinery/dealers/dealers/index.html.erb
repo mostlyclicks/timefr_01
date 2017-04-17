@@ -47,12 +47,8 @@
 
    <div class="container-fluid" id="search-results-list">
     <div class="row">
-    
       <div class="col-md-3"> 
-
-
         <div class="result-scroll">
-        
         <!-- dealers -->
         <% @js_array =[] %>
         <% @results.each do |d| %>
@@ -62,40 +58,38 @@
           <small><%= d.latitude %> | <%= d.longitude %></small>
         <% end %>
         
-        <p>
-          <%= d.street_address_1 %><br />
-            <% unless d.street_address_2.blank? %>
-              <%= d.street_address_2 %><br />
-            <% end %>
-          <%= d.city %>, <%= d.state_province %> <%= d.postal_code %><br />
-          
-            TEL: <%= d.telephone_1 %><br />
-            <% unless d.email.blank? %>
-              <%= d.email %><br />
-            <% end %>
-            <% unless d.website.blank? %>
-              <%= d.website %><br />
-            <% end %>
-              <div class="row icon-row" >
-                <div class="col-md-8">
-                <% if d.demo_center == true %>
-                  <div class="col-md-2 col-xs-1" style="margin-right:10px;">
-                    <%= link_to (image_tag 'dealer-icons-test-center-red.png', class: 'img-responsive', alt: 'TIME TEST Center icon', title: 'TIME TEST Center'), '/dealers/dealers-us/time-test-centers' %>
+          <p>
+            <%= d.street_address_1 %><br />
+              <% unless d.street_address_2.blank? %>
+                <%= d.street_address_2 %><br />
+              <% end %>
+            <%= d.city %>, <%= d.state_province %> <%= d.postal_code %><br />
+            
+              TEL: <%= d.telephone_1 %><br />
+              <% unless d.email.blank? %>
+                <%= d.email %><br />
+              <% end %>
+              <% unless d.website.blank? %>
+                <%= d.website %><br />
+              <% end %>
+                <div class="row icon-row" >
+                  <div class="col-md-8">
+                  <% if d.demo_center == true %>
+                    <div class="col-md-2 col-xs-1" style="margin-right:10px;">
+                      <%= link_to (image_tag 'dealer-icons-test-center-red.png', class: 'img-responsive', alt: 'TIME TEST Center icon', title: 'TIME TEST Center'), '/dealers/dealers-us/time-test-centers' %>
+                    </div>
+                  <% end %>
+                  <% if d.full_dealer == true %>
+                    <div class="col-md-2 col-xs-1"><%= image_tag 'dealer-icons-full-dealer.png', class: 'img-responsive', alt: 'TIME Frame, Accessories dealer icon', title: 'TIME Frame, Accessories dealer' %></div>
+                  <% end %>
+                  <% if d.pedal_dealer == true %>
+                    <div class="col-md-2 col-xs-1"><%= image_tag 'dealer-icons-pedal-dealer.png', class: 'img-responsive', alt: 'Pedal dealer icon', title: 'TIME Pedal dealer' %></div>
+                  <% end %>
                   </div>
-                <% end %>
-                <% if d.full_dealer == true %>
-                  <div class="col-md-2 col-xs-1"><%= image_tag 'dealer-icons-full-dealer.png', class: 'img-responsive', alt: 'TIME Frame, Accessories dealer icon', title: 'TIME Frame, Accessories dealer' %></div>
-                <% end %>
-                <% if d.pedal_dealer == true %>
-                  <div class="col-md-2 col-xs-1"><%= image_tag 'dealer-icons-pedal-dealer.png', class: 'img-responsive', alt: 'Pedal dealer icon', title: 'TIME Pedal dealer' %></div>
-                <% end %>
                 </div>
-              </div>
-          <% end %>
-        </p>
-
+            <% end %>
+            </p>
         </div>
-
       </div>
 
       <!-- top result -->
@@ -152,10 +146,11 @@
     <!-- POPULATES FALLBACK MAP IN COUNTRY IF NO RESULTS ARE FOUND -->
     <%#= @dealers.count %>
 
-   <div class="container" id="search-results-list">
+   <div class="container-fluid" id="search-results-list">
     <div class="row">
     
       <div class="col-md-3 ">
+        <div class="result-scroll">
 
     <% @js_array = [] %>
     <% if @dealers.present? %>
@@ -199,7 +194,7 @@
     <% @zoom = 1 %>
 
  
-
+  </div>
   </div>
   <% if @dealers.present? %>
   <div class="col-md-8">
