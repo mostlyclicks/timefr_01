@@ -1,0 +1,14 @@
+<% @us_dealers = Refinery::Dealers::Dealer.where(country: 'USA') %>
+
+<% @us_dealers.each do |d| %>
+  "<%= d.dealer_name %>",
+  "<%= d.street_address_1 %>",
+  "<%= d.city %>",
+  "<%= d.state_province %>",
+  "<%= d.country %>",
+  "<%= d.postal_code %>",
+  "<%= d.website %>",
+  "<%= d.telephone_1 %>",
+  "<%= d.latitude %>",
+  "<%= d.longitude %>"
+<% end %>
